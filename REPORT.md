@@ -1,6 +1,6 @@
-# Report predmarket-lab — 16/09/2026 15:14:41
+# Report predmarket-lab — 16/09/2026 15:19:23
 
-Ultimo scan: `2026-09-16T13:14:35+00:00` UTC · ciclo n.8 · 312 mercati tracciati · 1797 snapshot · 48 alert
+Ultimo scan: `2026-09-16T13:19:17+00:00` UTC · ciclo n.9 · 312 mercati tracciati · 2097 snapshot · 48 alert
 
 ## Conto paper
 
@@ -23,18 +23,22 @@ Ultimo scan: `2026-09-16T13:14:35+00:00` UTC · ciclo n.8 · 312 mercati traccia
 - `12:47` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.29) su 95k vol
 - `12:47` **MOVER_1H** — mossa -12 punti in 1h (prezzo 0.49) su 89k vol
 
+## Indice di inefficienza (v0)
+
+- **2/100** — 2% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
+
 ## Shadow signals (l'AI studia, zero capitale)
 
 - nessun segnale ancora valutato: servono cicli del watcher
 
 segnali aperti ora:
 
+- `LONGSHOT_FADE` Dota 2: Zero Tenacity vs PuckChamp - Game 1 Winner — longshot a 0.005 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Counter-Strike: CYBERSHOKE Esports vs Nemiga - Map 2 Winner — longshot a 0.005 — ipotesi sopravvalutazione
+- `MEAN_REVERT` KBO: KT Wiz vs. Hanwha Eagles — mossa -39p in 1h — ipotesi rientro eccesso
 - `MAKER_SPREAD` KBO: KT Wiz vs. Hanwha Eagles — spread 12p — ipotesi cattura maker
 - `MAKER_SPREAD` Will the price of Ethereum be above $2,400 on September 16? — spread 11p — ipotesi cattura maker
 - `LONGSHOT_FADE` Will the Fed increase interest rates by 50+ bps after the September 20 — longshot a 0.007 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will the Fed decrease interest rates by 25 bps after the September 202 — longshot a 0.002 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Will the Fed increase interest rates by 25 bps after the September 202 — favorito 0.89 a fine giornata, spread 1p, vol 4825k
-- `LONGSHOT_FADE` Will the Fed decrease interest rates by 50+ bps after the September 20 — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 

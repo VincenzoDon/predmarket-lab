@@ -118,6 +118,19 @@ def generate(conn, paper, outdir: str = ".") -> None:
     n_cycles = conn.execute("SELECT COUNT(*) FROM equity").fetchone()[0]
     db_kb = round(os.path.getsize(DB_PATH) / 1024, 1) if os.path.exists(DB_PATH) else 0
 
+    # ---------------- indice di inefficienza (v0 sperimentale) ----------------
+    top50 = _rows(conn, "SELECT spread, hour_chg FROM snapshots WHERE ts=? "
+                    "ORDER BY vol24h DESC LIMIT 50", (latest,))
+    n50 = len(top50)
+    if n50:
+        frac_spread = sum(1 for r in top50 if (r["spread"] or 0) >= 0.04) / n50
+        frac_mover = sum(1 for r in top50 if abs(r["hour_chg"] or 0) >= 0.08) / n50
+        inef_idx = round(100 * (0.6 * frac_spread + 0.4 * frac_mover))
+        inef_txt = (f"{int(frac_spread*100)}% dei top-{n50} mercati ha spread >=4 punti, "
+                    f"{int(frac_mover*100)}% ha mosso >=8 punti in 1h")
+    else:
+        inef_idx, inef_txt = None, "dati insufficienti"
+
     # ------------------------------------------------------------ dashboard
     alert_rows = "".join(
         f"<tr><td><span class='tag t-{_e(a['kind'])}'>{_e(a['kind']).replace('_', ' ')}</span></td>"
@@ -250,7 +263,9 @@ i mercati predittivi sono oscurati in Italia per provvedimento ADM: aggiorna la 
         md.append(f"- `{a['ts'][11:16]}` **{a['kind']}** — {a['message']}")
     if not alerts:
         md.append("- nessuno per ora")
-    md += ["", "## Shadow signals (l'AI studia, zero capitale)", ""]
+    md += ["", "## Indice di inefficienza (v0)", "",
+           f"- **{inef_idx if inef_idx is not None else '—'}/100** — {inef_txt}",
+           "", "## Shadow signals (l'AI studia, zero capitale)", ""]
     for s in sig_stats:
         md.append(f"- **{s['kind']}** — {s['n']} valutati · {s['hit_pct']}% hit · risultato medio {s['avg_res']:+.2f}%")
     if not sig_stats:
