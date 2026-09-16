@@ -50,7 +50,7 @@ def init_db(path: str = DB_PATH) -> sqlite3.Connection:
             ts TEXT NOT NULL, slug TEXT NOT NULL, question TEXT,
             bid REAL, ask REAL, spread REAL, last REAL, yes_price REAL,
             vol24h REAL, liquidity REAL, ends_at TEXT, fee_rate REAL,
-            hour_chg REAL, day_chg REAL);
+            hour_chg REAL, day_chg REAL, has_rewards INTEGER DEFAULT 0);
         CREATE INDEX IF NOT EXISTS idx_snap_slug_ts ON snapshots(slug, ts);
         CREATE INDEX IF NOT EXISTS idx_snap_ts ON snapshots(ts);
         CREATE TABLE IF NOT EXISTS alerts(
@@ -72,6 +72,11 @@ def init_db(path: str = DB_PATH) -> sqlite3.Connection:
         """
     )
     conn.commit()
+    # migrazione per DB gia' esistenti
+    cols = {r[1] for r in conn.execute("PRAGMA table_info(snapshots)")}
+    if "has_rewards" not in cols:
+        conn.execute("ALTER TABLE snapshots ADD COLUMN has_rewards INTEGER DEFAULT 0")
+        conn.commit()
     return conn
 
 
@@ -141,7 +146,11 @@ def run_cycle(gamma, conn, paper, rules=ALERT_RULES, verbose=True) -> dict:
 
     # ---------------- alert da regole ----------------
     cand = []
-    for (ts_, slug, q, bid, ask, spread, last, yes, vol, liq, ends, fee, hchg, dchg) in rows:
+    for (ts_, slug, q, bid, ask, spread, last, yes, vol, liq, ends, fee, hchg, dchg, rw) in rows:
+        if rw and vol >= 5000:
+            cand.append((ts_, "REWARDS_MARKET", slug,
+                         f"liquidity rewards attivi — vol 24h {vol/1000:.0f}k: candidate yield maker",
+                         round(vol, 2)))
         if (spread >= rules["spread_min"] and vol >= rules["spread_min_vol"]
                 and liq >= rules["spread_min_liq"]):
             cand.append((ts_, "SPREAD_LARGO", slug,
