@@ -1,6 +1,6 @@
-# Report predmarket-lab — 16/09/2026 15:19:54
+# Report predmarket-lab — 16/09/2026 15:44:35
 
-Ultimo scan: `2026-09-16T13:19:48+00:00` UTC · ciclo n.10 · 312 mercati tracciati · 2397 snapshot · 48 alert
+Ultimo scan: `2026-09-16T13:44:29+00:00` UTC · ciclo n.11 · 326 mercati tracciati · 2697 snapshot · 155 alert
 
 ## Conto paper
 
@@ -10,22 +10,22 @@ Ultimo scan: `2026-09-16T13:19:48+00:00` UTC · ciclo n.10 · 312 mercati tracci
 
 ## Ultimi alert
 
-- `13:14` **SPREAD_LARGO** — bid 0.35/ask 0.47 = 12 punti su 54k vol 24h — candidata maker
-- `13:12` **CHIUDE_OGGI** — chiude oggi, vol 24h 103k — finestra informativa finale
-- `13:12` **MOVER_1H** — mossa +11 punti in 1h (prezzo 0.81) su 76k vol
-- `13:12` **SPREAD_LARGO** — bid 0.11/ask 0.18 = 7 punti su 74k vol 24h — candidata maker
-- `13:12` **MOVER_1H** — mossa -64 punti in 1h (prezzo 0.18) su 74k vol
-- `13:12` **MOVER_1H** — mossa -12 punti in 1h (prezzo 0.2) su 64k vol
-- `13:12` **MOVER_1H** — mossa +14 punti in 1h (prezzo 0.54) su 36k vol
-- `13:12` **MOVER_1H** — mossa +10 punti in 1h (prezzo 0.53) su 25k vol
-- `13:12` **MOVER_1H** — mossa -45 punti in 1h (prezzo 0.01) su 22k vol
-- `13:12` **MOVER_1H** — mossa -22 punti in 1h (prezzo 0.34) su 20k vol
-- `12:47` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.29) su 95k vol
-- `12:47` **MOVER_1H** — mossa -12 punti in 1h (prezzo 0.49) su 89k vol
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 6225k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 4612k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3369k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 718k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 337k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 337k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 297k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 292k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 193k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 190k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 166k: candidate yield maker
+- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 166k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **2/100** — 2% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
+- **3/100** — 2% dei top-50 mercati ha spread >=4 punti, 4% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
@@ -33,12 +33,12 @@ Ultimo scan: `2026-09-16T13:19:48+00:00` UTC · ciclo n.10 · 312 mercati tracci
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Dota 2: Zero Tenacity vs PuckChamp - Game 1 Winner — longshot a 0.005 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Counter-Strike: CYBERSHOKE Esports vs Nemiga - Map 2 Winner — longshot a 0.005 — ipotesi sopravvalutazione
-- `MEAN_REVERT` KBO: KT Wiz vs. Hanwha Eagles — mossa -39p in 1h — ipotesi rientro eccesso
-- `MAKER_SPREAD` KBO: KT Wiz vs. Hanwha Eagles — spread 12p — ipotesi cattura maker
-- `MAKER_SPREAD` Will the price of Ethereum be above $2,400 on September 16? — spread 11p — ipotesi cattura maker
-- `LONGSHOT_FADE` Will the Fed increase interest rates by 50+ bps after the September 20 — longshot a 0.007 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Guangzhou: Marat Sharipov vs Lloyd Harris — mossa +31p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Counter-Strike: Just Players vs NAVI Junior - Map 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Will Vissel Kobe win on 2026-09-16? — favorito 0.83 a fine giornata, spread 1p, vol 80k
+- `MEAN_REVERT` Sao Paulo Open: Whitney Osuigwe vs Kaitlin Quevedo — mossa +16p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Counter-Strike: OldMix vs EAC Extra (BO3) - United21 Playoffs — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Port FC win on 2026-09-16? — longshot a 0.020 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 

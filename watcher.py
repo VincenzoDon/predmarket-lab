@@ -138,11 +138,12 @@ def run_cycle(gamma, conn, paper, rules=ALERT_RULES, verbose=True) -> dict:
             _f(m.get("volume24hr")) or 0.0, _f(m.get("liquidityNum")) or 0.0,
             m.get("endDate"), fee,
             _f(m.get("oneHourPriceChange")) or 0.0, _f(m.get("oneDayPriceChange")) or 0.0,
+            1 if m.get("clobRewards") else 0,
         ))
         if yes is not None:
             price_map[slug] = yes
     if rows:
-        conn.executemany("INSERT INTO snapshots VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)", rows)
+        conn.executemany("INSERT INTO snapshots VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)", rows)
 
     # ---------------- alert da regole ----------------
     cand = []

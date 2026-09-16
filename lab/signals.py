@@ -46,7 +46,7 @@ def generate(conn: sqlite3.Connection, rows, ts: str) -> int:
                     entry_spread, _iso_plus_hours(ts, horizon_h), rationale))
         open_sig.add((kind, slug))
 
-    for (ts_, slug, q, bid, ask, spread, last, yes, vol, liq, ends, fee, hchg, dchg) in rows:
+    for (ts_, slug, q, bid, ask, spread, last, yes, vol, liq, ends, fee, hchg, dchg, rw) in rows:
         if not slug or yes is None:
             continue
         ends_today = bool(ends and ends[:10] == today)
