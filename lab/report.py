@@ -233,6 +233,12 @@ def generate(conn, paper, outdir: str = ".") -> None:
     <table style="margin-top:10px"><tr><th>posizione</th><th class="r">balena</th><th class="r">prezzo</th><th class="r">valore</th><th class="r">p&amp;l</th></tr>{whale_rows}</table>
   </div>
   <div class="card">
+    <h2>Indice di inefficienza — il nostro numero</h2>
+    <div class="big">{inef_idx if inef_idx is not None else '—'}<span style="font-size:16px;color:#8b949e">/100</span></div>
+    <div class="muted">{_e(inef_txt)}</div>
+    <div class="muted" style="margin-top:8px">v0 sperimentale: spread larghi + mosse violente = mercato inefficiente = opportunita'. Aggiornato a ogni ciclo.</div>
+  </div>
+  <div class="card">
     <h2>Sistema</h2>
     <div class="kpis">
       <div class="kpi"><b>{n_mkt}</b><span>mercati tracciati</span></div>

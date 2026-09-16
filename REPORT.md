@@ -1,6 +1,6 @@
-# Report predmarket-lab — 16/09/2026 15:19:23
+# Report predmarket-lab — 16/09/2026 15:19:54
 
-Ultimo scan: `2026-09-16T13:19:17+00:00` UTC · ciclo n.9 · 312 mercati tracciati · 2097 snapshot · 48 alert
+Ultimo scan: `2026-09-16T13:19:48+00:00` UTC · ciclo n.10 · 312 mercati tracciati · 2397 snapshot · 48 alert
 
 ## Conto paper
 
