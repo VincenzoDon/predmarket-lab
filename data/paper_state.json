@@ -1,0 +1,12 @@
+{
+  "bankroll": 200.0,
+  "cash": 201.24212139766118,
+  "positions": {},
+  "n_trades": 1,
+  "n_wins": 1,
+  "n_losses": 0,
+  "realized_pnl": 1.299589233569634,
+  "max_bankroll": 200.0,
+  "state_file": "data/paper_state.json",
+  "trades_file": "data/paper_trades.csv"
+}

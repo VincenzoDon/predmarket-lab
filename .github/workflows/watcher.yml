@@ -1,0 +1,44 @@
+# Watcher predmarket-lab — gira ogni 30 minuti su GitHub Actions (gratis).
+# NOTA: questo workflow committa data/lab.db, REPORT.md e dashboard.html nel repo.
+# NON mettere MAI chiavi private, seed phrase o credenziali in questo repository:
+# il watcher usa solo API pubbliche in lettura e non richiede segreti.
+
+name: watcher
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"   # ogni 15 minuti: sweet spot gratis su repo pubblico.
+                             # su repo PRIVATO (2.000 min/mese) usa "0 * * * *" (orario).
+  workflow_dispatch: {}       # permette il run manuale dal pannello Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: watcher
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installa dipendenze
+        run: pip install -r requirements.txt
+
+      - name: Ciclo di scan
+        run: python watcher.py --once
+
+      - name: Committa dati e report
+        run: |
+          git config user.name "lab-bot"
+          git config user.email "actions@github.com"
+          git add data REPORT.md dashboard.html || true
+          git commit -m "scan $(date -u '+%Y-%m-%d %H:%M') UTC" || echo "nessuna modifica da committare"
+          git push

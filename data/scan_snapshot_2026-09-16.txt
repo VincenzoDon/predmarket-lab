@@ -1,0 +1,80 @@
+
+====================================================================================================
+MERCATI IN CHIUSURA ENTRO 7 GIORNI (volume 24h > 500)
+aggiornato al 16/09/2026 11:34:00 (Europe/Rome) — dati: Gamma API pubblica
+====================================================================================================
+ # CHIUSURA (CEST)     ORE YES ask   spr   vol24h      liq   fee  mercato
+ 1 16/09 02:00         0.0   0.130  0.02       4k      42k  0.05  Will the Fed Pause–Pause–Pause in the next three dec *** OGGI ***
+ 2 16/09 02:00         0.0   0.004  0.00       1k      70k  0.05  Will the Fed Pause–Pause–Cut in the next three decis *** OGGI ***
+ 3 16/09 02:00         0.0   0.890  0.02      936      38k  0.05  Will the Fed decide differently in the next three de *** OGGI ***
+ 4 16/09 02:00         0.0   0.001  0.00     1.3M     7.4M  0.05  Will the Fed decrease interest rates by 50+ bps afte *** OGGI ***
+ 5 16/09 02:00         0.0   0.002  0.00     4.6M     5.8M  0.05  Will the Fed decrease interest rates by 25 bps after *** OGGI ***
+ 6 16/09 02:00         0.0   0.130  0.01     6.7M     853k  0.05  Will there be no change in Fed interest rates after  *** OGGI ***
+ 7 16/09 02:00         0.0   0.880  0.01     4.4M     926k  0.05  Will the Fed increase interest rates by 25 bps after *** OGGI ***
+ 8 16/09 02:00         0.0   0.008  0.00     4.8M     1.6M  0.05  Will the Fed increase interest rates by 50+ bps afte *** OGGI ***
+ 9 16/09 05:59         0.0   0.002  0.00      17k      31k  0.00  US-Iran Hormuz Agreement by September 15? *** OGGI ***
+10 16/09 05:59         0.0   0.003  0.00      11k      65k  0.00  Bab el-Mandeb Strait effectively closed by September *** OGGI ***
+11 16/09 05:59         0.0   0.849  0.32       4k       2k  0.00  Moscow air traffic suspended by September 15? *** OGGI ***
+12 16/09 05:59         0.0   0.012  0.01       4k      13k  0.00  Houthis seize an oil tanker by September 15, 2026? *** OGGI ***
+13 16/09 10:30         0.0   0.110  0.01      11k      50k  0.05  Will Borneo Samarinda win on 2026-09-16? *** OGGI ***
+14 16/09 10:30         0.0   0.270  0.01       1k      11k  0.05  Will Borneo Samarinda vs. Dewa United end in a draw? *** OGGI ***
+15 16/09 10:30         0.0   0.640  0.02       5k      32k  0.05  Will Dewa United win on 2026-09-16? *** OGGI ***
+16 16/09 10:30         0.0   0.030  0.01       1k       3k  0.05  Spread: Borneo Samarinda (-1.5) *** OGGI ***
+17 16/09 10:30         0.0   0.260  0.02       2k       5k  0.05  Spread: Dewa United (-1.5) *** OGGI ***
+18 16/09 10:30         0.0   0.760  0.01       1k       8k  0.05  Borneo Samarinda vs. Dewa United: O/U 1.5 *** OGGI ***
+19 16/09 10:30         0.0   0.390  0.01       3k       9k  0.05  Borneo Samarinda vs. Dewa United: O/U 2.5 *** OGGI ***
+20 16/09 10:30         0.0   0.150  0.01       2k       7k  0.05  Borneo Samarinda vs. Dewa United: O/U 3.5 *** OGGI ***
+21 16/09 10:30         0.0   0.570  0.04       3k       4k  0.05  Borneo Samarinda vs. Dewa United: Both Teams to Scor *** OGGI ***
+
+====================================================================================================
+ARBITRAGGIO STRUTTURALE SU EVENTI MULTI-ESITO (negRisk) — NETTO DELLE FEE
+aggiornato al 16/09/2026 11:34:00 (Europe/Rome) — dati: Gamma API pubblica
+====================================================================================================
+Nessuna opportunita' netta >= 0.5% in questo istante (normale: i bot HFT le chiudono in ~3 secondi).
+
+Paniere MULTI-ESITO piu' vicini al rounding (per monitoraggio):
+evento                                             esiti costo YES edge YES  edge NO
+Fed Decision in October?                               5     1.069   -6.95%   -1.19%
+FC Barcelona vs. Real Racing Club                      3     1.014   -1.39%   -2.09%
+Bayer 04 Leverkusen vs. NK Celje                       3     1.022   -2.17%   -1.87%
+Balance of Power: 2026 Midterms                        5     1.056   -5.58%   -2.13%
+Club Atlético de Madrid vs. CA Osasuna                 3     1.023   -2.30%   -5.25%
+United Russia seats in the next Russian legislat       7     1.031   -3.10%   -4.50%
+Fed Decision in December?                              5     1.062   -6.24%   -3.36%
+Beşiktaş JK vs. Olympique de Marseille                 3     1.050   -5.00%   -3.95%
+
+====================================================================================================
+MERCATI CON ALTO VOLUME E SPREAD LARGO (candidate strategie MAKER — fee 0% + rebate)
+aggiornato al 16/09/2026 11:34:01 (Europe/Rome) — dati: Gamma API pubblica
+====================================================================================================
+   bid    ask   spr   vol24h      liq rw  mercato
+  0.84   0.87  0.03     248k      29k  -  Counter-Strike: Black Phoenix vs ENCE (BO3) - CCT Europe
+  0.19   0.23  0.04      62k      65k  Y  Will WTI Crude Oil (WTI) hit (HIGH) $115 in September?
+  0.81   0.84  0.03      64k      96k  -  Biella: Jay Clarke vs Petr Brunclik
+
+====================================================================================================
+I 20 MERCATI CHE SI STANNO MUOVENDO DI PIU' (ultime 24h) — zona notizia
+aggiornato al 16/09/2026 11:34:03 (Europe/Rome) — dati: Gamma API pubblica
+====================================================================================================
+ prezzo      1h     24h   vol24h  mercato
+  0.999   91.5%   74.5%     199k  Guangzhou: Naoya Honda vs Nikoloz Basilashvili
+  0.890   31.0%   41.5%     248k  Counter-Strike: Black Phoenix vs ENCE (BO3) - CCT Europe S
+  0.840   -1.0%   27.0%      64k  Biella: Jay Clarke vs Petr Brunclik
+  0.410   14.0%  -26.0%      78k  Will the price of Bitcoin be above $76,000 on September 16
+  0.250    5.5%  -25.0%      79k  Bitcoin Up or Down on September 16?
+  0.999    0.0%   24.9%      57k  Phan Thiet 4: Rodrigo Pacheco vs Arthur Weber
+  0.030    1.1%  -24.9%      81k  Will the price of Bitcoin be above $78,000 on September 16
+  0.790    1.5%   20.0%      67k  Will Elon Musk post 40-64 tweets from September 14 to Sept
+  0.749   -0.9%  -15.1%     246k  Sao Paulo Open: Eva Lys vs Gabriela Ce
+  0.250    1.0%  -14.5%      68k  Will Ethereum reach $2,700 in September?
+  0.460    4.0%  -13.5%      84k  Will Bitcoin reach $80,000 in September?
+  0.052    0.4%  -13.2%     3.4M  Clarity Act (H.R.3633) signed into law in 2026?
+  0.999    0.0%   13.1%     115k  Will any AI model reach 1520 Overall Arena Score by Septem
+  0.220   -2.0%  -11.0%      56k  Will Elon Musk post 65-89 tweets from September 14 to Sept
+  0.250    0.0%  -10.0%      64k  Will Bitcoin reach $82,500 in September?
+  0.380    0.0%    8.0%     371k  Sao Paulo Open: Xiaodi You vs Alina Charaeva
+  0.550   -4.0%    7.5%      54k  Will Bitcoin dip to $72,500 in September?
+  0.140    0.0%   -6.5%      61k  Will Bitcoin reach $85,000 in September?
+  0.222   -0.1%   -6.2%      62k  Will WTI Crude Oil (WTI) hit (HIGH) $115 in September?
+  0.150    0.0%    6.0%     192k  US recession by end of 2026?
+

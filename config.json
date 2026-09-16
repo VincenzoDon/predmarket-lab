@@ -1,0 +1,20 @@
+{
+  "bankroll_usd": 200,
+  "risk": {
+    "kelly_fraction": 0.25,
+    "max_stake_pct": 0.05,
+    "min_edge_pct": 2.0,
+    "daily_stop_loss_pct": 10.0,
+    "max_reloads": 2
+  },
+  "scan": {
+    "closing_days": 7,
+    "min_vol24": 500,
+    "min_liquidity": 2000,
+    "arb_min_edge_pct": 0.5
+  },
+  "paper": {
+    "slippage_pct": 0.5,
+    "start_bankroll_usd": 200
+  }
+}
