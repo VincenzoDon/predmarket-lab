@@ -1,6 +1,6 @@
-# Report predmarket-lab — 17/09/2026 23:37:23
+# Report predmarket-lab — 18/09/2026 01:41:13
 
-Ultimo scan: `2026-09-17T21:37:17+00:00` UTC · ciclo n.15 · 717 mercati tracciati · 3897 snapshot · 700 alert
+Ultimo scan: `2026-09-17T23:41:07+00:00` UTC · ciclo n.16 · 783 mercati tracciati · 4197 snapshot · 818 alert
 
 ## Conto paper
 
@@ -10,42 +10,42 @@ Ultimo scan: `2026-09-17T21:37:17+00:00` UTC · ciclo n.15 · 717 mercati tracci
 
 ## Ultimi alert
 
-- `21:37` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 6642k: candidate yield maker
-- `21:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 1980k — finestra informativa finale
-- `21:37` **MOVER_1H** — mossa +22 punti in 1h (prezzo 0.999) su 1568k vol
-- `21:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 1568k — finestra informativa finale
-- `21:37` **MOVER_1H** — mossa +21 punti in 1h (prezzo 0.999) su 881k vol
-- `21:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 881k — finestra informativa finale
-- `21:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 845k — finestra informativa finale
-- `21:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 627k — finestra informativa finale
-- `21:37` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 583k: candidate yield maker
-- `21:37` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 582k: candidate yield maker
-- `21:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 527k — finestra informativa finale
-- `21:37` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 465k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 7058k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 600k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 588k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 487k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 465k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 365k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 301k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 203k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 194k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 191k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 174k: candidate yield maker
+- `23:41` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 161k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **6/100** — 0% dei top-50 mercati ha spread >=4 punti, 16% ha mosso >=8 punti in 1h
+- **0/100** — 0% dei top-50 mercati ha spread >=4 punti, 0% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 7 valutati · 85.7% hit · risultato medio +10.62%
-- **LONGSHOT_FADE** — 73 valutati · 84.9% hit · risultato medio +59.63%
+- **LONGSHOT_FADE** — 74 valutati · 85.1% hit · risultato medio +59.52%
 - **MAKER_SPREAD** — 1 valutati · 100.0% hit · risultato medio +8.00%
 - **MEAN_REVERT** — 8 valutati · 25.0% hit · risultato medio -36.00%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Will Real Sociedad de Fútbol win on 2026-09-17? — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Rennes: Daniel Rincon vs Titouan Droguet — mossa -22p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Rennes: Daniel Rincon vs Titouan Droguet — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Málaga CF win on 2026-09-17? — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Tiburon: Timo Legout vs Bryce Nakashima — mossa -46p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Tiburon: Timo Legout vs Bryce Nakashima — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Dota 2: Kalmychata vs uralan (BO3) - European Pro League Group B — mossa +28p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Roy Cooper win the 2028 Democratic presidential nomination? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the price of Bitcoin be above $78,000 on September 18? — longshot a 0.045 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the next diplomatic US-Iran meeting be in the United States by Se — longshot a 0.043 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will CD Real Tomayapo win on 2026-09-17? — longshot a 0.006 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the price of Bitcoin be above $88,000 on September 19? — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 3 balene (halvanicus,kindar,mooseborzoi) su 'Lions vs. Bills' — $4,139,761
+- **Consenso**: 2 balene (halvanicus,kindar) su 'Lions vs. Bills' — $4,113,656
 - halvanicus: Lions vs. Bills @ 0.69 ($3,285,184, P&L -44,267$)
 - JnStrtPrdctnMrkts: Will Ethereum dip to $1,500 by December 31, 2026? @ 0.86 ($865,555, P&L +242,774$)
 - kindar: Lions vs. Bills @ 0.69 ($828,472, P&L -5,959$)
