@@ -44,6 +44,7 @@ ALERT_RULES = {
 def init_db(path: str = DB_PATH) -> sqlite3.Connection:
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     conn = sqlite3.connect(path)
+    conn.row_factory = sqlite3.Row
     conn.executescript(
         """
         CREATE TABLE IF NOT EXISTS snapshots(

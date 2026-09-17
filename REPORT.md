@@ -1,6 +1,6 @@
-# Report predmarket-lab — 16/09/2026 15:44:35
+# Report predmarket-lab — 17/09/2026 10:01:34
 
-Ultimo scan: `2026-09-16T13:44:29+00:00` UTC · ciclo n.11 · 326 mercati tracciati · 2697 snapshot · 155 alert
+Ultimo scan: `2026-09-17T08:01:28+00:00` UTC · ciclo n.12 · 493 mercati tracciati · 2997 snapshot · 269 alert
 
 ## Conto paper
 
@@ -10,22 +10,22 @@ Ultimo scan: `2026-09-16T13:44:29+00:00` UTC · ciclo n.11 · 326 mercati tracci
 
 ## Ultimi alert
 
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 6225k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 4612k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3369k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 718k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 337k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 337k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 297k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 292k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 193k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 190k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 166k: candidate yield maker
-- `13:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 166k: candidate yield maker
+- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 968k: candidate yield maker
+- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 829k: candidate yield maker
+- `08:01` **CHIUDE_OGGI** — chiude oggi, vol 24h 820k — finestra informativa finale
+- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 672k: candidate yield maker
+- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 664k: candidate yield maker
+- `08:01` **SPREAD_LARGO** — bid 0.47/ask 0.58 = 11 punti su 337k vol 24h — candidata maker
+- `08:01` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.47) su 337k vol
+- `08:01` **CHIUDE_OGGI** — chiude oggi, vol 24h 231k — finestra informativa finale
+- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 156k: candidate yield maker
+- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 154k: candidate yield maker
+- `08:01` **CHIUDE_OGGI** — chiude oggi, vol 24h 154k — finestra informativa finale
+- `08:01` **CHIUDE_OGGI** — chiude oggi, vol 24h 137k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **3/100** — 2% dei top-50 mercati ha spread >=4 punti, 4% ha mosso >=8 punti in 1h
+- **3/100** — 4% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
@@ -33,20 +33,21 @@ Ultimo scan: `2026-09-16T13:44:29+00:00` UTC · ciclo n.11 · 326 mercati tracci
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Guangzhou: Marat Sharipov vs Lloyd Harris — mossa +31p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Counter-Strike: Just Players vs NAVI Junior - Map 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Will Vissel Kobe win on 2026-09-16? — favorito 0.83 a fine giornata, spread 1p, vol 80k
-- `MEAN_REVERT` Sao Paulo Open: Whitney Osuigwe vs Kaitlin Quevedo — mossa +16p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Counter-Strike: OldMix vs EAC Extra (BO3) - United21 Playoffs — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Port FC win on 2026-09-16? — longshot a 0.020 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Valencia: Guiomar Maristany vs Marina Bassols Ribera — mossa -10p in 1h — ipotesi rientro eccesso
+- `MAKER_SPREAD` Valencia: Guiomar Maristany vs Marina Bassols Ribera — spread 11p — ipotesi cattura maker
+- `LONGSHOT_FADE` Will Ruben Gallego win the 2028 Democratic presidential nomination? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Erling Haaland win the 2026 Ballon d'Or? — longshot a 0.003 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Elissa Slotkin win the 2028 Democratic presidential nomination? — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will 1 Fed rate cut happen in 2026? — longshot a 0.017 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- 0xdc3E831cad: Will the U.S. invade Iran before 2027? @ 0.82 ($79,418, P&L +19,579$)
-- 0xdc3E831cad: Will the Iranian regime fall before 2027? @ 0.92 ($9,150, P&L +1,943$)
-- 0xdc3E831cad: Lee Jae-myung arrested before 2027? @ 0.93 ($7,478, P&L +1,009$)
-- 0xdc3E831cad: Billionaire one-time wealth tax passes in California electio @ 0.68 ($5,588, P&L +621$)
-- 0xdc3E831cad: Will AI solve 0 more Millennium Prize Problems in 2026? @ 0.51 ($3,233, P&L +1,707$)
+- **Consenso**: 2 balene (HMLSF,RN1) su 'Valencia: Guiomar Maristany vs Marina Bassols Ribera' — $40,931
+- Sassy-Bucket: Kansas City Royals vs. Houston Astros @ 1.00 ($166,695, P&L +101,684$)
+- Sassy-Bucket: San Francisco Giants vs. St. Louis Cardinals: O/U 8.5 @ 1.00 ($86,945, P&L +45,217$)
+- Sassy-Bucket: Athletics vs. Tampa Bay Rays @ 1.00 ($75,951, P&L +28,861$)
+- Sassy-Bucket: Milwaukee Brewers vs. Pittsburgh Pirates @ 1.00 ($75,400, P&L +33,932$)
+- Sassy-Bucket: Philadelphia Phillies vs. Washington Nationals: O/U 8.5 @ 1.00 ($52,279, P&L +28,231$)
 
 ## Watchlist normativa
 
