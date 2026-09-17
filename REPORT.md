@@ -1,6 +1,6 @@
-# Report predmarket-lab — 17/09/2026 16:27:38
+# Report predmarket-lab — 17/09/2026 20:27:21
 
-Ultimo scan: `2026-09-17T14:27:33+00:00` UTC · ciclo n.13 · 573 mercati tracciati · 3297 snapshot · 395 alert
+Ultimo scan: `2026-09-17T18:27:15+00:00` UTC · ciclo n.14 · 648 mercati tracciati · 3597 snapshot · 558 alert
 
 ## Conto paper
 
@@ -10,46 +10,49 @@ Ultimo scan: `2026-09-17T14:27:33+00:00` UTC · ciclo n.13 · 573 mercati tracci
 
 ## Ultimi alert
 
-- `14:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1159k: candidate yield maker
-- `14:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 843k: candidate yield maker
-- `14:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 672k: candidate yield maker
-- `14:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 656k: candidate yield maker
-- `14:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 379k — finestra informativa finale
-- `14:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 366k — finestra informativa finale
-- `14:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 311k — finestra informativa finale
-- `14:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 284k — finestra informativa finale
-- `14:27` **MOVER_1H** — mossa +58 punti in 1h (prezzo 0.999) su 281k vol
-- `14:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 275k — finestra informativa finale
-- `14:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 274k — finestra informativa finale
-- `14:27` **MOVER_1H** — mossa +39 punti in 1h (prezzo 0.999) su 228k vol
+- `18:27` **MOVER_1H** — mossa +21 punti in 1h (prezzo 0.85) su 5497k vol
+- `18:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 5497k — finestra informativa finale
+- `18:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 1230k — finestra informativa finale
+- `18:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1061k: candidate yield maker
+- `18:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 734k: candidate yield maker
+- `18:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 706k — finestra informativa finale
+- `18:27` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.023) su 624k vol
+- `18:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 624k — finestra informativa finale
+- `18:27` **MOVER_1H** — mossa -19 punti in 1h (prezzo 0.46) su 602k vol
+- `18:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 602k — finestra informativa finale
+- `18:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 553k — finestra informativa finale
+- `18:27` **MOVER_1H** — mossa +12 punti in 1h (prezzo 0.71) su 492k vol
 
 ## Indice di inefficienza (v0)
 
-- **7/100** — 2% dei top-50 mercati ha spread >=4 punti, 14% ha mosso >=8 punti in 1h
+- **13/100** — 4% dei top-50 mercati ha spread >=4 punti, 26% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 6 valutati · 100.0% hit · risultato medio +13.32%
-- **LONGSHOT_FADE** — 71 valutati · 85.9% hit · risultato medio +60.70%
+- **ENDGAME_FAVORITE** — 7 valutati · 85.7% hit · risultato medio +10.62%
+- **LONGSHOT_FADE** — 73 valutati · 84.9% hit · risultato medio +59.63%
 - **MAKER_SPREAD** — 1 valutati · 100.0% hit · risultato medio +8.00%
 - **MEAN_REVERT** — 7 valutati · 28.6% hit · risultato medio -41.14%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Szczecin: Marco Cecchinato vs Marvin Moeller — mossa +58p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Caldas da Rainha: Jeline Vandromme vs Elena Malygina — mossa +39p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will the price of Bitcoin be above $78,000 on September 17? — longshot a 0.049 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Rennes: Francesco Maestrelli vs Yanis Durand — mossa +11p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Caldas da Rainha: Noma Noha Akugue vs Malaika Rapolu — mossa -55p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Caldas da Rainha: Noma Noha Akugue vs Malaika Rapolu — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Will Real Betis Balompié win on 2026-09-17? — favorito 0.84 a fine giornata, spread 1p, vol 5497k
+- `LONGSHOT_FADE` Will Getafe CF win on 2026-09-17? — longshot a 0.024 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Putin out as President of Russia by December 31, 2026? — longshot a 0.045 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championsh — longshot a 0.002 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Rennes: Adrian Mannarino vs Matisse Bobichon — mossa -56p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Rennes: Adrian Mannarino vs Matisse Bobichon — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
+- **Consenso**: 2 balene (Sassy-Bucket,BrotherObama) su 'Los Angeles Dodgers vs. Cincinnati Reds: O/U 9.5' — $53,879
+- **Consenso**: 2 balene (BrotherObama,lllllllIlll) su 'Counter-Strike: B8 vs M80 (BO1) - Logitech G Play Connect Gr' — $51,002
+- **Consenso**: 2 balene (Sassy-Bucket,BrotherObama) su 'San Diego Padres vs. Colorado Rockies: O/U 10.5' — $49,913
+- halvanicus: Will Real Betis Balompié win on 2026-09-17? @ 0.84 ($2,763,883, P&L +633,053$)
 - JnStrtPrdctnMrkts: Will Ethereum dip to $1,500 by December 31, 2026? @ 0.86 ($865,555, P&L +242,774$)
-- JnStrtPrdctnMrkts: Will Bitcoin dip to $55,000 by December 31, 2026? @ 0.83 ($588,761, P&L +209,340$)
+- JnStrtPrdctnMrkts: Will Bitcoin dip to $55,000 by December 31, 2026? @ 0.81 ($578,121, P&L +198,700$)
 - JnStrtPrdctnMrkts: Will Bitcoin dip to $50,000 by December 31, 2026? @ 0.88 ($545,562, P&L +128,336$)
 - JnStrtPrdctnMrkts: Will Ethereum dip to $1,250 by December 31, 2026? @ 0.92 ($362,494, P&L +60,920$)
-- JnStrtPrdctnMrkts: Will Ethereum dip to $1,750 by December 31, 2026? @ 0.84 ($322,899, P&L +30,362$)
 
 ## Watchlist normativa
 
