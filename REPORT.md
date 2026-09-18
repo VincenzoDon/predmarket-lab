@@ -1,8 +1,8 @@
-# Report predmarket-lab — 18/09/2026 17:46:00
+# Report predmarket-lab — 18/09/2026 20:41:16
 
 🟢 **Salute dati:** dati freschi: ultimo scan 2 min fa
 
-Ultimo scan: `2026-09-18T15:43:57+00:00` UTC · ciclo n.20 · 1008 mercati tracciati · 5395 snapshot · 1411 alert
+Ultimo scan: `2026-09-18T18:38:50+00:00` UTC · ciclo n.21 · 1078 mercati tracciati · 5694 snapshot · 1562 alert
 
 ## Conto paper
 
@@ -12,62 +12,63 @@ Ultimo scan: `2026-09-18T15:43:57+00:00` UTC · ciclo n.20 · 1008 mercati tracc
 
 ## Ultimi alert
 
-- `15:43` **CHIUDE_OGGI** — chiude oggi, vol 24h 997k — finestra informativa finale
-- `15:43` **MOVER_1H** — mossa +28 punti in 1h (prezzo 0.41) su 992k vol
-- `15:43` **CHIUDE_OGGI** — chiude oggi, vol 24h 992k — finestra informativa finale
-- `15:43` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 783k: candidate yield maker
-- `15:43` **CHIUDE_OGGI** — chiude oggi, vol 24h 662k — finestra informativa finale
-- `15:43` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 529k: candidate yield maker
-- `15:43` **CHIUDE_OGGI** — chiude oggi, vol 24h 452k — finestra informativa finale
-- `15:43` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 417k: candidate yield maker
-- `15:43` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 414k: candidate yield maker
-- `15:43` **CHIUDE_OGGI** — chiude oggi, vol 24h 414k — finestra informativa finale
-- `15:43` **MOVER_1H** — mossa +10 punti in 1h (prezzo 0.993) su 394k vol
-- `15:43` **CHIUDE_OGGI** — chiude oggi, vol 24h 394k — finestra informativa finale
+- `18:38` **CHIUDE_OGGI** — chiude oggi, vol 24h 1222k — finestra informativa finale
+- `18:38` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1173k: candidate yield maker
+- `18:38` **CHIUDE_OGGI** — chiude oggi, vol 24h 1038k — finestra informativa finale
+- `18:38` **MOVER_1H** — mossa -15 punti in 1h (prezzo 0.001) su 864k vol
+- `18:38` **CHIUDE_OGGI** — chiude oggi, vol 24h 864k — finestra informativa finale
+- `18:38` **CHIUDE_OGGI** — chiude oggi, vol 24h 822k — finestra informativa finale
+- `18:38` **MOVER_1H** — mossa -69 punti in 1h (prezzo 0.001) su 802k vol
+- `18:38` **CHIUDE_OGGI** — chiude oggi, vol 24h 735k — finestra informativa finale
+- `18:38` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 681k: candidate yield maker
+- `18:38` **CHIUDE_OGGI** — chiude oggi, vol 24h 681k — finestra informativa finale
+- `18:38` **MOVER_1H** — mossa -8 punti in 1h (prezzo 0.001) su 535k vol
+- `18:38` **CHIUDE_OGGI** — chiude oggi, vol 24h 535k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **7/100** — 0% dei top-50 mercati ha spread >=4 punti, 18% ha mosso >=8 punti in 1h
+- **11/100** — 6% dei top-50 mercati ha spread >=4 punti, 18% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 29 valutati · 89.7% hit · risultato medio +4.74%
-- **LONGSHOT_FADE** — 206 valutati · 85.0% hit · risultato medio +21.38%
+- **ENDGAME_FAVORITE** — 30 valutati · 90.0% hit · risultato medio +4.71%
+- **LONGSHOT_FADE** — 255 valutati · 81.6% hit · risultato medio +16.94%
 - **MAKER_SPREAD** — 3 valutati · 100.0% hit · risultato medio +8.00%
-- **MEAN_REVERT** — 45 valutati · 15.6% hit · risultato medio +24.78%
+- **MEAN_REVERT** — 49 valutati · 16.3% hit · risultato medio +18.40%
 
 segnali aperti ora:
 
-- `ENDGAME_FAVORITE` Will FC Bayern München win on 2026-09-18? — favorito 0.94 a fine giornata, spread 1p, vol 997k
-- `LONGSHOT_FADE` Will François Ruffin win the 2027 French presidential election? — longshot a 0.003 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Elon Musk post 180-199 tweets from September 11 to September 18,  — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Biella: Jay Clarke vs Felix Gill — mossa +52p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will FC Bayern München vs. 1. FC Union Berlin end in a draw? — longshot a 0.045 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will the price of Bitcoin be above $82,000 on September 18? — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Natus Vincere vs Movistar KOI - Game 3 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Natus Vincere vs Movistar KOI - Game 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Caldas da Rainha: Susan Bandecchi vs Lisa Pigato — mossa -69p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Caldas da Rainha: Susan Bandecchi vs Lisa Pigato — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Counter-Strike: NRG vs Aurora Gaming (BO3) - StarLadder StarSeries Pla — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Counter-Strike: NRG vs Aurora Gaming - Map 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- JnStrtPrdctnMrkts: Will Ethereum dip to $1,500 by December 31, 2026? @ 0.88 ($881,593, P&L +258,812$)
-- JnStrtPrdctnMrkts: Will Bitcoin dip to $55,000 by December 31, 2026? @ 0.89 ($627,775, P&L +248,354$)
-- JnStrtPrdctnMrkts: Will Bitcoin dip to $50,000 by December 31, 2026? @ 0.91 ($564,267, P&L +147,041$)
+- JnStrtPrdctnMrkts: Will Ethereum dip to $1,500 by December 31, 2026? @ 0.89 ($890,615, P&L +267,833$)
+- JnStrtPrdctnMrkts: Will Bitcoin dip to $55,000 by December 31, 2026? @ 0.88 ($624,229, P&L +244,808$)
+- JnStrtPrdctnMrkts: Will Bitcoin dip to $50,000 by December 31, 2026? @ 0.90 ($558,032, P&L +140,806$)
 - JnStrtPrdctnMrkts: Will Ethereum dip to $1,250 by December 31, 2026? @ 0.93 ($366,456, P&L +64,882$)
-- JnStrtPrdctnMrkts: Will Ethereum dip to $1,750 by December 31, 2026? @ 0.87 ($332,452, P&L +39,916$)
+- JnStrtPrdctnMrkts: Will Ethereum dip to $1,750 by December 31, 2026? @ 0.89 ($338,184, P&L +45,648$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
 Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, convinzione, nicchia). Radar da validare nel tempo, non un invito a copiare.
 
-- **JnStrtPrdctnMrkts** — score 89/100 · win 74% · 90 osservazioni su 15 mercati
+- **JnStrtPrdctnMrkts** — score 90/100 · win 76% · 105 osservazioni su 15 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **Donkey14** — score 76/100 · win 80% · 5 osservazioni su 5 mercati
 - **HMLSF** — score 75/100 · win 76% · 17 osservazioni su 9 mercati
-- **En11006** — score 73/100 · win 75% · 4 osservazioni su 4 mercati
 - **BrotherObama** — score 72/100 · win 71% · 7 osservazioni su 6 mercati
-- **kindar** — score 70/100 · win 33% · 21 osservazioni su 4 mercati
 - **halvanicus** — score 69/100 · win 40% · 5 osservazioni su 3 mercati
+- **kindar** — score 69/100 · win 33% · 24 osservazioni su 4 mercati
+- **0xdc3E831cad** — score 68/100 · win 56% · 90 osservazioni su 15 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
+- `09-18T18:38` wallet informato-simile En11006 (score 66/100, win 57%) ENTRA su 'Will Ethereum reach $2,650 on September 18?' — da osservare (shadow, zero ordini)
 - `09-18T15:43` wallet informato-simile En11006 (score 73/100, win 75%) ENTRA su 'Will Bitcoin reach $120,000 by December 31, 2026?' — da osservare (shadow, zero ordini)
 - `09-18T15:43` wallet informato-simile En11006 (score 73/100, win 75%) ENTRA su 'Will Bitcoin reach $82,500 in September?' — da osservare (shadow, zero ordini)
 - `09-18T15:43` wallet informato-simile En11006 (score 73/100, win 75%) ENTRA su 'Will Ethereum reach $2,600 in September?' — da osservare (shadow, zero ordini)
