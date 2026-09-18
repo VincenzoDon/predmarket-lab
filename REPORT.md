@@ -1,12 +1,6 @@
-<<<<<<< Updated upstream
-# Report predmarket-lab — 18/09/2026 08:40:14
+# Report predmarket-lab — 18/09/2026 13:53:46
 
-Ultimo scan: `2026-09-18T06:40:08+00:00` UTC · ciclo n.18 · 878 mercati tracciati · 4795 snapshot · 1119 alert
-=======
-# Report predmarket-lab — 17/09/2026 10:34:05
-
-Ultimo scan: `2026-09-17T08:33:28+00:00` UTC · ciclo n.13 · 501 mercati tracciati · 3297 snapshot · 280 alert
->>>>>>> Stashed changes
+Ultimo scan: `2026-09-18T11:49:43+00:00` UTC · ciclo n.19 · 934 mercati tracciati · 5095 snapshot · 1265 alert
 
 ## Conto paper
 
@@ -16,88 +10,46 @@ Ultimo scan: `2026-09-17T08:33:28+00:00` UTC · ciclo n.13 · 501 mercati tracci
 
 ## Ultimi alert
 
-<<<<<<< Updated upstream
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 597k: candidate yield maker
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 530k: candidate yield maker
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 461k: candidate yield maker
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 434k: candidate yield maker
-- `06:40` **CHIUDE_OGGI** — chiude oggi, vol 24h 394k — finestra informativa finale
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 342k: candidate yield maker
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 283k: candidate yield maker
-- `06:40` **CHIUDE_OGGI** — chiude oggi, vol 24h 261k — finestra informativa finale
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 215k: candidate yield maker
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 180k: candidate yield maker
-- `06:40` **CHIUDE_OGGI** — chiude oggi, vol 24h 180k — finestra informativa finale
-- `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 177k: candidate yield maker
+- `11:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 1346k — finestra informativa finale
+- `11:49` **MOVER_1H** — mossa -42 punti in 1h (prezzo 0.001) su 1280k vol
+- `11:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 1280k — finestra informativa finale
+- `11:49` **MOVER_1H** — mossa -22 punti in 1h (prezzo 0.19) su 939k vol
+- `11:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 939k — finestra informativa finale
+- `11:49` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.32) su 906k vol
+- `11:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 906k — finestra informativa finale
+- `11:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 899k — finestra informativa finale
+- `11:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 678k: candidate yield maker
+- `11:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 637k — finestra informativa finale
+- `11:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 538k: candidate yield maker
+- `11:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 460k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **2/100** — 0% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
+- **7/100** — 0% dei top-50 mercati ha spread >=4 punti, 18% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 7 valutati · 85.7% hit · risultato medio +10.62%
-- **LONGSHOT_FADE** — 77 valutati · 81.8% hit · risultato medio +57.01%
+- **ENDGAME_FAVORITE** — 26 valutati · 92.3% hit · risultato medio +7.71%
+- **LONGSHOT_FADE** — 185 valutati · 87.6% hit · risultato medio +24.05%
 - **MAKER_SPREAD** — 2 valutati · 100.0% hit · risultato medio +9.00%
-- **MEAN_REVERT** — 8 valutati · 25.0% hit · risultato medio -36.00%
+- **MEAN_REVERT** — 37 valutati · 13.5% hit · risultato medio -53.39%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Will Leeds United win the 2026-27 English Premier League (EPL) Champio — longshot a 0.002 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Phan Thiet 4: Rodrigo Pacheco vs Philip Sekulic — mossa +16p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Counter-Strike: Black Phoenix vs Lavked (BO3) - CCT Europe Series #9 G — favorito 0.76 a fine giornata, spread 1p, vol 123k
-- `LONGSHOT_FADE` Kent State vs. Ohio State — longshot a 0.002 — ipotesi sopravvalutazione
-- `MEAN_REVERT` W35 Shenyang: Kristiana Sidorova vs Yufei Ren — mossa +39p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Will Elon Musk post 180-199 tweets from September 11 to September 18,  — favorito 0.89 a fine giornata, spread 1p, vol 78k
+- `LONGSHOT_FADE` LoL: Team WE vs JD Gaming - Game 3 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Team WE vs JD Gaming - Game 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Guangzhou: Elias Ymer vs Marat Sharipov — mossa -14p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Guangzhou: Elias Ymer vs Marat Sharipov — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Ljubljana: Samira De Stefano vs Alice Tubello — mossa +46p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Map Handicap: MOUZ (-1.5) vs Natus Vincere (+1.5) — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- kindar: Will United Russia (ER) gain the most seats in the next Russ @ 0.77 ($366,842, P&L +11,614$)
-- Herdonia: Bengals vs. Texans @ 0.42 ($71,018, P&L -600$)
-- kindar: Russia Elections: United Russia Wins Every Region? @ 0.41 ($22,385, P&L -2,615$)
-- Herdonia: Spread: BAL (-8.5) @ 0.49 ($22,169, P&L -576$)
-- kindar: Will New People (NL) gain the most seats in the next Russian @ 0.81 ($18,716, P&L -1,284$)
-=======
-- `08:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 141k — finestra informativa finale
-- `08:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 101k — finestra informativa finale
-- `08:33` **MOVER_1H** — mossa -42 punti in 1h (prezzo 0.24) su 75k vol
-- `08:33` **SPREAD_LARGO** — bid 0.01/ask 0.64 = 63 punti su 56k vol 24h — candidata maker
-- `08:33` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.77) su 51k vol
-- `08:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 34k: candidate yield maker
-- `08:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 24k: candidate yield maker
-- `08:33` **MOVER_1H** — mossa +14 punti in 1h (prezzo 0.67) su 22k vol
-- `08:33` **MOVER_1H** — mossa -11 punti in 1h (prezzo 0.248) su 21k vol
-- `08:33` **MOVER_1H** — mossa -16 punti in 1h (prezzo 0.1) su 20k vol
-- `08:33` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.78) su 19k vol
-- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 968k: candidate yield maker
-
-## Indice di inefficienza (v0)
-
-- **0/100** — 0% dei top-50 mercati ha spread >=4 punti, 0% ha mosso >=8 punti in 1h
-
-## Shadow signals (l'AI studia, zero capitale)
-
-- **ENDGAME_FAVORITE** — 6 valutati · 100.0% hit · risultato medio +13.32%
-- **LONGSHOT_FADE** — 34 valutati · 100.0% hit · risultato medio +0.61%
-- **MEAN_REVERT** — 7 valutati · 14.3% hit · risultato medio -49.87%
-
-segnali aperti ora:
-
-- `LONGSHOT_FADE` Will the price of Bitcoin be above $78,000 on September 17? — longshot a 0.045 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Guangzhou: James Kent Trotter vs Mitsuki Wei Kang Leong — mossa -42p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Counter-Strike: G2 Ares vs Misa Esports (BO3) - European Pro League Se — favorito 0.77 a fine giornata, spread 3p, vol 51k
-- `LONGSHOT_FADE` Will Bitcoin dip to $60,000 in September? — longshot a 0.020 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will the price of Ethereum be above $2,800 on September 17? — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Valencia: Guiomar Maristany vs Marina Bassols Ribera — mossa -10p in 1h — ipotesi rientro eccesso
-
-## Whale watch 🐋
-
-- Sassy-Bucket: Kansas City Royals vs. Houston Astros @ 1.00 ($166,695, P&L +101,684$)
-- Sassy-Bucket: San Francisco Giants vs. St. Louis Cardinals: O/U 8.5 @ 1.00 ($86,945, P&L +45,217$)
-- Sassy-Bucket: Athletics vs. Tampa Bay Rays @ 1.00 ($75,951, P&L +28,861$)
-- Sassy-Bucket: Milwaukee Brewers vs. Pittsburgh Pirates @ 1.00 ($75,400, P&L +33,932$)
-- Sassy-Bucket: Philadelphia Phillies vs. Washington Nationals: O/U 8.5 @ 1.00 ($52,279, P&L +28,231$)
->>>>>>> Stashed changes
+- JnStrtPrdctnMrkts: Will Ethereum dip to $1,500 by December 31, 2026? @ 0.88 ($881,593, P&L +258,812$)
+- JnStrtPrdctnMrkts: Will Bitcoin dip to $55,000 by December 31, 2026? @ 0.83 ($592,308, P&L +212,887$)
+- JnStrtPrdctnMrkts: Will Bitcoin dip to $50,000 by December 31, 2026? @ 0.91 ($564,267, P&L +147,041$)
+- JnStrtPrdctnMrkts: Will Ethereum dip to $1,250 by December 31, 2026? @ 0.92 ($362,494, P&L +60,920$)
+- kindar: Will United Russia (ER) gain the most seats in the next Russ @ 0.78 ($328,912, P&L +14,523$)
 
 ## Watchlist normativa
 
