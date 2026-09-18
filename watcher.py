@@ -253,16 +253,22 @@ def main() -> int:
 
     cycles = 10**9 if args.loop else (args.cycles or 1)
     i = 0
+    last_stats: dict | None = None
+    for_cycle_errors = 0
     while i < cycles:
         try:
             stats = run_cycle(gamma, conn, paper)
+            last_stats = stats
         except Exception as exc:  # noqa: BLE001
             print(f"[errore ciclo {i+1}] {exc} — riprovo tra 10s")
+            for_cycle_errors += 1
             time.sleep(10)
             i += 1
             continue
         from lab import report
         report.generate(conn, paper)
+        from lab import site
+        site.generate(conn, paper)
         with open(os.path.join("data", "last_run.json"), "w", encoding="utf-8") as fh:
             json.dump(stats, fh, indent=1)
         i += 1
@@ -270,6 +276,21 @@ def main() -> int:
             time.sleep(args.interval)
     conn.close()
     print("Fatto: dashboard.html e REPORT.md aggiornati.")
+
+    # ---------------- health check: onestà verso CI e self-awareness ----------------
+    # Un ciclo che raccoglie ZERO mercati NON è un successo: è un guasto (di solito
+    # rete/API irraggiungibili). In modalità --once (GitHub Actions) usciamo con codice
+    # != 0 così il run diventa ROSSO invece di "verde silenzioso". Il progetto deve
+    # accorgersi da solo quando è fermo.
+    if last_stats is not None and last_stats.get("markets", 0) == 0:
+        print("[HEALTH] ATTENZIONE: 0 mercati raccolti in questo ciclo — "
+              "probabile API/rete irraggiungibile. Nessun dato nuovo salvato.")
+        if args.once or args.cycles:
+            print("[HEALTH] esco con codice 2: il ciclo NON ha raccolto dati.")
+            return 2
+    if last_stats is None:
+        print("[HEALTH] ATTENZIONE: nessun ciclo completato con successo.")
+        return 3
     return 0
 
 

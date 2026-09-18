@@ -28,6 +28,51 @@
   personale del founder (uploads/01-03) a questo progetto.
 - Da fare (prossimo passo unico): fix metrica fade → Shadow Detector v1.
 
+## 2026-09-18 (sessione 6) — allineamento cloud, UI pubblica, basi validazione+automazione
+- **Autocorrezione:** verificato che GitHub Actions RACCOGLIE dati (avevo detto il contrario:
+  errore mio, mi ero fidato di git log prima del fetch). Il bot lab-bot committa scan su main.
+  Il cloud si autoripara i conflitti (watcher rigenera i file d'output ogni ciclo).
+- Scoperto che main (bot) e arena (mio codice v0.9) erano storie git SENZA antenato comune.
+  Ricostruito arena su main fresco + codice v0.9 → superset pulito, PR mergeabile.
+- **UI pubblica index.html** (lab/site.py): vetrina "per tutti" per GitHub Pages. Strategie con
+  verdetto onesto, Shadow Detector, conto simulato, indice inefficienza, nota legale. La
+  trasparenza come prodotto, anche per non-esperti → passo verso il "rivendibile".
+- **lab/newsvalidator.py (base):** impianto per confermare i segnali su eventi LUNGHI (≥48h)
+  con fonti esterne. Scoring confidence [-1,+1] pesato per fonte già funzionante; raccolta
+  news/X/Telegram = STUB (NotImplementedError) finché non scegliamo le fonti. Nessun segreto.
+- **lab/executor.py (base):** scaffold A6 gated e OFF. 5 cancelli di sicurezza (interruttore
+  hard, blacklist ADM, evidenza numerica L3, budget alive, approval umano). Zero invio ordini.
+  dry_run_report() dice quanto manca. Coerente con "radar → fucile" e con AGENTI.md.
+- Decisione (col founder): per ora SOLO la struttura di validazione-notizie; le fonti X/Telegram
+  si valutano dopo (API/costi/ToS), senza mettere chiavi nel repo.
+
+## 2026-09-18 (sessione 5) — riparazione + Shadow Detector v1
+- Nuovo agente collegato via ACCENSIONE_NUOVO_AGENTE.txt. Verifica repo: MANIFEST completo,
+  commit v0.8 presente, DB storico intatto (4795 snapshot, 393 segnali, 308 posizioni whale).
+- **Guasto trovato e riparato:** l'upload v0.8 via GitHub Desktop aveva lasciato marker di
+  conflitto Git NON risolti dentro REPORT.md, dashboard.html, data/last_run.json. Risolti
+  tenendo la versione più recente (ciclo 18, coerente col DB) + commit a1cfe8a + push.
+- **Ambiente:** questa sandbox Arena non ha internet aperto (Polymarket e persino google.com
+  irraggiungibili; solo GitHub/PyPI passano). Quindi il watcher live NON gira da qui — gira su
+  GitHub Actions. Le sessioni precedenti giravano su sandbox aperte: è solo un ambiente diverso.
+- **Osservazione preoccupante:** i run GitHub Actions risultano "success" ma durano 15-56s e non
+  hanno prodotto NESSUN commit di dati (main fermo a v0.8). Probabile che lo scan non
+  raccolga/committi, mascherato da `|| echo "nulla da committare"` e dal watcher che non falliva mai.
+- **T1 — health-check onesto:** watcher.py ora esce con codice 2 se un ciclo raccoglie 0 mercati
+  (in --once/--cycles) → i run cloud diventano ROSSI invece di verdi silenziosi. Workflow reso
+  onesto (commit condizionale, niente più mascheramento).
+- **T2 — bandiera salute dati:** report.py::_freshness → 🟢/🟡/🔴 "ultimo scan X ore fa" in
+  dashboard e REPORT. Il sistema si accorge da solo quando è fermo (auto-aggiustante).
+- **T3+T4 — SHADOW DETECTOR v1** (EDGE-STACK.md Strato A): lab/whales.py::score_wallets punteggia
+  ogni wallet su win-rate (40%), profitto (25%), convinzione/size (20%), nicchia/focus (15%);
+  penalità se poche osservazioni. Tabella wallet_scores. Alert SHADOW_ENTRY quando un wallet ad
+  alto score entra su un mercato NUOVO. Gate di rischio: niente alert sotto 55% win-rate (per non
+  fare da liquidità d'uscita alle balene). Calcolato offline dallo storico, zero ordini, zero rete.
+  Ranking v1 sui dati reali: JnStrtPrdctnMrkts 87, Sassy-Bucket 80, Donkey14 76, HMLSF 75...
+  I pesi/soglie sono parametri d'alpha (open-core), facili da ritarare.
+- Prossimo passo: validare il ciclo cloud e misurare l'hit-rate degli alert SHADOW_ENTRY prima
+  di dargli peso; poi split LONGSHOT_FADE per categoria (Strato C).
+
 ## Decisioni chiave (log)
 | Data | Decisione | Motivo |
 |---|---|---|
