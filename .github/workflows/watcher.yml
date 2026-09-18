@@ -32,6 +32,8 @@ jobs:
       - name: Installa dipendenze
         run: pip install -r requirements.txt
 
+      # Se lo scan raccoglie 0 mercati (rete/API giu') esce con codice 2:
+      # NON mascherare l'errore -> il run diventa ROSSO e ce ne accorgiamo.
       - name: Ciclo di scan
         run: python watcher.py --once
 
@@ -39,6 +41,10 @@ jobs:
         run: |
           git config user.name "lab-bot"
           git config user.email "actions@github.com"
-          git add data REPORT.md dashboard.html || true
-          git commit -m "scan $(date -u '+%Y-%m-%d %H:%M') UTC" || echo "nessuna modifica da committare"
-          git push
+          git add data REPORT.md dashboard.html index.html || true
+          if git diff --cached --quiet; then
+            echo "nessuna modifica da committare"
+          else
+            git commit -m "scan $(date -u '+%Y-%m-%d %H:%M') UTC"
+            git push
+          fi

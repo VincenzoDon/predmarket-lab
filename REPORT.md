@@ -1,4 +1,6 @@
-# Report predmarket-lab — 18/09/2026 13:53:46
+# Report predmarket-lab — 18/09/2026 15:08:17
+
+🟡 **Salute dati:** dati un po' vecchi: ultimo scan 1.3 ore fa
 
 Ultimo scan: `2026-09-18T11:49:43+00:00` UTC · ciclo n.19 · 934 mercati tracciati · 5095 snapshot · 1265 alert
 
@@ -50,6 +52,19 @@ segnali aperti ora:
 - JnStrtPrdctnMrkts: Will Bitcoin dip to $50,000 by December 31, 2026? @ 0.91 ($564,267, P&L +147,041$)
 - JnStrtPrdctnMrkts: Will Ethereum dip to $1,250 by December 31, 2026? @ 0.92 ($362,494, P&L +60,920$)
 - kindar: Will United Russia (ER) gain the most seats in the next Russ @ 0.78 ($328,912, P&L +14,523$)
+
+## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
+
+Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, convinzione, nicchia). Radar da validare nel tempo, non un invito a copiare.
+
+- **JnStrtPrdctnMrkts** — score 88/100 · win 72% · 75 osservazioni su 15 mercati
+- **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
+- **Donkey14** — score 76/100 · win 80% · 5 osservazioni su 5 mercati
+- **HMLSF** — score 75/100 · win 76% · 17 osservazioni su 9 mercati
+- **BrotherObama** — score 72/100 · win 71% · 7 osservazioni su 6 mercati
+- **kindar** — score 70/100 · win 33% · 18 osservazioni su 4 mercati
+- **halvanicus** — score 69/100 · win 40% · 5 osservazioni su 3 mercati
+- **0xdc3E831cad** — score 68/100 · win 56% · 90 osservazioni su 15 mercati
 
 ## Watchlist normativa
 

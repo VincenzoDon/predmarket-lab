@@ -46,10 +46,20 @@ td.r,th.r{text-align:right}
 .tag{display:inline-block;padding:1px 7px;border-radius:10px;font-size:10px;font-weight:700;white-space:nowrap}
 .t-ARB{background:#1f6feb33;color:#58a6ff}.t-SPREAD_LARGO{background:#2ea04333;color:#2ea043}
 .t-MOVER_1H{background:#d2992233;color:#d29922}.t-CHIUDE_OGGI{background:#f8514933;color:#f85149}
+.t-SHADOW_ENTRY{background:#a371f733;color:#a371f7}.t-WHALE_CONSENSUS{background:#1f6feb33;color:#58a6ff}
+.t-REWARDS_MARKET{background:#2ea04333;color:#2ea043}
+.score-bar{height:6px;background:#30363d;border-radius:3px;overflow:hidden;margin-top:3px}
+.score-fill{height:100%;background:linear-gradient(90deg,#d29922,#a371f7)}
 footer{margin-top:22px;color:#8b949e;font-size:11px;line-height:1.7}
 .kpis{display:flex;gap:18px;flex-wrap:wrap;margin-top:10px}
 .kpi b{display:block;font-size:17px}.kpi span{font-size:10px;color:#8b949e;text-transform:uppercase;letter-spacing:.5px}
+.health{border-radius:8px;padding:9px 13px;margin:0 0 18px;font-size:13px;font-weight:600;display:flex;gap:8px;align-items:center}
+.h-ok{background:#2ea04322;border:1px solid #2ea04366;color:#3fb950}
+.h-giallo{background:#d2992222;border:1px solid #d2992266;color:#d29922}
+.h-rosso{background:#f8514922;border:1px solid #f8514966;color:#f85149}
 </style>"""
+
+HEALTH_DOT = {"ok": "🟢", "giallo": "🟡", "rosso": "🔴"}
 
 
 def _e(s) -> str:
@@ -96,10 +106,33 @@ def _rows(conn, sql, params=()):
     return conn.execute(sql, params).fetchall()
 
 
+def _freshness(latest: str) -> dict:
+    """Quanto sono vecchi i dati piu' recenti? Bandiera rossa se il lab e' fermo."""
+    if not latest or latest == "n.d.":
+        return {"hours": None, "level": "rosso",
+                "txt": "nessuno snapshot nel database — il watcher non ha mai raccolto dati"}
+    try:
+        last_dt = datetime.fromisoformat(latest)
+    except ValueError:
+        return {"hours": None, "level": "rosso", "txt": f"timestamp illeggibile: {latest}"}
+    if last_dt.tzinfo is None:
+        last_dt = last_dt.replace(tzinfo=timezone.utc)
+    hours = (datetime.now(timezone.utc) - last_dt).total_seconds() / 3600.0
+    if hours <= 1.0:
+        level, txt = "ok", f"dati freschi: ultimo scan {hours*60:.0f} min fa"
+    elif hours <= 6.0:
+        level, txt = "giallo", f"dati un po' vecchi: ultimo scan {hours:.1f} ore fa"
+    else:
+        level, txt = "rosso", (f"DATI FERMI da {hours:.1f} ore — il watcher non raccoglie "
+                               f"(controlla GitHub Actions / rete)")
+    return {"hours": round(hours, 1), "level": level, "txt": txt}
+
+
 def generate(conn, paper, outdir: str = ".") -> None:
     now = datetime.now(ROME).strftime("%d/%m/%Y %H:%M:%S")
     latest = conn.execute("SELECT MAX(ts) FROM snapshots").fetchone()[0] or "n.d."
     today = latest[:10] if latest != "n.d." else ""
+    fresh = _freshness(latest)
 
     ps = paper.summary()
     eq_series = [r["value"] for r in _rows(conn, "SELECT value FROM equity ORDER BY ts")]
@@ -166,6 +199,12 @@ def generate(conn, paper, outdir: str = ".") -> None:
                        FROM whale_positions WHERE ts=? GROUP BY slug
                        HAVING nw>=2 ORDER BY tot DESC LIMIT 4""", (last_wp,)) if last_wp else []
 
+    # ---------------- Shadow Detector v1: scoring wallet + alert ingressi ----------------
+    from lab import whales as whales_mod
+    shadow_scores = whales_mod.top_scores(conn, limit=8)
+    shadow_alerts = _rows(conn, "SELECT * FROM alerts WHERE kind='SHADOW_ENTRY' "
+                          "ORDER BY ts DESC LIMIT 6")
+
     DIR_TXT = {1: "LUNGO", -1: "FADE", 0: "MAKER"}
     sig_stat_html = " · ".join(
         f"<b style='color:#2ea043'>{_e(s['kind'])}</b> {s['n']} valutati · {s['hit_pct']}% hit · {s['avg_res']:+.1f}% medio"
@@ -185,6 +224,17 @@ def generate(conn, paper, outdir: str = ".") -> None:
         f"<td class='r' style='color:{'#2ea043' if (r['cash_pnl'] or 0) >= 0 else '#f85149'}'>{(r['cash_pnl'] or 0):+,.0f}$</td></tr>"
         for r in whale_pos) or "<tr><td class='muted'>dati in arrivo col prossimo ciclo</td></tr>"
 
+    shadow_score_rows = "".join(
+        f"<tr><td>{_e(s['name'])}</td>"
+        f"<td class='r'>{(s['win_rate'] or 0)*100:.0f}%</td>"
+        f"<td class='r muted'>{s['n_pos']}/{s['n_markets']}</td>"
+        f"<td class='r'><b>{s['score']:.0f}</b>"
+        f"<div class='score-bar'><div class='score-fill' style='width:{max(0,min(100,s['score'])):.0f}%'></div></div></td></tr>"
+        for s in shadow_scores) or "<tr><td class='muted'>scoring in costruzione — servono cicli del watcher</td></tr>"
+    shadow_alert_rows = "".join(
+        f"<tr><td>{_e(a['message'])}</td><td class='r muted'>{_e(a['ts'][5:16])}</td></tr>"
+        for a in shadow_alerts) or "<tr><td class='muted'>nessun ingresso sospetto rilevato finora (shadow, zero ordini)</td></tr>"
+
     dashboard = f"""<!DOCTYPE html>
 <html lang="it"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -192,6 +242,7 @@ def generate(conn, paper, outdir: str = ".") -> None:
 <body>
 <h1>PREDMARKET <b>LAB</b> — cockpit autonomo</h1>
 <div class="sub">aggiornato {now} (Europe/Rome) · dati: API pubbliche in sola lettura · ultimo scan: {_e(latest)} UTC · ciclo n.{n_cycles}</div>
+<div class="health h-{fresh['level']}">{HEALTH_DOT.get(fresh['level'], '')} <span>{_e(fresh['txt'])}</span></div>
 <div class="grid">
   <div class="card">
     <h2>Conto paper (simulato)</h2>
@@ -233,6 +284,13 @@ def generate(conn, paper, outdir: str = ".") -> None:
     <table style="margin-top:10px"><tr><th>posizione</th><th class="r">balena</th><th class="r">prezzo</th><th class="r">valore</th><th class="r">p&amp;l</th></tr>{whale_rows}</table>
   </div>
   <div class="card">
+    <h2>Shadow Detector v1 🕵️ — wallet informato-simili</h2>
+    <div class="muted" style="margin-bottom:8px">punteggio "insider-simiglianza" (win-rate, profitto, convinzione, nicchia) dallo storico on-chain. Alza un alert quando un wallet ad alto punteggio ENTRA su un mercato nuovo — <b>shadow, zero ordini</b>. È un radar da validare, non un invito a copiare.</div>
+    <table><tr><th>wallet</th><th class="r">win</th><th class="r">oss.</th><th class="r">score/100</th></tr>{shadow_score_rows}</table>
+    <h2 style="margin-top:14px">Ingressi sospetti (SHADOW_ENTRY)</h2>
+    <table><tr><th>evento</th><th class="r">quando</th></tr>{shadow_alert_rows}</table>
+  </div>
+  <div class="card">
     <h2>Indice di inefficienza — il nostro numero</h2>
     <div class="big">{inef_idx if inef_idx is not None else '—'}<span style="font-size:16px;color:#8b949e">/100</span></div>
     <div class="muted">{_e(inef_txt)}</div>
@@ -259,6 +317,7 @@ i mercati predittivi sono oscurati in Italia per provvedimento ADM: aggiorna la 
 
     # ------------------------------------------------------------ report md
     md = [f"# Report predmarket-lab — {now}", "",
+          f"{HEALTH_DOT.get(fresh['level'], '')} **Salute dati:** {fresh['txt']}", "",
           f"Ultimo scan: `{latest}` UTC · ciclo n.{n_cycles} · {n_mkt} mercati tracciati · {n_snap} snapshot · {n_alerts} alert", "",
           "## Conto paper", "",
           f"- **Equity:** {ps['equity']} USDC (**ROI {ps['roi_pct']:+.2f}%**)",
@@ -288,6 +347,18 @@ i mercati predittivi sono oscurati in Italia per provvedimento ADM: aggiorna la 
         md.append(f"- {r['name']}: {r['title'][:60]} @ {(r['cur_price'] or 0):.2f} (${r['current_value']:,.0f}, P&L {r['cash_pnl'] or 0:+,.0f}$)")
     if not whale_cons and not whale_pos:
         md.append("- dati in arrivo col prossimo ciclo")
+    md += ["", "## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)", "",
+           "Punteggio \"insider-simiglianza\" dallo storico on-chain (win-rate, profitto, convinzione, nicchia). "
+           "Radar da validare nel tempo, non un invito a copiare.", ""]
+    for s in shadow_scores:
+        md.append(f"- **{s['name']}** — score {s['score']:.0f}/100 · win {(s['win_rate'] or 0)*100:.0f}% · "
+                  f"{s['n_pos']} osservazioni su {s['n_markets']} mercati")
+    if not shadow_scores:
+        md.append("- scoring in costruzione: servono cicli del watcher")
+    if shadow_alerts:
+        md += ["", "ingressi sospetti recenti (SHADOW_ENTRY):", ""]
+        for a in shadow_alerts:
+            md.append(f"- `{a['ts'][5:16]}` {a['message']}")
     md += ["", "## Watchlist normativa", ""]
     md += [f"- {w}" for w in WATCHLIST_NORMATIVA]
     md += ["", "## Prossime azioni", "",

@@ -10,10 +10,10 @@ Nessun agente esegue ordini reali: l'esecutore esiste come design ma resta
 | A0 | **SCOUT** | raccoglie i dati di mercato | ✅ costruito (`watcher.py`, `lab/scanner.py`, `lab/api.py`) | API pubbliche → SQLite (`data/lab.db`) ogni ciclo |
 | A1 | **ANALISTA** | trasforma i dati in report/dashboard | ✅ costruito (`lab/report.py`) | DB → `dashboard.html` + `REPORT.md` |
 | A2 | **RISK MANAGER** | decide quanto puntare e quando fermarsi | ✅ costruito (`lab/kelly.py`, limiti in `config.json`) | edge stimato → stake (Kelly ¼, cap 5%, stop giornaliero 10%) |
-| A3 | **SENTINELLA** | notizie/fonti → alert informativi | ⬜ Fase 1 | RSS/Telegram/siti → alert nel DB (regola: 2 fonti indipendenti) |
-| A4 | **WHALE WATCHER** | studia i wallet vincenti on-chain | ✅ v0 costruito (`lab/whales.py`): leaderboard live + posizioni + alert consenso multi-balena | Data API pubblica → tabella `whale_positions` + alert `WHALE_CONSENSUS` |
+| A3 | **SENTINELLA / NEWS VALIDATOR** | notizie/fonti → confidence sui segnali lunghi | 🟡 base costruita (`lab/newsvalidator.py`): tabelle + scoring; fonti esterne = stub da collegare | news/X/Telegram → confidence [-1,+1] per segnale (regola: 2 fonti indipendenti) |
+| A4 | **WHALE WATCHER / SHADOW DETECTOR** | studia i wallet vincenti on-chain e ne punteggia l'"insider-simiglianza" | ✅ v1 costruito (`lab/whales.py`): leaderboard + posizioni + consenso multi-balena + **scoring wallet (win-rate/profitto/convinzione/nicchia) e alert `SHADOW_ENTRY`** con gate di rischio sul win-rate | Data API pubblica → `whale_positions` + `wallet_scores` + alert `WHALE_CONSENSUS`/`SHADOW_ENTRY` |
 | A5 | **SIGNAL ENGINE** | genera ipotesi e le verifica sui dati (shadow, zero capitale) | ✅ v0 costruito (`lab/signals.py`): ENDGAME_FAVORITE / MEAN_REVERT / LONGSHOT_FADE / MAKER_SPREAD con hit-rate automatico | snapshot → tabella `signals` → statistiche per strategia in dashboard |
-| A6 | **ESECUTORE** | firma e invia ordini reali | 🔒 disegnato, NON attivo | segnali + autorizzazione → ordini (solo su venue legale) |
+| A6 | **ESECUTORE** | firma e invia ordini reali | 🔒 scaffold gated NON attivo (`lab/executor.py`): 5 cancelli + interruttore hard, zero invio | segnali + 5 gate + autorizzazione → ordini (solo su venue legale, oggi inesistente in IT) |
 | A7 | **NORMATIVE WATCH** | monitora ADM/TAR/licenze | 🟡 oggi manuale (watchlist in REPORT.md) | news → attivazione di A6 quando la via è legale |
 
 ## Come scala l'autonomia (lettere di livello)
