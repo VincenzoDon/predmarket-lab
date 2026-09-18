@@ -32,3 +32,8 @@ Nessun agente esegue ordini reali: l'esecutore esiste come design ma resta
 2. Ogni decisione è loggata (audit trail): `data/paper_trades.csv` oggi, DB domani.
 3. Prima di ogni salto di livello serve evidenza numerica, non entusiasmo.
 4. Se la watchlist normativa peggiora → si scende di livello, non si aggira.
+5. Budget AI = formula, non promessa (lab/budget.py): il budget giornaliero dell'AI e'
+   clamp(FLOOR, 20% x guadagni_netti_30g / 30, HARD_CAP), dove i guadagni paper contano
+   al 10% e quelli reali al 100%. Zero guadagni -> spesa minima vitale; il progetto si
+   autofinanzia e cresce solo se guadagna. Kill switch automatico a budget esaurito e
+   tetto assoluto replicato SUL PROVIDER. Ogni spesa AI viene registrata in budget_events.

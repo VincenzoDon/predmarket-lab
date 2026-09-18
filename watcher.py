@@ -185,6 +185,7 @@ def run_cycle(gamma, conn, paper, rules=ALERT_RULES, verbose=True) -> dict:
 
     n_new_sig = signals_mod.generate(conn, rows, ts)
     n_closed_sig = signals_mod.evaluate(conn, ts)
+    n_settled = signals_mod.settle_resolved(conn, gamma, active_slugs={r[1] for r in rows})
     try:
         cand.extend(whales_mod.track(conn, ts))
     except Exception as exc:  # noqa: BLE001 — il watcher non deve mai morire per le balene
@@ -212,10 +213,18 @@ def run_cycle(gamma, conn, paper, rules=ALERT_RULES, verbose=True) -> dict:
     conn.execute("INSERT INTO equity VALUES (?,?)", (ts, round(eq, 2)))
     conn.commit()
 
+    # ---------------- budget governor (autosufficienza economica) ----------------
+    from lab import budget as budget_mod
+    budget_mod.init_table(conn)
+    prev = conn.execute("SELECT value FROM equity ORDER BY ts DESC LIMIT 2").fetchall()
+    if len(prev) > 1:
+        budget_mod.record(conn, "gain_paper", eq - prev[1]["value"], ts=ts)
+    bstate = budget_mod.state(conn)
+
     if verbose:
         print(f"[{ts}] mercati={len(rows)}  alert nuovi={len(kept)}  "
-              f"segnali shadow: +{n_new_sig} aperti / {n_closed_sig} valutati  "
-              f"equity paper={eq:.2f} USDC")
+              f"segnali shadow: +{n_new_sig} aperti / {n_closed_sig} valutati / {n_settled} risolti  "
+              f"equity paper={eq:.2f} USDC  budget AI oggi: {bstate['available_today']:.3f}$/{bstate['daily_cap']:.3f}$")
         for a in kept:
             print(f"   >> {a[1]:<15} {a[3]}")
     return {"ts": ts, "markets": len(rows), "alerts": len(kept),

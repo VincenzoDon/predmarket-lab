@@ -12,6 +12,8 @@ Lab operativo e autonomo: 5 agenti attivi (SCOUT, ANALISTA, RISK, SIGNAL ENGINE,
 - Whale watcher: leaderboard + posizioni top-5 + alert consenso (fixare: vedi sotto)
 - Tracking liquidity rewards (97/300 mercati con rewards attivi al 16/09)
 - Paper trading engine (fee+slippage) — usato 1 volta demo, ROI +0.62%
+- Budget governor (lab/budget.py): spesa AI = funzione matematica dei guadagni (paper al 10%,
+  reali al 100%, FLOOR 0,03$/g, HARD_CAP 5$/g, kill switch) — wired nel watcher
 - Git: repo locale con commit fino a v0.5 (NON ancora pushato su GitHub: serve sessione collegata)
 
 ## Prime evidenze (giorno 1, 16→17/09, 46 mercati risolti)
@@ -23,9 +25,10 @@ Lab operativo e autonomo: 5 agenti attivi (SCOUT, ANALISTA, RISK, SIGNAL ENGINE,
   live tendono a CONTINUARE, non a rientrare). Da rivedere: forse invertirla (momentum) o cancellarla.
 
 ## Prossimo UNICO passo (dedotto, non deciso dal founder)
-1. Fix metrica LONGSHOT_FADE (P&L reale del lato NO) in `lab/signals.py::evaluate`
-2. Poi: **Shadow Detector v1** (upgrade di whale watcher): scoring wallet per win-rate/timing/nicchia
-   e alert quando un wallet "informato-simile" entra su un mercato liquido (vedi EDGE-STACK.md Strato A)
+1. ✅ FATTO (17/09): metrica P&L reale per lato + settle automatico a risoluzione mercato
+   (lab/signals.py: _pnl_settled / settle_resolved, chiamato dal watcher ogni ciclo)
+2. **Shadow Detector v1** (upgrade di lab/whales.py): scoring wallet per win-rate/timing/nicchia
+   e alert quando un wallet "informato-simile" entra su un mercato liquido (EDGE-STACK.md Strato A)
 
 ## Cosa NON fare (decisioni già prese, non riaprirle senza motivo del founder)
 - Nessuna esecuzione ordini su venue non autorizzate in Italia (Polymarket/Kalshi in blacklist ADM).

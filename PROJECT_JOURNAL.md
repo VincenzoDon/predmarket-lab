@@ -36,3 +36,16 @@
 | 16/09 | Open-core (infrastruttura pubblica, alpha privato) | credibilità/community senza regalare l'edge |
 | 16/09 | Posizionamento IT + strumento EN | vuoto italiano verificato su Reddit/Telegram/stampa |
 | 17/09 | MEAN_REVERT segnalata come bocciata | evidenza 1/6, media -51,5% |
+- 17/09 (seguito): metrica P&L reale per lato implementata (_pnl_settled/_pnl_pct_live) +
+  settle automatico a risoluzione mercato dentro il ciclo watcher. Ricalcolo onesto dei 46 segnali:
+  ENDGAME 6/6 +13,3% · FADE 34/34 +0,61%/trade · MEAN_REVERT 1/7 -49,9% (confermata bocciatura).
+  SIMULAZIONE CHIAVE (cap 5%/trade): tutte le strategie insieme = 200→175 (-12%);
+  solo le valide (ENDGAME+FADE) = ~200→210. Lezione: il valore del lab è SEPARARE le strategie,
+  non tradarle tutte. MEAN_REVERT resta attiva solo come esperimento (zero costi, più dati).
+  Budget AI: regola n.5 in AGENTI.md (tetti di spesa lato provider, kill switch).
+  Creato predmarket-lab-export.zip + MANUALE_GITHUB.md per il trasferimento.
+- 17/09 (chiusura): BUDGET GOVERNOR (lab/budget.py): budget AI giornaliero = funzione
+  matematica dei guadagni netti 30g (paper 10%, reali 100%, floor/cap, kill switch),
+  wired nel watcher (registra gain_paper ogni ciclo). Preparati ACCENSIONE_NUOVO_AGENTE.txt
+  + patch v0.8 per il trasferimento GitHub (via GitHub Desktop andata parzialmente bene:
+  il nuovo agente deve verificare il MANIFEST e completare coi file del patch zip).

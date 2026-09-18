@@ -23,6 +23,7 @@ Le 4 ipotesi v0 (da affinare/sostituire coi dati):
 
 from __future__ import annotations
 
+import json
 import sqlite3
 from datetime import datetime, timedelta, timezone
 
@@ -91,9 +92,9 @@ def evaluate(conn: sqlite3.Connection, ts_now: str) -> int:
             res = ((s["entry_spread"] or 0) - (snap["spread"] or 0)) * 100
         else:
             ep = s["entry_price"] or 0
-            if ep <= 0:
+            if ep <= 0 or not s["direction"]:
                 continue
-            res = s["direction"] * (snap["yes_price"] - ep) / ep * 100
+            res = _pnl_pct_live(s["direction"], ep, snap["yes_price"])
         conn.execute(
             "UPDATE signals SET status='done', eval_price=?, eval_spread=?, result_pct=? WHERE id=?",
             (snap["yes_price"], snap["spread"], round(res, 2), s["id"]))
@@ -112,3 +113,60 @@ def stats(conn: sqlite3.Connection) -> list[dict]:
                     "hit_pct": round(100.0 * r["hits"] / r["n"], 1) if r["n"] else 0.0,
                     "avg_res": round(r["avg_res"] or 0, 2)})
     return out
+
+
+# ---------------- P&L reale per lato (stake-based) ----------------
+def _pnl_pct_live(direction: int, ep: float, price: float) -> float:
+    """P&L % sull'uscita a prezzo `price` (positio ancora aperta)."""
+    if direction == 1:                      # comprato YES a ep
+        return (price - ep) / ep * 100.0
+    return (ep - price) / (1.0 - ep) * 100.0  # comprato NO a (1-ep)
+
+
+def _pnl_settled(direction: int, ep: float, final_yes: float) -> float:
+    """P&L % a risoluzione (final_yes in {0,1}). Loss = -100% della posizione."""
+    if direction == 1:
+        return ((1.0 - ep) / ep * 100.0) if final_yes == 1 else -100.0
+    return (ep / (1.0 - ep) * 100.0) if final_yes == 0 else -100.0
+
+
+def settle_resolved(conn: sqlite3.Connection, gamma, active_slugs: set | None = None) -> int:
+    """Chiude i segnali il cui mercato si e' risolto (0/1), con P&L reale.
+
+    `active_slugs` = slug visti nell'ultimo ciclo: se un mercato e' ancora attivo
+    non serve interrogare Gamma (risparmio di richieste)."""
+    active = active_slugs or set()
+    pend = conn.execute(
+        "SELECT id, kind, slug, direction, entry_price FROM signals WHERE status='pending'"
+    ).fetchall()
+    closed: dict[str, dict | None] = {}
+    for s in pend:
+        sl = s["slug"]
+        if sl in active or sl in closed:
+            continue
+        try:
+            r = gamma.markets(slug=sl, closed="true")
+        except RuntimeError:
+            closed[sl] = None
+            continue
+        closed[sl] = r[0] if r else None
+    n = 0
+    for s in pend:
+        m = closed.get(s["slug"])
+        if not m:
+            continue
+        try:
+            p = float(json.loads(m["outcomePrices"])[0])
+        except (ValueError, TypeError):
+            continue
+        if p not in (0.0, 1.0):
+            continue
+        ep = s["entry_price"] or 0
+        if ep <= 0 or not s["direction"]:
+            continue
+        res = _pnl_settled(s["direction"], ep, p)
+        conn.execute(
+            "UPDATE signals SET status='done', eval_price=?, eval_spread=NULL, result_pct=? WHERE id=?",
+            (p, round(res, 2), s["id"]))
+        n += 1
+    return n

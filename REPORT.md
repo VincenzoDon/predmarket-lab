@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 # Report predmarket-lab — 18/09/2026 08:40:14
 
 Ultimo scan: `2026-09-18T06:40:08+00:00` UTC · ciclo n.18 · 878 mercati tracciati · 4795 snapshot · 1119 alert
+=======
+# Report predmarket-lab — 17/09/2026 10:34:05
+
+Ultimo scan: `2026-09-17T08:33:28+00:00` UTC · ciclo n.13 · 501 mercati tracciati · 3297 snapshot · 280 alert
+>>>>>>> Stashed changes
 
 ## Conto paper
 
@@ -10,6 +16,7 @@ Ultimo scan: `2026-09-18T06:40:08+00:00` UTC · ciclo n.18 · 878 mercati tracci
 
 ## Ultimi alert
 
+<<<<<<< Updated upstream
 - `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 597k: candidate yield maker
 - `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 530k: candidate yield maker
 - `06:40` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 461k: candidate yield maker
@@ -50,6 +57,47 @@ segnali aperti ora:
 - kindar: Russia Elections: United Russia Wins Every Region? @ 0.41 ($22,385, P&L -2,615$)
 - Herdonia: Spread: BAL (-8.5) @ 0.49 ($22,169, P&L -576$)
 - kindar: Will New People (NL) gain the most seats in the next Russian @ 0.81 ($18,716, P&L -1,284$)
+=======
+- `08:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 141k — finestra informativa finale
+- `08:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 101k — finestra informativa finale
+- `08:33` **MOVER_1H** — mossa -42 punti in 1h (prezzo 0.24) su 75k vol
+- `08:33` **SPREAD_LARGO** — bid 0.01/ask 0.64 = 63 punti su 56k vol 24h — candidata maker
+- `08:33` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.77) su 51k vol
+- `08:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 34k: candidate yield maker
+- `08:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 24k: candidate yield maker
+- `08:33` **MOVER_1H** — mossa +14 punti in 1h (prezzo 0.67) su 22k vol
+- `08:33` **MOVER_1H** — mossa -11 punti in 1h (prezzo 0.248) su 21k vol
+- `08:33` **MOVER_1H** — mossa -16 punti in 1h (prezzo 0.1) su 20k vol
+- `08:33` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.78) su 19k vol
+- `08:01` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 968k: candidate yield maker
+
+## Indice di inefficienza (v0)
+
+- **0/100** — 0% dei top-50 mercati ha spread >=4 punti, 0% ha mosso >=8 punti in 1h
+
+## Shadow signals (l'AI studia, zero capitale)
+
+- **ENDGAME_FAVORITE** — 6 valutati · 100.0% hit · risultato medio +13.32%
+- **LONGSHOT_FADE** — 34 valutati · 100.0% hit · risultato medio +0.61%
+- **MEAN_REVERT** — 7 valutati · 14.3% hit · risultato medio -49.87%
+
+segnali aperti ora:
+
+- `LONGSHOT_FADE` Will the price of Bitcoin be above $78,000 on September 17? — longshot a 0.045 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Guangzhou: James Kent Trotter vs Mitsuki Wei Kang Leong — mossa -42p in 1h — ipotesi rientro eccesso
+- `ENDGAME_FAVORITE` Counter-Strike: G2 Ares vs Misa Esports (BO3) - European Pro League Se — favorito 0.77 a fine giornata, spread 3p, vol 51k
+- `LONGSHOT_FADE` Will Bitcoin dip to $60,000 in September? — longshot a 0.020 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the price of Ethereum be above $2,800 on September 17? — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Valencia: Guiomar Maristany vs Marina Bassols Ribera — mossa -10p in 1h — ipotesi rientro eccesso
+
+## Whale watch 🐋
+
+- Sassy-Bucket: Kansas City Royals vs. Houston Astros @ 1.00 ($166,695, P&L +101,684$)
+- Sassy-Bucket: San Francisco Giants vs. St. Louis Cardinals: O/U 8.5 @ 1.00 ($86,945, P&L +45,217$)
+- Sassy-Bucket: Athletics vs. Tampa Bay Rays @ 1.00 ($75,951, P&L +28,861$)
+- Sassy-Bucket: Milwaukee Brewers vs. Pittsburgh Pirates @ 1.00 ($75,400, P&L +33,932$)
+- Sassy-Bucket: Philadelphia Phillies vs. Washington Nationals: O/U 8.5 @ 1.00 ($52,279, P&L +28,231$)
+>>>>>>> Stashed changes
 
 ## Watchlist normativa
 
