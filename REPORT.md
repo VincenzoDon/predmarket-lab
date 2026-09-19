@@ -1,8 +1,8 @@
-# Report predmarket-lab — 19/09/2026 19:24:53
+# Report predmarket-lab — 19/09/2026 21:30:58
 
 🟢 **Salute dati:** dati freschi: ultimo scan 4 min fa
 
-Ultimo scan: `2026-09-19T17:21:22+00:00` UTC · ciclo n.28 · 1513 mercati tracciati · 7776 snapshot · 2708 alert
+Ultimo scan: `2026-09-19T19:27:11+00:00` UTC · ciclo n.29 · 1553 mercati tracciati · 8075 snapshot · 2974 alert
 
 ## Conto paper
 
@@ -12,47 +12,47 @@ Ultimo scan: `2026-09-19T17:21:22+00:00` UTC · ciclo n.28 · 1513 mercati tracc
 
 ## Ultimi alert
 
-- `17:21` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2237k: candidate yield maker
-- `17:21` **CHIUDE_OGGI** — chiude oggi, vol 24h 1384k — finestra informativa finale
-- `17:21` **CHIUDE_OGGI** — chiude oggi, vol 24h 1379k — finestra informativa finale
-- `17:21` **MOVER_1H** — mossa -64 punti in 1h (prezzo 0.73) su 1379k vol
-- `17:21` **CHIUDE_OGGI** — chiude oggi, vol 24h 1379k — finestra informativa finale
-- `17:21` **CHIUDE_OGGI** — chiude oggi, vol 24h 1271k — finestra informativa finale
-- `17:21` **MOVER_1H** — mossa -30 punti in 1h (prezzo 0.6) su 908k vol
-- `17:21` **CHIUDE_OGGI** — chiude oggi, vol 24h 908k — finestra informativa finale
-- `17:21` **MOVER_1H** — mossa -14 punti in 1h (prezzo 0.57) su 889k vol
-- `17:21` **CHIUDE_OGGI** — chiude oggi, vol 24h 889k — finestra informativa finale
-- `17:21` **CHIUDE_OGGI** — chiude oggi, vol 24h 746k — finestra informativa finale
-- `17:21` **MOVER_1H** — mossa +19 punti in 1h (prezzo 0.79) su 687k vol
+- `19:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2382k: candidate yield maker
+- `19:27` **MOVER_1H** — mossa +8 punti in 1h (prezzo 0.84) su 2382k vol
+- `19:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 1712k — finestra informativa finale
+- `19:27` **MOVER_1H** — mossa +65 punti in 1h (prezzo 0.999) su 986k vol
+- `19:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 986k — finestra informativa finale
+- `19:27` **MOVER_1H** — mossa -25 punti in 1h (prezzo 0.01) su 935k vol
+- `19:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 935k — finestra informativa finale
+- `19:27` **MOVER_1H** — mossa -12 punti in 1h (prezzo 0.79) su 692k vol
+- `19:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 692k — finestra informativa finale
+- `19:27` **MOVER_1H** — mossa -51 punti in 1h (prezzo 0.44) su 643k vol
+- `19:27` **CHIUDE_OGGI** — chiude oggi, vol 24h 643k — finestra informativa finale
+- `19:27` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 569k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **15/100** — 6% dei top-50 mercati ha spread >=4 punti, 28% ha mosso >=8 punti in 1h
+- **24/100** — 2% dei top-50 mercati ha spread >=4 punti, 56% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 45 valutati · 84.4% hit · risultato medio +2.16%
-- **LONGSHOT_FADE** — 372 valutati · 82.3% hit · risultato medio +11.39%
+- **ENDGAME_FAVORITE** — 50 valutati · 84.0% hit · risultato medio +0.88%
+- **LONGSHOT_FADE** — 415 valutati · 83.4% hit · risultato medio +10.27%
 - **MAKER_SPREAD** — 3 valutati · 100.0% hit · risultato medio +8.00%
-- **MEAN_REVERT** — 99 valutati · 20.2% hit · risultato medio +14.42%
+- **MEAN_REVERT** — 101 valutati · 19.8% hit · risultato medio +12.15%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` LoL: Karmine Corp vs Movistar KOI - Game 1 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` LoL: Karmine Corp vs Movistar KOI - Game 2 Winner — longshot a 0.005 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` North Carolina vs. Clemson — favorito 0.90 a fine giornata, spread 2p, vol 670k
-- `LONGSHOT_FADE` Game Handicap: KC (-1.5) vs Movistar KOI (+1.5) — longshot a 0.005 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Will AS Roma win on 2026-09-19? — favorito 0.84 a fine giornata, spread 2p, vol 543k
-- `LONGSHOT_FADE` Will FC Internazionale Milano win on 2026-09-19? — longshot a 0.050 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Karmine Corp vs Movistar KOI (BO5) - LEC Playoffs — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Nottingham Forest FC win on 2026-09-19? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will AS Roma win on 2026-09-19? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Counter-Strike: Aurora Gaming vs Vitality - Map 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Wyoming vs. Central Michigan — longshot a 0.023 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Elissa Slotkin win the 2028 Democratic presidential nomination? — longshot a 0.002 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (Elaran1993,gransaaa) su 'Will Paris FC win on 2026-09-19?' — $524,038
-- Elaran1993: Will Paris FC win on 2026-09-19? @ 0.99 ($352,177, P&L +160,372$)
-- 0x076daa87: Game Handicap: KC (-1.5) vs Movistar KOI (+1.5) @ 0.99 ($213,892, P&L +112,802$)
-- MiltonFriedmanHongKong: Will AS Roma win on 2026-09-19? @ 0.84 ($174,464, P&L +99,467$)
-- gransaaa: Will Paris FC win on 2026-09-19? @ 0.99 ($171,861, P&L +84,408$)
-- 0x076daa87: LoL: Karmine Corp vs Movistar KOI (BO5) - LEC Playoffs @ 0.74 ($93,624, P&L +47,478$)
+- **Consenso**: 2 balene (BreakTheBank,UpTheBlues) su 'Will Nottingham Forest FC win on 2026-09-19?' — $455,783
+- BreakTheBank: Will Nottingham Forest FC win on 2026-09-19? @ 1.00 ($445,658, P&L +267,305$)
+- BreakTheBank: Will Manchester City win the 2026-27 English Premier League  @ 0.62 ($284,172, P&L -38,642$)
+- BreakTheBank: Will Arsenal win the 2026-27 English Premier League (EPL) Ch @ 0.46 ($182,000, P&L +165,334$)
+- UpTheBlues: Will Coventry City FC win on 2026-09-19? @ 1.00 ($142,289, P&L +119,436$)
+- 0x076daa87: LoL: Karmine Corp vs Movistar KOI (BO5) - LEC Playoffs @ 1.00 ($125,607, P&L +79,460$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -60,21 +60,21 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 - **JnStrtPrdctnMrkts** — score 90/100 · win 78% · 135 osservazioni su 15 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
+- **UpTheBlues** — score 79/100 · win 93% · 15 osservazioni su 15 mercati
 - **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 77/100 · win 78% · 27 osservazioni su 14 mercati
 - **Donkey14** — score 76/100 · win 80% · 5 osservazioni su 5 mercati
 - **HMLSF** — score 75/100 · win 76% · 17 osservazioni su 9 mercati
-- **0x076daa87** — score 74/100 · win 80% · 15 osservazioni su 15 mercati
-- **BrotherObama** — score 72/100 · win 71% · 7 osservazioni su 6 mercati
-- **RN1** — score 71/100 · win 80% · 45 osservazioni su 41 mercati
+- **0x076daa87** — score 75/100 · win 73% · 30 osservazioni su 17 mercati
+- **BreakTheBank** — score 72/100 · win 67% · 15 osservazioni su 15 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-19T17:21` wallet informato-simile 0x076daa87 (score 74/100, win 80%) ENTRA su 'West Virginia vs. Virginia' — da osservare (shadow, zero ordini)
-- `09-19T17:21` wallet informato-simile 0x076daa87 (score 74/100, win 80%) ENTRA su 'Davis Cup: Arthur Fery vs. Alvaro Guillen Meza' — da osservare (shadow, zero ordini)
-- `09-19T17:21` wallet informato-simile 0x076daa87 (score 74/100, win 80%) ENTRA su 'Will Manchester City FC win on 2026-09-20?' — da osservare (shadow, zero ordini)
-- `09-19T17:21` wallet informato-simile 0x076daa87 (score 74/100, win 80%) ENTRA su 'Spread: Manchester City FC (-1.5)' — da osservare (shadow, zero ordini)
-- `09-19T17:21` wallet informato-simile 0x076daa87 (score 74/100, win 80%) ENTRA su 'Olympique Lyonnais vs. Stade Rennais FC 1901: O/U ' — da osservare (shadow, zero ordini)
-- `09-19T17:21` wallet informato-simile 0x076daa87 (score 74/100, win 80%) ENTRA su 'Will Lille OSC win on 2026-09-20?' — da osservare (shadow, zero ordini)
+- `09-19T19:27` wallet informato-simile UpTheBlues (score 79/100, win 93%) ENTRA su 'VfB Stuttgart vs. BV Borussia 09 Dortmund: Both Te' — da osservare (shadow, zero ordini)
+- `09-19T19:27` wallet informato-simile UpTheBlues (score 79/100, win 93%) ENTRA su 'VfB Stuttgart vs. BV Borussia 09 Dortmund: O/U 3.5' — da osservare (shadow, zero ordini)
+- `09-19T19:27` wallet informato-simile 0x076daa87 (score 75/100, win 73%) ENTRA su 'Spread: LSU (-2.5)' — da osservare (shadow, zero ordini)
+- `09-19T19:27` wallet informato-simile UpTheBlues (score 79/100, win 93%) ENTRA su 'Will Coventry City FC win on 2026-09-19?' — da osservare (shadow, zero ordini)
+- `09-19T19:27` wallet informato-simile BreakTheBank (score 72/100, win 67%) ENTRA su 'Will Nottingham Forest FC win on 2026-09-19?' — da osservare (shadow, zero ordini)
+- `09-19T19:27` wallet informato-simile UpTheBlues (score 79/100, win 93%) ENTRA su 'Will Nottingham Forest FC win on 2026-09-19?' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
