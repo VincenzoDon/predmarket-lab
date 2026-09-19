@@ -1,8 +1,8 @@
-# Report predmarket-lab — 19/09/2026 01:29:19
+# Report predmarket-lab — 19/09/2026 03:26:57
 
 🟢 **Salute dati:** dati freschi: ultimo scan 2 min fa
 
-Ultimo scan: `2026-09-18T23:26:54+00:00` UTC · ciclo n.23 · 1182 mercati tracciati · 6287 snapshot · 1827 alert
+Ultimo scan: `2026-09-19T01:24:44+00:00` UTC · ciclo n.24 · 1211 mercati tracciati · 6584 snapshot · 1988 alert
 
 ## Conto paper
 
@@ -12,46 +12,46 @@ Ultimo scan: `2026-09-18T23:26:54+00:00` UTC · ciclo n.23 · 1182 mercati tracc
 
 ## Ultimi alert
 
-- `23:26` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1508k: candidate yield maker
-- `23:26` **MOVER_1H** — mossa +64 punti in 1h (prezzo 0.999) su 520k vol
-- `23:26` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 503k: candidate yield maker
-- `23:26` **MOVER_1H** — mossa +22 punti in 1h (prezzo 0.347) su 501k vol
-- `23:26` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 362k: candidate yield maker
-- `23:26` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.51) su 352k vol
-- `23:26` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 336k: candidate yield maker
-- `23:26` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.48) su 320k vol
-- `23:26` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 304k: candidate yield maker
-- `23:26` **MOVER_1H** — mossa -8 punti in 1h (prezzo 0.36) su 244k vol
-- `23:26` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 229k: candidate yield maker
-- `23:26` **MOVER_1H** — mossa +20 punti in 1h (prezzo 0.53) su 226k vol
+- `01:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2282k: candidate yield maker
+- `01:24` **MOVER_1H** — mossa -73 punti in 1h (prezzo 0.09) su 659k vol
+- `01:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 543k: candidate yield maker
+- `01:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 520k: candidate yield maker
+- `01:24` **CHIUDE_OGGI** — chiude oggi, vol 24h 520k — finestra informativa finale
+- `01:24` **MOVER_1H** — mossa -36 punti in 1h (prezzo 0.03) su 519k vol
+- `01:24` **MOVER_1H** — mossa +12 punti in 1h (prezzo 0.58) su 497k vol
+- `01:24` **CHIUDE_OGGI** — chiude oggi, vol 24h 450k — finestra informativa finale
+- `01:24` **CHIUDE_OGGI** — chiude oggi, vol 24h 445k — finestra informativa finale
+- `01:24` **MOVER_1H** — mossa +52 punti in 1h (prezzo 0.999) su 441k vol
+- `01:24` **MOVER_1H** — mossa -48 punti in 1h (prezzo 0.08) su 390k vol
+- `01:24` **MOVER_1H** — mossa +11 punti in 1h (prezzo 0.92) su 368k vol
 
 ## Indice di inefficienza (v0)
 
-- **8/100** — 0% dei top-50 mercati ha spread >=4 punti, 20% ha mosso >=8 punti in 1h
+- **14/100** — 4% dei top-50 mercati ha spread >=4 punti, 30% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 31 valutati · 90.3% hit · risultato medio +4.78%
-- **LONGSHOT_FADE** — 306 valutati · 83.7% hit · risultato medio +14.13%
+- **LONGSHOT_FADE** — 318 valutati · 83.6% hit · risultato medio +13.58%
 - **MAKER_SPREAD** — 3 valutati · 100.0% hit · risultato medio +8.00%
-- **MEAN_REVERT** — 59 valutati · 15.3% hit · risultato medio +4.81%
+- **MEAN_REVERT** — 65 valutati · 16.9% hit · risultato medio +28.13%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` LoL: Shopify Rebellion vs Sentinels - Game 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` LoL: Shopify Rebellion vs Sentinels - Game 4 Winner — mossa +64p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Kansas City Royals vs. Pittsburgh Pirates — mossa +13p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Chicago Cubs vs. Cincinnati Reds — mossa -10p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Miami (FL) vs. Wake Forest — favorito 0.92 a fine giornata, spread 1p, vol 186k
-- `LONGSHOT_FADE` Will CSyD Defensa y Justicia win on 2026-09-18? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Kansas City Royals vs. Pittsburgh Pirates — longshot a 0.025 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Milwaukee Brewers vs. Baltimore Orioles — mossa +12p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Sao Paulo Open: Nadia Podoroska vs Suzan Lamens — mossa +52p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Boston Red Sox vs. Tampa Bay Rays — mossa +11p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Philadelphia Phillies vs. New York Mets — mossa -19p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Boston Red Sox vs. Tampa Bay Rays: O/U 7.5 — mossa -58p in 1h — ipotesi rientro eccesso
 
 ## Whale watch 🐋
 
-- JnStrtPrdctnMrkts: Will Ethereum dip to $1,500 by December 31, 2026? @ 0.89 ($890,615, P&L +267,833$)
-- JnStrtPrdctnMrkts: Will Bitcoin dip to $55,000 by December 31, 2026? @ 0.88 ($620,682, P&L +241,261$)
-- JnStrtPrdctnMrkts: Will Bitcoin dip to $50,000 by December 31, 2026? @ 0.91 ($564,267, P&L +147,041$)
-- JnStrtPrdctnMrkts: Will Ethereum dip to $1,250 by December 31, 2026? @ 0.93 ($366,456, P&L +64,882$)
-- JnStrtPrdctnMrkts: Will Ethereum dip to $1,750 by December 31, 2026? @ 0.89 ($340,095, P&L +47,558$)
+- Elaran1993: Boston Red Sox vs. Tampa Bay Rays: O/U 7.5 @ 0.82 ($166,682, P&L +50,818$)
+- xifutloong3: Kansas City Royals vs. Pittsburgh Pirates @ 0.99 ($97,547, P&L +47,429$)
+- bogdanc1: Will New People (NL) gain the most seats in the next Russian @ 0.23 ($37,440, P&L +10,004$)
+- bogdanc1: Will United Russia (ER) gain the most seats in the next Russ @ 0.24 ($28,651, P&L +1,645$)
+- Elaran1993: Colts vs. Chiefs: O/U 46.5 @ 0.48 ($9,373, P&L -97$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
