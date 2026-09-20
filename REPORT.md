@@ -1,8 +1,8 @@
-# Report predmarket-lab — 20/09/2026 01:36:49
+# Report predmarket-lab — 20/09/2026 03:43:23
 
-🟢 **Salute dati:** dati freschi: ultimo scan 3 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 4 min fa
 
-Ultimo scan: `2026-09-19T23:33:27+00:00` UTC · ciclo n.31 · 1681 mercati tracciati · 8673 snapshot · 3355 alert
+Ultimo scan: `2026-09-20T01:39:23+00:00` UTC · ciclo n.32 · 1741 mercati tracciati · 8973 snapshot · 3604 alert
 
 ## Conto paper
 
@@ -12,47 +12,50 @@ Ultimo scan: `2026-09-19T23:33:27+00:00` UTC · ciclo n.31 · 1681 mercati tracc
 
 ## Ultimi alert
 
-- `23:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2444k: candidate yield maker
-- `23:33` **MOVER_1H** — mossa -39 punti in 1h (prezzo 0.01) su 1781k vol
-- `23:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 1781k — finestra informativa finale
-- `23:33` **MOVER_1H** — mossa -32 punti in 1h (prezzo 0.12) su 954k vol
-- `23:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 954k — finestra informativa finale
-- `23:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 779k: candidate yield maker
-- `23:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 779k — finestra informativa finale
-- `23:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 596k: candidate yield maker
-- `23:33` **MOVER_1H** — mossa -75 punti in 1h (prezzo 0.01) su 591k vol
-- `23:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 579k: candidate yield maker
-- `23:33` **MOVER_1H** — mossa -47 punti in 1h (prezzo 0.28) su 570k vol
-- `23:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 465k: candidate yield maker
+- `01:39` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1715k: candidate yield maker
+- `01:39` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1407k: candidate yield maker
+- `01:39` **MOVER_1H** — mossa -19 punti in 1h (prezzo 0.14) su 1407k vol
+- `01:39` **CHIUDE_OGGI** — chiude oggi, vol 24h 858k — finestra informativa finale
+- `01:39` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 555k: candidate yield maker
+- `01:39` **CHIUDE_OGGI** — chiude oggi, vol 24h 497k — finestra informativa finale
+- `01:39` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 467k: candidate yield maker
+- `01:39` **CHIUDE_OGGI** — chiude oggi, vol 24h 467k — finestra informativa finale
+- `01:39` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 434k: candidate yield maker
+- `01:39` **MOVER_1H** — mossa +15 punti in 1h (prezzo 0.86) su 434k vol
+- `01:39` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 423k: candidate yield maker
+- `01:39` **CHIUDE_OGGI** — chiude oggi, vol 24h 423k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **15/100** — 4% dei top-50 mercati ha spread >=4 punti, 32% ha mosso >=8 punti in 1h
+- **16/100** — 8% dei top-50 mercati ha spread >=4 punti, 28% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 58 valutati · 81.0% hit · risultato medio -3.33%
-- **LONGSHOT_FADE** — 471 valutati · 82.6% hit · risultato medio +9.07%
-- **MAKER_SPREAD** — 3 valutati · 100.0% hit · risultato medio +8.00%
-- **MEAN_REVERT** — 109 valutati · 20.2% hit · risultato medio +6.74%
+- **ENDGAME_FAVORITE** — 61 valutati · 80.3% hit · risultato medio -4.55%
+- **LONGSHOT_FADE** — 503 valutati · 82.9% hit · risultato medio +8.50%
+- **MAKER_SPREAD** — 4 valutati · 100.0% hit · risultato medio +8.00%
+- **MEAN_REVERT** — 124 valutati · 20.2% hit · risultato medio -0.80%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` SMU vs. Louisville — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will the Liberal Democratic Party of Russia (LDPR) gain the most seats — longshot a 0.011 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Yabloko gain the most seats in the next Russian parliamentary ele — longshot a 0.002 — ipotesi sopravvalutazione
-- `MEAN_REVERT` LoL: LYON vs Cloud9 - Game 3 Winner — mossa -75p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` LoL: LYON vs Cloud9 - Game 3 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Temple vs. Toledo — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Florida State vs. Alabama — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` LSU vs. Ole Miss — mossa -19p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Virginia Tech vs. Maryland — mossa +15p in 1h — ipotesi rientro eccesso
+- `MAKER_SPREAD` Washington Nationals vs. St. Louis Cardinals — spread 18p — ipotesi cattura maker
+- `MEAN_REVERT` Spread: LSU (-2.5) — mossa -19p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Kansas City Royals vs. Pittsburgh Pirates — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (0x076daa87,HMLSF) su 'Boston Red Sox vs. Tampa Bay Rays' — $21,129
-- BreakTheBank: Will Manchester City win the 2026-27 English Premier League  @ 0.61 ($279,626, P&L -43,189$)
-- BreakTheBank: Will Arsenal win the 2026-27 English Premier League (EPL) Ch @ 0.47 ($186,000, P&L +169,334$)
-- 0x076daa87: Spread: Manchester City FC (-1.5) @ 0.52 ($75,889, P&L +356$)
-- Elaran1993: Will CR Vasco da Gama win on 2026-09-19? @ 0.71 ($60,718, P&L -1,012$)
-- BreakTheBank: Bengals vs. Texans @ 0.41 ($51,875, P&L -625$)
+- **Consenso**: 3 balene (wr0ngw4yb3tt0r,Kch-Temp,0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185) su 'LSU vs. Ole Miss' — $334,887
+- **Consenso**: 2 balene (wr0ngw4yb3tt0r,Kch-Temp) su 'James Madison vs. San Diego State: O/U 46.5' — $241,032
+- **Consenso**: 3 balene (wr0ngw4yb3tt0r,Kch-Temp,0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185) su 'Spread: LSU (-2.5)' — $200,258
+- **Consenso**: 3 balene (wr0ngw4yb3tt0r,Kch-Temp,0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185) su 'Spread: LSU (-3.5)' — $165,111
+- wr0ngw4yb3tt0r: LSU vs. Ole Miss @ 0.86 ($224,545, P&L +113,416$)
+- wr0ngw4yb3tt0r: James Madison vs. San Diego State: O/U 46.5 @ 0.49 ($187,027, P&L -2,891$)
+- wr0ngw4yb3tt0r: Spread: LSU (-2.5) @ 0.91 ($129,352, P&L +62,438$)
+- Kch-Temp: LSU vs. Ole Miss @ 0.86 ($102,242, P&L +52,598$)
+- Elaran1993: Will CR Vasco da Gama win on 2026-09-19? @ 1.00 ($84,878, P&L +23,148$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -62,19 +65,19 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **UpTheBlues** — score 79/100 · win 93% · 15 osservazioni su 15 mercati
 - **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 77/100 · win 78% · 27 osservazioni su 14 mercati
+- **primm** — score 77/100 · win 86% · 7 osservazioni su 7 mercati
 - **BreakTheBank** — score 76/100 · win 58% · 45 osservazioni su 16 mercati
 - **Donkey14** — score 76/100 · win 80% · 5 osservazioni su 5 mercati
-- **0x076daa87** — score 73/100 · win 65% · 60 osservazioni su 24 mercati
-- **BrotherObama** — score 72/100 · win 71% · 7 osservazioni su 6 mercati
+- **Kch-Temp** — score 73/100 · win 78% · 9 osservazioni su 9 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-19T23:33` wallet informato-simile 0x076daa87 (score 73/100, win 65%) ENTRA su 'Troy vs. Missouri' — da osservare (shadow, zero ordini)
-- `09-19T23:33` wallet informato-simile 0x076daa87 (score 73/100, win 65%) ENTRA su 'Will Debreceni VSC win on 2026-09-19?' — da osservare (shadow, zero ordini)
-- `09-19T23:33` wallet informato-simile HMLSF (score 67/100, win 63%) ENTRA su 'Atlanta Braves vs. Houston Astros' — da osservare (shadow, zero ordini)
-- `09-19T23:33` wallet informato-simile 0x076daa87 (score 73/100, win 65%) ENTRA su 'Boston Red Sox vs. Tampa Bay Rays' — da osservare (shadow, zero ordini)
-- `09-19T23:33` wallet informato-simile HMLSF (score 67/100, win 63%) ENTRA su 'Boston Red Sox vs. Tampa Bay Rays' — da osservare (shadow, zero ordini)
-- `09-19T23:33` wallet informato-simile HMLSF (score 67/100, win 63%) ENTRA su 'Kansas City Royals vs. Pittsburgh Pirates' — da osservare (shadow, zero ordini)
+- `09-20T01:39` wallet informato-simile wr0ngw4yb3tt0r (score 73/100, win 78%) ENTRA su 'Spread: TCU (-19.5)' — da osservare (shadow, zero ordini)
+- `09-20T01:39` wallet informato-simile primm (score 77/100, win 86%) ENTRA su 'East Carolina vs. Old Dominion' — da osservare (shadow, zero ordini)
+- `09-20T01:39` wallet informato-simile primm (score 77/100, win 86%) ENTRA su 'Spread: Old Dominion (-2.5)' — da osservare (shadow, zero ordini)
+- `09-20T01:39` wallet informato-simile wr0ngw4yb3tt0r (score 73/100, win 78%) ENTRA su 'Florida International vs. Florida Atlantic' — da osservare (shadow, zero ordini)
+- `09-20T01:39` wallet informato-simile Kch-Temp (score 73/100, win 78%) ENTRA su 'Spread: Florida Atlantic (-6.5)' — da osservare (shadow, zero ordini)
+- `09-20T01:39` wallet informato-simile primm (score 77/100, win 86%) ENTRA su 'Fresno State vs. San Jose State' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
