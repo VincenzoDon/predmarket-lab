@@ -1,8 +1,8 @@
-# Report predmarket-lab — 20/09/2026 09:06:19
+# Report predmarket-lab — 20/09/2026 14:25:08
 
 🟢 **Salute dati:** dati freschi: ultimo scan 4 min fa
 
-Ultimo scan: `2026-09-20T07:02:00+00:00` UTC · ciclo n.33 · 1821 mercati tracciati · 9273 snapshot · 3791 alert
+Ultimo scan: `2026-09-20T12:20:53+00:00` UTC · ciclo n.34 · 1914 mercati tracciati · 9573 snapshot · 4016 alert
 
 ## Conto paper
 
@@ -12,46 +12,45 @@ Ultimo scan: `2026-09-20T07:02:00+00:00` UTC · ciclo n.33 · 1821 mercati tracc
 
 ## Ultimi alert
 
-- `07:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1634k: candidate yield maker
-- `07:02` **MOVER_1H** — mossa +25 punti in 1h (prezzo 0.999) su 974k vol
-- `07:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 974k — finestra informativa finale
-- `07:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 550k: candidate yield maker
-- `07:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 520k: candidate yield maker
-- `07:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 520k — finestra informativa finale
-- `07:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 511k: candidate yield maker
-- `07:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 511k — finestra informativa finale
-- `07:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 438k — finestra informativa finale
-- `07:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 435k: candidate yield maker
-- `07:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 435k — finestra informativa finale
-- `07:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 393k — finestra informativa finale
+- `12:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1719k: candidate yield maker
+- `12:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 904k: candidate yield maker
+- `12:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 904k — finestra informativa finale
+- `12:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 860k: candidate yield maker
+- `12:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 860k — finestra informativa finale
+- `12:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 796k: candidate yield maker
+- `12:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 796k — finestra informativa finale
+- `12:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 734k: candidate yield maker
+- `12:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 734k — finestra informativa finale
+- `12:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 685k: candidate yield maker
+- `12:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 685k — finestra informativa finale
+- `12:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 585k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **4/100** — 0% dei top-50 mercati ha spread >=4 punti, 10% ha mosso >=8 punti in 1h
+- **7/100** — 2% dei top-50 mercati ha spread >=4 punti, 14% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 63 valutati · 79.4% hit · risultato medio -5.80%
-- **LONGSHOT_FADE** — 535 valutati · 83.6% hit · risultato medio +8.04%
+- **ENDGAME_FAVORITE** — 66 valutati · 78.8% hit · risultato medio -5.01%
+- **LONGSHOT_FADE** — 563 valutati · 83.7% hit · risultato medio +7.47%
 - **MAKER_SPREAD** — 7 valutati · 100.0% hit · risultato medio +15.93%
-- **MEAN_REVERT** — 165 valutati · 19.4% hit · risultato medio -9.09%
+- **MEAN_REVERT** — 170 valutati · 19.4% hit · risultato medio -11.03%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Spread: Auburn (-4.5) — longshot a 0.004 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will CF América win on 2026-09-19? — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Purdue vs. UCLA — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will CD Guadalajara win on 2026-09-19? — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Singapore Open, Qualification: Nao Hibino vs Aoi Ito — mossa +11p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` São Paulo FC vs. SC Internacional: O/U 2.5 — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Hakeem Jeffries win the 2028 Democratic presidential nomination? — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: DN SOOPers Challengers vs T1 Academy (BO1) - World Star Challenge — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Fuego vs EDward Gaming Youth Team (BO1) - World Star Challengers  — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Dota 2: GamerLegion vs LGD Gaming - Game 1 Winner — longshot a 0.040 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: CTBC Flying Oyster Academy vs Bilibili Gaming Junior (BO1) - Worl — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Will Nicolás Maduro be the leader of Venezuela end of 2026? — mossa -10p in 1h — ipotesi rientro eccesso
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,UpTheBlues) su 'São Paulo FC vs. SC Internacional: O/U 2.5' — $66,470
-- wr0ngw4yb3tt0r: San Francisco Giants vs. Los Angeles Dodgers: O/U 7.5 @ 1.00 ($103,652, P&L +54,033$)
-- UpTheBlues: Will CF América vs. CD Guadalajara end in a draw? @ 1.00 ($57,827, P&L +40,464$)
-- UpTheBlues: São Paulo FC vs. SC Internacional: O/U 2.5 @ 1.00 ($56,002, P&L +23,512$)
-- UpTheBlues: Will CF América win on 2026-09-19? @ 1.00 ($53,821, P&L +7,050$)
+- wr0ngw4yb3tt0r: Steelers vs. Patriots @ 0.68 ($129,212, P&L -957$)
+- wr0ngw4yb3tt0r: Spread: Packers (-4.5) @ 0.56 ($84,206, P&L +745$)
+- classified: Will Mojtaba Khamenei be head of state in Iran end of 2026? @ 0.84 ($71,102, P&L +16,942$)
+- wr0ngw4yb3tt0r: Vikings vs. Bears @ 0.34 ($53,972, P&L +782$)
 - wr0ngw4yb3tt0r: Spread: Broncos (-2.5) @ 0.48 ($49,276, P&L +680$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
@@ -65,16 +64,16 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **primm** — score 77/100 · win 86% · 7 osservazioni su 7 mercati
 - **BreakTheBank** — score 76/100 · win 58% · 45 osservazioni su 16 mercati
 - **Donkey14** — score 76/100 · win 80% · 5 osservazioni su 5 mercati
-- **wr0ngw4yb3tt0r** — score 74/100 · win 78% · 60 osservazioni su 38 mercati
+- **wr0ngw4yb3tt0r** — score 75/100 · win 77% · 75 osservazioni su 41 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-20T07:02` wallet informato-simile wr0ngw4yb3tt0r (score 74/100, win 78%) ENTRA su 'São Paulo FC vs. SC Internacional: O/U 2.5' — da osservare (shadow, zero ordini)
-- `09-20T07:02` wallet informato-simile UpTheBlues (score 80/100, win 93%) ENTRA su 'São Paulo FC vs. SC Internacional: O/U 2.5' — da osservare (shadow, zero ordini)
-- `09-20T07:02` wallet informato-simile wr0ngw4yb3tt0r (score 74/100, win 78%) ENTRA su 'Spread: South Alabama (-6.5)' — da osservare (shadow, zero ordini)
-- `09-20T07:02` wallet informato-simile UpTheBlues (score 80/100, win 93%) ENTRA su 'Davis Cup: Felix Auger-Aliassime vs. Arthur Rinder' — da osservare (shadow, zero ordini)
-- `09-20T07:02` wallet informato-simile UpTheBlues (score 80/100, win 93%) ENTRA su 'Will CF América win on 2026-09-19?' — da osservare (shadow, zero ordini)
-- `09-20T07:02` wallet informato-simile UpTheBlues (score 80/100, win 93%) ENTRA su 'Will CF América vs. CD Guadalajara end in a draw?' — da osservare (shadow, zero ordini)
+- `09-20T12:20` wallet informato-simile classified (score 68/100, win 73%) ENTRA su 'Iran leadership change by December 31?' — da osservare (shadow, zero ordini)
+- `09-20T12:20` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 77%) ENTRA su 'Will Real Madrid CF win on 2026-09-20?' — da osservare (shadow, zero ordini)
+- `09-20T12:20` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 77%) ENTRA su 'Spread: Packers (-4.5)' — da osservare (shadow, zero ordini)
+- `09-20T12:20` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 77%) ENTRA su 'Vikings vs. Bears' — da osservare (shadow, zero ordini)
+- `09-20T12:20` wallet informato-simile classified (score 68/100, win 73%) ENTRA su 'US x Iran ceasefire continues through September 25' — da osservare (shadow, zero ordini)
+- `09-20T12:20` wallet informato-simile classified (score 68/100, win 73%) ENTRA su 'Will A Just Russia – For Truth (SRZP) gain the mos' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
