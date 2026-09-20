@@ -1,8 +1,8 @@
-# Report predmarket-lab — 20/09/2026 21:01:30
+# Report predmarket-lab — 20/09/2026 23:16:47
 
-🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 4 min fa
 
-Ultimo scan: `2026-09-20T18:57:00+00:00` UTC · ciclo n.36 · 2082 mercati tracciati · 10168 snapshot · 4612 alert
+Ultimo scan: `2026-09-20T21:12:25+00:00` UTC · ciclo n.37 · 2140 mercati tracciati · 10464 snapshot · 4885 alert
 
 ## Conto paper
 
@@ -12,72 +12,72 @@ Ultimo scan: `2026-09-20T18:57:00+00:00` UTC · ciclo n.36 · 2082 mercati tracc
 
 ## Ultimi alert
 
-- `18:57` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3345k: candidate yield maker
-- `18:57` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2768k: candidate yield maker
-- `18:57` **MOVER_1H** — mossa +11 punti in 1h (prezzo 0.96) su 2768k vol
-- `18:57` **CHIUDE_OGGI** — chiude oggi, vol 24h 2768k — finestra informativa finale
-- `18:57` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2723k: candidate yield maker
-- `18:57` **MOVER_1H** — mossa +10 punti in 1h (prezzo 0.49) su 2723k vol
-- `18:57` **CHIUDE_OGGI** — chiude oggi, vol 24h 2723k — finestra informativa finale
-- `18:57` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2709k: candidate yield maker
-- `18:57` **CHIUDE_OGGI** — chiude oggi, vol 24h 2709k — finestra informativa finale
-- `18:57` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2381k: candidate yield maker
-- `18:57` **MOVER_1H** — mossa +27 punti in 1h (prezzo 0.67) su 2381k vol
-- `18:57` **CHIUDE_OGGI** — chiude oggi, vol 24h 2381k — finestra informativa finale
+- `21:12` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 6017k: candidate yield maker
+- `21:12` **MOVER_1H** — mossa +53 punti in 1h (prezzo 0.999) su 3363k vol
+- `21:12` **CHIUDE_OGGI** — chiude oggi, vol 24h 3363k — finestra informativa finale
+- `21:12` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2473k: candidate yield maker
+- `21:12` **MOVER_1H** — mossa -17 punti in 1h (prezzo 0.19) su 2473k vol
+- `21:12` **CHIUDE_OGGI** — chiude oggi, vol 24h 2473k — finestra informativa finale
+- `21:12` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2238k: candidate yield maker
+- `21:12` **CHIUDE_OGGI** — chiude oggi, vol 24h 2238k — finestra informativa finale
+- `21:12` **SPREAD_LARGO** — bid None/ask 0.19 = 19 punti su 2153k vol 24h — candidata maker
+- `21:12` **CHIUDE_OGGI** — chiude oggi, vol 24h 2153k — finestra informativa finale
+- `21:12` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1525k: candidate yield maker
+- `21:12` **CHIUDE_OGGI** — chiude oggi, vol 24h 1525k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **19/100** — 10% dei top-50 mercati ha spread >=4 punti, 32% ha mosso >=8 punti in 1h
+- **17/100** — 8% dei top-50 mercati ha spread >=4 punti, 30% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 69 valutati · 78.3% hit · risultato medio -4.10%
-- **LONGSHOT_FADE** — 614 valutati · 83.9% hit · risultato medio +6.90%
+- **ENDGAME_FAVORITE** — 74 valutati · 79.7% hit · risultato medio -3.16%
+- **LONGSHOT_FADE** — 632 valutati · 83.7% hit · risultato medio +6.71%
 - **MAKER_SPREAD** — 8 valutati · 100.0% hit · risultato medio +15.11%
-- **MEAN_REVERT** — 178 valutati · 19.1% hit · risultato medio -13.62%
+- **MEAN_REVERT** — 185 valutati · 18.9% hit · risultato medio -15.70%
 
 segnali aperti ora:
 
-- `ENDGAME_FAVORITE` Panthers vs. Falcons — favorito 0.95 a fine giornata, spread 1p, vol 2768k
-- `ENDGAME_FAVORITE` Eagles vs. Titans — favorito 0.90 a fine giornata, spread 1p, vol 2286k
-- `LONGSHOT_FADE` Counter-Strike: Aurora Gaming vs Vitality (BO5) - StarLadder StarSerie — longshot a 0.001 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Spread: Panthers (-2.5) — favorito 0.93 a fine giornata, spread 2p, vol 1047k
-- `MAKER_SPREAD` Spread: Bears (-4.5) — spread 13p — ipotesi cattura maker
-- `LONGSHOT_FADE` Vikings vs. Bears: O/U 47.5 — longshot a 0.028 — ipotesi sopravvalutazione
+- `MAKER_SPREAD` Spread: BAL (-8.5) — spread 19p — ipotesi cattura maker
+- `LONGSHOT_FADE` Steelers vs. Patriots: O/U 41.5 — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will New People (NL) gain the most seats in the next Russian parliamen — longshot a 0.017 — ipotesi sopravvalutazione
+- `MAKER_SPREAD` Commanders vs. Cowboys: O/U 51.5 — spread 10p — ipotesi cattura maker
+- `LONGSHOT_FADE` Spread: Bears (-4.5) — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Spread: Packers (-3.5) — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,BreakTheBank) su 'Packers vs. Jets' — $650,393
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,BreakTheBank) su 'Spread: Buccaneers (-7.5)' — $388,695
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,BreakTheBank) su 'Browns vs. Buccaneers' — $351,117
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,BreakTheBank) su 'Spread: Broncos (-2.5)' — $313,701
-- wr0ngw4yb3tt0r: Packers vs. Jets @ 0.46 ($445,815, P&L +39,710$)
-- wr0ngw4yb3tt0r: Spread: Chargers (-6.5) @ 0.49 ($352,049, P&L +3,556$)
+- **Consenso**: 2 balene (Kch-Temp,BreakTheBank) su 'Browns vs. Buccaneers' — $330,167
+- **Consenso**: 2 balene (UpTheBlues,Flaznorp) su 'SK Brann vs. FK Bodø/Glimt: FK Bodø/Glimt O/U 1.5' — $55,231
+- **Consenso**: 2 balene (UpTheBlues,Flaznorp) su 'Will Paris Saint-Germain FC win on 2026-09-20?' — $50,052
+- **Consenso**: 2 balene (UpTheBlues,Flaznorp) su 'FC Porto vs. Sport Lisboa e Benfica: O/U 3.5' — $29,625
+- ratatatatatatatataaaa: Steelers vs. Patriots: O/U 41.5 @ 1.00 ($445,866, P&L +216,292$)
+- BreakTheBank: Packers vs. Jets @ 1.00 ($375,184, P&L +147,653$)
 - BreakTheBank: Will Manchester City win the 2026-27 English Premier League  @ 0.61 ($279,626, P&L -43,189$)
-- BreakTheBank: Browns vs. Buccaneers @ 0.88 ($273,730, P&L +31,009$)
-- wr0ngw4yb3tt0r: Steelers vs. Patriots @ 0.89 ($249,160, P&L +47,209$)
+- ratatatatatatatataaaa: Spread: BAL (-8.5) @ 0.91 ($275,847, P&L +119,058$)
+- Kch-Temp: Spread: Bears (-4.5) @ 1.00 ($260,465, P&L +129,551$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
 Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, convinzione, nicchia). Radar da validare nel tempo, non un invito a copiare.
 
 - **JnStrtPrdctnMrkts** — score 90/100 · win 78% · 135 osservazioni su 15 mercati
+- **Kch-Temp** — score 82/100 · win 89% · 18 osservazioni su 18 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
-- **UpTheBlues** — score 79/100 · win 92% · 60 osservazioni su 51 mercati
-- **BreakTheBank** — score 78/100 · win 61% · 75 osservazioni su 24 mercati
+- **BreakTheBank** — score 80/100 · win 63% · 90 osservazioni su 26 mercati
+- **UpTheBlues** — score 79/100 · win 92% · 75 osservazioni su 60 mercati
+- **Flaznorp** — score 78/100 · win 91% · 45 osservazioni su 38 mercati
 - **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 77/100 · win 78% · 27 osservazioni su 14 mercati
 - **primm** — score 77/100 · win 86% · 7 osservazioni su 7 mercati
-- **Flaznorp** — score 76/100 · win 90% · 30 osservazioni su 29 mercati
-- **Donkey14** — score 76/100 · win 80% · 5 osservazioni su 5 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-20T18:57` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Will CA Rosario Central win on 2026-09-20?' — da osservare (shadow, zero ordini)
-- `09-20T18:57` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Will CA San Lorenzo de Almagro win on 2026-09-20?' — da osservare (shadow, zero ordini)
-- `09-20T18:57` wallet informato-simile Flaznorp (score 76/100, win 90%) ENTRA su 'Will FC Salzburg win on 2026-09-20?' — da osservare (shadow, zero ordini)
-- `09-20T18:57` wallet informato-simile Flaznorp (score 76/100, win 90%) ENTRA su 'FCV Dender EH vs. Patro Eisden Maasmechelen: O/U 0' — da osservare (shadow, zero ordini)
-- `09-20T18:57` wallet informato-simile Flaznorp (score 76/100, win 90%) ENTRA su 'Will SE Palmeiras win on 2026-09-20?' — da osservare (shadow, zero ordini)
-- `09-20T18:57` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Grêmio FBPA vs. SE Palmeiras: O/U 0.5' — da osservare (shadow, zero ordini)
+- `09-20T21:12` wallet informato-simile Flaznorp (score 78/100, win 91%) ENTRA su 'Will CDP Junior FC win on 2026-09-20?' — da osservare (shadow, zero ordini)
+- `09-20T21:12` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Will CD Leganés win on 2026-09-20?' — da osservare (shadow, zero ordini)
+- `09-20T21:12` wallet informato-simile Flaznorp (score 78/100, win 91%) ENTRA su 'Will CD Leganés win on 2026-09-20?' — da osservare (shadow, zero ordini)
+- `09-20T21:12` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Will Olympique de Marseille win on 2026-09-20?' — da osservare (shadow, zero ordini)
+- `09-20T21:12` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Will Paris Saint-Germain FC win on 2026-09-20?' — da osservare (shadow, zero ordini)
+- `09-20T21:12` wallet informato-simile Flaznorp (score 78/100, win 91%) ENTRA su 'Will Paris Saint-Germain FC win on 2026-09-20?' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
