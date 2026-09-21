@@ -1,8 +1,8 @@
-# Report predmarket-lab — 21/09/2026 15:27:24
+# Report predmarket-lab — 21/09/2026 20:55:30
 
-🟢 **Salute dati:** dati freschi: ultimo scan 4 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
 
-Ultimo scan: `2026-09-21T13:23:06+00:00` UTC · ciclo n.41 · 2391 mercati tracciati · 11664 snapshot · 5540 alert
+Ultimo scan: `2026-09-21T18:50:58+00:00` UTC · ciclo n.42 · 2455 mercati tracciati · 11963 snapshot · 5682 alert
 
 ## Conto paper
 
@@ -12,47 +12,50 @@ Ultimo scan: `2026-09-21T13:23:06+00:00` UTC · ciclo n.41 · 2391 mercati tracc
 
 ## Ultimi alert
 
-- `13:23` **MOVER_1H** — mossa -19 punti in 1h (prezzo 0.33) su 1162k vol
-- `13:23` **CHIUDE_OGGI** — chiude oggi, vol 24h 1162k — finestra informativa finale
-- `13:23` **MOVER_1H** — mossa +27 punti in 1h (prezzo 0.999) su 377k vol
-- `13:23` **CHIUDE_OGGI** — chiude oggi, vol 24h 377k — finestra informativa finale
-- `13:23` **MOVER_1H** — mossa -62 punti in 1h (prezzo 0.001) su 374k vol
-- `13:23` **CHIUDE_OGGI** — chiude oggi, vol 24h 374k — finestra informativa finale
-- `13:23` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 292k: candidate yield maker
-- `13:23` **CHIUDE_OGGI** — chiude oggi, vol 24h 273k — finestra informativa finale
-- `13:23` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 256k: candidate yield maker
-- `13:23` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 239k: candidate yield maker
-- `13:23` **CHIUDE_OGGI** — chiude oggi, vol 24h 207k — finestra informativa finale
-- `13:23` **CHIUDE_OGGI** — chiude oggi, vol 24h 205k — finestra informativa finale
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 411k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 379k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 319k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 304k: candidate yield maker
+- `18:50` **CHIUDE_OGGI** — chiude oggi, vol 24h 279k — finestra informativa finale
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 263k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 261k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 230k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 208k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 189k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 171k: candidate yield maker
+- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 161k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **4/100** — 2% dei top-50 mercati ha spread >=4 punti, 8% ha mosso >=8 punti in 1h
+- **2/100** — 2% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 87 valutati · 81.6% hit · risultato medio -1.29%
-- **LONGSHOT_FADE** — 827 valutati · 83.4% hit · risultato medio +5.07%
+- **ENDGAME_FAVORITE** — 90 valutati · 82.2% hit · risultato medio -0.63%
+- **LONGSHOT_FADE** — 864 valutati · 83.2% hit · risultato medio +4.77%
 - **MAKER_SPREAD** — 9 valutati · 100.0% hit · risultato medio +14.21%
-- **MEAN_REVERT** — 218 valutati · 17.4% hit · risultato medio -24.19%
+- **MEAN_REVERT** — 223 valutati · 18.4% hit · risultato medio -24.29%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` LoL: ZSK vs Saigon Warriors (BO1) - World Star Challengers Invitationa — longshot a 0.001 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Will the price of Bitcoin be above $84,000 on September 21? — favorito 0.84 a fine giornata, spread 1p, vol 273k
-- `LONGSHOT_FADE` Singapore Open: Kyoka Okamura vs Leylah Fernandez — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Bitcoin dip to $40,000 by December 31, 2026? — longshot a 0.045 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Xavier Bertrand win the 2027 French presidential election? — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will voter turnout be between 56% and 59% in the 2026 Russian parliame — longshot a 0.022 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the US confirm that aliens exist before 2027? — longshot a 0.043 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Counter-Strike: Leo Team vs G2 Ares (BO3) - NODWIN Clutch Series Group — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Ethereum reach $3,200 in September? — longshot a 0.039 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Bitcoin dip to $45,000 by December 31, 2026? — longshot a 0.043 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the next Claude Opus model be released on September 21, 2026? — longshot a 0.018 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Putin out as President of Russia by September 30, 2026? — longshot a 0.002 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (HomeRunHazard,ferrariChampions2026) su 'Toronto Blue Jays vs. Baltimore Orioles' — $5,446
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.61 ($3,690,000, P&L +690,000$)
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.39 ($2,310,000, P&L -690,000$)
+- **Consenso**: 2 balene (wr0ngw4yb3tt0r,surfandturf) su 'Giants vs. Rams' — $63,913
+- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Washington Nationals vs. Detroit Tigers' — $43,286
+- **Consenso**: 3 balene (HomeRunHazard,wr0ngw4yb3tt0r,ferrariChampions2026) su 'Toronto Blue Jays vs. Baltimore Orioles' — $28,376
+- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Minnesota Twins vs. San Francisco Giants: O/U 8.5' — $28,168
 - surfandturf: Will Harry Kane win the 2026 Ballon d'Or? @ 0.58 ($81,620, P&L +20,767$)
+- wr0ngw4yb3tt0r: Washington Nationals vs. Detroit Tigers @ 0.45 ($38,769, P&L +1,307$)
+- wr0ngw4yb3tt0r: Giants vs. Rams @ 0.73 ($35,773, P&L +241$)
+- surfandturf: Giants vs. Rams @ 0.27 ($28,140, P&L +531$)
 - ferrariChampions2026: Monterrey Open: Maria Timofeeva vs Ann Li @ 0.50 ($26,858, P&L -840$)
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: Will Bitcoin dip to $35,000 by December 31, 2026? @ 0.97 ($19,346, P&L +2,350$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -69,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
+- `09-21T18:50` wallet informato-simile surfandturf (score 72/100, win 62%) ENTRA su 'Giants vs. Rams' — da osservare (shadow, zero ordini)
 - `09-21T13:23` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 82/100, win 78%) ENTRA su 'San Diego 2: Ozan Baris vs Alex Rybakov' — da osservare (shadow, zero ordini)
 - `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Davis Cup: Arthur Fery vs. Andres Andrade' — da osservare (shadow, zero ordini)
 - `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Deportivo Toluca FC vs. Club Santos Laguna: O/U 3.' — da osservare (shadow, zero ordini)
 - `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Milwaukee Brewers vs. Baltimore Orioles' — da osservare (shadow, zero ordini)
 - `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Milwaukee Brewers vs. Baltimore Orioles: O/U 4.5' — da osservare (shadow, zero ordini)
-- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Milwaukee Brewers vs. Baltimore Orioles: O/U 5.5' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
