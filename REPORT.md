@@ -1,8 +1,8 @@
-# Report predmarket-lab — 21/09/2026 20:55:30
+# Report predmarket-lab — 22/09/2026 00:28:54
 
-🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 4 min fa
 
-Ultimo scan: `2026-09-21T18:50:58+00:00` UTC · ciclo n.42 · 2455 mercati tracciati · 11963 snapshot · 5682 alert
+Ultimo scan: `2026-09-21T22:24:31+00:00` UTC · ciclo n.43 · 2498 mercati tracciati · 12261 snapshot · 5809 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-21T18:50:58+00:00` UTC · ciclo n.42 · 2455 mercati tracc
 
 ## Ultimi alert
 
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 411k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 379k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 319k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 304k: candidate yield maker
-- `18:50` **CHIUDE_OGGI** — chiude oggi, vol 24h 279k — finestra informativa finale
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 263k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 261k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 230k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 208k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 189k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 171k: candidate yield maker
-- `18:50` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 161k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1112k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 946k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 409k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 345k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 316k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 305k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 286k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 264k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 254k: candidate yield maker
+- `22:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 232k: candidate yield maker
+- `22:24` **MOVER_1H** — mossa +45 punti in 1h (prezzo 0.999) su 232k vol
+- `22:24` **CHIUDE_OGGI** — chiude oggi, vol 24h 216k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **2/100** — 2% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
+- **2/100** — 0% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 90 valutati · 82.2% hit · risultato medio -0.63%
-- **LONGSHOT_FADE** — 864 valutati · 83.2% hit · risultato medio +4.77%
+- **LONGSHOT_FADE** — 887 valutati · 82.9% hit · risultato medio +4.66%
 - **MAKER_SPREAD** — 9 valutati · 100.0% hit · risultato medio +14.21%
-- **MEAN_REVERT** — 223 valutati · 18.4% hit · risultato medio -24.29%
+- **MEAN_REVERT** — 224 valutati · 18.8% hit · risultato medio -22.88%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Will the US confirm that aliens exist before 2027? — longshot a 0.043 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Counter-Strike: Leo Team vs G2 Ares (BO3) - NODWIN Clutch Series Group — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Ethereum reach $3,200 in September? — longshot a 0.039 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Bitcoin dip to $45,000 by December 31, 2026? — longshot a 0.043 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will the next Claude Opus model be released on September 21, 2026? — longshot a 0.018 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Putin out as President of Russia by September 30, 2026? — longshot a 0.002 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Dota 2: Yellow Submarine vs Team Lynx (BO3) - European Pro League Play — mossa +45p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Sarah Huckabee Sanders win the 2028 Republican presidential nomin — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` San Diego 2: Braden Shick vs Patrick Maloney — mossa -18p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` San Diego 2: Dinko Dinev vs Dylan Dietrich — mossa -13p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` San Diego 2: Dinko Dinev vs Dylan Dietrich — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Friedrich Merz out as Chancellor of Germany before September 30, 2026 — longshot a 0.022 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,surfandturf) su 'Giants vs. Rams' — $63,913
+- **Consenso**: 2 balene (HomeRunHazard,Tiger200) su 'Giants vs. Rams: O/U 47.5' — $265,876
+- **Consenso**: 2 balene (wr0ngw4yb3tt0r,surfandturf) su 'Giants vs. Rams' — $79,951
 - **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Washington Nationals vs. Detroit Tigers' — $43,286
-- **Consenso**: 3 balene (HomeRunHazard,wr0ngw4yb3tt0r,ferrariChampions2026) su 'Toronto Blue Jays vs. Baltimore Orioles' — $28,376
-- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Minnesota Twins vs. San Francisco Giants: O/U 8.5' — $28,168
-- surfandturf: Will Harry Kane win the 2026 Ballon d'Or? @ 0.58 ($81,620, P&L +20,767$)
+- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Minnesota Twins vs. San Francisco Giants: O/U 8.5' — $34,324
+- Tiger200: Giants vs. Rams: O/U 47.5 @ 0.51 ($246,974, P&L -2,445$)
+- surfandturf: Will Harry Kane win the 2026 Ballon d'Or? @ 0.58 ($81,270, P&L +20,417$)
+- surfandturf: Giants vs. Rams @ 0.27 ($44,178, P&L +834$)
 - wr0ngw4yb3tt0r: Washington Nationals vs. Detroit Tigers @ 0.45 ($38,769, P&L +1,307$)
 - wr0ngw4yb3tt0r: Giants vs. Rams @ 0.73 ($35,773, P&L +241$)
-- surfandturf: Giants vs. Rams @ 0.27 ($28,140, P&L +531$)
-- ferrariChampions2026: Monterrey Open: Maria Timofeeva vs Ann Li @ 0.50 ($26,858, P&L -840$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
