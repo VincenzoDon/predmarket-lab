@@ -1,8 +1,8 @@
-# Report predmarket-lab — 21/09/2026 01:20:18
+# Report predmarket-lab — 21/09/2026 03:25:27
 
 🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
 
-Ultimo scan: `2026-09-20T23:15:21+00:00` UTC · ciclo n.38 · 2198 mercati tracciati · 10764 snapshot · 5101 alert
+Ultimo scan: `2026-09-21T01:20:14+00:00` UTC · ciclo n.39 · 2262 mercati tracciati · 11064 snapshot · 5276 alert
 
 ## Conto paper
 
@@ -12,53 +12,56 @@ Ultimo scan: `2026-09-20T23:15:21+00:00` UTC · ciclo n.38 · 2198 mercati tracc
 
 ## Ultimi alert
 
-- `23:15` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.04) su 3022k vol
-- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 3022k — finestra informativa finale
-- `23:15` **MOVER_1H** — mossa +46 punti in 1h (prezzo 0.999) su 2786k vol
-- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 2786k — finestra informativa finale
-- `23:15` **MOVER_1H** — mossa -63 punti in 1h (prezzo 0.001) su 2401k vol
-- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 2401k — finestra informativa finale
-- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 1803k — finestra informativa finale
-- `23:15` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1386k: candidate yield maker
-- `23:15` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.01) su 1386k vol
-- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 1386k — finestra informativa finale
-- `23:15` **MOVER_1H** — mossa +71 punti in 1h (prezzo 0.999) su 1275k vol
-- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 1275k — finestra informativa finale
+- `01:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3427k: candidate yield maker
+- `01:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 3427k — finestra informativa finale
+- `01:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1484k: candidate yield maker
+- `01:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 1484k — finestra informativa finale
+- `01:20` **MOVER_1H** — mossa -11 punti in 1h (prezzo 0.39) su 1220k vol
+- `01:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 1220k — finestra informativa finale
+- `01:20` **MOVER_1H** — mossa +33 punti in 1h (prezzo 0.76) su 460k vol
+- `01:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 460k — finestra informativa finale
+- `01:20` **MOVER_1H** — mossa +10 punti in 1h (prezzo 0.88) su 458k vol
+- `01:20` **MOVER_1H** — mossa -9 punti in 1h (prezzo 0.32) su 359k vol
+- `01:20` **CHIUDE_OGGI** — chiude oggi, vol 24h 359k — finestra informativa finale
+- `01:20` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 328k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **15/100** — 6% dei top-50 mercati ha spread >=4 punti, 28% ha mosso >=8 punti in 1h
+- **14/100** — 4% dei top-50 mercati ha spread >=4 punti, 30% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 78 valutati · 80.8% hit · risultato medio -2.45%
-- **LONGSHOT_FADE** — 675 valutati · 84.0% hit · risultato medio +6.30%
+- **ENDGAME_FAVORITE** — 80 valutati · 81.2% hit · risultato medio -2.11%
+- **LONGSHOT_FADE** — 749 valutati · 84.1% hit · risultato medio +5.59%
 - **MAKER_SPREAD** — 9 valutati · 100.0% hit · risultato medio +14.21%
-- **MEAN_REVERT** — 194 valutati · 18.6% hit · risultato medio -18.76%
+- **MEAN_REVERT** — 206 valutati · 18.0% hit · risultato medio -20.80%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Commanders vs. Cowboys — longshot a 0.038 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Jaguars vs. Broncos — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Dolphins vs. 49ers — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Spread: Chargers (-6.5) — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` LoL: Team Liquid vs FlyQuest - Game 3 Winner — mossa +51p in 1h — ipotesi rientro eccesso
-- `MAKER_SPREAD` Seahawks vs. Cardinals: O/U 41.5 — spread 13p — ipotesi cattura maker
+- `LONGSHOT_FADE` Seahawks vs. Cardinals: O/U 41.5 — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Colts vs. Chiefs: O/U 46.5 — favorito 0.80 a fine giornata, spread 3p, vol 460k
+- `MEAN_REVERT` Milwaukee Brewers vs. Baltimore Orioles — mossa +10p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Phil Murphy win the 2028 Democratic presidential nomination? — longshot a 0.002 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Colts vs. Chiefs: O/U 45.5 — favorito 0.83 a fine giornata, spread 2p, vol 303k
+- `MEAN_REVERT` Inter Miami CF vs. San Diego FC: O/U 4.5 — mossa -36p in 1h — ipotesi rientro eccesso
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (Elaran1993,UpTheBlues) su 'Inter Miami CF vs. San Diego FC: O/U 4.5' — $60,974
-- Elaran1993: Commanders vs. Cowboys @ 0.98 ($712,923, P&L +235,229$)
-- Kch-Temp: Spread: Bears (-4.5) @ 1.00 ($260,465, P&L +129,551$)
-- Kch-Temp: Vikings vs. Bears: O/U 47.5 @ 1.00 ($236,644, P&L +111,855$)
-- Kch-Temp: Spread: Packers (-3.5) @ 1.00 ($186,713, P&L +87,705$)
-- mooseborzoi: Will Chicago Fire FC win the 2026 MLS Cup? @ 0.94 ($94,043, P&L +36$)
+- **Consenso**: 3 balene (ferrariChampions2026,mooseborzoi,nigiri99) su 'Colts vs. Chiefs' — $402,908
+- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Will CF Pachuca win on 2026-09-20?' — $157,680
+- **Consenso**: 2 balene (ferrariChampions2026,mooseborzoi) su 'Milwaukee Brewers vs. Baltimore Orioles' — $144,170
+- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Spread: KC (-5.5)' — $92,890
+- JnStrtPrdctnMrkts: Will Ethereum dip to $1,500 by December 31, 2026? @ 0.91 ($909,660, P&L +286,878$)
+- JnStrtPrdctnMrkts: Will Bitcoin dip to $55,000 by December 31, 2026? @ 0.87 ($617,135, P&L +237,714$)
+- JnStrtPrdctnMrkts: Will Bitcoin dip to $50,000 by December 31, 2026? @ 0.91 ($567,385, P&L +150,159$)
+- JnStrtPrdctnMrkts: Will Ethereum dip to $1,250 by December 31, 2026? @ 0.94 ($370,417, P&L +68,843$)
+- JnStrtPrdctnMrkts: Will Ethereum dip to $1,750 by December 31, 2026? @ 0.91 ($345,827, P&L +53,315$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
 Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, convinzione, nicchia). Radar da validare nel tempo, non un invito a copiare.
 
-- **JnStrtPrdctnMrkts** — score 90/100 · win 78% · 135 osservazioni su 15 mercati
+- **JnStrtPrdctnMrkts** — score 91/100 · win 79% · 150 osservazioni su 15 mercati
 - **Kch-Temp** — score 85/100 · win 91% · 23 osservazioni su 18 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **BreakTheBank** — score 80/100 · win 63% · 90 osservazioni su 26 mercati
@@ -69,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-20T23:15` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'San Diego 2: Daniil Ostapenkov vs Quinn Vandecaste' — da osservare (shadow, zero ordini)
-- `09-20T23:15` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Will CA Bucaramanga win on 2026-09-20?' — da osservare (shadow, zero ordini)
-- `09-20T23:15` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Will Club Tijuana win on 2026-09-20?' — da osservare (shadow, zero ordini)
-- `09-20T23:15` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Spread: Inter Miami CF (-1.5)' — da osservare (shadow, zero ordini)
-- `09-20T23:15` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'Inter Miami CF vs. San Diego FC: O/U 4.5' — da osservare (shadow, zero ordini)
-- `09-20T23:15` wallet informato-simile UpTheBlues (score 79/100, win 92%) ENTRA su 'FC Porto vs. Sport Lisboa e Benfica: O/U 4.5' — da osservare (shadow, zero ordini)
+- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Davis Cup: Arthur Fery vs. Andres Andrade' — da osservare (shadow, zero ordini)
+- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Deportivo Toluca FC vs. Club Santos Laguna: O/U 3.' — da osservare (shadow, zero ordini)
+- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Milwaukee Brewers vs. Baltimore Orioles' — da osservare (shadow, zero ordini)
+- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Milwaukee Brewers vs. Baltimore Orioles: O/U 4.5' — da osservare (shadow, zero ordini)
+- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Milwaukee Brewers vs. Baltimore Orioles: O/U 5.5' — da osservare (shadow, zero ordini)
+- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Milwaukee Brewers vs. Baltimore Orioles: O/U 7.5' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
