@@ -1,8 +1,8 @@
-# Report predmarket-lab — 22/09/2026 08:03:05
+# Report predmarket-lab — 22/09/2026 13:21:45
 
 🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
 
-Ultimo scan: `2026-09-22T05:58:31+00:00` UTC · ciclo n.45 · 2578 mercati tracciati · 12861 snapshot · 6110 alert
+Ultimo scan: `2026-09-22T11:17:12+00:00` UTC · ciclo n.46 · 2629 mercati tracciati · 13161 snapshot · 6267 alert
 
 ## Conto paper
 
@@ -12,46 +12,47 @@ Ultimo scan: `2026-09-22T05:58:31+00:00` UTC · ciclo n.45 · 2578 mercati tracc
 
 ## Ultimi alert
 
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 412k: candidate yield maker
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 339k: candidate yield maker
-- `05:58` **MOVER_1H** — mossa +15 punti in 1h (prezzo 0.64) su 302k vol
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 298k: candidate yield maker
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 280k: candidate yield maker
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 246k: candidate yield maker
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 240k: candidate yield maker
-- `05:58` **CHIUDE_OGGI** — chiude oggi, vol 24h 212k — finestra informativa finale
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 172k: candidate yield maker
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 159k: candidate yield maker
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 157k: candidate yield maker
-- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 153k: candidate yield maker
+- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 537k: candidate yield maker
+- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 445k: candidate yield maker
+- `11:17` **MOVER_1H** — mossa +8 punti in 1h (prezzo 0.57) su 404k vol
+- `11:17` **MOVER_1H** — mossa -51 punti in 1h (prezzo 0.01) su 373k vol
+- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 373k — finestra informativa finale
+- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 362k: candidate yield maker
+- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 348k: candidate yield maker
+- `11:17` **MOVER_1H** — mossa -27 punti in 1h (prezzo 0.12) su 342k vol
+- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 316k — finestra informativa finale
+- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 289k: candidate yield maker
+- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 271k — finestra informativa finale
+- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 268k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **2/100** — 2% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
+- **10/100** — 4% dei top-50 mercati ha spread >=4 punti, 20% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 93 valutati · 82.8% hit · risultato medio +0.04%
-- **LONGSHOT_FADE** — 917 valutati · 82.6% hit · risultato medio +4.52%
+- **ENDGAME_FAVORITE** — 94 valutati · 83.0% hit · risultato medio +0.09%
+- **LONGSHOT_FADE** — 934 valutati · 82.1% hit · risultato medio +4.45%
 - **MAKER_SPREAD** — 9 valutati · 100.0% hit · risultato medio +14.21%
-- **MEAN_REVERT** — 232 valutati · 19.0% hit · risultato medio -22.16%
+- **MEAN_REVERT** — 236 valutati · 18.6% hit · risultato medio -23.48%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Korea Open: Anna Bondar vs Renata Zarazua — mossa +15p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Trump out as President by September 30? — longshot a 0.002 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Chengdu Open, Qualification: Alexandre Muller vs Luka Pavlovic — mossa +22p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will Ethereum reach $3,300 in September? — longshot a 0.040 — ipotesi sopravvalutazione
-- `MAKER_SPREAD` Will WTI Crude Oil (WTI) hit (LOW) $90 in September? — spread 19p — ipotesi cattura maker
-- `LONGSHOT_FADE` Will the highest temperature in Hong Kong be 29°C on September 22? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Dota 2: Natus Vincere vs 1win - Game 1 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Tolentino: Lisa Zaar vs Rebeka Masarova — mossa -27p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Tolentino: Lisa Zaar vs Rebeka Masarova — longshot a 0.001 — ipotesi sopravvalutazione
+- `MAKER_SPREAD` Dota 2:  Pipsqueak+4 vs Team Cobra - Game 2 Winner — spread 17p — ipotesi cattura maker
+- `LONGSHOT_FADE` Will the Fed increase interest rates by 50+ bps after the October 2026 — longshot a 0.007 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Ankara: Anastasia Tikhonova vs Anastasia Gasanova — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- takeormake: NATO x Russia military clash by December 31, 2026? @ 0.68 ($1,744, P&L -90$)
-- takeormake: Will Anthropic IPO by December 31, 2026? @ 0.20 ($1,707, P&L -741$)
-- takeormake: Will Los Angeles Rams win the 2027 NFL NFC Championship? @ 0.81 ($1,489, P&L -9$)
-- takeormake: Will Anthropic IPO by November 30, 2026? @ 0.42 ($1,101, P&L -194$)
-- takeormake: Will the Baltimore Ravens win the 2027 NFL league championsh @ 0.94 ($938, P&L +25$)
+- **Consenso**: 2 balene (0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465,BreakTheBank) su 'Will Philadelphia 76ers win the 2027 NBA Finals?' — $50,030
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.66 ($3,930,000, P&L +930,000$)
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.34 ($2,070,000, P&L -930,000$)
+- BreakTheBank: Will Manchester City win the 2026-27 English Premier League  @ 0.61 ($279,626, P&L -43,189$)
+- BreakTheBank: Will Arsenal win the 2026-27 English Premier League (EPL) Ch @ 0.48 ($194,000, P&L +181,653$)
+- BreakTheBank: Will Philadelphia 76ers win the 2027 NBA Finals? @ 0.89 ($45,449, P&L +1,126$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -59,21 +60,21 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 - **JnStrtPrdctnMrkts** — score 91/100 · win 79% · 150 osservazioni su 15 mercati
 - **Kch-Temp** — score 85/100 · win 91% · 23 osservazioni su 18 mercati
-- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 82/100 · win 78% · 46 osservazioni su 15 mercati
 - **Tiger200** — score 81/100 · win 75% · 4 osservazioni su 3 mercati
+- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 81/100 · win 76% · 55 osservazioni su 15 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
-- **BreakTheBank** — score 80/100 · win 63% · 90 osservazioni su 26 mercati
 - **UpTheBlues** — score 79/100 · win 92% · 90 osservazioni su 66 mercati
+- **BreakTheBank** — score 79/100 · win 62% · 105 osservazioni su 27 mercati
 - **Flaznorp** — score 78/100 · win 91% · 45 osservazioni su 38 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
+- `09-22T11:17` wallet informato-simile BreakTheBank (score 79/100, win 62%) ENTRA su 'Will the Jacksonville Jaguars win the 2027 NFL lea' — da osservare (shadow, zero ordini)
 - `09-22T00:59` wallet informato-simile Tiger200 (score 81/100, win 75%) ENTRA su 'Giants vs. Rams' — da osservare (shadow, zero ordini)
 - `09-22T00:59` wallet informato-simile Tiger200 (score 81/100, win 75%) ENTRA su 'Spread: Rams (-6.5)' — da osservare (shadow, zero ordini)
 - `09-21T18:50` wallet informato-simile surfandturf (score 72/100, win 62%) ENTRA su 'Giants vs. Rams' — da osservare (shadow, zero ordini)
 - `09-21T13:23` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 82/100, win 78%) ENTRA su 'San Diego 2: Ozan Baris vs Alex Rybakov' — da osservare (shadow, zero ordini)
 - `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Davis Cup: Arthur Fery vs. Andres Andrade' — da osservare (shadow, zero ordini)
-- `09-21T01:20` wallet informato-simile ferrariChampions2026 (score 74/100, win 80%) ENTRA su 'Deportivo Toluca FC vs. Club Santos Laguna: O/U 3.' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
