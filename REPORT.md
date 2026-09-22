@@ -1,8 +1,8 @@
-# Report predmarket-lab — 22/09/2026 13:21:45
+# Report predmarket-lab — 22/09/2026 17:39:34
 
 🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
 
-Ultimo scan: `2026-09-22T11:17:12+00:00` UTC · ciclo n.46 · 2629 mercati tracciati · 13161 snapshot · 6267 alert
+Ultimo scan: `2026-09-22T15:34:47+00:00` UTC · ciclo n.47 · 2689 mercati tracciati · 13455 snapshot · 6424 alert
 
 ## Conto paper
 
@@ -12,38 +12,38 @@ Ultimo scan: `2026-09-22T11:17:12+00:00` UTC · ciclo n.46 · 2629 mercati tracc
 
 ## Ultimi alert
 
-- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 537k: candidate yield maker
-- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 445k: candidate yield maker
-- `11:17` **MOVER_1H** — mossa +8 punti in 1h (prezzo 0.57) su 404k vol
-- `11:17` **MOVER_1H** — mossa -51 punti in 1h (prezzo 0.01) su 373k vol
-- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 373k — finestra informativa finale
-- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 362k: candidate yield maker
-- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 348k: candidate yield maker
-- `11:17` **MOVER_1H** — mossa -27 punti in 1h (prezzo 0.12) su 342k vol
-- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 316k — finestra informativa finale
-- `11:17` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 289k: candidate yield maker
-- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 271k — finestra informativa finale
-- `11:17` **CHIUDE_OGGI** — chiude oggi, vol 24h 268k — finestra informativa finale
+- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 724k: candidate yield maker
+- `15:34` **MOVER_1H** — mossa -22 punti in 1h (prezzo 0.5) su 680k vol
+- `15:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 680k — finestra informativa finale
+- `15:34` **MOVER_1H** — mossa -30 punti in 1h (prezzo 0.2) su 438k vol
+- `15:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 438k — finestra informativa finale
+- `15:34` **MOVER_1H** — mossa -26 punti in 1h (prezzo 0.55) su 396k vol
+- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 389k: candidate yield maker
+- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 366k: candidate yield maker
+- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 302k: candidate yield maker
+- `15:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 282k — finestra informativa finale
+- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 274k: candidate yield maker
+- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 261k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **10/100** — 4% dei top-50 mercati ha spread >=4 punti, 20% ha mosso >=8 punti in 1h
+- **9/100** — 0% dei top-50 mercati ha spread >=4 punti, 22% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 94 valutati · 83.0% hit · risultato medio +0.09%
-- **LONGSHOT_FADE** — 934 valutati · 82.1% hit · risultato medio +4.45%
-- **MAKER_SPREAD** — 9 valutati · 100.0% hit · risultato medio +14.21%
-- **MEAN_REVERT** — 236 valutati · 18.6% hit · risultato medio -23.48%
+- **LONGSHOT_FADE** — 949 valutati · 82.2% hit · risultato medio +4.39%
+- **MAKER_SPREAD** — 10 valutati · 100.0% hit · risultato medio +14.72%
+- **MEAN_REVERT** — 241 valutati · 18.7% hit · risultato medio -20.19%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Dota 2: Natus Vincere vs 1win - Game 1 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Tolentino: Lisa Zaar vs Rebeka Masarova — mossa -27p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Tolentino: Lisa Zaar vs Rebeka Masarova — longshot a 0.001 — ipotesi sopravvalutazione
-- `MAKER_SPREAD` Dota 2:  Pipsqueak+4 vs Team Cobra - Game 2 Winner — spread 17p — ipotesi cattura maker
-- `LONGSHOT_FADE` Will the Fed increase interest rates by 50+ bps after the October 2026 — longshot a 0.007 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Ankara: Anastasia Tikhonova vs Anastasia Gasanova — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championsh — longshot a 0.002 — ipotesi sopravvalutazione
+- `MEAN_REVERT` St. Tropez: Harold Mayot vs Justin Boulais — mossa -26p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will the US confirm that aliens exist by September 30? — longshot a 0.005 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Singapore Open: Maria Sakkari vs Linda Fruhvirtova — mossa +39p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Elon Musk post 240-259 tweets from September 15 to September 22,  — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Will the price of Bitcoin be above $86,000 on September 22? — favorito 0.87 a fine giornata, spread 2p, vol 138k
 
 ## Whale watch 🐋
 
@@ -61,10 +61,10 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **JnStrtPrdctnMrkts** — score 91/100 · win 79% · 150 osservazioni su 15 mercati
 - **Kch-Temp** — score 85/100 · win 91% · 23 osservazioni su 18 mercati
 - **Tiger200** — score 81/100 · win 75% · 4 osservazioni su 3 mercati
-- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 81/100 · win 76% · 55 osservazioni su 15 mercati
+- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 80/100 · win 75% · 64 osservazioni su 15 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **UpTheBlues** — score 79/100 · win 92% · 90 osservazioni su 66 mercati
-- **BreakTheBank** — score 79/100 · win 62% · 105 osservazioni su 27 mercati
+- **BreakTheBank** — score 78/100 · win 61% · 120 osservazioni su 27 mercati
 - **Flaznorp** — score 78/100 · win 91% · 45 osservazioni su 38 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
