@@ -1,8 +1,8 @@
-# Report predmarket-lab — 22/09/2026 03:03:57
+# Report predmarket-lab — 22/09/2026 08:03:05
 
 🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
 
-Ultimo scan: `2026-09-22T00:59:08+00:00` UTC · ciclo n.44 · 2527 mercati tracciati · 12561 snapshot · 5976 alert
+Ultimo scan: `2026-09-22T05:58:31+00:00` UTC · ciclo n.45 · 2578 mercati tracciati · 12861 snapshot · 6110 alert
 
 ## Conto paper
 
@@ -12,50 +12,46 @@ Ultimo scan: `2026-09-22T00:59:08+00:00` UTC · ciclo n.44 · 2527 mercati tracc
 
 ## Ultimi alert
 
-- `00:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 5117k: candidate yield maker
-- `00:59` **MOVER_1H** — mossa -19 punti in 1h (prezzo 0.08) su 5117k vol
-- `00:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 5117k — finestra informativa finale
-- `00:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1688k: candidate yield maker
-- `00:59` **MOVER_1H** — mossa +33 punti in 1h (prezzo 0.84) su 1688k vol
-- `00:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 1688k — finestra informativa finale
-- `00:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1537k: candidate yield maker
-- `00:59` **MOVER_1H** — mossa -22 punti in 1h (prezzo 0.3) su 1537k vol
-- `00:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 1537k — finestra informativa finale
-- `00:59` **MOVER_1H** — mossa +11 punti in 1h (prezzo 0.79) su 638k vol
-- `00:59` **MOVER_1H** — mossa +36 punti in 1h (prezzo 0.76) su 587k vol
-- `00:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 587k — finestra informativa finale
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 412k: candidate yield maker
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 339k: candidate yield maker
+- `05:58` **MOVER_1H** — mossa +15 punti in 1h (prezzo 0.64) su 302k vol
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 298k: candidate yield maker
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 280k: candidate yield maker
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 246k: candidate yield maker
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 240k: candidate yield maker
+- `05:58` **CHIUDE_OGGI** — chiude oggi, vol 24h 212k — finestra informativa finale
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 172k: candidate yield maker
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 159k: candidate yield maker
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 157k: candidate yield maker
+- `05:58` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 153k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **8/100** — 0% dei top-50 mercati ha spread >=4 punti, 20% ha mosso >=8 punti in 1h
+- **2/100** — 2% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 90 valutati · 82.2% hit · risultato medio -0.63%
-- **LONGSHOT_FADE** — 897 valutati · 82.7% hit · risultato medio +4.61%
+- **ENDGAME_FAVORITE** — 93 valutati · 82.8% hit · risultato medio +0.04%
+- **LONGSHOT_FADE** — 917 valutati · 82.6% hit · risultato medio +4.52%
 - **MAKER_SPREAD** — 9 valutati · 100.0% hit · risultato medio +14.21%
-- **MEAN_REVERT** — 227 valutati · 18.5% hit · risultato medio -23.90%
+- **MEAN_REVERT** — 232 valutati · 19.0% hit · risultato medio -22.16%
 
 segnali aperti ora:
 
-- `ENDGAME_FAVORITE` Spread: Rams (-6.5) — favorito 0.84 a fine giornata, spread 1p, vol 1688k
-- `LONGSHOT_FADE` Will Glenn Youngkin win the 2028 US Presidential Election? — longshot a 0.002 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Toronto Blue Jays vs. Baltimore Orioles — mossa +11p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Spread: Rams (-7.5) — favorito 0.80 a fine giornata, spread 1p, vol 587k
-- `LONGSHOT_FADE` Washington Nationals vs. Detroit Tigers — longshot a 0.001 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Spread: Rams (-4.5) — favorito 0.86 a fine giornata, spread 2p, vol 304k
+- `MEAN_REVERT` Korea Open: Anna Bondar vs Renata Zarazua — mossa +15p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Trump out as President by September 30? — longshot a 0.002 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Chengdu Open, Qualification: Alexandre Muller vs Luka Pavlovic — mossa +22p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Ethereum reach $3,300 in September? — longshot a 0.040 — ipotesi sopravvalutazione
+- `MAKER_SPREAD` Will WTI Crude Oil (WTI) hit (LOW) $90 in September? — spread 19p — ipotesi cattura maker
+- `LONGSHOT_FADE` Will the highest temperature in Hong Kong be 29°C on September 22? — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 4 balene (HomeRunHazard,wr0ngw4yb3tt0r,Tiger200,surfandturf) su 'Giants vs. Rams' — $1,039,502
-- **Consenso**: 2 balene (HomeRunHazard,Tiger200) su 'Giants vs. Rams: O/U 47.5' — $342,524
-- **Consenso**: 3 balene (HomeRunHazard,wr0ngw4yb3tt0r,Tiger200) su 'Spread: Rams (-6.5)' — $266,981
-- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Washington Nationals vs. Detroit Tigers' — $67,673
-- Tiger200: Giants vs. Rams @ 0.94 ($512,300, P&L +121,976$)
-- Tiger200: Giants vs. Rams: O/U 47.5 @ 0.68 ($330,113, P&L +80,694$)
-- surfandturf: Giants vs. Rams @ 0.94 ($236,250, P&L +54,205$)
-- wr0ngw4yb3tt0r: Giants vs. Rams @ 0.94 ($207,455, P&L +40,539$)
-- Tiger200: Spread: Rams (-6.5) @ 0.91 ($191,770, P&L +81,582$)
+- takeormake: NATO x Russia military clash by December 31, 2026? @ 0.68 ($1,744, P&L -90$)
+- takeormake: Will Anthropic IPO by December 31, 2026? @ 0.20 ($1,707, P&L -741$)
+- takeormake: Will Los Angeles Rams win the 2027 NFL NFC Championship? @ 0.81 ($1,489, P&L -9$)
+- takeormake: Will Anthropic IPO by November 30, 2026? @ 0.42 ($1,101, P&L -194$)
+- takeormake: Will the Baltimore Ravens win the 2027 NFL league championsh @ 0.94 ($938, P&L +25$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
