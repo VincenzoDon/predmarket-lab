@@ -1,8 +1,8 @@
-# Report predmarket-lab — 22/09/2026 17:39:34
+# Report predmarket-lab — 22/09/2026 21:16:02
 
 🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
 
-Ultimo scan: `2026-09-22T15:34:47+00:00` UTC · ciclo n.47 · 2689 mercati tracciati · 13455 snapshot · 6424 alert
+Ultimo scan: `2026-09-22T19:10:46+00:00` UTC · ciclo n.48 · 2749 mercati tracciati · 13750 snapshot · 6577 alert
 
 ## Conto paper
 
@@ -12,47 +12,46 @@ Ultimo scan: `2026-09-22T15:34:47+00:00` UTC · ciclo n.47 · 2689 mercati tracc
 
 ## Ultimi alert
 
-- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 724k: candidate yield maker
-- `15:34` **MOVER_1H** — mossa -22 punti in 1h (prezzo 0.5) su 680k vol
-- `15:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 680k — finestra informativa finale
-- `15:34` **MOVER_1H** — mossa -30 punti in 1h (prezzo 0.2) su 438k vol
-- `15:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 438k — finestra informativa finale
-- `15:34` **MOVER_1H** — mossa -26 punti in 1h (prezzo 0.55) su 396k vol
-- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 389k: candidate yield maker
-- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 366k: candidate yield maker
-- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 302k: candidate yield maker
-- `15:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 282k — finestra informativa finale
-- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 274k: candidate yield maker
-- `15:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 261k: candidate yield maker
+- `19:10` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3407k: candidate yield maker
+- `19:10` **MOVER_1H** — mossa -15 punti in 1h (prezzo 0.06) su 3407k vol
+- `19:10` **MOVER_1H** — mossa -39 punti in 1h (prezzo 0.38) su 816k vol
+- `19:10` **CHIUDE_OGGI** — chiude oggi, vol 24h 816k — finestra informativa finale
+- `19:10` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 715k: candidate yield maker
+- `19:10` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 402k: candidate yield maker
+- `19:10` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 373k: candidate yield maker
+- `19:10` **MOVER_1H** — mossa +25 punti in 1h (prezzo 0.981) su 373k vol
+- `19:10` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 349k: candidate yield maker
+- `19:10` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 347k: candidate yield maker
+- `19:10` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 304k: candidate yield maker
+- `19:10` **MOVER_1H** — mossa -44 punti in 1h (prezzo 0.01) su 279k vol
 
 ## Indice di inefficienza (v0)
 
-- **9/100** — 0% dei top-50 mercati ha spread >=4 punti, 22% ha mosso >=8 punti in 1h
+- **10/100** — 0% dei top-50 mercati ha spread >=4 punti, 24% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 94 valutati · 83.0% hit · risultato medio +0.09%
-- **LONGSHOT_FADE** — 949 valutati · 82.2% hit · risultato medio +4.39%
+- **ENDGAME_FAVORITE** — 96 valutati · 83.3% hit · risultato medio +0.32%
+- **LONGSHOT_FADE** — 981 valutati · 82.1% hit · risultato medio +4.26%
 - **MAKER_SPREAD** — 10 valutati · 100.0% hit · risultato medio +14.72%
-- **MEAN_REVERT** — 241 valutati · 18.7% hit · risultato medio -20.19%
+- **MEAN_REVERT** — 251 valutati · 19.1% hit · risultato medio -20.51%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championsh — longshot a 0.002 — ipotesi sopravvalutazione
-- `MEAN_REVERT` St. Tropez: Harold Mayot vs Justin Boulais — mossa -26p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will the US confirm that aliens exist by September 30? — longshot a 0.005 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Singapore Open: Maria Sakkari vs Linda Fruhvirtova — mossa +39p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will Elon Musk post 240-259 tweets from September 15 to September 22,  — longshot a 0.001 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Will the price of Bitcoin be above $86,000 on September 22? — favorito 0.87 a fine giornata, spread 2p, vol 138k
+- `LONGSHOT_FADE` Tampa Bay Rays vs. New York Yankees — longshot a 0.015 — ipotesi sopravvalutazione
+- `MEAN_REVERT` US x Iran diplomatic meeting by September 30, 2026? — mossa +25p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Counter-Strike: Inner Circle Esports vs 3DMAX - Map 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Skillcamp Esport vs Lodis (BO3) - EMEA Masters Group A — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Buenos Aires 2: Genaro Alberto Olivieri vs Valerio Aboian — mossa -65p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Buenos Aires 2: Genaro Alberto Olivieri vs Valerio Aboian — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465,BreakTheBank) su 'Will Philadelphia 76ers win the 2027 NBA Finals?' — $50,030
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.66 ($3,930,000, P&L +930,000$)
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.34 ($2,070,000, P&L -930,000$)
+- goshkam: Tampa Bay Rays vs. New York Yankees @ 1.00 ($2,493,846, P&L +1,028,642$)
 - BreakTheBank: Will Manchester City win the 2026-27 English Premier League  @ 0.61 ($279,626, P&L -43,189$)
 - BreakTheBank: Will Arsenal win the 2026-27 English Premier League (EPL) Ch @ 0.48 ($194,000, P&L +181,653$)
 - BreakTheBank: Will Philadelphia 76ers win the 2027 NBA Finals? @ 0.89 ($45,449, P&L +1,126$)
+- BreakTheBank: Will the Chicago Bears win the 2027 NFL league championship? @ 0.97 ($22,310, P&L +930$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -64,7 +63,7 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 80/100 · win 75% · 64 osservazioni su 15 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **UpTheBlues** — score 79/100 · win 92% · 90 osservazioni su 66 mercati
-- **BreakTheBank** — score 78/100 · win 61% · 120 osservazioni su 27 mercati
+- **BreakTheBank** — score 78/100 · win 60% · 135 osservazioni su 27 mercati
 - **Flaznorp** — score 78/100 · win 91% · 45 osservazioni su 38 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
