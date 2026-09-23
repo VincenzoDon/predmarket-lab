@@ -1,8 +1,8 @@
-# Report predmarket-lab — 23/09/2026 00:13:58
+# Report predmarket-lab — 23/09/2026 02:36:41
 
 🟢 **Salute dati:** dati freschi: ultimo scan 5 min fa
 
-Ultimo scan: `2026-09-22T22:08:32+00:00` UTC · ciclo n.49 · 2811 mercati tracciati · 14045 snapshot · 6697 alert
+Ultimo scan: `2026-09-23T00:31:26+00:00` UTC · ciclo n.50 · 2857 mercati tracciati · 14345 snapshot · 6854 alert
 
 ## Conto paper
 
@@ -12,46 +12,46 @@ Ultimo scan: `2026-09-22T22:08:32+00:00` UTC · ciclo n.49 · 2811 mercati tracc
 
 ## Ultimi alert
 
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 667k: candidate yield maker
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 448k: candidate yield maker
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 429k: candidate yield maker
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 401k: candidate yield maker
-- `22:08` **MOVER_1H** — mossa -56 punti in 1h (prezzo 0.001) su 312k vol
-- `22:08` **MOVER_1H** — mossa +10 punti in 1h (prezzo 0.8) su 301k vol
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 299k: candidate yield maker
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 249k: candidate yield maker
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 226k: candidate yield maker
-- `22:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 215k: candidate yield maker
-- `22:08` **CHIUDE_OGGI** — chiude oggi, vol 24h 201k — finestra informativa finale
-- `22:08` **CHIUDE_OGGI** — chiude oggi, vol 24h 156k — finestra informativa finale
+- `00:31` **MOVER_1H** — mossa +17 punti in 1h (prezzo 0.49) su 4266k vol
+- `00:31` **MOVER_1H** — mossa +28 punti in 1h (prezzo 0.41) su 925k vol
+- `00:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 617k: candidate yield maker
+- `00:31` **MOVER_1H** — mossa +16 punti in 1h (prezzo 0.63) su 535k vol
+- `00:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 468k: candidate yield maker
+- `00:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 417k: candidate yield maker
+- `00:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 417k: candidate yield maker
+- `00:31` **MOVER_1H** — mossa -8 punti in 1h (prezzo 0.45) su 396k vol
+- `00:31` **CHIUDE_OGGI** — chiude oggi, vol 24h 369k — finestra informativa finale
+- `00:31` **MOVER_1H** — mossa -27 punti in 1h (prezzo 0.15) su 345k vol
+- `00:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 322k: candidate yield maker
+- `00:31` **MOVER_1H** — mossa +28 punti in 1h (prezzo 0.75) su 292k vol
 
 ## Indice di inefficienza (v0)
 
-- **2/100** — 0% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
+- **10/100** — 0% dei top-50 mercati ha spread >=4 punti, 26% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 96 valutati · 83.3% hit · risultato medio +0.32%
-- **LONGSHOT_FADE** — 1009 valutati · 82.5% hit · risultato medio +4.15%
+- **LONGSHOT_FADE** — 1038 valutati · 82.6% hit · risultato medio +4.05%
 - **MAKER_SPREAD** — 10 valutati · 100.0% hit · risultato medio +14.72%
-- **MEAN_REVERT** — 258 valutati · 19.0% hit · risultato medio -21.26%
+- **MEAN_REVERT** — 265 valutati · 18.9% hit · risultato medio -22.14%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` LoL: Arctic Pandas vs Pyramid IV Esports (BO3) - EMEA Masters Group A — mossa -56p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` LoL: Arctic Pandas vs Pyramid IV Esports (BO3) - EMEA Masters Group A — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Buenos Aires 2: Lucio Ratti vs Federico Coria — mossa +10p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will Renan Santos win the 2026 Brazilian presidential election? — longshot a 0.009 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Bitcoin dip to $45,000 by December 31, 2026? — longshot a 0.036 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Dota 2: Team Synapse vs Kalmychata (BO3) - European Pro League Playoff — mossa +39p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Cincinnati Reds vs. Atlanta Braves — mossa +17p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Milwaukee Brewers vs. Philadelphia Phillies — mossa +28p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Tampa Bay Rays vs. New York Yankees — mossa +16p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` St. Louis Cardinals vs. Pittsburgh Pirates — mossa -27p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Milwaukee Brewers vs. Philadelphia Phillies: O/U 7.5 — mossa +28p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Chicago White Sox vs. Kansas City Royals — mossa +43p in 1h — ipotesi rientro eccesso
 
 ## Whale watch 🐋
 
-- goshkam: Cincinnati Reds vs. Atlanta Braves @ 0.69 ($2,409,588, P&L -53,701$)
+- goshkam: Cincinnati Reds vs. Atlanta Braves @ 0.55 ($1,917,118, P&L -546,172$)
 - BreakTheBank: Will Manchester City win the 2026-27 English Premier League  @ 0.61 ($279,626, P&L -43,189$)
 - BreakTheBank: Will Arsenal win the 2026-27 English Premier League (EPL) Ch @ 0.48 ($194,000, P&L +181,653$)
 - BreakTheBank: Will Philadelphia 76ers win the 2027 NBA Finals? @ 0.89 ($45,449, P&L +1,126$)
-- BreakTheBank: Will the Chicago Bears win the 2027 NFL league championship? @ 0.97 ($22,310, P&L +930$)
+- BreakTheBank: Will the Chicago Bears win the 2027 NFL league championship? @ 0.97 ($22,333, P&L +953$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -64,7 +64,7 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **UpTheBlues** — score 79/100 · win 92% · 90 osservazioni su 66 mercati
 - **Flaznorp** — score 78/100 · win 91% · 45 osservazioni su 38 mercati
-- **BreakTheBank** — score 77/100 · win 59% · 150 osservazioni su 27 mercati
+- **BreakTheBank** — score 77/100 · win 59% · 165 osservazioni su 27 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
