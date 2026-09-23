@@ -1,8 +1,8 @@
 {
- "ts": "2026-09-23T09:58:58+00:00",
- "markets": 300,
- "alerts": 143,
- "signals_new": 35,
- "signals_closed": 6,
+ "ts": "2026-09-23T14:50:12+00:00",
+ "markets": 299,
+ "alerts": 154,
+ "signals_new": 40,
+ "signals_closed": 9,
  "equity": 201.24
 }
