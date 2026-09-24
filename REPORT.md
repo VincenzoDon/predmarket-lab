@@ -1,8 +1,8 @@
-# Report predmarket-lab — 24/09/2026 16:57:49
+# Report predmarket-lab — 24/09/2026 20:54:38
 
 🟢 **Salute dati:** dati freschi: ultimo scan 6 min fa
 
-Ultimo scan: `2026-09-24T14:51:57+00:00` UTC · ciclo n.59 · 3390 mercati tracciati · 17041 snapshot · 8153 alert
+Ultimo scan: `2026-09-24T18:48:29+00:00` UTC · ciclo n.60 · 3481 mercati tracciati · 17341 snapshot · 8298 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-24T14:51:57+00:00` UTC · ciclo n.59 · 3390 mercati tracc
 
 ## Ultimi alert
 
-- `14:51` **MOVER_1H** — mossa +26 punti in 1h (prezzo 0.96) su 543k vol
-- `14:51` **CHIUDE_OGGI** — chiude oggi, vol 24h 543k — finestra informativa finale
-- `14:51` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 478k: candidate yield maker
-- `14:51` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 421k: candidate yield maker
-- `14:51` **CHIUDE_OGGI** — chiude oggi, vol 24h 354k — finestra informativa finale
-- `14:51` **MOVER_1H** — mossa +10 punti in 1h (prezzo 0.99) su 234k vol
-- `14:51` **CHIUDE_OGGI** — chiude oggi, vol 24h 234k — finestra informativa finale
-- `14:51` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.02) su 229k vol
-- `14:51` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 218k: candidate yield maker
-- `14:51` **CHIUDE_OGGI** — chiude oggi, vol 24h 214k — finestra informativa finale
-- `14:51` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 212k: candidate yield maker
-- `14:51` **CHIUDE_OGGI** — chiude oggi, vol 24h 195k — finestra informativa finale
+- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 8059k — finestra informativa finale
+- `18:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1430k: candidate yield maker
+- `18:48` **MOVER_1H** — mossa -38 punti in 1h (prezzo 0.001) su 524k vol
+- `18:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 473k: candidate yield maker
+- `18:48` **MOVER_1H** — mossa +8 punti in 1h (prezzo 0.46) su 404k vol
+- `18:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 375k: candidate yield maker
+- `18:48` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.999) su 364k vol
+- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 364k — finestra informativa finale
+- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 318k — finestra informativa finale
+- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 261k — finestra informativa finale
+- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 257k — finestra informativa finale
+- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 257k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **9/100** — 4% dei top-50 mercati ha spread >=4 punti, 16% ha mosso >=8 punti in 1h
+- **5/100** — 0% dei top-50 mercati ha spread >=4 punti, 12% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 106 valutati · 83.0% hit · risultato medio +1.59%
-- **LONGSHOT_FADE** — 1227 valutati · 82.3% hit · risultato medio +3.50%
+- **ENDGAME_FAVORITE** — 107 valutati · 83.2% hit · risultato medio +1.62%
+- **LONGSHOT_FADE** — 1260 valutati · 82.1% hit · risultato medio +3.42%
 - **MAKER_SPREAD** — 13 valutati · 84.6% hit · risultato medio +11.16%
-- **MEAN_REVERT** — 336 valutati · 19.3% hit · risultato medio -27.01%
+- **MEAN_REVERT** — 339 valutati · 19.2% hit · risultato medio -27.65%
 
 segnali aperti ora:
 
-- `ENDGAME_FAVORITE` Dota 2: Aurora vs GamerLegion - Game 2 Winner — favorito 0.96 a fine giornata, spread 2p, vol 543k
-- `MEAN_REVERT` Hangzhou Open: Zhizhen Zhang vs Coleman Wong — mossa -13p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Hangzhou Open: Zhizhen Zhang vs Coleman Wong — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Tolentino: Ekaterine Gorgodze vs Barbora Palicova — mossa +14p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Dota 2: Two Move vs Team Lynx - Game 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` China PR vs. Maldives: O/U 3.5 — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` St. Tropez: Andrea Guerrieri vs Jesper de Jong — mossa -38p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` St. Tropez: Andrea Guerrieri vs Jesper de Jong — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Chicago White Sox vs. Kansas City Royals — mossa +40p in 1h — ipotesi rientro eccesso
+- `ENDGAME_FAVORITE` Chicago White Sox vs. Kansas City Royals: O/U 8.5 — favorito 0.92 a fine giornata, spread 1p, vol 235k
+- `LONGSHOT_FADE` Will Elon Musk post 160-179 tweets from September 18 to September 25,  — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Andorra win on 2026-09-24? — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 3 balene (HomeRunHazard,nigiri99,wr0ngw4yb3tt0r) su 'Falcons vs. Packers: O/U 43.5' — $36,999
-- **Consenso**: 3 balene (HomeRunHazard,nigiri99,wr0ngw4yb3tt0r) su 'Spread: Packers (-6.5)' — $26,954
-- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Spread: Packers (-4.5)' — $18,759
-- **Consenso**: 2 balene (nigiri99,wr0ngw4yb3tt0r) su 'Raiders vs. Saints' — $18,080
-- nigiri99: Will Wales win on 2026-09-24? @ 0.95 ($20,186, P&L -106$)
-- Donkey14: Spread: Pittsburgh Pirates (-1.5) @ 0.39 ($19,744, P&L -256$)
-- nigiri99: Will Norway win on 2026-09-24? @ 0.57 ($18,324, P&L +890$)
-- HomeRunHazard: Spread: Packers (-7.5) @ 0.60 ($16,037, P&L +155$)
-- nigiri99: Will the Republicans win the Ohio Senate race in 2026? @ 0.60 ($15,971, P&L +132$)
+- **Consenso**: 4 balene (Donkey14,HomeRunHazard,HMLSF,wr0ngw4yb3tt0r) su 'St. Louis Cardinals vs. Pittsburgh Pirates' — $93,243
+- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Spread: Packers (-4.5)' — $76,184
+- **Consenso**: 3 balene (HomeRunHazard,nigiri99,wr0ngw4yb3tt0r) su 'Falcons vs. Packers: O/U 43.5' — $46,404
+- **Consenso**: 2 balene (Donkey14,nigiri99) su 'Spread: Chicago Cubs (-1.5)' — $37,850
+- HomeRunHazard: Spread: Seahawks (-7.5) @ 0.52 ($43,646, P&L +288$)
+- nigiri99: Spread: Packers (-4.5) @ 0.53 ($43,128, P&L +1,853$)
+- wr0ngw4yb3tt0r: Oregon State vs. UTEP: O/U 55.5 @ 0.51 ($32,357, P&L +341$)
+- wr0ngw4yb3tt0r: Texas A&M vs. LSU @ 0.24 ($29,211, P&L +596$)
+- wr0ngw4yb3tt0r: Cincinnati Reds vs. Atlanta Braves @ 0.69 ($27,721, P&L +607$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
+- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'BC Dubai vs. Real Madrid' — da osservare (shadow, zero ordini)
+- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'Chicago White Sox vs. Kansas City Royals' — da osservare (shadow, zero ordini)
+- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'Miami Marlins vs. Chicago Cubs' — da osservare (shadow, zero ordini)
+- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'St. Louis Cardinals vs. Pittsburgh Pirates' — da osservare (shadow, zero ordini)
+- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'Rams vs. Broncos: O/U 44.5' — da osservare (shadow, zero ordini)
 - `09-24T14:51` wallet informato-simile HomeRunHazard (score 68/100, win 68%) ENTRA su 'Spread: Hawai'i (-2.5)' — da osservare (shadow, zero ordini)
-- `09-24T14:51` wallet informato-simile HomeRunHazard (score 68/100, win 68%) ENTRA su 'Spread: Hawai'i (-3.5)' — da osservare (shadow, zero ordini)
-- `09-24T14:51` wallet informato-simile Donkey14 (score 66/100, win 60%) ENTRA su 'Spread: Pittsburgh Pirates (-1.5)' — da osservare (shadow, zero ordini)
-- `09-24T14:51` wallet informato-simile HomeRunHazard (score 68/100, win 68%) ENTRA su 'Spread: Packers (-4.5)' — da osservare (shadow, zero ordini)
-- `09-24T14:51` wallet informato-simile HomeRunHazard (score 68/100, win 68%) ENTRA su 'Spread: Packers (-5.5)' — da osservare (shadow, zero ordini)
-- `09-24T14:51` wallet informato-simile HomeRunHazard (score 68/100, win 68%) ENTRA su 'Spread: Texans (-2.5)' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
