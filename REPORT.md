@@ -1,8 +1,8 @@
-# Report predmarket-lab — 24/09/2026 07:14:59
+# Report predmarket-lab — 24/09/2026 12:05:10
 
 🟢 **Salute dati:** dati freschi: ultimo scan 6 min fa
 
-Ultimo scan: `2026-09-24T05:08:59+00:00` UTC · ciclo n.57 · 3268 mercati tracciati · 16442 snapshot · 7847 alert
+Ultimo scan: `2026-09-24T09:59:29+00:00` UTC · ciclo n.58 · 3326 mercati tracciati · 16742 snapshot · 7995 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-24T05:08:59+00:00` UTC · ciclo n.57 · 3268 mercati tracc
 
 ## Ultimi alert
 
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 641k: candidate yield maker
-- `05:08` **MOVER_1H** — mossa +15 punti in 1h (prezzo 0.99) su 641k vol
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 435k: candidate yield maker
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 356k: candidate yield maker
-- `05:08` **MOVER_1H** — mossa -24 punti in 1h (prezzo 0.028) su 324k vol
-- `05:08` **MOVER_1H** — mossa -16 punti in 1h (prezzo 0.75) su 244k vol
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 207k: candidate yield maker
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 203k: candidate yield maker
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 197k: candidate yield maker
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 195k: candidate yield maker
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 176k: candidate yield maker
-- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 157k: candidate yield maker
+- `09:59` **MOVER_1H** — mossa -46 punti in 1h (prezzo 0.15) su 563k vol
+- `09:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 563k — finestra informativa finale
+- `09:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 505k: candidate yield maker
+- `09:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 465k: candidate yield maker
+- `09:59` **MOVER_1H** — mossa -21 punti in 1h (prezzo 0.22) su 449k vol
+- `09:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 449k — finestra informativa finale
+- `09:59` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.008) su 286k vol
+- `09:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 286k — finestra informativa finale
+- `09:59` **CHIUDE_OGGI** — chiude oggi, vol 24h 253k — finestra informativa finale
+- `09:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 204k: candidate yield maker
+- `09:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 195k: candidate yield maker
+- `09:59` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 180k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **4/100** — 2% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
+- **7/100** — 2% dei top-50 mercati ha spread >=4 punti, 14% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 105 valutati · 83.8% hit · risultato medio +1.70%
-- **LONGSHOT_FADE** — 1194 valutati · 82.4% hit · risultato medio +3.58%
-- **MAKER_SPREAD** — 10 valutati · 100.0% hit · risultato medio +14.72%
-- **MEAN_REVERT** — 323 valutati · 19.5% hit · risultato medio -25.54%
+- **ENDGAME_FAVORITE** — 106 valutati · 83.0% hit · risultato medio +1.59%
+- **LONGSHOT_FADE** — 1217 valutati · 82.3% hit · risultato medio +3.53%
+- **MAKER_SPREAD** — 13 valutati · 84.6% hit · risultato medio +11.16%
+- **MEAN_REVERT** — 326 valutati · 19.6% hit · risultato medio -25.82%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` San Diego Padres vs. Los Angeles Dodgers — mossa +15p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Buenos Aires 2: Francisco Comesana vs Joaquin Aguilar — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Korea Open: Yexin Ma vs Kimberly Birrell — mossa -24p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Korea Open: Yexin Ma vs Kimberly Birrell — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Korea Open: Anna Bondar vs Alina Charaeva — mossa -16p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Putin out as President of Russia by September 30, 2026? — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: ⁠Movistar KOI Fénix vs KT Rolster Challengers (BO1) - World Star  — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Hangzhou Open: Yunchaokete Bu vs Michael Zheng — mossa +31p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Wales win on 2026-09-24? — longshot a 0.045 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Fuego vs T1 Academy (BO1) - World Star Challengers Invitational G — longshot a 0.005 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Chris Van Hollen win the 2028 Democratic presidential nomination? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the price of Bitcoin be above $86,000 on September 24? — longshot a 0.025 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 3 balene (HomeRunHazard,Donkey14,wr0ngw4yb3tt0r) su 'San Diego Padres vs. Los Angeles Dodgers' — $278,843
-- **Consenso**: 4 balene (HomeRunHazard,nigiri99,Donkey14,wr0ngw4yb3tt0r) su 'Houston Astros vs. Seattle Mariners' — $170,996
-- **Consenso**: 3 balene (HomeRunHazard,Donkey14,wr0ngw4yb3tt0r) su 'Spread: Los Angeles Dodgers (-1.5)' — $48,015
 - **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Falcons vs. Packers: O/U 43.5' — $18,561
-- wr0ngw4yb3tt0r: San Diego Padres vs. Los Angeles Dodgers @ 1.00 ($173,990, P&L +71,906$)
-- wr0ngw4yb3tt0r: Houston Astros vs. Seattle Mariners @ 0.76 ($70,749, P&L +28,567$)
-- Donkey14: San Diego Padres vs. Los Angeles Dodgers @ 1.00 ($60,424, P&L +40,424$)
-- HomeRunHazard: San Diego Padres vs. Los Angeles Dodgers @ 1.00 ($44,429, P&L +11,335$)
-- HomeRunHazard: Houston Astros vs. Seattle Mariners @ 0.76 ($42,900, P&L +13,566$)
+- **Consenso**: 2 balene (nigiri99,wr0ngw4yb3tt0r) su 'Raiders vs. Saints' — $18,080
+- **Consenso**: 2 balene (nigiri99,wr0ngw4yb3tt0r) su 'Will Japan win on 2026-09-24?' — $12,338
+- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Spread: Packers (-6.5)' — $7,560
+- nigiri99: Will the Republicans win the Ohio Senate race in 2026? @ 0.62 ($16,499, P&L +660$)
+- wr0ngw4yb3tt0r: Bengals vs. Steelers @ 0.38 ($14,871, P&L +198$)
+- nigiri99: Spread: Packers (-4.5) @ 0.51 ($14,371, P&L -142$)
+- wr0ngw4yb3tt0r: Falcons vs. Packers: O/U 43.5 @ 0.47 ($12,497, P&L +132$)
+- wr0ngw4yb3tt0r: UFC Fight Night: Wellington Turman vs. Islam Dulatov (Welter @ 0.50 ($11,536, P&L -1,608$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
+- `09-24T09:59` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Ole Miss vs. Florida' — da osservare (shadow, zero ordini)
+- `09-24T09:59` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'KBO: NC Dinos vs. KT Wiz' — da osservare (shadow, zero ordini)
+- `09-24T09:59` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Spread: Packers (-6.5)' — da osservare (shadow, zero ordini)
+- `09-24T09:59` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Spread: Bills (-7.5)' — da osservare (shadow, zero ordini)
+- `09-24T09:59` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Seahawks vs. Commanders: O/U 40.5' — da osservare (shadow, zero ordini)
 - `09-24T05:08` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Houston Astros vs. Seattle Mariners' — da osservare (shadow, zero ordini)
-- `09-24T05:08` wallet informato-simile Donkey14 (score 68/100, win 64%) ENTRA su 'Houston Astros vs. Seattle Mariners' — da osservare (shadow, zero ordini)
-- `09-24T05:08` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Spread: Houston Astros (-1.5)' — da osservare (shadow, zero ordini)
-- `09-24T05:08` wallet informato-simile Donkey14 (score 68/100, win 64%) ENTRA su 'Spread: Seattle Mariners (-1.5)' — da osservare (shadow, zero ordini)
-- `09-24T05:08` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'San Diego Padres vs. Los Angeles Dodgers' — da osservare (shadow, zero ordini)
-- `09-24T05:08` wallet informato-simile Donkey14 (score 68/100, win 64%) ENTRA su 'San Diego Padres vs. Los Angeles Dodgers' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
