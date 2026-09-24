@@ -1,8 +1,8 @@
-# Report predmarket-lab — 24/09/2026 02:28:30
+# Report predmarket-lab — 24/09/2026 07:14:59
 
 🟢 **Salute dati:** dati freschi: ultimo scan 6 min fa
 
-Ultimo scan: `2026-09-24T00:22:56+00:00` UTC · ciclo n.56 · 3214 mercati tracciati · 16144 snapshot · 7703 alert
+Ultimo scan: `2026-09-24T05:08:59+00:00` UTC · ciclo n.57 · 3268 mercati tracciati · 16442 snapshot · 7847 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-24T00:22:56+00:00` UTC · ciclo n.56 · 3214 mercati tracc
 
 ## Ultimi alert
 
-- `00:22` **MOVER_1H** — mossa -39 punti in 1h (prezzo 0.03) su 526k vol
-- `00:22` **CHIUDE_OGGI** — chiude oggi, vol 24h 515k — finestra informativa finale
-- `00:22` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 396k: candidate yield maker
-- `00:22` **CHIUDE_OGGI** — chiude oggi, vol 24h 380k — finestra informativa finale
-- `00:22` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 354k: candidate yield maker
-- `00:22` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.62) su 286k vol
-- `00:22` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 285k: candidate yield maker
-- `00:22` **MOVER_1H** — mossa +32 punti in 1h (prezzo 0.89) su 255k vol
-- `00:22` **MOVER_1H** — mossa +52 punti in 1h (prezzo 0.999) su 246k vol
-- `00:22` **MOVER_1H** — mossa +21 punti in 1h (prezzo 0.51) su 239k vol
-- `00:22` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 193k: candidate yield maker
-- `00:22` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 193k: candidate yield maker
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 641k: candidate yield maker
+- `05:08` **MOVER_1H** — mossa +15 punti in 1h (prezzo 0.99) su 641k vol
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 435k: candidate yield maker
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 356k: candidate yield maker
+- `05:08` **MOVER_1H** — mossa -24 punti in 1h (prezzo 0.028) su 324k vol
+- `05:08` **MOVER_1H** — mossa -16 punti in 1h (prezzo 0.75) su 244k vol
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 207k: candidate yield maker
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 203k: candidate yield maker
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 197k: candidate yield maker
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 195k: candidate yield maker
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 176k: candidate yield maker
+- `05:08` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 157k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **14/100** — 8% dei top-50 mercati ha spread >=4 punti, 22% ha mosso >=8 punti in 1h
+- **4/100** — 2% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 104 valutati · 83.7% hit · risultato medio +1.44%
-- **LONGSHOT_FADE** — 1174 valutati · 82.1% hit · risultato medio +3.63%
+- **ENDGAME_FAVORITE** — 105 valutati · 83.8% hit · risultato medio +1.70%
+- **LONGSHOT_FADE** — 1194 valutati · 82.4% hit · risultato medio +3.58%
 - **MAKER_SPREAD** — 10 valutati · 100.0% hit · risultato medio +14.72%
-- **MEAN_REVERT** — 310 valutati · 20.0% hit · risultato medio -23.07%
+- **MEAN_REVERT** — 323 valutati · 19.5% hit · risultato medio -25.54%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Tampa Bay Rays vs. New York Yankees — mossa -39p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Tampa Bay Rays vs. New York Yankees — longshot a 0.015 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Milwaukee Brewers vs. Philadelphia Phillies — mossa +32p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Tampa Bay Rays vs. New York Yankees: O/U 6.5 — mossa +52p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Cincinnati Reds vs. Atlanta Braves — mossa +21p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Chicago White Sox vs. Kansas City Royals — mossa -39p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` San Diego Padres vs. Los Angeles Dodgers — mossa +15p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Buenos Aires 2: Francisco Comesana vs Joaquin Aguilar — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Korea Open: Yexin Ma vs Kimberly Birrell — mossa -24p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Korea Open: Yexin Ma vs Kimberly Birrell — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Korea Open: Anna Bondar vs Alina Charaeva — mossa -16p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Putin out as President of Russia by September 30, 2026? — longshot a 0.002 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465,HomeRunHazard) su 'Arizona Diamondbacks vs. Colorado Rockies: O/U 11.5' — $91,838
-- **Consenso**: 3 balene (wr0ngw4yb3tt0r,HomeRunHazard,ferrariChampions2026) su 'St. Louis Cardinals vs. Pittsburgh Pirates' — $77,175
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,HomeRunHazard) su 'Cincinnati Reds vs. Atlanta Braves' — $53,910
-- **Consenso**: 3 balene (wr0ngw4yb3tt0r,HomeRunHazard,ferrariChampions2026) su 'Milwaukee Brewers vs. Philadelphia Phillies' — $52,434
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.66 ($3,930,000, P&L +930,000$)
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.34 ($2,070,000, P&L -930,000$)
-- Diabolical-Prize: Valorant: Team Liquid vs Paper Rex (BO3) - VCT Champions Gro @ 0.43 ($45,662, P&L +1,502$)
-- wr0ngw4yb3tt0r: St. Louis Cardinals vs. Pittsburgh Pirates @ 0.93 ($44,184, P&L +24,052$)
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: Arizona Diamondbacks vs. Colorado Rockies: O/U 11.5 @ 0.55 ($39,116, P&L +3,230$)
+- **Consenso**: 3 balene (HomeRunHazard,Donkey14,wr0ngw4yb3tt0r) su 'San Diego Padres vs. Los Angeles Dodgers' — $278,843
+- **Consenso**: 4 balene (HomeRunHazard,nigiri99,Donkey14,wr0ngw4yb3tt0r) su 'Houston Astros vs. Seattle Mariners' — $170,996
+- **Consenso**: 3 balene (HomeRunHazard,Donkey14,wr0ngw4yb3tt0r) su 'Spread: Los Angeles Dodgers (-1.5)' — $48,015
+- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Falcons vs. Packers: O/U 43.5' — $18,561
+- wr0ngw4yb3tt0r: San Diego Padres vs. Los Angeles Dodgers @ 1.00 ($173,990, P&L +71,906$)
+- wr0ngw4yb3tt0r: Houston Astros vs. Seattle Mariners @ 0.76 ($70,749, P&L +28,567$)
+- Donkey14: San Diego Padres vs. Los Angeles Dodgers @ 1.00 ($60,424, P&L +40,424$)
+- HomeRunHazard: San Diego Padres vs. Los Angeles Dodgers @ 1.00 ($44,429, P&L +11,335$)
+- HomeRunHazard: Houston Astros vs. Seattle Mariners @ 0.76 ($42,900, P&L +13,566$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-24T00:22` wallet informato-simile HomeRunHazard (score 70/100, win 71%) ENTRA su 'Cincinnati Reds vs. Atlanta Braves' — da osservare (shadow, zero ordini)
-- `09-24T00:22` wallet informato-simile HomeRunHazard (score 70/100, win 71%) ENTRA su 'Spread: Atlanta Braves (-1.5)' — da osservare (shadow, zero ordini)
-- `09-24T00:22` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 73%) ENTRA su 'Cleveland Guardians vs. Boston Red Sox' — da osservare (shadow, zero ordini)
-- `09-24T00:22` wallet informato-simile HomeRunHazard (score 70/100, win 71%) ENTRA su 'Cleveland Guardians vs. Boston Red Sox' — da osservare (shadow, zero ordini)
-- `09-24T00:22` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 73%) ENTRA su 'Chicago White Sox vs. Kansas City Royals' — da osservare (shadow, zero ordini)
-- `09-24T00:22` wallet informato-simile HomeRunHazard (score 70/100, win 71%) ENTRA su 'Los Angeles Angels vs. Athletics: O/U 9.5' — da osservare (shadow, zero ordini)
+- `09-24T05:08` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Houston Astros vs. Seattle Mariners' — da osservare (shadow, zero ordini)
+- `09-24T05:08` wallet informato-simile Donkey14 (score 68/100, win 64%) ENTRA su 'Houston Astros vs. Seattle Mariners' — da osservare (shadow, zero ordini)
+- `09-24T05:08` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'Spread: Houston Astros (-1.5)' — da osservare (shadow, zero ordini)
+- `09-24T05:08` wallet informato-simile Donkey14 (score 68/100, win 64%) ENTRA su 'Spread: Seattle Mariners (-1.5)' — da osservare (shadow, zero ordini)
+- `09-24T05:08` wallet informato-simile HomeRunHazard (score 70/100, win 70%) ENTRA su 'San Diego Padres vs. Los Angeles Dodgers' — da osservare (shadow, zero ordini)
+- `09-24T05:08` wallet informato-simile Donkey14 (score 68/100, win 64%) ENTRA su 'San Diego Padres vs. Los Angeles Dodgers' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
