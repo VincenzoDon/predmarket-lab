@@ -1,8 +1,8 @@
-# Report predmarket-lab — 24/09/2026 20:54:38
+# Report predmarket-lab — 25/09/2026 00:01:49
 
 🟢 **Salute dati:** dati freschi: ultimo scan 6 min fa
 
-Ultimo scan: `2026-09-24T18:48:29+00:00` UTC · ciclo n.60 · 3481 mercati tracciati · 17341 snapshot · 8298 alert
+Ultimo scan: `2026-09-24T21:55:39+00:00` UTC · ciclo n.61 · 3533 mercati tracciati · 17639 snapshot · 8429 alert
 
 ## Conto paper
 
@@ -12,72 +12,72 @@ Ultimo scan: `2026-09-24T18:48:29+00:00` UTC · ciclo n.60 · 3481 mercati tracc
 
 ## Ultimi alert
 
-- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 8059k — finestra informativa finale
-- `18:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1430k: candidate yield maker
-- `18:48` **MOVER_1H** — mossa -38 punti in 1h (prezzo 0.001) su 524k vol
-- `18:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 473k: candidate yield maker
-- `18:48` **MOVER_1H** — mossa +8 punti in 1h (prezzo 0.46) su 404k vol
-- `18:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 375k: candidate yield maker
-- `18:48` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.999) su 364k vol
-- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 364k — finestra informativa finale
-- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 318k — finestra informativa finale
-- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 261k — finestra informativa finale
-- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 257k — finestra informativa finale
-- `18:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 257k — finestra informativa finale
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 13370k — finestra informativa finale
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 678k — finestra informativa finale
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 519k — finestra informativa finale
+- `21:55` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 456k: candidate yield maker
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 434k — finestra informativa finale
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 409k — finestra informativa finale
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 388k — finestra informativa finale
+- `21:55` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 367k: candidate yield maker
+- `21:55` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 324k: candidate yield maker
+- `21:55` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 319k: candidate yield maker
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 317k — finestra informativa finale
+- `21:55` **CHIUDE_OGGI** — chiude oggi, vol 24h 272k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **5/100** — 0% dei top-50 mercati ha spread >=4 punti, 12% ha mosso >=8 punti in 1h
+- **0/100** — 0% dei top-50 mercati ha spread >=4 punti, 0% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 107 valutati · 83.2% hit · risultato medio +1.62%
-- **LONGSHOT_FADE** — 1260 valutati · 82.1% hit · risultato medio +3.42%
-- **MAKER_SPREAD** — 13 valutati · 84.6% hit · risultato medio +11.16%
-- **MEAN_REVERT** — 339 valutati · 19.2% hit · risultato medio -27.65%
+- **ENDGAME_FAVORITE** — 109 valutati · 83.5% hit · risultato medio +1.76%
+- **LONGSHOT_FADE** — 1276 valutati · 82.1% hit · risultato medio +3.38%
+- **MAKER_SPREAD** — 14 valutati · 78.6% hit · risultato medio +10.29%
+- **MEAN_REVERT** — 344 valutati · 19.2% hit · risultato medio -28.41%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` St. Tropez: Andrea Guerrieri vs Jesper de Jong — mossa -38p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` St. Tropez: Andrea Guerrieri vs Jesper de Jong — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Chicago White Sox vs. Kansas City Royals — mossa +40p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Chicago White Sox vs. Kansas City Royals: O/U 8.5 — favorito 0.92 a fine giornata, spread 1p, vol 235k
-- `LONGSHOT_FADE` Will Elon Musk post 160-179 tweets from September 18 to September 25,  — longshot a 0.002 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Andorra win on 2026-09-24? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Germany win on 2026-09-24? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Netherlands win on 2026-09-24? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the Fed decrease interest rates by 50+ bps after the October 2026 — longshot a 0.003 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Sarah Huckabee Sanders win the 2028 Republican presidential nomin — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Israel win on 2026-09-24? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Sri Lanka Tour of England ODIs: England vs Sri Lanka — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 4 balene (Donkey14,HomeRunHazard,HMLSF,wr0ngw4yb3tt0r) su 'St. Louis Cardinals vs. Pittsburgh Pirates' — $93,243
-- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Spread: Packers (-4.5)' — $76,184
-- **Consenso**: 3 balene (HomeRunHazard,nigiri99,wr0ngw4yb3tt0r) su 'Falcons vs. Packers: O/U 43.5' — $46,404
-- **Consenso**: 2 balene (Donkey14,nigiri99) su 'Spread: Chicago Cubs (-1.5)' — $37,850
-- HomeRunHazard: Spread: Seahawks (-7.5) @ 0.52 ($43,646, P&L +288$)
-- nigiri99: Spread: Packers (-4.5) @ 0.53 ($43,128, P&L +1,853$)
-- wr0ngw4yb3tt0r: Oregon State vs. UTEP: O/U 55.5 @ 0.51 ($32,357, P&L +341$)
-- wr0ngw4yb3tt0r: Texas A&M vs. LSU @ 0.24 ($29,211, P&L +596$)
-- wr0ngw4yb3tt0r: Cincinnati Reds vs. Atlanta Braves @ 0.69 ($27,721, P&L +607$)
+- **Consenso**: 2 balene (nigiri99,0x361b16e3ddfe1d415d41008daac2631d94ab74fe) su 'Will Norway win on 2026-09-24?' — $640,311
+- **Consenso**: 3 balene (HomeRunHazard,Donkey14,nigiri99) su 'Spread: Packers (-4.5)' — $95,774
+- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Falcons vs. Packers: O/U 43.5' — $62,237
+- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Spread: Packers (-7.5)' — $31,118
+- 0x361b16e3ddfe1d415d41008daac2631d94ab74fe: Will Norway win on 2026-09-24? @ 1.00 ($607,960, P&L +246,598$)
+- 0x361b16e3ddfe1d415d41008daac2631d94ab74fe: Will FC Barcelona win on 2026-09-19? @ 1.00 ($393,945, P&L +77,695$)
+- 0x361b16e3ddfe1d415d41008daac2631d94ab74fe: Will Manchester City FC win on 2026-09-17? @ 1.00 ($256,429, P&L +23,897$)
+- 0x361b16e3ddfe1d415d41008daac2631d94ab74fe: Will Manchester City FC win on 2026-09-13? @ 1.00 ($230,792, P&L +123,500$)
+- 0x361b16e3ddfe1d415d41008daac2631d94ab74fe: Will Sevilla FC win on 2026-09-19? @ 1.00 ($57,719, P&L +4,309$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
 Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, convinzione, nicchia). Radar da validare nel tempo, non un invito a copiare.
 
 - **JnStrtPrdctnMrkts** — score 91/100 · win 79% · 150 osservazioni su 15 mercati
+- **0x361b16e3ddfe1d415d41008daac2631d94ab74fe** — score 87/100 · win 100% · 15 osservazioni su 15 mercati
 - **Kch-Temp** — score 85/100 · win 91% · 23 osservazioni su 18 mercati
 - **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 73% · 144 osservazioni su 30 mercati
 - **Tiger200** — score 81/100 · win 75% · 4 osservazioni su 3 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **UpTheBlues** — score 79/100 · win 92% · 90 osservazioni su 66 mercati
 - **Flaznorp** — score 78/100 · win 91% · 45 osservazioni su 38 mercati
-- **BreakTheBank** — score 77/100 · win 59% · 165 osservazioni su 27 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'BC Dubai vs. Real Madrid' — da osservare (shadow, zero ordini)
-- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'Chicago White Sox vs. Kansas City Royals' — da osservare (shadow, zero ordini)
-- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'Miami Marlins vs. Chicago Cubs' — da osservare (shadow, zero ordini)
-- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'St. Louis Cardinals vs. Pittsburgh Pirates' — da osservare (shadow, zero ordini)
-- `09-24T18:48` wallet informato-simile HomeRunHazard (score 68/100, win 67%) ENTRA su 'Rams vs. Broncos: O/U 44.5' — da osservare (shadow, zero ordini)
-- `09-24T14:51` wallet informato-simile HomeRunHazard (score 68/100, win 68%) ENTRA su 'Spread: Hawai'i (-2.5)' — da osservare (shadow, zero ordini)
+- `09-24T21:55` wallet informato-simile 0x361b16e3ddfe1d415d41008daac2631d94ab74fe (score 87/100, win 100%) ENTRA su 'Exact Score: Athletic Club 2 - 2 CR Brasil?' — da osservare (shadow, zero ordini)
+- `09-24T21:55` wallet informato-simile 0x361b16e3ddfe1d415d41008daac2631d94ab74fe (score 87/100, win 100%) ENTRA su 'Will Manchester City FC vs. Norwich City FC end in' — da osservare (shadow, zero ordini)
+- `09-24T21:55` wallet informato-simile 0x361b16e3ddfe1d415d41008daac2631d94ab74fe (score 87/100, win 100%) ENTRA su 'Exact Score: Manchester City FC 1 - 1 Norwich City' — da osservare (shadow, zero ordini)
+- `09-24T21:55` wallet informato-simile 0x361b16e3ddfe1d415d41008daac2631d94ab74fe (score 87/100, win 100%) ENTRA su 'Will Manchester City FC win on 2026-09-17?' — da osservare (shadow, zero ordini)
+- `09-24T21:55` wallet informato-simile 0x361b16e3ddfe1d415d41008daac2631d94ab74fe (score 87/100, win 100%) ENTRA su 'Will Norwich City FC win on 2026-09-17?' — da osservare (shadow, zero ordini)
+- `09-24T21:55` wallet informato-simile 0x361b16e3ddfe1d415d41008daac2631d94ab74fe (score 87/100, win 100%) ENTRA su 'Spread: Manchester City FC (-2.5)' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
