@@ -1,8 +1,8 @@
-# Report predmarket-lab — 26/09/2026 00:43:17
+# Report predmarket-lab — 26/09/2026 03:00:03
 
 🟢 **Salute dati:** dati freschi: ultimo scan 6 min fa
 
-Ultimo scan: `2026-09-25T22:37:07+00:00` UTC · ciclo n.67 · 3914 mercati tracciati · 19431 snapshot · 9220 alert
+Ultimo scan: `2026-09-26T00:53:41+00:00` UTC · ciclo n.68 · 3968 mercati tracciati · 19731 snapshot · 9362 alert
 
 ## Conto paper
 
@@ -12,45 +12,47 @@ Ultimo scan: `2026-09-25T22:37:07+00:00` UTC · ciclo n.67 · 3914 mercati tracc
 
 ## Ultimi alert
 
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 1381k — finestra informativa finale
-- `22:37` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1060k: candidate yield maker
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 1060k — finestra informativa finale
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 760k — finestra informativa finale
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 661k — finestra informativa finale
-- `22:37` **MOVER_1H** — mossa -34 punti in 1h (prezzo 0.01) su 495k vol
-- `22:37` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 468k: candidate yield maker
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 463k — finestra informativa finale
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 402k — finestra informativa finale
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 393k — finestra informativa finale
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 382k — finestra informativa finale
-- `22:37` **CHIUDE_OGGI** — chiude oggi, vol 24h 364k — finestra informativa finale
+- `00:53` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.001) su 968k vol
+- `00:53` **CHIUDE_OGGI** — chiude oggi, vol 24h 968k — finestra informativa finale
+- `00:53` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 739k: candidate yield maker
+- `00:53` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 471k: candidate yield maker
+- `00:53` **CHIUDE_OGGI** — chiude oggi, vol 24h 426k — finestra informativa finale
+- `00:53` **CHIUDE_OGGI** — chiude oggi, vol 24h 424k — finestra informativa finale
+- `00:53` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 401k: candidate yield maker
+- `00:53` **CHIUDE_OGGI** — chiude oggi, vol 24h 401k — finestra informativa finale
+- `00:53` **CHIUDE_OGGI** — chiude oggi, vol 24h 392k — finestra informativa finale
+- `00:53` **MOVER_1H** — mossa -22 punti in 1h (prezzo 0.3) su 295k vol
+- `00:53` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 294k: candidate yield maker
+- `00:53` **SPREAD_LARGO** — bid 0.8/ask 0.86 = 6 punti su 262k vol 24h — candidata maker
 
 ## Indice di inefficienza (v0)
 
-- **4/100** — 2% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
+- **10/100** — 4% dei top-50 mercati ha spread >=4 punti, 20% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 117 valutati · 83.8% hit · risultato medio +1.49%
-- **LONGSHOT_FADE** — 1469 valutati · 82.0% hit · risultato medio +2.98%
+- **LONGSHOT_FADE** — 1511 valutati · 82.3% hit · risultato medio +2.91%
 - **MAKER_SPREAD** — 15 valutati · 80.0% hit · risultato medio +10.27%
-- **MEAN_REVERT** — 365 valutati · 19.2% hit · risultato medio -28.92%
+- **MEAN_REVERT** — 369 valutati · 19.5% hit · risultato medio -6.78%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Will Türkiye win on 2026-09-25? — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` LoL: FlyQuest vs Shopify Rebellion - Game 2 Winner — mossa -34p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` LoL: FlyQuest vs Shopify Rebellion - Game 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Türkiye vs. France: O/U 1.5 — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Türkiye vs. France: O/U 3.5 — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Italy win on 2026-09-25? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: FlyQuest vs Shopify Rebellion (BO5) - LCS Playoffs — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: FlyQuest vs Shopify Rebellion - Game 4 Winner — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` New York Mets vs. Washington Nationals — mossa -22p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Kharg Island no longer under Iranian control by September 30? — longshot a 0.004 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Tampa Bay Rays vs. Philadelphia Phillies — mossa +12p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` US announces end of Iranian blockade by September 30, 2026? — longshot a 0.045 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
 - **Consenso**: 2 balene (maz26,HomeRunHazard) su 'Spread: Seahawks (-7.5)' — $183,757
-- **Consenso**: 2 balene (maz26,HomeRunHazard) su 'Spread: Chiefs (-10.5)' — $23,932
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.64 ($3,810,000, P&L +810,000$)
-- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.36 ($2,190,000, P&L -810,000$)
+- **Consenso**: 3 balene (0xBc43c8bfBC4d77c2FC9011adaD38Ba43b88996d3-1765231687816,maz26,HomeRunHazard) su 'Chiefs vs. Dolphins' — $100,057
+- **Consenso**: 2 balene (0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465,HomeRunHazard) su 'Navy vs. UAB' — $97,549
+- **Consenso**: 2 balene (maz26,HomeRunHazard) su 'Spread: Chiefs (-10.5)' — $61,992
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.62 ($3,750,000, P&L +750,000$)
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: 2026 Balance of Power: D Senate, D House @ 0.38 ($2,250,000, P&L -750,000$)
 - maz26: Spread: Seahawks (-7.5) @ 0.51 ($135,126, P&L +2,841$)
 - maz26: Texas A&M vs. LSU @ 0.76 ($92,843, P&L -615$)
 - maz26: Jets vs. Lions @ 0.72 ($85,912, P&L -592$)
@@ -62,7 +64,7 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **JnStrtPrdctnMrkts** — score 91/100 · win 79% · 150 osservazioni su 15 mercati
 - **0x361b16e3ddfe1d415d41008daac2631d94ab74fe** — score 87/100 · win 100% · 15 osservazioni su 15 mercati
 - **Kch-Temp** — score 85/100 · win 91% · 23 osservazioni su 18 mercati
-- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 75% · 216 osservazioni su 51 mercati
+- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 75% · 231 osservazioni su 55 mercati
 - **Tiger200** — score 81/100 · win 75% · 4 osservazioni su 3 mercati
 - **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
 - **UpTheBlues** — score 79/100 · win 92% · 90 osservazioni su 66 mercati
@@ -70,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-25T22:37` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'Chengdu Open: Federico Cina vs Alexandre Muller' — da osservare (shadow, zero ordini)
-- `09-25T22:37` wallet informato-simile HomeRunHazard (score 68/100, win 61%) ENTRA su 'Army vs. Temple' — da osservare (shadow, zero ordini)
-- `09-25T22:37` wallet informato-simile HomeRunHazard (score 68/100, win 61%) ENTRA su 'Spread: Army (-2.5)' — da osservare (shadow, zero ordini)
-- `09-25T22:37` wallet informato-simile HomeRunHazard (score 68/100, win 61%) ENTRA su 'Spread: Army (-4.5)' — da osservare (shadow, zero ordini)
-- `09-25T22:37` wallet informato-simile HomeRunHazard (score 68/100, win 61%) ENTRA su 'Spread: Navy (-6.5)' — da osservare (shadow, zero ordini)
-- `09-25T22:37` wallet informato-simile HomeRunHazard (score 68/100, win 61%) ENTRA su 'Spread: Indiana (-20.5)' — da osservare (shadow, zero ordini)
+- `09-26T00:53` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'Navy vs. UAB' — da osservare (shadow, zero ordini)
+- `09-26T00:53` wallet informato-simile HomeRunHazard (score 67/100, win 60%) ENTRA su 'Navy vs. UAB' — da osservare (shadow, zero ordini)
+- `09-26T00:53` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'Northwestern vs. Indiana' — da osservare (shadow, zero ordini)
+- `09-26T00:53` wallet informato-simile HomeRunHazard (score 67/100, win 60%) ENTRA su 'Houston Astros vs. Athletics' — da osservare (shadow, zero ordini)
+- `09-26T00:53` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'New York Mets vs. Washington Nationals' — da osservare (shadow, zero ordini)
+- `09-26T00:53` wallet informato-simile HomeRunHazard (score 67/100, win 60%) ENTRA su 'New York Mets vs. Washington Nationals' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
