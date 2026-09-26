@@ -1,8 +1,8 @@
-# Report predmarket-lab — 26/09/2026 16:51:17
+# Report predmarket-lab — 26/09/2026 20:11:03
 
 🟢 **Salute dati:** dati freschi: ultimo scan 7 min fa
 
-Ultimo scan: `2026-09-26T14:44:47+00:00` UTC · ciclo n.71 · 4160 mercati tracciati · 20631 snapshot · 9758 alert
+Ultimo scan: `2026-09-26T18:04:02+00:00` UTC · ciclo n.72 · 4252 mercati tracciati · 20931 snapshot · 10015 alert
 
 ## Conto paper
 
@@ -12,49 +12,50 @@ Ultimo scan: `2026-09-26T14:44:47+00:00` UTC · ciclo n.71 · 4160 mercati tracc
 
 ## Ultimi alert
 
-- `14:44` **CHIUDE_OGGI** — chiude oggi, vol 24h 1539k — finestra informativa finale
-- `14:44` **MOVER_1H** — mossa -30 punti in 1h (prezzo 0.007) su 930k vol
-- `14:44` **CHIUDE_OGGI** — chiude oggi, vol 24h 930k — finestra informativa finale
-- `14:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 779k: candidate yield maker
-- `14:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 461k: candidate yield maker
-- `14:44` **MOVER_1H** — mossa +49 punti in 1h (prezzo 0.999) su 414k vol
-- `14:44` **CHIUDE_OGGI** — chiude oggi, vol 24h 408k — finestra informativa finale
-- `14:44` **MOVER_1H** — mossa -22 punti in 1h (prezzo 0.001) su 402k vol
-- `14:44` **CHIUDE_OGGI** — chiude oggi, vol 24h 402k — finestra informativa finale
-- `14:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 398k: candidate yield maker
-- `14:44` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 322k: candidate yield maker
-- `14:44` **MOVER_1H** — mossa +24 punti in 1h (prezzo 0.84) su 279k vol
+- `18:04` **MOVER_1H** — mossa -38 punti in 1h (prezzo 0.01) su 2959k vol
+- `18:04` **CHIUDE_OGGI** — chiude oggi, vol 24h 2959k — finestra informativa finale
+- `18:04` **CHIUDE_OGGI** — chiude oggi, vol 24h 1764k — finestra informativa finale
+- `18:04` **CHIUDE_OGGI** — chiude oggi, vol 24h 793k — finestra informativa finale
+- `18:04` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 774k: candidate yield maker
+- `18:04` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 688k: candidate yield maker
+- `18:04` **MOVER_1H** — mossa -23 punti in 1h (prezzo 0.031) su 688k vol
+- `18:04` **CHIUDE_OGGI** — chiude oggi, vol 24h 688k — finestra informativa finale
+- `18:04` **MOVER_1H** — mossa -27 punti in 1h (prezzo 0.001) su 572k vol
+- `18:04` **CHIUDE_OGGI** — chiude oggi, vol 24h 572k — finestra informativa finale
+- `18:04` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 542k: candidate yield maker
+- `18:04` **CHIUDE_OGGI** — chiude oggi, vol 24h 542k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **9/100** — 2% dei top-50 mercati ha spread >=4 punti, 20% ha mosso >=8 punti in 1h
+- **15/100** — 4% dei top-50 mercati ha spread >=4 punti, 32% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 123 valutati · 83.7% hit · risultato medio +1.01%
-- **LONGSHOT_FADE** — 1568 valutati · 82.1% hit · risultato medio +2.82%
+- **ENDGAME_FAVORITE** — 125 valutati · 84.0% hit · risultato medio +1.38%
+- **LONGSHOT_FADE** — 1589 valutati · 82.1% hit · risultato medio +2.80%
 - **MAKER_SPREAD** — 15 valutati · 80.0% hit · risultato medio +10.27%
-- **MEAN_REVERT** — 390 valutati · 20.3% hit · risultato medio -5.20%
+- **MEAN_REVERT** — 394 valutati · 20.3% hit · risultato medio -4.28%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Dota 2: LGD Gaming vs Team Yandex - Game 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` St. Tropez: Harold Mayot vs Murphy Cassone — mossa +49p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Counter-Strike: EYEBALLERS vs K27 (BO3) - 1win Private Club #1 Playoff — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Hangzhou Open: Coleman Wong vs Adolfo Vallejo — mossa +24p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will the US confirm that aliens exist before 2027? — longshot a 0.035 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Dota 2: LGD Gaming vs Team Yandex (BO3) - PGL Wallachia Playoffs — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Faroe Islands win on 2026-09-26? — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Texas vs. Tennessee — favorito 0.80 a fine giornata, spread 1p, vol 793k
+- `LONGSHOT_FADE` San Diego State vs. Toledo — longshot a 0.025 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Counter-Strike: Sinners vs NIP (BO3) - 1win Private Club #1 Playoffs — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Tolentino: Julia Grabher vs Oksana Selekhmeteva — mossa +68p in 1h — ipotesi rientro eccesso
+- `ENDGAME_FAVORITE` Counter-Strike: paiN vs Galorys (BO3) - FERJEE In House Playoffs — favorito 0.92 a fine giornata, spread 1p, vol 394k
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Spread: Seahawks (-7.5)' — $150,050
-- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Spread: Bills (-7.5)' — $123,458
-- **Consenso**: 2 balene (HomeRunHazard,wr0ngw4yb3tt0r) su 'Spread: Chiefs (-10.5)' — $70,788
-- wr0ngw4yb3tt0r: Spread: Lions (-6.5) @ 0.52 ($196,429, P&L -780$)
-- wr0ngw4yb3tt0r: Spread: Bills (-7.5) @ 0.49 ($104,018, P&L +1,645$)
-- wr0ngw4yb3tt0r: Spread: Seahawks (-7.5) @ 0.49 ($101,419, P&L -94$)
+- **Consenso**: 2 balene (UpTheBlues,Flaznorp) su 'Will Faroe Islands win on 2026-09-26?' — $459,627
+- **Consenso**: 2 balene (UpTheBlues,Flaznorp) su 'Will Spain win on 2026-09-26?' — $70,098
+- **Consenso**: 2 balene (UpTheBlues,Flaznorp) su 'Will San Marino win on 2026-09-26?' — $58,315
+- **Consenso**: 2 balene (UpTheBlues,Flaznorp) su 'Iceland vs. Estonia: O/U 2.5' — $55,754
+- UpTheBlues: Will Faroe Islands win on 2026-09-26? @ 1.00 ($390,127, P&L +209,158$)
+- Sassy-Bucket: UNLV vs. Akron @ 0.97 ($285,413, P&L +42,957$)
+- Sassy-Bucket: Texas vs. Tennessee @ 0.77 ($135,666, P&L +19,396$)
 - HomeRunHazard: Spread: Cowboys (-3.5) @ 0.74 ($85,395, P&L -570$)
-- wr0ngw4yb3tt0r: Spread: Bengals (-3.5) @ 0.54 ($68,280, P&L +835$)
+- Flaznorp: Will Faroe Islands win on 2026-09-26? @ 1.00 ($69,500, P&L +34,885$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -65,18 +66,18 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **Kch-Temp** — score 85/100 · win 91% · 23 osservazioni su 18 mercati
 - **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 75% · 231 osservazioni su 55 mercati
 - **Tiger200** — score 81/100 · win 75% · 4 osservazioni su 3 mercati
-- **Sassy-Bucket** — score 80/100 · win 88% · 17 osservazioni su 15 mercati
-- **UpTheBlues** — score 79/100 · win 92% · 90 osservazioni su 66 mercati
-- **Flaznorp** — score 78/100 · win 91% · 45 osservazioni su 38 mercati
+- **UpTheBlues** — score 80/100 · win 92% · 105 osservazioni su 79 mercati
+- **BreakTheBank** — score 77/100 · win 59% · 165 osservazioni su 27 mercati
+- **Flaznorp** — score 76/100 · win 88% · 60 osservazioni su 52 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-26T14:44` wallet informato-simile wr0ngw4yb3tt0r (score 72/100, win 72%) ENTRA su 'Spread: Arizona (-10.5)' — da osservare (shadow, zero ordini)
-- `09-26T14:44` wallet informato-simile wr0ngw4yb3tt0r (score 72/100, win 72%) ENTRA su 'Spread: Ohio State (-26.5)' — da osservare (shadow, zero ordini)
-- `09-26T14:44` wallet informato-simile wr0ngw4yb3tt0r (score 72/100, win 72%) ENTRA su 'Spread: Florida (-3.5)' — da osservare (shadow, zero ordini)
-- `09-26T14:44` wallet informato-simile HomeRunHazard (score 68/100, win 58%) ENTRA su 'Oklahoma vs. Georgia: O/U 43.5' — da osservare (shadow, zero ordini)
-- `09-26T14:44` wallet informato-simile primm (score 73/100, win 80%) ENTRA su 'Spread: Texas (-10.5)' — da osservare (shadow, zero ordini)
-- `09-26T14:44` wallet informato-simile primm (score 73/100, win 80%) ENTRA su 'Spread: Texas (-7.5)' — da osservare (shadow, zero ordini)
+- `09-26T18:04` wallet informato-simile Sassy-Bucket (score 74/100, win 78%) ENTRA su 'Ball State vs. Kent State' — da osservare (shadow, zero ordini)
+- `09-26T18:04` wallet informato-simile Sassy-Bucket (score 74/100, win 78%) ENTRA su 'Boise State vs. Western Michigan' — da osservare (shadow, zero ordini)
+- `09-26T18:04` wallet informato-simile Sassy-Bucket (score 74/100, win 78%) ENTRA su 'Columbia vs. Georgetown' — da osservare (shadow, zero ordini)
+- `09-26T18:04` wallet informato-simile HomeRunHazard (score 68/100, win 58%) ENTRA su 'Colorado vs. Baylor' — da osservare (shadow, zero ordini)
+- `09-26T18:04` wallet informato-simile Sassy-Bucket (score 74/100, win 78%) ENTRA su 'Drake vs. Davidson' — da osservare (shadow, zero ordini)
+- `09-26T18:04` wallet informato-simile Sassy-Bucket (score 74/100, win 78%) ENTRA su 'New Hampshire vs. Sacred Heart' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
