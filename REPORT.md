@@ -1,8 +1,8 @@
-# Report predmarket-lab — 27/09/2026 22:55:27
+# Report predmarket-lab — 28/09/2026 01:44:15
 
-🟢 **Salute dati:** dati freschi: ultimo scan 8 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 10 min fa
 
-Ultimo scan: `2026-09-27T20:47:05+00:00` UTC · ciclo n.79 · 4781 mercati tracciati · 23030 snapshot · 11603 alert
+Ultimo scan: `2026-09-27T23:34:44+00:00` UTC · ciclo n.80 · 4887 mercati tracciati · 23329 snapshot · 11837 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-27T20:47:05+00:00` UTC · ciclo n.79 · 4781 mercati tracc
 
 ## Ultimi alert
 
-- `20:47` **MOVER_1H** — mossa -48 punti in 1h (prezzo 0.001) su 2686k vol
-- `20:47` **CHIUDE_OGGI** — chiude oggi, vol 24h 2686k — finestra informativa finale
-- `20:47` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2163k: candidate yield maker
-- `20:47` **MOVER_1H** — mossa -44 punti in 1h (prezzo 0.001) su 2163k vol
-- `20:47` **CHIUDE_OGGI** — chiude oggi, vol 24h 2163k — finestra informativa finale
-- `20:47` **MOVER_1H** — mossa -28 punti in 1h (prezzo 0.001) su 2081k vol
-- `20:47` **CHIUDE_OGGI** — chiude oggi, vol 24h 2081k — finestra informativa finale
-- `20:47` **MOVER_1H** — mossa +23 punti in 1h (prezzo 0.999) su 2073k vol
-- `20:47` **CHIUDE_OGGI** — chiude oggi, vol 24h 2073k — finestra informativa finale
-- `20:47` **MOVER_1H** — mossa -26 punti in 1h (prezzo 0.001) su 1969k vol
-- `20:47` **CHIUDE_OGGI** — chiude oggi, vol 24h 1969k — finestra informativa finale
-- `20:47` **MOVER_1H** — mossa +83 punti in 1h (prezzo 0.999) su 1925k vol
+- `23:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 4184k: candidate yield maker
+- `23:34` **MOVER_1H** — mossa +36 punti in 1h (prezzo 0.999) su 4184k vol
+- `23:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 4184k — finestra informativa finale
+- `23:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3742k: candidate yield maker
+- `23:34` **MOVER_1H** — mossa -40 punti in 1h (prezzo 0.61) su 3742k vol
+- `23:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 3742k — finestra informativa finale
+- `23:34` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3305k: candidate yield maker
+- `23:34` **MOVER_1H** — mossa +85 punti in 1h (prezzo 0.97) su 3305k vol
+- `23:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 3305k — finestra informativa finale
+- `23:34` **MOVER_1H** — mossa -12 punti in 1h (prezzo 0.004) su 1949k vol
+- `23:34` **CHIUDE_OGGI** — chiude oggi, vol 24h 1949k — finestra informativa finale
+- `23:34` **MOVER_1H** — mossa -54 punti in 1h (prezzo 0.01) su 1646k vol
 
 ## Indice di inefficienza (v0)
 
-- **25/100** — 4% dei top-50 mercati ha spread >=4 punti, 56% ha mosso >=8 punti in 1h
+- **24/100** — 8% dei top-50 mercati ha spread >=4 punti, 48% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 154 valutati · 83.8% hit · risultato medio +1.10%
-- **LONGSHOT_FADE** — 1806 valutati · 82.5% hit · risultato medio +2.53%
+- **ENDGAME_FAVORITE** — 158 valutati · 84.2% hit · risultato medio +1.40%
+- **LONGSHOT_FADE** — 1903 valutati · 83.1% hit · risultato medio +2.42%
 - **MAKER_SPREAD** — 16 valutati · 81.2% hit · risultato medio +10.51%
-- **MEAN_REVERT** — 461 valutati · 19.5% hit · risultato medio -11.96%
+- **MEAN_REVERT** — 475 valutati · 18.9% hit · risultato medio -14.56%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Seahawks vs. Commanders — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Panthers vs. Browns — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Texans vs. Colts — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Chargers vs. Bills — longshot a 0.001 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Spread: 49ers (-7.5) — favorito 0.79 a fine giornata, spread 1p, vol 1611k
-- `LONGSHOT_FADE` Bengals vs. Steelers — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Raiders vs. Saints — favorito 0.97 a fine giornata, spread 0p, vol 3305k
+- `LONGSHOT_FADE` Spread: 49ers (-7.5) — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Spread: Saints (-3.5) — longshot a 0.019 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` LoL: Cloud9 vs Team Liquid (BO5) - LCS Playoffs — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` LoL: Cloud9 vs Team Liquid - Game 4 Winner — mossa -44p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` LoL: Cloud9 vs Team Liquid - Game 4 Winner — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Spread: Chiefs (-10.5)' — $346,638
-- **Consenso**: 3 balene (gmpm2,Donkey14,Kch-Temp) su 'Spread: Saints (-3.5)' — $326,147
-- **Consenso**: 2 balene (gmpm2,Kch-Temp) su 'Spread: 49ers (-7.5)' — $313,153
-- **Consenso**: 2 balene (gmpm2,Kch-Temp) su 'Bengals vs. Steelers' — $295,363
-- gmpm2: Spread: Saints (-3.5) @ 0.49 ($282,041, P&L -12,163$)
-- Kch-Temp: Bengals vs. Steelers @ 1.00 ($258,592, P&L +157,691$)
-- Kch-Temp: Spread: 49ers (-7.5) @ 0.85 ($254,920, P&L +107,432$)
-- Kch-Temp: Panthers vs. Browns: O/U 42.5 @ 1.00 ($213,502, P&L +102,210$)
-- nigiri99: Spread: Chiefs (-10.5) @ 1.00 ($212,970, P&L +113,034$)
+- **Consenso**: 2 balene (wr0ngw4yb3tt0r,HomeRunHazard) su 'Vikings vs. Buccaneers' — $539,357
+- **Consenso**: 2 balene (wr0ngw4yb3tt0r,HomeRunHazard) su 'Ravens vs. Cowboys' — $530,079
+- **Consenso**: 3 balene (wr0ngw4yb3tt0r,HomeRunHazard,gmpm2) su 'Spread: 49ers (-7.5)' — $527,628
+- **Consenso**: 3 balene (wr0ngw4yb3tt0r,HomeRunHazard,gmpm2) su 'Spread: Rams (-1.5)' — $388,226
+- wr0ngw4yb3tt0r: Vikings vs. Buccaneers @ 1.00 ($455,158, P&L +169,413$)
+- gmpm2: Spread: 49ers (-7.5) @ 1.00 ($401,403, P&L +201,987$)
+- wr0ngw4yb3tt0r: Raiders vs. Saints @ 1.00 ($257,131, P&L +182,546$)
+- wr0ngw4yb3tt0r: Ravens vs. Cowboys @ 0.21 ($235,942, P&L -239,009$)
+- gmpm2: Spread: Rams (-1.5) @ 0.47 ($223,669, P&L -3,598$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -63,7 +63,7 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 - **JnStrtPrdctnMrkts** — score 91/100 · win 79% · 150 osservazioni su 15 mercati
 - **0x361b16e3ddfe1d415d41008daac2631d94ab74fe** — score 88/100 · win 100% · 19 osservazioni su 19 mercati
-- **Kch-Temp** — score 86/100 · win 94% · 32 osservazioni su 27 mercati
+- **Kch-Temp** — score 86/100 · win 94% · 33 osservazioni su 28 mercati
 - **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 75% · 231 osservazioni su 55 mercati
 - **Tiger200** — score 81/100 · win 75% · 4 osservazioni su 3 mercati
 - **UpTheBlues** — score 80/100 · win 92% · 105 osservazioni su 79 mercati
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-27T20:47` wallet informato-simile Kch-Temp (score 86/100, win 94%) ENTRA su 'Spread: 49ers (-7.5)' — da osservare (shadow, zero ordini)
-- `09-27T20:47` wallet informato-simile maz26 (score 69/100, win 55%) ENTRA su 'Spread: 49ers (-8.5)' — da osservare (shadow, zero ordini)
-- `09-27T20:47` wallet informato-simile Kch-Temp (score 86/100, win 94%) ENTRA su 'Cardinals vs. 49ers: O/U 48.5' — da osservare (shadow, zero ordini)
-- `09-27T20:47` wallet informato-simile Kch-Temp (score 86/100, win 94%) ENTRA su 'Panthers vs. Browns: O/U 42.5' — da osservare (shadow, zero ordini)
-- `09-27T20:47` wallet informato-simile Kch-Temp (score 86/100, win 94%) ENTRA su 'Bengals vs. Steelers' — da osservare (shadow, zero ordini)
-- `09-27T20:47` wallet informato-simile maz26 (score 69/100, win 55%) ENTRA su 'Spread: Bengals (-2.5)' — da osservare (shadow, zero ordini)
+- `09-27T23:34` wallet informato-simile Kch-Temp (score 86/100, win 94%) ENTRA su 'Chengdu Open: Nikoloz Basilashvili vs Alejandro Da' — da osservare (shadow, zero ordini)
+- `09-27T23:34` wallet informato-simile HomeRunHazard (score 71/100, win 56%) ENTRA su 'Spread: 49ers (-14.5)' — da osservare (shadow, zero ordini)
+- `09-27T23:34` wallet informato-simile HomeRunHazard (score 71/100, win 56%) ENTRA su 'Spread: 49ers (-3.5)' — da osservare (shadow, zero ordini)
+- `09-27T23:34` wallet informato-simile wr0ngw4yb3tt0r (score 74/100, win 71%) ENTRA su 'Spread: 49ers (-7.5)' — da osservare (shadow, zero ordini)
+- `09-27T23:34` wallet informato-simile HomeRunHazard (score 71/100, win 56%) ENTRA su 'Spread: 49ers (-7.5)' — da osservare (shadow, zero ordini)
+- `09-27T23:34` wallet informato-simile wr0ngw4yb3tt0r (score 74/100, win 71%) ENTRA su 'Cardinals vs. 49ers: O/U 47.5' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
