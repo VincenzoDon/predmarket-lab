@@ -1,8 +1,8 @@
-# Report predmarket-lab — 27/09/2026 01:44:16
+# Report predmarket-lab — 27/09/2026 03:55:36
 
 🟢 **Salute dati:** dati freschi: ultimo scan 7 min fa
 
-Ultimo scan: `2026-09-26T23:36:59+00:00` UTC · ciclo n.74 · 4408 mercati tracciati · 21531 snapshot · 10448 alert
+Ultimo scan: `2026-09-27T01:48:29+00:00` UTC · ciclo n.75 · 4469 mercati tracciati · 21830 snapshot · 10676 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-26T23:36:59+00:00` UTC · ciclo n.74 · 4408 mercati tracc
 
 ## Ultimi alert
 
-- `23:36` **CHIUDE_OGGI** — chiude oggi, vol 24h 1937k — finestra informativa finale
-- `23:36` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 802k: candidate yield maker
-- `23:36` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 544k: candidate yield maker
-- `23:36` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 373k: candidate yield maker
-- `23:36` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 338k: candidate yield maker
-- `23:36` **MOVER_1H** — mossa +8 punti in 1h (prezzo 0.88) su 338k vol
-- `23:36` **CHIUDE_OGGI** — chiude oggi, vol 24h 338k — finestra informativa finale
-- `23:36` **MOVER_1H** — mossa +24 punti in 1h (prezzo 0.999) su 324k vol
-- `23:36` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 322k: candidate yield maker
-- `23:36` **CHIUDE_OGGI** — chiude oggi, vol 24h 322k — finestra informativa finale
-- `23:36` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 317k: candidate yield maker
-- `23:36` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 316k: candidate yield maker
+- `01:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1134k: candidate yield maker
+- `01:48` **MOVER_1H** — mossa +26 punti in 1h (prezzo 0.79) su 1134k vol
+- `01:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 667k: candidate yield maker
+- `01:48` **MOVER_1H** — mossa -20 punti in 1h (prezzo 0.09) su 667k vol
+- `01:48` **MOVER_1H** — mossa +73 punti in 1h (prezzo 0.999) su 570k vol
+- `01:48` **CHIUDE_OGGI** — chiude oggi, vol 24h 570k — finestra informativa finale
+- `01:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 542k: candidate yield maker
+- `01:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 454k: candidate yield maker
+- `01:48` **MOVER_1H** — mossa +19 punti in 1h (prezzo 0.32) su 454k vol
+- `01:48` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 377k: candidate yield maker
+- `01:48` **SPREAD_LARGO** — bid 0.77/ask 0.86 = 9 punti su 377k vol 24h — candidata maker
+- `01:48` **MOVER_1H** — mossa +34 punti in 1h (prezzo 0.6) su 377k vol
 
 ## Indice di inefficienza (v0)
 
-- **13/100** — 8% dei top-50 mercati ha spread >=4 punti, 20% ha mosso >=8 punti in 1h
+- **25/100** — 12% dei top-50 mercati ha spread >=4 punti, 44% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 136 valutati · 83.8% hit · risultato medio +0.76%
-- **LONGSHOT_FADE** — 1667 valutati · 82.6% hit · risultato medio +2.69%
+- **ENDGAME_FAVORITE** — 138 valutati · 84.1% hit · risultato medio +0.89%
+- **LONGSHOT_FADE** — 1686 valutati · 82.6% hit · risultato medio +2.67%
 - **MAKER_SPREAD** — 16 valutati · 81.2% hit · risultato medio +10.51%
-- **MEAN_REVERT** — 403 valutati · 20.1% hit · risultato medio -5.58%
+- **MEAN_REVERT** — 409 valutati · 20.3% hit · risultato medio -5.75%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Ole Miss vs. Florida — longshot a 0.001 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Louisiana vs. Charlotte — favorito 0.86 a fine giornata, spread 3p, vol 338k
-- `LONGSHOT_FADE` LoL: LYON vs Shopify Rebellion - Game 3 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` LoL: LYON vs Shopify Rebellion - Game 4 Winner — mossa +24p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` San Diego 2: Timo Legout vs Igor Ribeiro Marcondes — mossa -18p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Vanderbilt vs. Auburn — longshot a 0.005 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Oregon vs. USC — mossa +26p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Texas A&M vs. LSU — mossa -20p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Texas A&M vs. LSU — longshot a 0.045 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Missouri vs. Mississippi State — mossa +19p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Spread: LSU (-8.5) — mossa +34p in 1h — ipotesi rientro eccesso
+- `MAKER_SPREAD` Spread: LSU (-8.5) — spread 9p — ipotesi cattura maker
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (HomeRunHazard,0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185) su 'Oregon vs. USC: O/U 60.5' — $85,094
-- **Consenso**: 2 balene (HomeRunHazard,ferrariChampions2026) su 'Vanderbilt vs. Auburn' — $74,178
-- **Consenso**: 2 balene (HomeRunHazard,Talvez10) su 'Spread: Alabama (-12.5)' — $70,364
-- **Consenso**: 2 balene (HomeRunHazard,0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185) su 'Oklahoma State vs. West Virginia: O/U 59.5' — $58,148
-- HomeRunHazard: Spread: Cowboys (-3.5) @ 0.74 ($85,395, P&L -570$)
-- Talvez10: Kansas State vs. Cincinnati: O/U 55.5 @ 0.79 ($78,500, P&L +25,549$)
-- surfandturf: Will Harry Kane win the 2026 Ballon d'Or? @ 0.56 ($78,190, P&L +17,337$)
-- 0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185: Spread: Nebraska (-6.5) @ 0.65 ($69,657, P&L +16,739$)
-- HomeRunHazard: James Madison vs. Old Dominion: O/U 43.5 @ 1.00 ($66,303, P&L +32,954$)
+- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Oregon vs. USC' — $137,587
+- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Spread: Chiefs (-3.5)' — $84,230
+- **Consenso**: 2 balene (nigiri99,0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185) su 'Oregon vs. USC: O/U 60.5' — $64,711
+- **Consenso**: 2 balene (HomeRunHazard,0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185) su 'Oklahoma State vs. West Virginia: O/U 59.5' — $62,491
+- matanovik: UFC Fight Night: Ilimbek Akylbek Uulu vs. Mehemmedeli Osmanl @ 1.00 ($106,587, P&L +76,683$)
+- HomeRunHazard: Spread: Cowboys (-3.5) @ 0.74 ($94,756, P&L -507$)
+- HomeRunHazard: Oregon vs. USC @ 0.62 ($85,093, P&L -1,952$)
+- HomeRunHazard: Spread: Steelers (-3.5) @ 0.72 ($63,898, P&L -209$)
+- nigiri99: James Madison vs. Old Dominion @ 1.00 ($62,896, P&L +19,493$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-26T23:36` wallet informato-simile HomeRunHazard (score 68/100, win 57%) ENTRA su 'James Madison vs. Old Dominion: O/U 43.5' — da osservare (shadow, zero ordini)
-- `09-26T23:36` wallet informato-simile Talvez10 (score 68/100, win 64%) ENTRA su 'Kansas State vs. Cincinnati: O/U 55.5' — da osservare (shadow, zero ordini)
-- `09-26T23:36` wallet informato-simile Talvez10 (score 68/100, win 64%) ENTRA su 'Spread: Louisiana (-9.5)' — da osservare (shadow, zero ordini)
-- `09-26T23:36` wallet informato-simile 0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185 (score 73/100, win 72%) ENTRA su 'Spread: Nebraska (-5.5)' — da osservare (shadow, zero ordini)
-- `09-26T23:36` wallet informato-simile 0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185 (score 73/100, win 72%) ENTRA su 'Spread: Nebraska (-6.5)' — da osservare (shadow, zero ordini)
-- `09-26T23:36` wallet informato-simile HomeRunHazard (score 68/100, win 57%) ENTRA su 'Oklahoma State vs. West Virginia: O/U 59.5' — da osservare (shadow, zero ordini)
+- `09-27T01:48` wallet informato-simile 0x3DFb153c197D4C19D3B31c1ecD2c7B6860eeabAf-1722957908185 (score 72/100, win 68%) ENTRA su 'Spread: Florida Atlantic (-11.5)' — da osservare (shadow, zero ordini)
+- `09-27T01:48` wallet informato-simile HomeRunHazard (score 68/100, win 56%) ENTRA su 'Kansas State vs. Cincinnati: O/U 55.5' — da osservare (shadow, zero ordini)
+- `09-27T01:48` wallet informato-simile HomeRunHazard (score 68/100, win 56%) ENTRA su 'Oklahoma State vs. West Virginia' — da osservare (shadow, zero ordini)
+- `09-27T01:48` wallet informato-simile matanovik (score 75/100, win 80%) ENTRA su 'Oregon vs. USC: O/U 58.5' — da osservare (shadow, zero ordini)
+- `09-27T01:48` wallet informato-simile HomeRunHazard (score 68/100, win 56%) ENTRA su 'Spread: Fresno State (-12.5)' — da osservare (shadow, zero ordini)
+- `09-27T01:48` wallet informato-simile matanovik (score 75/100, win 80%) ENTRA su 'Spread: Alabama (-14.5)' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
