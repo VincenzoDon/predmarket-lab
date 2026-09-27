@@ -1,8 +1,8 @@
-# Report predmarket-lab — 27/09/2026 15:25:40
+# Report predmarket-lab — 27/09/2026 20:00:58
 
-🟢 **Salute dati:** dati freschi: ultimo scan 7 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 8 min fa
 
-Ultimo scan: `2026-09-27T13:18:26+00:00` UTC · ciclo n.77 · 4612 mercati tracciati · 22430 snapshot · 11023 alert
+Ultimo scan: `2026-09-27T17:52:47+00:00` UTC · ciclo n.78 · 4701 mercati tracciati · 22730 snapshot · 11308 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-27T13:18:26+00:00` UTC · ciclo n.77 · 4612 mercati tracc
 
 ## Ultimi alert
 
-- `13:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1385k: candidate yield maker
-- `13:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 1385k — finestra informativa finale
-- `13:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1220k: candidate yield maker
-- `13:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 1220k — finestra informativa finale
-- `13:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1013k: candidate yield maker
-- `13:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 1013k — finestra informativa finale
-- `13:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 864k: candidate yield maker
-- `13:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 864k — finestra informativa finale
-- `13:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 481k: candidate yield maker
-- `13:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 481k — finestra informativa finale
-- `13:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 441k: candidate yield maker
-- `13:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 441k — finestra informativa finale
+- `17:52` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 3830k: candidate yield maker
+- `17:52` **CHIUDE_OGGI** — chiude oggi, vol 24h 3830k — finestra informativa finale
+- `17:52` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2019k: candidate yield maker
+- `17:52` **MOVER_1H** — mossa -16 punti in 1h (prezzo 0.25) su 2019k vol
+- `17:52` **CHIUDE_OGGI** — chiude oggi, vol 24h 2019k — finestra informativa finale
+- `17:52` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1998k: candidate yield maker
+- `17:52` **MOVER_1H** — mossa -36 punti in 1h (prezzo 0.09) su 1998k vol
+- `17:52` **CHIUDE_OGGI** — chiude oggi, vol 24h 1998k — finestra informativa finale
+- `17:52` **MOVER_1H** — mossa +11 punti in 1h (prezzo 0.56) su 1977k vol
+- `17:52` **CHIUDE_OGGI** — chiude oggi, vol 24h 1977k — finestra informativa finale
+- `17:52` **SPREAD_LARGO** — bid 0.46/ask 0.58 = 12 punti su 1754k vol 24h — candidata maker
+- `17:52` **CHIUDE_OGGI** — chiude oggi, vol 24h 1754k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **5/100** — 0% dei top-50 mercati ha spread >=4 punti, 12% ha mosso >=8 punti in 1h
+- **30/100** — 18% dei top-50 mercati ha spread >=4 punti, 48% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 145 valutati · 84.1% hit · risultato medio +1.36%
-- **LONGSHOT_FADE** — 1751 valutati · 82.3% hit · risultato medio +2.59%
+- **ENDGAME_FAVORITE** — 152 valutati · 83.6% hit · risultato medio +0.97%
+- **LONGSHOT_FADE** — 1778 valutati · 82.3% hit · risultato medio +2.56%
 - **MAKER_SPREAD** — 16 valutati · 81.2% hit · risultato medio +10.51%
-- **MEAN_REVERT** — 454 valutati · 19.2% hit · risultato medio -13.17%
+- **MEAN_REVERT** — 458 valutati · 19.7% hit · risultato medio -11.38%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` LoL: Dplus KIA Challengers vs DN SOOPers Challengers (BO5) - World Sta — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Chengdu Open: Lloyd Harris vs Hubert Hurkacz — mossa -35p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` LoL: Dplus KIA Challengers vs DN SOOPers Challengers - Game 3 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Valorant: JD Gaming vs FUT Esports - Map 2 Winner — longshot a 0.005 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Dota 2: Team Yandex vs Natus Vincere (BO5) - PGL Wallachia Playoffs — favorito 0.86 a fine giornata, spread 1p, vol 218k
-- `LONGSHOT_FADE` Valorant: JD Gaming vs FUT Esports (BO3) - VCT Champions Group A — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Chiefs vs. Dolphins — favorito 0.90 a fine giornata, spread 1p, vol 3830k
+- `MAKER_SPREAD` Spread: Lions (-6.5) — spread 12p — ipotesi cattura maker
+- `ENDGAME_FAVORITE` Will Netherlands win on 2026-09-27? — favorito 0.92 a fine giornata, spread 1p, vol 759k
+- `ENDGAME_FAVORITE` Bengals vs. Steelers: O/U 42.5 — favorito 0.90 a fine giornata, spread 3p, vol 440k
+- `LONGSHOT_FADE` Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championsh — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Spread: Bills (-14.5) — longshot a 0.040 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 3 balene (HomeRunHazard,nigiri99,gmpm2) su 'Spread: Chiefs (-10.5)' — $221,956
-- **Consenso**: 2 balene (HomeRunHazard,gmpm2) su 'Spread: Seahawks (-7.5)' — $187,367
-- **Consenso**: 2 balene (HomeRunHazard,nigiri99) su 'Spread: Chiefs (-3.5)' — $130,837
-- **Consenso**: 2 balene (HomeRunHazard,gmpm2) su 'Chiefs vs. Dolphins' — $103,005
-- gmpm2: Spread: Seahawks (-7.5) @ 0.53 ($140,700, P&L +8,196$)
-- nigiri99: Spread: Chiefs (-10.5) @ 0.45 ($109,735, P&L -6,315$)
-- HomeRunHazard: Spread: Cowboys (-3.5) @ 0.74 ($104,005, P&L -569$)
-- HomeRunHazard: Spread: Chiefs (-3.5) @ 0.74 ($96,545, P&L -401$)
-- gmpm2: Jets vs. Lions @ 0.72 ($85,912, P&L -592$)
+- **Consenso**: 2 balene (HomeRunHazard,gmpm2) su 'Chiefs vs. Dolphins' — $628,769
+- **Consenso**: 2 balene (HomeRunHazard,mooseborzoi) su 'Spread: Bills (-7.5)' — $223,656
+- **Consenso**: 2 balene (HomeRunHazard,gmpm2) su 'Spread: Seahawks (-7.5)' — $172,737
+- **Consenso**: 2 balene (HomeRunHazard,mooseborzoi) su 'Spread: Cowboys (-3.5)' — $165,670
+- gmpm2: Chiefs vs. Dolphins @ 0.88 ($533,042, P&L +21,322$)
+- gmpm2: Spread: 49ers (-7.5) @ 0.49 ($188,349, P&L -523$)
+- mooseborzoi: Spread: Raiders (-3.5) @ 0.76 ($186,858, P&L +1,055$)
+- gmpm2: Spread: Texans (-1.5) @ 0.81 ($140,454, P&L +52,828$)
+- HomeRunHazard: Spread: Bills (-7.5) @ 0.86 ($138,041, P&L +54,371$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-27T13:18` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Laver Cup: Carlos Alcaraz vs Alex de Minaur' — da osservare (shadow, zero ordini)
-- `09-27T13:18` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Shaanxi Union FC vs. Dalian Kun City: O/U 3.5' — da osservare (shadow, zero ordini)
-- `09-27T13:18` wallet informato-simile Donkey14 (score 68/100, win 67%) ENTRA su 'New York Mets vs. Washington Nationals' — da osservare (shadow, zero ordini)
-- `09-27T13:18` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Gibraltar vs. Andorra: O/U 6.5' — da osservare (shadow, zero ordini)
-- `09-27T13:18` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Gibraltar vs. Andorra: O/U 7.5' — da osservare (shadow, zero ordini)
-- `09-27T13:18` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Lithuania vs. Azerbaijan: O/U 7.5' — da osservare (shadow, zero ordini)
+- `09-27T17:52` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Will SD Eibar win on 2026-09-27?' — da osservare (shadow, zero ordini)
+- `09-27T17:52` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'RCD Mallorca vs. UD Almería: O/U 1.5' — da osservare (shadow, zero ordini)
+- `09-27T17:52` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'RCD Mallorca vs. UD Almería: O/U 2.5' — da osservare (shadow, zero ordini)
+- `09-27T17:52` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Will Malta win on 2026-09-27?' — da osservare (shadow, zero ordini)
+- `09-27T17:52` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Will Kosovo win on 2026-09-27?' — da osservare (shadow, zero ordini)
+- `09-27T17:52` wallet informato-simile Flaznorp (score 72/100, win 80%) ENTRA su 'Denmark vs. Wales: O/U 2.5' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
