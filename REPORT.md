@@ -1,8 +1,8 @@
-# Report predmarket-lab — 30/09/2026 10:58:49
+# Report predmarket-lab — 30/09/2026 17:42:52
 
 🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
 
-Ultimo scan: `2026-09-30T08:49:57+00:00` UTC · ciclo n.91 · 5633 mercati tracciati · 26628 snapshot · 13546 alert
+Ultimo scan: `2026-09-30T15:33:41+00:00` UTC · ciclo n.92 · 5706 mercati tracciati · 26928 snapshot · 13725 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-30T08:49:57+00:00` UTC · ciclo n.91 · 5633 mercati tracc
 
 ## Ultimi alert
 
-- `08:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 760k: candidate yield maker
-- `08:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 638k: candidate yield maker
-- `08:49` **MOVER_1H** — mossa +15 punti in 1h (prezzo 0.999) su 598k vol
-- `08:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 462k: candidate yield maker
-- `08:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 449k: candidate yield maker
-- `08:49` **MOVER_1H** — mossa +39 punti in 1h (prezzo 0.999) su 420k vol
-- `08:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 420k — finestra informativa finale
-- `08:49` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.14) su 416k vol
-- `08:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 373k — finestra informativa finale
-- `08:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 349k — finestra informativa finale
-- `08:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 341k — finestra informativa finale
-- `08:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 312k — finestra informativa finale
+- `15:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1015k: candidate yield maker
+- `15:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 913k: candidate yield maker
+- `15:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 781k: candidate yield maker
+- `15:33` **MOVER_1H** — mossa +70 punti in 1h (prezzo 0.999) su 767k vol
+- `15:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 767k — finestra informativa finale
+- `15:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 478k: candidate yield maker
+- `15:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 416k — finestra informativa finale
+- `15:33` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 388k: candidate yield maker
+- `15:33` **MOVER_1H** — mossa +19 punti in 1h (prezzo 0.97) su 388k vol
+- `15:33` **MOVER_1H** — mossa -27 punti in 1h (prezzo 0.3) su 371k vol
+- `15:33` **CHIUDE_OGGI** — chiude oggi, vol 24h 291k — finestra informativa finale
+- `15:33` **MOVER_1H** — mossa +22 punti in 1h (prezzo 0.999) su 260k vol
 
 ## Indice di inefficienza (v0)
 
-- **8/100** — 6% dei top-50 mercati ha spread >=4 punti, 10% ha mosso >=8 punti in 1h
+- **6/100** — 0% dei top-50 mercati ha spread >=4 punti, 14% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 181 valutati · 81.8% hit · risultato medio -2.14%
-- **LONGSHOT_FADE** — 2310 valutati · 83.1% hit · risultato medio +2.06%
-- **MAKER_SPREAD** — 19 valutati · 84.2% hit · risultato medio +10.22%
-- **MEAN_REVERT** — 532 valutati · 19.2% hit · risultato medio -17.57%
+- **ENDGAME_FAVORITE** — 184 valutati · 82.1% hit · risultato medio -1.88%
+- **LONGSHOT_FADE** — 2329 valutati · 83.1% hit · risultato medio +2.04%
+- **MAKER_SPREAD** — 21 valutati · 85.7% hit · risultato medio +10.80%
+- **MEAN_REVERT** — 539 valutati · 19.3% hit · risultato medio -16.75%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` China Open: Maddison Inglis vs Zeynep Sonmez — mossa +15p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Strait of Hormuz traffic returns to normal by September 30? — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championsh — longshot a 0.002 — ipotesi sopravvalutazione
-- `MEAN_REVERT` China Open: Oleksandra Oliynykova vs Yue Yuan — mossa -10p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` China Open: Zhuoxuan Bai vs Linda Fruhvirtova — mossa -35p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` China Open: Zhuoxuan Bai vs Linda Fruhvirtova — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` West Indies Tour of India ODIs: India vs West Indies — mossa +19p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` China Open: Anna Bondar vs Renata Zarazua — mossa -27p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Iran charges Hormuz fees by September 30? — longshot a 0.041 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Dota 2: PARIVISION vs LGD Gaming (BO3) - BLAST Slam Group A — favorito 0.93 a fine giornata, spread 1p, vol 146k
+- `LONGSHOT_FADE` Will Bitcoin reach $90,000 in September? — longshot a 0.004 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Elon Musk post 90-114 tweets from September 28 to September 30, 2 — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (UpTheBlues,omnibus-076daa) su 'China Open: Juan Manuel Cerundolo vs Yunchaokete Bu' — $18,499
-- **Consenso**: 2 balene (UpTheBlues,omnibus-076daa) su 'Porto 2: David Jorda Sanchis vs Jesper de Jong' — $14,493
-- **Consenso**: 2 balene (UpTheBlues,omnibus-076daa) su 'Porto 2: Hugo Grenier vs Carl Overbeck' — $14,416
-- **Consenso**: 2 balene (BrotherObama,omnibus-076daa) su 'LoL: T1 Academy vs Galions (BO5) - World Star Challengers In' — $11,618
-- surfandturf: Will Harry Kane win the 2026 Ballon d'Or? @ 0.44 ($61,740, P&L +887$)
-- omnibus-076daa: Valorant: Team Vitality vs LOUD (BO3) - VCT Champions Group  @ 0.46 ($55,311, P&L +8$)
-- UpTheBlues: China Open: Oleksandra Oliynykova vs Yue Yuan @ 0.97 ($35,403, P&L +4,952$)
-- UpTheBlues: Japan Open Tennis Championships: Arthur Fils vs Luca Van Ass @ 1.00 ($27,698, P&L +868$)
-- surfandturf: Will Lamine Yamal win the 2026 Ballon d'Or? @ 0.45 ($18,063, P&L +7,742$)
+- **Consenso**: 3 balene (UpTheBlues,omnibus-076daa,HomeRunHazard) su 'China Open: Anna Bondar vs Renata Zarazua' — $91,186
+- **Consenso**: 3 balene (UpTheBlues,omnibus-076daa,HomeRunHazard) su 'Porto 2: Hugo Grenier vs Carl Overbeck' — $32,285
+- **Consenso**: 2 balene (UpTheBlues,omnibus-076daa) su 'Curitiba: Luis Guto Miguel vs Facundo Mena' — $20,843
+- **Consenso**: 2 balene (UpTheBlues,HomeRunHazard) su 'Mouilleron-Le-Captif: Clement Tabur vs Thomas Faurel' — $18,396
+- UpTheBlues: China Open: Anna Bondar vs Renata Zarazua @ 1.00 ($63,661, P&L +30,937$)
+- HomeRunHazard: China Open: Anna Bondar vs Renata Zarazua @ 1.00 ($23,222, P&L +10,797$)
+- HomeRunHazard: Porto 2: Hugo Grenier vs Carl Overbeck @ 1.00 ($17,371, P&L +5,997$)
+- omnibus-076daa: Dota 2: Team Nemesis vs Natus Vincere (BO3) - BLAST Slam Gro @ 0.45 ($14,093, P&L -2,738$)
+- UpTheBlues: Will Athletic Club win on 2026-09-16? @ 0.56 ($13,091, P&L -163$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-30T08:49` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'China Open: Juan Manuel Cerundolo vs Yunchaokete B' — da osservare (shadow, zero ordini)
-- `09-30T08:49` wallet informato-simile 0x076daa87 (score 70/100, win 65%) ENTRA su 'China Open: Juan Manuel Cerundolo vs Yunchaokete B' — da osservare (shadow, zero ordini)
-- `09-30T08:49` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'Japan Open Tennis Championships: Arthur Fils vs Lu' — da osservare (shadow, zero ordini)
-- `09-30T08:49` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'Porto 2: Hugo Grenier vs Carl Overbeck' — da osservare (shadow, zero ordini)
-- `09-30T08:49` wallet informato-simile 0x076daa87 (score 70/100, win 65%) ENTRA su 'Porto 2: Hugo Grenier vs Carl Overbeck' — da osservare (shadow, zero ordini)
-- `09-30T08:49` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'Japan Open Tennis Championships: Jiri Lehecka vs Z' — da osservare (shadow, zero ordini)
+- `09-30T15:33` wallet informato-simile UpTheBlues (score 79/100, win 90%) ENTRA su 'Curitiba: Guido Justo vs Franco Roncadelli' — da osservare (shadow, zero ordini)
+- `09-30T15:33` wallet informato-simile 0x076daa87 (score 70/100, win 69%) ENTRA su 'Japan Open Tennis Championships: Jiri Lehecka vs Z' — da osservare (shadow, zero ordini)
+- `09-30T15:33` wallet informato-simile UpTheBlues (score 79/100, win 90%) ENTRA su 'Curitiba: Luis Guto Miguel vs Facundo Mena' — da osservare (shadow, zero ordini)
+- `09-30T15:33` wallet informato-simile UpTheBlues (score 79/100, win 90%) ENTRA su 'Porto 2: Luca Potenza vs Inaki Montes' — da osservare (shadow, zero ordini)
+- `09-30T15:33` wallet informato-simile UpTheBlues (score 79/100, win 90%) ENTRA su 'Mouilleron-Le-Captif: Clement Tabur vs Thomas Faur' — da osservare (shadow, zero ordini)
+- `09-30T15:33` wallet informato-simile HomeRunHazard (score 70/100, win 57%) ENTRA su 'Mouilleron-Le-Captif: Clement Tabur vs Thomas Faur' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
