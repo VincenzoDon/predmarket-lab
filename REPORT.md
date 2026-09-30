@@ -1,8 +1,8 @@
-# Report predmarket-lab — 30/09/2026 01:51:23
+# Report predmarket-lab — 30/09/2026 04:33:24
 
 🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
 
-Ultimo scan: `2026-09-29T23:42:01+00:00` UTC · ciclo n.89 · 5555 mercati tracciati · 26028 snapshot · 13234 alert
+Ultimo scan: `2026-09-30T02:24:33+00:00` UTC · ciclo n.90 · 5594 mercati tracciati · 26328 snapshot · 13383 alert
 
 ## Conto paper
 
@@ -12,50 +12,50 @@ Ultimo scan: `2026-09-29T23:42:01+00:00` UTC · ciclo n.89 · 5555 mercati tracc
 
 ## Ultimi alert
 
-- `23:42` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 703k: candidate yield maker
-- `23:42` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 614k: candidate yield maker
-- `23:42` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 426k: candidate yield maker
-- `23:42` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 383k: candidate yield maker
-- `23:42` **CHIUDE_OGGI** — chiude oggi, vol 24h 323k — finestra informativa finale
-- `23:42` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.37) su 278k vol
-- `23:42` **CHIUDE_OGGI** — chiude oggi, vol 24h 278k — finestra informativa finale
-- `23:42` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 264k: candidate yield maker
-- `23:42` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 241k: candidate yield maker
-- `23:42` **MOVER_1H** — mossa -14 punti in 1h (prezzo 0.34) su 230k vol
-- `23:42` **CHIUDE_OGGI** — chiude oggi, vol 24h 230k — finestra informativa finale
-- `23:42` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 215k: candidate yield maker
+- `02:24` **MOVER_1H** — mossa -15 punti in 1h (prezzo 0.14) su 759k vol
+- `02:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 709k: candidate yield maker
+- `02:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 613k: candidate yield maker
+- `02:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 434k: candidate yield maker
+- `02:24` **MOVER_1H** — mossa -39 punti in 1h (prezzo 0.012) su 406k vol
+- `02:24` **CHIUDE_OGGI** — chiude oggi, vol 24h 406k — finestra informativa finale
+- `02:24` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 403k: candidate yield maker
+- `02:24` **MOVER_1H** — mossa -23 punti in 1h (prezzo 0.22) su 332k vol
+- `02:24` **MOVER_1H** — mossa -20 punti in 1h (prezzo 0.42) su 316k vol
+- `02:24` **CHIUDE_OGGI** — chiude oggi, vol 24h 316k — finestra informativa finale
+- `02:24` **MOVER_1H** — mossa -11 punti in 1h (prezzo 0.14) su 306k vol
+- `02:24` **CHIUDE_OGGI** — chiude oggi, vol 24h 306k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **4/100** — 2% dei top-50 mercati ha spread >=4 punti, 8% ha mosso >=8 punti in 1h
+- **8/100** — 4% dei top-50 mercati ha spread >=4 punti, 14% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 181 valutati · 81.8% hit · risultato medio -2.14%
-- **LONGSHOT_FADE** — 2244 valutati · 83.2% hit · risultato medio +2.10%
+- **LONGSHOT_FADE** — 2275 valutati · 83.2% hit · risultato medio +2.08%
 - **MAKER_SPREAD** — 16 valutati · 81.2% hit · risultato medio +10.51%
-- **MEAN_REVERT** — 526 valutati · 19.0% hit · risultato medio -17.62%
+- **MEAN_REVERT** — 530 valutati · 19.2% hit · risultato medio -17.26%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` US announces end of Iranian blockade by September 30, 2026? — longshot a 0.014 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will the Fed decrease interest rates by 50+ bps after the October 2026 — longshot a 0.003 — ipotesi sopravvalutazione
-- `MAKER_SPREAD` Will Erick Visconde win by KO or TKO? — spread 14p — ipotesi cattura maker
-- `LONGSHOT_FADE` Will Andy Beshear win the 2028 US Presidential Election? — longshot a 0.014 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Columbus: Kaylan Bigun vs Keegan Smith — mossa +33p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will Jesus Christ return before 2027? — longshot a 0.015 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Boston Red Sox vs. New York Yankees — mossa -15p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Minnesota Lynx vs. New York Liberty — longshot a 0.018 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the Fed increase interest rates by 50+ bps after the October 2026 — longshot a 0.006 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will New York Red Bulls win the 2026 MLS Cup? — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Portland Timbers win the 2026 MLS Cup? — longshot a 0.003 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` US x Iran ceasefire continues through September 30? — favorito 0.97 a fine giornata, spread 0p, vol 157k
 
 ## Whale watch 🐋
 
-- **Consenso**: 3 balene (wr0ngw4yb3tt0r,primm,HomeRunHazard) su 'Chicago White Sox vs. Houston Astros' — $303,913
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,HomeRunHazard) su 'Las Vegas Aces vs. Indiana Fever' — $54,428
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,HomeRunHazard) su 'Chicago White Sox vs. Houston Astros: O/U 8.5' — $18,149
-- **Consenso**: 2 balene (wr0ngw4yb3tt0r,HomeRunHazard) su 'Boston Red Sox vs. New York Yankees: O/U 6.5' — $17,087
-- BreakTheBank: Will Manchester City win the 2026-27 English Premier League  @ 0.81 ($366,014, P&L +43,200$)
-- BreakTheBank: Will Arsenal win the 2026-27 English Premier League (EPL) Ch @ 0.60 ($242,000, P&L +229,653$)
-- wr0ngw4yb3tt0r: Chicago White Sox vs. Houston Astros @ 0.96 ($168,898, P&L +18,180$)
-- HomeRunHazard: Chicago White Sox vs. Houston Astros @ 0.96 ($124,119, P&L +40,442$)
-- BreakTheBank: Will Philadelphia 76ers win the 2027 NBA Finals? @ 0.89 ($45,475, P&L +1,152$)
+- **Consenso**: 2 balene (surfandturf,wr0ngw4yb3tt0r) su 'Boston Red Sox vs. New York Yankees' — $172,340
+- **Consenso**: 2 balene (wr0ngw4yb3tt0r,0x0c154c190E293B7e5F8D453b5F690C4dC9599A45-1775083003603) su 'Minnesota Lynx vs. New York Liberty' — $100,543
+- **Consenso**: 2 balene (Gourmet1,wr0ngw4yb3tt0r) su 'Canucks vs. Oilers' — $58,331
+- **Consenso**: 2 balene (wr0ngw4yb3tt0r,viboomchuu) su 'Blackhawks vs. Golden Knights' — $57,979
+- surfandturf: Boston Red Sox vs. New York Yankees @ 0.94 ($116,875, P&L +49,206$)
+- surfandturf: Will Harry Kane win the 2026 Ballon d'Or? @ 0.45 ($62,510, P&L +1,657$)
+- 0x0c154c190E293B7e5F8D453b5F690C4dC9599A45-1775083003603: Minnesota Lynx vs. New York Liberty @ 1.00 ($59,774, P&L +35,260$)
+- Gourmet1: Canucks vs. Oilers @ 0.41 ($53,901, P&L +17,967$)
+- wr0ngw4yb3tt0r: Boston Red Sox vs. New York Yankees @ 0.94 ($48,185, P&L +5,187$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +72,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-29T23:42` wallet informato-simile HomeRunHazard (score 70/100, win 57%) ENTRA su 'Porto 2: Hugo Grenier vs Carl Overbeck' — da osservare (shadow, zero ordini)
-- `09-29T23:42` wallet informato-simile HomeRunHazard (score 70/100, win 57%) ENTRA su 'Boston Red Sox vs. New York Yankees: O/U 5.5' — da osservare (shadow, zero ordini)
-- `09-29T23:42` wallet informato-simile HomeRunHazard (score 70/100, win 57%) ENTRA su 'Boston Red Sox vs. New York Yankees: O/U 6.5' — da osservare (shadow, zero ordini)
-- `09-29T23:42` wallet informato-simile HomeRunHazard (score 70/100, win 57%) ENTRA su 'Chicago Cubs vs. San Diego Padres' — da osservare (shadow, zero ordini)
-- `09-29T23:42` wallet informato-simile HomeRunHazard (score 70/100, win 57%) ENTRA su 'Chicago Cubs vs. San Diego Padres: O/U 8.5' — da osservare (shadow, zero ordini)
-- `09-29T23:42` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 69%) ENTRA su 'Chicago White Sox vs. Houston Astros' — da osservare (shadow, zero ordini)
+- `09-30T02:24` wallet informato-simile surfandturf (score 80/100, win 65%) ENTRA su 'Boston Red Sox vs. New York Yankees' — da osservare (shadow, zero ordini)
+- `09-30T02:24` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 68%) ENTRA su 'Boston Red Sox vs. New York Yankees' — da osservare (shadow, zero ordini)
+- `09-30T02:24` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 68%) ENTRA su 'Chicago Cubs vs. San Diego Padres' — da osservare (shadow, zero ordini)
+- `09-30T02:24` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 68%) ENTRA su 'Rangers vs. Bruins' — da osservare (shadow, zero ordini)
+- `09-30T02:24` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 68%) ENTRA su 'Canucks vs. Oilers' — da osservare (shadow, zero ordini)
+- `09-30T02:24` wallet informato-simile wr0ngw4yb3tt0r (score 75/100, win 68%) ENTRA su 'Dana White's Contender Series: Ilias Bulaid vs. Er' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
