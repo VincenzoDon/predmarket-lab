@@ -1,8 +1,8 @@
-# Report predmarket-lab — 01/10/2026 14:29:10
+# Report predmarket-lab — 01/10/2026 20:39:25
 
 🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
 
-Ultimo scan: `2026-10-01T12:19:54+00:00` UTC · ciclo n.96 · 5973 mercati tracciati · 28128 snapshot · 14272 alert
+Ultimo scan: `2026-10-01T18:30:21+00:00` UTC · ciclo n.97 · 6063 mercati tracciati · 28428 snapshot · 14415 alert
 
 ## Conto paper
 
@@ -12,49 +12,47 @@ Ultimo scan: `2026-10-01T12:19:54+00:00` UTC · ciclo n.96 · 5973 mercati tracc
 
 ## Ultimi alert
 
-- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 617k: candidate yield maker
-- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 562k: candidate yield maker
-- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 456k: candidate yield maker
-- `12:19` **MOVER_1H** — mossa -36 punti in 1h (prezzo 0.001) su 430k vol
-- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 424k — finestra informativa finale
-- `12:19` **MOVER_1H** — mossa -12 punti in 1h (prezzo 0.52) su 418k vol
-- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 418k — finestra informativa finale
-- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 379k: candidate yield maker
-- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 355k — finestra informativa finale
-- `12:19` **MOVER_1H** — mossa -29 punti in 1h (prezzo 0.001) su 312k vol
-- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 312k — finestra informativa finale
-- `12:19` **MOVER_1H** — mossa -35 punti in 1h (prezzo 0.027) su 292k vol
+- `18:30` **MOVER_1H** — mossa +42 punti in 1h (prezzo 0.74) su 808k vol
+- `18:30` **CHIUDE_OGGI** — chiude oggi, vol 24h 808k — finestra informativa finale
+- `18:30` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 732k: candidate yield maker
+- `18:30` **CHIUDE_OGGI** — chiude oggi, vol 24h 646k — finestra informativa finale
+- `18:30` **MOVER_1H** — mossa -10 punti in 1h (prezzo 0.53) su 552k vol
+- `18:30` **CHIUDE_OGGI** — chiude oggi, vol 24h 552k — finestra informativa finale
+- `18:30` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 546k: candidate yield maker
+- `18:30` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 544k: candidate yield maker
+- `18:30` **CHIUDE_OGGI** — chiude oggi, vol 24h 431k — finestra informativa finale
+- `18:30` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 412k: candidate yield maker
+- `18:30` **CHIUDE_OGGI** — chiude oggi, vol 24h 375k — finestra informativa finale
+- `18:30` **CHIUDE_OGGI** — chiude oggi, vol 24h 373k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **10/100** — 4% dei top-50 mercati ha spread >=4 punti, 18% ha mosso >=8 punti in 1h
+- **8/100** — 2% dei top-50 mercati ha spread >=4 punti, 18% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 186 valutati · 82.3% hit · risultato medio -1.81%
-- **LONGSHOT_FADE** — 2528 valutati · 83.1% hit · risultato medio +1.93%
+- **ENDGAME_FAVORITE** — 188 valutati · 82.4% hit · risultato medio -1.66%
+- **LONGSHOT_FADE** — 2560 valutati · 83.1% hit · risultato medio +1.91%
 - **MAKER_SPREAD** — 22 valutati · 86.4% hit · risultato medio +10.80%
-- **MEAN_REVERT** — 569 valutati · 19.5% hit · risultato medio -18.16%
+- **MEAN_REVERT** — 578 valutati · 19.4% hit · risultato medio -18.63%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` China Open: Tallon Griekspoor vs Andrey Rublev — mossa -36p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` China Open: Tallon Griekspoor vs Andrey Rublev — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Counter-Strike: B8 vs Luminosity (BO3) - Stake Ranked Episode 4 Playof — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Japan Open Tennis Championships: Alejandro Davidovich Fokina vs Matteo — mossa -35p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Japan Open Tennis Championships: Alejandro Davidovich Fokina vs Matteo — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` China Open: Lanlana Tararudee vs Camila Osorio — mossa -42p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championsh — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Geraldo Alckmin win the 2026 Brazilian presidential election? — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Azerbaijan vs. Liechtenstein: O/U 0.5 — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Renan Santos win the 2026 Brazilian presidential election? — longshot a 0.003 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Azerbaijan vs. Liechtenstein: O/U 2.5 — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Elon Musk post 160-179 tweets from September 25 to October 2, 202 — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (mooseborzoi,UpTheBlues) su 'Will Norway win on 2026-10-01?' — $34,489
-- **Consenso**: 2 balene (mooseborzoi,UpTheBlues) su 'Will Netherlands win on 2026-10-01?' — $15,814
-- **Consenso**: 2 balene (HomeRunHazard,UpTheBlues) su 'Mouilleron-Le-Captif: Henry Bernet vs Dominic Stephan Strick' — $12,887
-- mooseborzoi: Will Chicago Fire FC win the 2026 MLS Cup? @ 0.95 ($94,540, P&L +533$)
-- mooseborzoi: Will San Jose Earthquakes win the 2026 MLS Cup? @ 0.97 ($74,646, P&L +1,151$)
-- mooseborzoi: Will the Milwaukee Brewers win the 2026 World Series? @ 0.84 ($23,855, P&L -1,804$)
-- HomeRunHazard: China Open: Lanlana Tararudee vs Camila Osorio @ 1.00 ($23,736, P&L +3,539$)
-- mooseborzoi: Will Norway win on 2026-10-01? @ 0.68 ($23,303, P&L +53$)
+- **Consenso**: 2 balene (HomeRunHazard,UpTheBlues) su 'Columbus: Abedallah Shelbayh vs Daniil Ostapenkov' — $16,395
+- FORTNITEMASTER888: 2026 Balance of Power: D Senate, D House @ 0.64 ($560,036, P&L +119,063$)
+- FORTNITEMASTER888: 2026 Balance of Power: D Senate, D House @ 0.36 ($321,911, P&L -119,063$)
+- UpTheBlues: Will Liechtenstein win on 2026-10-01? @ 1.00 ($56,044, P&L +1,417$)
+- qiu3: Valorant: Global Esports vs EDward Gaming (BO3) - VCT Champi @ 0.72 ($42,244, P&L -291$)
+- qiu3: Counter-Strike: FaZe vs Nemiga (BO3) - Stake Ranked Episode  @ 0.58 ($40,345, P&L +345$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -71,12 +69,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Exact Score: CA Platense 2 - 0 Estudiantes de La P' — da osservare (shadow, zero ordini)
-- `10-01T12:19` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Mouilleron-Le-Captif: Henry Bernet vs Dominic Step' — da osservare (shadow, zero ordini)
-- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Mouilleron-Le-Captif: Henry Bernet vs Dominic Step' — da osservare (shadow, zero ordini)
-- `10-01T12:19` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Jingshan: Alex Bolt vs Evan Zhu' — da osservare (shadow, zero ordini)
-- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Bari: Laurent Lokoli vs Samuele Pieri' — da osservare (shadow, zero ordini)
-- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Porto 2: Inaki Montes vs Jacob Fearnley' — da osservare (shadow, zero ordini)
+- `10-01T18:30` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Columbus: Abedallah Shelbayh vs Daniil Ostapenkov' — da osservare (shadow, zero ordini)
+- `10-01T18:30` wallet informato-simile UpTheBlues (score 78/100, win 90%) ENTRA su 'Columbus: Abedallah Shelbayh vs Daniil Ostapenkov' — da osservare (shadow, zero ordini)
+- `10-01T18:30` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Spread: Philadelphia Phillies (-1.5)' — da osservare (shadow, zero ordini)
+- `10-01T18:30` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Philadelphia Phillies vs. Atlanta Braves: O/U 7.5' — da osservare (shadow, zero ordini)
+- `10-01T18:30` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Steelers vs. Browns: O/U 44.5' — da osservare (shadow, zero ordini)
+- `10-01T18:30` wallet informato-simile UpTheBlues (score 78/100, win 90%) ENTRA su 'Exact Score: Azerbaijan 1 - 2 Liechtenstein?' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
