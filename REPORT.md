@@ -1,8 +1,8 @@
-# Report predmarket-lab — 30/09/2026 22:27:37
+# Report predmarket-lab — 01/10/2026 02:11:25
 
-🟢 **Salute dati:** dati freschi: ultimo scan 10 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
 
-Ultimo scan: `2026-09-30T20:18:03+00:00` UTC · ciclo n.93 · 5784 mercati tracciati · 27228 snapshot · 13881 alert
+Ultimo scan: `2026-10-01T00:02:00+00:00` UTC · ciclo n.94 · 5843 mercati tracciati · 27528 snapshot · 14016 alert
 
 ## Conto paper
 
@@ -12,50 +12,47 @@ Ultimo scan: `2026-09-30T20:18:03+00:00` UTC · ciclo n.93 · 5784 mercati tracc
 
 ## Ultimi alert
 
-- `20:18` **MOVER_1H** — mossa -24 punti in 1h (prezzo 0.26) su 1576k vol
-- `20:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 713k: candidate yield maker
-- `20:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 627k: candidate yield maker
-- `20:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 283k: candidate yield maker
-- `20:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 240k: candidate yield maker
-- `20:18` **MOVER_1H** — mossa +32 punti in 1h (prezzo 0.43) su 235k vol
-- `20:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 207k — finestra informativa finale
-- `20:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 204k: candidate yield maker
-- `20:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 197k — finestra informativa finale
-- `20:18` **CHIUDE_OGGI** — chiude oggi, vol 24h 195k — finestra informativa finale
-- `20:18` **MOVER_1H** — mossa +10 punti in 1h (prezzo 0.46) su 183k vol
-- `20:18` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 165k: candidate yield maker
+- `00:02` **MOVER_1H** — mossa +47 punti in 1h (prezzo 0.989) su 1293k vol
+- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 708k: candidate yield maker
+- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 692k — finestra informativa finale
+- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 551k: candidate yield maker
+- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 353k — finestra informativa finale
+- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 266k: candidate yield maker
+- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 266k — finestra informativa finale
+- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 247k — finestra informativa finale
+- `00:02` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.74) su 240k vol
+- `00:02` **MOVER_1H** — mossa +23 punti in 1h (prezzo 0.41) su 223k vol
+- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 223k: candidate yield maker
+- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 223k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **3/100** — 0% dei top-50 mercati ha spread >=4 punti, 8% ha mosso >=8 punti in 1h
+- **2/100** — 0% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 185 valutati · 82.2% hit · risultato medio -1.83%
-- **LONGSHOT_FADE** — 2359 valutati · 83.0% hit · risultato medio +2.02%
+- **ENDGAME_FAVORITE** — 186 valutati · 82.3% hit · risultato medio -1.81%
+- **LONGSHOT_FADE** — 2396 valutati · 83.0% hit · risultato medio +2.00%
 - **MAKER_SPREAD** — 21 valutati · 85.7% hit · risultato medio +10.80%
-- **MEAN_REVERT** — 547 valutati · 19.0% hit · risultato medio -17.97%
+- **MEAN_REVERT** — 555 valutati · 19.3% hit · risultato medio -17.62%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Philadelphia Phillies vs. Atlanta Braves — mossa -24p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Australia Tour of South Africa ODIs: South Africa vs Australia — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Adana: Cagla Buyukakcay vs Lucrezia Stefanini — mossa +32p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Mouilleron-Le-Captif: Lucas Poullain vs Remy Bertola — mossa +10p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` LoL: Team Heretics Academy vs NightBirds (BO3) - EMEA Masters Swiss St — mossa +31p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will the Fed decrease interest rates by 25 bps after the October 2026  — longshot a 0.004 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Chicago White Sox vs. Houston Astros — mossa +47p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Bitcoin dip to $82,500 in September? — longshot a 0.043 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Atlanta Dream vs. Washington Mystics — mossa +13p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Curitiba: Joao Lucas Da Silva vs Matheus Pucinelli de Almeida — mossa +23p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Gemini 4.0 released by September 30, 2026? — longshot a 0.005 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Bitcoin dip to $80,000 in September? — longshot a 0.004 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (UpTheBlues,RN1) su 'Adana: Cagla Buyukakcay vs Lucrezia Stefanini' — $38,618
-- **Consenso**: 2 balene (UpTheBlues,RN1) su 'Mouilleron-Le-Captif: Lucas Poullain vs Remy Bertola' — $27,244
-- **Consenso**: 2 balene (UpTheBlues,RN1) su 'OL Lyonnes vs. Chelsea FC: O/U 0.5' — $20,204
-- **Consenso**: 2 balene (UpTheBlues,RN1) su 'Will Arsenal WFC win on 2026-09-30?' — $14,294
-- BrotherObama: Philadelphia Phillies vs. Atlanta Braves @ 0.93 ($51,004, P&L +23,986$)
-- RN1: BK Häcken FF vs. Juventus FC: O/U 1.5 @ 1.00 ($22,579, P&L +7,504$)
-- RN1: Mouilleron-Le-Captif: Lucas Poullain vs Remy Bertola @ 0.82 ($20,184, P&L +5,212$)
-- RN1: Adana: Cagla Buyukakcay vs Lucrezia Stefanini @ 0.69 ($16,726, P&L -1,296$)
-- omnibus-076daa: Australia Tour of South Africa ODIs: South Africa vs Austral @ 1.00 ($13,629, P&L +2,548$)
+- **Consenso**: 2 balene (BrotherObama,HomeRunHazard) su 'Chicago White Sox vs. Houston Astros' — $290,533
+- BrotherObama: Chicago White Sox vs. Houston Astros @ 0.99 ($235,595, P&L +135,595$)
+- HomeRunHazard: Chicago White Sox vs. Houston Astros @ 0.99 ($54,938, P&L +12,816$)
+- UpTheBlues: Will Bolivia win on 2026-09-30? @ 0.99 ($36,671, P&L +517$)
+- HomeRunHazard: Chicago White Sox vs. Houston Astros: O/U 11.5 @ 0.95 ($36,333, P&L +16,065$)
+- HomeRunHazard: Atlanta Dream vs. Washington Mystics @ 0.73 ($22,900, P&L +824$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -72,12 +69,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `09-30T20:18` wallet informato-simile RN1 (score 71/100, win 83%) ENTRA su 'Eritrea vs. South Africa: O/U 2.5' — da osservare (shadow, zero ordini)
-- `09-30T20:18` wallet informato-simile RN1 (score 71/100, win 83%) ENTRA su 'Eritrea vs. South Africa: O/U 4.5' — da osservare (shadow, zero ordini)
-- `09-30T20:18` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Mouilleron-Le-Captif: Lucas Poullain vs Remy Berto' — da osservare (shadow, zero ordini)
-- `09-30T20:18` wallet informato-simile RN1 (score 71/100, win 83%) ENTRA su 'Mouilleron-Le-Captif: Lucas Poullain vs Remy Berto' — da osservare (shadow, zero ordini)
-- `09-30T20:18` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Columbus: Luca Staeheli vs Andres Andrade' — da osservare (shadow, zero ordini)
-- `09-30T20:18` wallet informato-simile 0x076daa87 (score 71/100, win 70%) ENTRA su 'Australia Tour of South Africa ODIs: South Africa ' — da osservare (shadow, zero ordini)
+- `10-01T00:02` wallet informato-simile 0x076daa87 (score 71/100, win 71%) ENTRA su 'Will San Luis de Quillota win on 2026-09-30?' — da osservare (shadow, zero ordini)
+- `10-01T00:02` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'Exact Score: DC United 3 - 2 SC Paderborn 07?' — da osservare (shadow, zero ordini)
+- `10-01T00:02` wallet informato-simile 0x076daa87 (score 71/100, win 71%) ENTRA su 'Will SC Paderborn 07 win on 2026-09-30?' — da osservare (shadow, zero ordini)
+- `10-01T00:02` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'Will Curaçao win on 2026-10-01?' — da osservare (shadow, zero ordini)
+- `10-01T00:02` wallet informato-simile 0x076daa87 (score 71/100, win 71%) ENTRA su 'Argentina vs. Bolivia: Both Teams to Score' — da osservare (shadow, zero ordini)
+- `10-01T00:02` wallet informato-simile BrotherObama (score 70/100, win 64%) ENTRA su 'Chicago White Sox vs. Houston Astros' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
