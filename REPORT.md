@@ -1,8 +1,8 @@
-# Report predmarket-lab — 01/10/2026 07:59:28
+# Report predmarket-lab — 01/10/2026 14:29:10
 
-🟢 **Salute dati:** dati freschi: ultimo scan 10 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
 
-Ultimo scan: `2026-10-01T05:49:49+00:00` UTC · ciclo n.95 · 5906 mercati tracciati · 27828 snapshot · 14128 alert
+Ultimo scan: `2026-10-01T12:19:54+00:00` UTC · ciclo n.96 · 5973 mercati tracciati · 28128 snapshot · 14272 alert
 
 ## Conto paper
 
@@ -12,49 +12,49 @@ Ultimo scan: `2026-10-01T05:49:49+00:00` UTC · ciclo n.95 · 5906 mercati tracc
 
 ## Ultimi alert
 
-- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 685k: candidate yield maker
-- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 550k: candidate yield maker
-- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 392k — finestra informativa finale
-- `05:49` **MOVER_1H** — mossa -25 punti in 1h (prezzo 0.038) su 334k vol
-- `05:49` **MOVER_1H** — mossa -46 punti in 1h (prezzo 0.35) su 239k vol
-- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 231k — finestra informativa finale
-- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 210k — finestra informativa finale
-- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 209k: candidate yield maker
-- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 201k — finestra informativa finale
-- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 195k: candidate yield maker
-- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 178k: candidate yield maker
-- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 169k — finestra informativa finale
+- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 617k: candidate yield maker
+- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 562k: candidate yield maker
+- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 456k: candidate yield maker
+- `12:19` **MOVER_1H** — mossa -36 punti in 1h (prezzo 0.001) su 430k vol
+- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 424k — finestra informativa finale
+- `12:19` **MOVER_1H** — mossa -12 punti in 1h (prezzo 0.52) su 418k vol
+- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 418k — finestra informativa finale
+- `12:19` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 379k: candidate yield maker
+- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 355k — finestra informativa finale
+- `12:19` **MOVER_1H** — mossa -29 punti in 1h (prezzo 0.001) su 312k vol
+- `12:19` **CHIUDE_OGGI** — chiude oggi, vol 24h 312k — finestra informativa finale
+- `12:19` **MOVER_1H** — mossa -35 punti in 1h (prezzo 0.027) su 292k vol
 
 ## Indice di inefficienza (v0)
 
-- **4/100** — 0% dei top-50 mercati ha spread >=4 punti, 10% ha mosso >=8 punti in 1h
+- **10/100** — 4% dei top-50 mercati ha spread >=4 punti, 18% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 186 valutati · 82.3% hit · risultato medio -1.81%
-- **LONGSHOT_FADE** — 2458 valutati · 83.2% hit · risultato medio +1.97%
+- **LONGSHOT_FADE** — 2528 valutati · 83.1% hit · risultato medio +1.93%
 - **MAKER_SPREAD** — 22 valutati · 86.4% hit · risultato medio +10.80%
-- **MEAN_REVERT** — 562 valutati · 19.4% hit · risultato medio -17.83%
+- **MEAN_REVERT** — 569 valutati · 19.5% hit · risultato medio -18.16%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Japan Open Tennis Championships: Tomas Etcheverry vs Stefanos Tsitsipa — mossa -25p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Japan Open Tennis Championships: Tomas Etcheverry vs Stefanos Tsitsipa — longshot a 0.036 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will the Fed decrease interest rates by 50+ bps after the October 2026 — longshot a 0.003 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Curitiba: Joao Lucas Da Silva vs Matheus Pucinelli de Almeida — longshot a 0.005 — ipotesi sopravvalutazione
-- `MEAN_REVERT` China Open: Yulia Starodubtseva vs Alina Charaeva — mossa -46p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` US announces end of Iranian blockade by September 30, 2026? — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` China Open: Tallon Griekspoor vs Andrey Rublev — mossa -36p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` China Open: Tallon Griekspoor vs Andrey Rublev — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Counter-Strike: B8 vs Luminosity (BO3) - Stake Ranked Episode 4 Playof — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Japan Open Tennis Championships: Alejandro Davidovich Fokina vs Matteo — mossa -35p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Japan Open Tennis Championships: Alejandro Davidovich Fokina vs Matteo — longshot a 0.001 — ipotesi sopravvalutazione
+- `MEAN_REVERT` China Open: Lanlana Tararudee vs Camila Osorio — mossa -42p in 1h — ipotesi rientro eccesso
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Will Portugal win on 2026-10-01?' — $47,599
-- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Will Norway win on 2026-10-01?' — $24,298
-- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Will Netherlands win on 2026-10-01?' — $22,298
+- **Consenso**: 2 balene (mooseborzoi,UpTheBlues) su 'Will Norway win on 2026-10-01?' — $34,489
+- **Consenso**: 2 balene (mooseborzoi,UpTheBlues) su 'Will Netherlands win on 2026-10-01?' — $15,814
+- **Consenso**: 2 balene (HomeRunHazard,UpTheBlues) su 'Mouilleron-Le-Captif: Henry Bernet vs Dominic Stephan Strick' — $12,887
 - mooseborzoi: Will Chicago Fire FC win the 2026 MLS Cup? @ 0.95 ($94,540, P&L +533$)
-- mooseborzoi: Will San Jose Earthquakes win the 2026 MLS Cup? @ 0.97 ($74,685, P&L +1,189$)
-- nigiri99: Will Spain win on 2026-10-03? @ 0.90 ($58,427, P&L -19$)
-- nigiri99: Will Portugal win on 2026-10-01? @ 0.48 ($32,887, P&L +700$)
-- mooseborzoi: Will the Milwaukee Brewers win the 2026 World Series? @ 0.83 ($23,698, P&L -1,960$)
+- mooseborzoi: Will San Jose Earthquakes win the 2026 MLS Cup? @ 0.97 ($74,646, P&L +1,151$)
+- mooseborzoi: Will the Milwaukee Brewers win the 2026 World Series? @ 0.84 ($23,855, P&L -1,804$)
+- HomeRunHazard: China Open: Lanlana Tararudee vs Camila Osorio @ 1.00 ($23,736, P&L +3,539$)
+- mooseborzoi: Will Norway win on 2026-10-01? @ 0.68 ($23,303, P&L +53$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -71,12 +71,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `10-01T00:02` wallet informato-simile 0x076daa87 (score 71/100, win 71%) ENTRA su 'Will San Luis de Quillota win on 2026-09-30?' — da osservare (shadow, zero ordini)
-- `10-01T00:02` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'Exact Score: DC United 3 - 2 SC Paderborn 07?' — da osservare (shadow, zero ordini)
-- `10-01T00:02` wallet informato-simile 0x076daa87 (score 71/100, win 71%) ENTRA su 'Will SC Paderborn 07 win on 2026-09-30?' — da osservare (shadow, zero ordini)
-- `10-01T00:02` wallet informato-simile UpTheBlues (score 79/100, win 91%) ENTRA su 'Will Curaçao win on 2026-10-01?' — da osservare (shadow, zero ordini)
-- `10-01T00:02` wallet informato-simile 0x076daa87 (score 71/100, win 71%) ENTRA su 'Argentina vs. Bolivia: Both Teams to Score' — da osservare (shadow, zero ordini)
-- `10-01T00:02` wallet informato-simile BrotherObama (score 70/100, win 64%) ENTRA su 'Chicago White Sox vs. Houston Astros' — da osservare (shadow, zero ordini)
+- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Exact Score: CA Platense 2 - 0 Estudiantes de La P' — da osservare (shadow, zero ordini)
+- `10-01T12:19` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Mouilleron-Le-Captif: Henry Bernet vs Dominic Step' — da osservare (shadow, zero ordini)
+- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Mouilleron-Le-Captif: Henry Bernet vs Dominic Step' — da osservare (shadow, zero ordini)
+- `10-01T12:19` wallet informato-simile HomeRunHazard (score 70/100, win 58%) ENTRA su 'Jingshan: Alex Bolt vs Evan Zhu' — da osservare (shadow, zero ordini)
+- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Bari: Laurent Lokoli vs Samuele Pieri' — da osservare (shadow, zero ordini)
+- `10-01T12:19` wallet informato-simile UpTheBlues (score 78/100, win 91%) ENTRA su 'Porto 2: Inaki Montes vs Jacob Fearnley' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
