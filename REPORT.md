@@ -1,8 +1,8 @@
-# Report predmarket-lab — 01/10/2026 02:11:25
+# Report predmarket-lab — 01/10/2026 07:59:28
 
-🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 10 min fa
 
-Ultimo scan: `2026-10-01T00:02:00+00:00` UTC · ciclo n.94 · 5843 mercati tracciati · 27528 snapshot · 14016 alert
+Ultimo scan: `2026-10-01T05:49:49+00:00` UTC · ciclo n.95 · 5906 mercati tracciati · 27828 snapshot · 14128 alert
 
 ## Conto paper
 
@@ -12,47 +12,49 @@ Ultimo scan: `2026-10-01T00:02:00+00:00` UTC · ciclo n.94 · 5843 mercati tracc
 
 ## Ultimi alert
 
-- `00:02` **MOVER_1H** — mossa +47 punti in 1h (prezzo 0.989) su 1293k vol
-- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 708k: candidate yield maker
-- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 692k — finestra informativa finale
-- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 551k: candidate yield maker
-- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 353k — finestra informativa finale
-- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 266k: candidate yield maker
-- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 266k — finestra informativa finale
-- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 247k — finestra informativa finale
-- `00:02` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.74) su 240k vol
-- `00:02` **MOVER_1H** — mossa +23 punti in 1h (prezzo 0.41) su 223k vol
-- `00:02` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 223k: candidate yield maker
-- `00:02` **CHIUDE_OGGI** — chiude oggi, vol 24h 223k — finestra informativa finale
+- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 685k: candidate yield maker
+- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 550k: candidate yield maker
+- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 392k — finestra informativa finale
+- `05:49` **MOVER_1H** — mossa -25 punti in 1h (prezzo 0.038) su 334k vol
+- `05:49` **MOVER_1H** — mossa -46 punti in 1h (prezzo 0.35) su 239k vol
+- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 231k — finestra informativa finale
+- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 210k — finestra informativa finale
+- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 209k: candidate yield maker
+- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 201k — finestra informativa finale
+- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 195k: candidate yield maker
+- `05:49` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 178k: candidate yield maker
+- `05:49` **CHIUDE_OGGI** — chiude oggi, vol 24h 169k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **2/100** — 0% dei top-50 mercati ha spread >=4 punti, 6% ha mosso >=8 punti in 1h
+- **4/100** — 0% dei top-50 mercati ha spread >=4 punti, 10% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 186 valutati · 82.3% hit · risultato medio -1.81%
-- **LONGSHOT_FADE** — 2396 valutati · 83.0% hit · risultato medio +2.00%
-- **MAKER_SPREAD** — 21 valutati · 85.7% hit · risultato medio +10.80%
-- **MEAN_REVERT** — 555 valutati · 19.3% hit · risultato medio -17.62%
+- **LONGSHOT_FADE** — 2458 valutati · 83.2% hit · risultato medio +1.97%
+- **MAKER_SPREAD** — 22 valutati · 86.4% hit · risultato medio +10.80%
+- **MEAN_REVERT** — 562 valutati · 19.4% hit · risultato medio -17.83%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Chicago White Sox vs. Houston Astros — mossa +47p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Will Bitcoin dip to $82,500 in September? — longshot a 0.043 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Atlanta Dream vs. Washington Mystics — mossa +13p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Curitiba: Joao Lucas Da Silva vs Matheus Pucinelli de Almeida — mossa +23p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` Gemini 4.0 released by September 30, 2026? — longshot a 0.005 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Bitcoin dip to $80,000 in September? — longshot a 0.004 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Japan Open Tennis Championships: Tomas Etcheverry vs Stefanos Tsitsipa — mossa -25p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Japan Open Tennis Championships: Tomas Etcheverry vs Stefanos Tsitsipa — longshot a 0.036 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the Fed decrease interest rates by 50+ bps after the October 2026 — longshot a 0.003 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Curitiba: Joao Lucas Da Silva vs Matheus Pucinelli de Almeida — longshot a 0.005 — ipotesi sopravvalutazione
+- `MEAN_REVERT` China Open: Yulia Starodubtseva vs Alina Charaeva — mossa -46p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` US announces end of Iranian blockade by September 30, 2026? — longshot a 0.001 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (BrotherObama,HomeRunHazard) su 'Chicago White Sox vs. Houston Astros' — $290,533
-- BrotherObama: Chicago White Sox vs. Houston Astros @ 0.99 ($235,595, P&L +135,595$)
-- HomeRunHazard: Chicago White Sox vs. Houston Astros @ 0.99 ($54,938, P&L +12,816$)
-- UpTheBlues: Will Bolivia win on 2026-09-30? @ 0.99 ($36,671, P&L +517$)
-- HomeRunHazard: Chicago White Sox vs. Houston Astros: O/U 11.5 @ 0.95 ($36,333, P&L +16,065$)
-- HomeRunHazard: Atlanta Dream vs. Washington Mystics @ 0.73 ($22,900, P&L +824$)
+- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Will Portugal win on 2026-10-01?' — $47,599
+- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Will Norway win on 2026-10-01?' — $24,298
+- **Consenso**: 2 balene (mooseborzoi,nigiri99) su 'Will Netherlands win on 2026-10-01?' — $22,298
+- mooseborzoi: Will Chicago Fire FC win the 2026 MLS Cup? @ 0.95 ($94,540, P&L +533$)
+- mooseborzoi: Will San Jose Earthquakes win the 2026 MLS Cup? @ 0.97 ($74,685, P&L +1,189$)
+- nigiri99: Will Spain win on 2026-10-03? @ 0.90 ($58,427, P&L -19$)
+- nigiri99: Will Portugal win on 2026-10-01? @ 0.48 ($32,887, P&L +700$)
+- mooseborzoi: Will the Milwaukee Brewers win the 2026 World Series? @ 0.83 ($23,698, P&L -1,960$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
