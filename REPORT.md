@@ -1,8 +1,8 @@
-# Report predmarket-lab — 02/10/2026 01:03:32
+# Report predmarket-lab — 02/10/2026 04:05:55
 
 🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
 
-Ultimo scan: `2026-10-01T22:54:25+00:00` UTC · ciclo n.98 · 6126 mercati tracciati · 28726 snapshot · 14543 alert
+Ultimo scan: `2026-10-02T01:56:52+00:00` UTC · ciclo n.99 · 6171 mercati tracciati · 29022 snapshot · 14715 alert
 
 ## Conto paper
 
@@ -12,47 +12,50 @@ Ultimo scan: `2026-10-01T22:54:25+00:00` UTC · ciclo n.98 · 6126 mercati tracc
 
 ## Ultimi alert
 
-- `22:54` **CHIUDE_OGGI** — chiude oggi, vol 24h 5026k — finestra informativa finale
-- `22:54` **CHIUDE_OGGI** — chiude oggi, vol 24h 1108k — finestra informativa finale
-- `22:54` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 787k: candidate yield maker
-- `22:54` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 771k: candidate yield maker
-- `22:54` **CHIUDE_OGGI** — chiude oggi, vol 24h 722k — finestra informativa finale
-- `22:54` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 551k: candidate yield maker
-- `22:54` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 493k: candidate yield maker
-- `22:54` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 341k: candidate yield maker
-- `22:54` **CHIUDE_OGGI** — chiude oggi, vol 24h 340k — finestra informativa finale
-- `22:54` **MOVER_1H** — mossa -37 punti in 1h (prezzo 0.001) su 296k vol
-- `22:54` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 284k: candidate yield maker
-- `22:54` **MOVER_1H** — mossa +23 punti in 1h (prezzo 0.999) su 272k vol
+- `01:56` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 2823k: candidate yield maker
+- `01:56` **MOVER_1H** — mossa -54 punti in 1h (prezzo 0.24) su 2823k vol
+- `01:56` **CHIUDE_OGGI** — chiude oggi, vol 24h 2823k — finestra informativa finale
+- `01:56` **MOVER_1H** — mossa -13 punti in 1h (prezzo 0.05) su 1246k vol
+- `01:56` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 814k: candidate yield maker
+- `01:56` **MOVER_1H** — mossa -54 punti in 1h (prezzo 0.18) su 609k vol
+- `01:56` **CHIUDE_OGGI** — chiude oggi, vol 24h 609k — finestra informativa finale
+- `01:56` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 566k: candidate yield maker
+- `01:56` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 505k: candidate yield maker
+- `01:56` **CHIUDE_OGGI** — chiude oggi, vol 24h 440k — finestra informativa finale
+- `01:56` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 354k: candidate yield maker
+- `01:56` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 337k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **6/100** — 4% dei top-50 mercati ha spread >=4 punti, 8% ha mosso >=8 punti in 1h
+- **11/100** — 6% dei top-50 mercati ha spread >=4 punti, 18% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
 - **ENDGAME_FAVORITE** — 189 valutati · 82.5% hit · risultato medio -1.54%
-- **LONGSHOT_FADE** — 2594 valutati · 83.0% hit · risultato medio +1.89%
+- **LONGSHOT_FADE** — 2618 valutati · 83.0% hit · risultato medio +1.88%
 - **MAKER_SPREAD** — 22 valutati · 86.4% hit · risultato medio +10.80%
-- **MEAN_REVERT** — 584 valutati · 19.2% hit · risultato medio -19.39%
+- **MEAN_REVERT** — 589 valutati · 19.0% hit · risultato medio -19.74%
 
 segnali aperti ora:
 
-- `LONGSHOT_FADE` Will Netherlands win on 2026-10-01? — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Greece win on 2026-10-01? — longshot a 0.001 — ipotesi sopravvalutazione
-- `LONGSHOT_FADE` Will Denmark win on 2026-10-01? — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` LoL: Estral Esports vs LOS - Game 2 Winner — mossa -37p in 1h — ipotesi rientro eccesso
-- `LONGSHOT_FADE` LoL: Estral Esports vs LOS - Game 2 Winner — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Curitiba: Guido Justo vs Pedro Sakamoto — mossa +23p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` Philadelphia Phillies vs. Atlanta Braves — mossa -13p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Philadelphia Phillies vs. Atlanta Braves — longshot a 0.045 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the Fed decrease interest rates by 25 bps after the October 2026  — longshot a 0.004 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Anguilla vs. Antigua and Barbuda: 1st Half O/U 1.5 — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Tarcisio de Freitas win the 2026 Brazilian presidential election? — longshot a 0.001 — ipotesi sopravvalutazione
+- `ENDGAME_FAVORITE` Wild vs. Predators — favorito 0.79 a fine giornata, spread 1p, vol 215k
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (UpTheBlues,HomeRunHazard) su 'Steelers vs. Browns: O/U 44.5' — $36,078
-- FORTNITEMASTER888: 2026 Balance of Power: D Senate, D House @ 0.64 ($560,036, P&L +119,063$)
-- FORTNITEMASTER888: 2026 Balance of Power: D Senate, D House @ 0.36 ($321,911, P&L -119,063$)
-- lllllllIlll: Counter-Strike: Nuclear TigeRES vs CYBERSHOKE Esports (BO3)  @ 1.00 ($62,301, P&L +33,005$)
-- HomeRunHazard: Steelers vs. Browns: O/U 44.5 @ 0.70 ($31,681, P&L -29$)
-- HomeRunHazard: Spread: Browns (-3.5) @ 0.71 ($28,070, P&L +202$)
+- **Consenso**: 2 balene (0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465,surfandturf) su 'Philadelphia Phillies vs. Atlanta Braves' — $540,458
+- **Consenso**: 3 balene (0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465,takeormake,surfandturf) su 'Steelers vs. Browns' — $323,738
+- **Consenso**: 2 balene (0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465,6kke1t) su 'Anguilla vs. Antigua and Barbuda: 1st Half O/U 1.5' — $72,895
+- **Consenso**: 2 balene (takeormake,Berniepaidoff) su 'Spread: Steelers (-2.5)' — $55,268
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: Philadelphia Phillies vs. Atlanta Braves @ 0.96 ($538,673, P&L +216,417$)
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: Steelers vs. Browns @ 0.24 ($184,118, P&L -271,687$)
+- takeormake: Spread: Colts (-3.5) @ 0.48 ($100,095, P&L -4,330$)
+- 6kke1t: Anguilla vs. Antigua and Barbuda: 1st Half O/U 1.5 @ 1.00 ($69,619, P&L +62,003$)
+- takeormake: Colts vs. Commanders @ 0.35 ($68,818, P&L -2,237$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -63,18 +66,18 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 - **0x361b16e3ddfe1d415d41008daac2631d94ab74fe** — score 88/100 · win 100% · 19 osservazioni su 19 mercati
 - **Kch-Temp** — score 86/100 · win 94% · 33 osservazioni su 28 mercati
 - **Tiger200** — score 85/100 · win 86% · 7 osservazioni su 5 mercati
-- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 84/100 · win 76% · 246 osservazioni su 63 mercati
+- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 75% · 261 osservazioni su 72 mercati
 - **BreakTheBank** — score 81/100 · win 66% · 285 osservazioni su 37 mercati
-- **surfandturf** — score 80/100 · win 66% · 50 osservazioni su 12 mercati
+- **UpTheBlues** — score 78/100 · win 90% · 210 osservazioni su 142 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `10-01T22:54` wallet informato-simile UpTheBlues (score 78/100, win 90%) ENTRA su 'Curitiba: Pedro Boscardin Dias vs Genaro Alberto O' — da osservare (shadow, zero ordini)
-- `10-01T22:54` wallet informato-simile UpTheBlues (score 78/100, win 90%) ENTRA su 'Curitiba: Guido Justo vs Pedro Sakamoto' — da osservare (shadow, zero ordini)
-- `10-01T22:54` wallet informato-simile UpTheBlues (score 78/100, win 90%) ENTRA su 'Will SC Recife win on 2026-10-01?' — da osservare (shadow, zero ordini)
-- `10-01T22:54` wallet informato-simile HomeRunHazard (score 70/100, win 59%) ENTRA su 'North Texas vs. Tulsa' — da osservare (shadow, zero ordini)
-- `10-01T22:54` wallet informato-simile UpTheBlues (score 78/100, win 90%) ENTRA su 'Will Cayman Islands win on 2026-10-01?' — da osservare (shadow, zero ordini)
-- `10-01T22:54` wallet informato-simile UpTheBlues (score 78/100, win 90%) ENTRA su 'Will Costa Rica win on 2026-10-01?' — da osservare (shadow, zero ordini)
+- `10-02T01:56` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'North Texas vs. Tulsa' — da osservare (shadow, zero ordini)
+- `10-02T01:56` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'Anguilla vs. Antigua and Barbuda: 1st Half O/U 1.5' — da osservare (shadow, zero ordini)
+- `10-02T01:56` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'Philadelphia Phillies vs. Atlanta Braves' — da osservare (shadow, zero ordini)
+- `10-02T01:56` wallet informato-simile surfandturf (score 78/100, win 62%) ENTRA su 'Philadelphia Phillies vs. Atlanta Braves' — da osservare (shadow, zero ordini)
+- `10-02T01:56` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'Spread: Philadelphia Phillies (-1.5)' — da osservare (shadow, zero ordini)
+- `10-02T01:56` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 75%) ENTRA su 'Rams vs. Eagles' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
