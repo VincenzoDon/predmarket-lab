@@ -1,8 +1,8 @@
-# Report predmarket-lab — 02/10/2026 21:41:12
+# Report predmarket-lab — 03/10/2026 01:25:00
 
 🟢 **Salute dati:** dati freschi: ultimo scan 10 min fa
 
-Ultimo scan: `2026-10-02T19:31:34+00:00` UTC · ciclo n.102 · 6400 mercati tracciati · 29916 snapshot · 15165 alert
+Ultimo scan: `2026-10-02T23:15:30+00:00` UTC · ciclo n.103 · 6468 mercati tracciati · 30216 snapshot · 15290 alert
 
 ## Conto paper
 
@@ -12,48 +12,46 @@ Ultimo scan: `2026-10-02T19:31:34+00:00` UTC · ciclo n.102 · 6400 mercati trac
 
 ## Ultimi alert
 
-- `19:31` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.79) su 2504k vol
-- `19:31` **CHIUDE_OGGI** — chiude oggi, vol 24h 2504k — finestra informativa finale
-- `19:31` **MOVER_1H** — mossa +62 punti in 1h (prezzo 0.999) su 1207k vol
-- `19:31` **CHIUDE_OGGI** — chiude oggi, vol 24h 1207k — finestra informativa finale
-- `19:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 903k: candidate yield maker
-- `19:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 792k: candidate yield maker
-- `19:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 758k: candidate yield maker
-- `19:31` **CHIUDE_OGGI** — chiude oggi, vol 24h 606k — finestra informativa finale
-- `19:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 545k: candidate yield maker
-- `19:31` **CHIUDE_OGGI** — chiude oggi, vol 24h 501k — finestra informativa finale
-- `19:31` **CHIUDE_OGGI** — chiude oggi, vol 24h 386k — finestra informativa finale
-- `19:31` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 317k: candidate yield maker
+- `23:15` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1009k: candidate yield maker
+- `23:15` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 889k: candidate yield maker
+- `23:15` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 761k: candidate yield maker
+- `23:15` **MOVER_1H** — mossa +13 punti in 1h (prezzo 0.51) su 542k vol
+- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 542k — finestra informativa finale
+- `23:15` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 497k: candidate yield maker
+- `23:15` **MOVER_1H** — mossa +17 punti in 1h (prezzo 0.63) su 413k vol
+- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 413k — finestra informativa finale
+- `23:15` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 316k: candidate yield maker
+- `23:15` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 281k: candidate yield maker
+- `23:15` **MOVER_1H** — mossa +12 punti in 1h (prezzo 0.57) su 222k vol
+- `23:15` **CHIUDE_OGGI** — chiude oggi, vol 24h 222k — finestra informativa finale
 
 ## Indice di inefficienza (v0)
 
-- **9/100** — 0% dei top-50 mercati ha spread >=4 punti, 22% ha mosso >=8 punti in 1h
+- **4/100** — 2% dei top-50 mercati ha spread >=4 punti, 8% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 197 valutati · 83.2% hit · risultato medio -1.01%
-- **LONGSHOT_FADE** — 2722 valutati · 82.8% hit · risultato medio +1.82%
+- **ENDGAME_FAVORITE** — 203 valutati · 83.3% hit · risultato medio -1.00%
+- **LONGSHOT_FADE** — 2753 valutati · 82.8% hit · risultato medio +1.81%
 - **MAKER_SPREAD** — 22 valutati · 86.4% hit · risultato medio +10.80%
-- **MEAN_REVERT** — 607 valutati · 18.6% hit · risultato medio -21.23%
+- **MEAN_REVERT** — 616 valutati · 19.0% hit · risultato medio -21.36%
 
 segnali aperti ora:
 
-- `ENDGAME_FAVORITE` Will Belgium win on 2026-10-02? — favorito 0.80 a fine giornata, spread 1p, vol 2504k
-- `LONGSHOT_FADE` Will the Fed increase interest rates by 50+ bps after the October 2026 — longshot a 0.004 — ipotesi sopravvalutazione
-- `ENDGAME_FAVORITE` Will Slovakia win on 2026-10-02? — favorito 0.78 a fine giornata, spread 1p, vol 315k
-- `LONGSHOT_FADE` Will Armenia win on 2026-10-02? — longshot a 0.001 — ipotesi sopravvalutazione
-- `MEAN_REVERT` Counter-Strike: Nemiga vs Alliance (BO3) - Stake Ranked Episode 4 Play — mossa +17p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Will Poland win on 2026-10-02? — favorito 0.94 a fine giornata, spread 1p, vol 235k
+- `LONGSHOT_FADE` Will Renan Santos win the 2026 Brazilian presidential election? — longshot a 0.002 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championsh — longshot a 0.002 — ipotesi sopravvalutazione
+- `MAKER_SPREAD` Spread: Burkina Faso (-5.5) — spread 9p — ipotesi cattura maker
+- `LONGSHOT_FADE` Will Elise Stefanik win the 2028 Republican presidential nomination? — longshot a 0.002 — ipotesi sopravvalutazione
+- `MEAN_REVERT` Counter-Strike: K27 vs Team Nemesis (BO5) - CIS LAN Championship Playo — mossa +29p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Will Geraldo Alckmin win the 2026 Brazilian presidential election? — longshot a 0.002 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- **Consenso**: 2 balene (mooseborzoii,HomeRunHazard) su 'Lions vs. Panthers: O/U 50.5' — $21,148
-- **Consenso**: 2 balene (mooseborzoii,HomeRunHazard) su 'Lions vs. Panthers: O/U 51.5' — $18,033
-- mooseborzoii: Spread: Virginia Tech (-2.5) @ 0.48 ($236,979, P&L -2,443$)
-- mooseborzoii: Rams vs. Eagles: O/U 43.5 @ 0.47 ($24,481, P&L +258$)
-- FORTNITEMASTER888: LoL: Team Vitality vs BNK FEARX (BO1) - Demacia Cup Global I @ 0.30 ($17,483, P&L -551$)
-- HomeRunHazard: Lions vs. Panthers: O/U 51.5 @ 0.53 ($12,943, P&L +237$)
-- HomeRunHazard: Lions vs. Panthers: O/U 50.5 @ 0.49 ($12,283, P&L +499$)
+- mooseborzoii: Spread: Virginia Tech (-2.5) @ 0.80 ($390,006, P&L +149,664$)
+- mooseborzoii: Liberty vs. Delaware @ 0.80 ($54,789, P&L +1,497$)
+- mooseborzoii: Liberty vs. Delaware: O/U 51.5 @ 0.66 ($43,388, P&L +9,609$)
+- mooseborzoii: São Paulo FC vs. Santos FC: O/U 2.5 @ 0.68 ($39,481, P&L +7,450$)
+- mooseborzoii: Cowboys vs. Texans @ 0.41 ($30,686, P&L +370$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -70,12 +68,12 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `10-02T19:31` wallet informato-simile 0xBc43c8bfBC4d77c2FC9011adaD38Ba43b88996d3-1765231687816 (score 73/100, win 67%) ENTRA su 'Japan Open Tennis Championships: Matteo Berrettini' — da osservare (shadow, zero ordini)
-- `10-02T19:31` wallet informato-simile HomeRunHazard (score 71/100, win 60%) ENTRA su 'Columbus: Abedallah Shelbayh vs Aidan Mayo' — da osservare (shadow, zero ordini)
-- `10-02T19:31` wallet informato-simile HomeRunHazard (score 71/100, win 60%) ENTRA su 'Spread: Wake Forest (-13.5)' — da osservare (shadow, zero ordini)
-- `10-02T19:31` wallet informato-simile HomeRunHazard (score 71/100, win 60%) ENTRA su 'Lions vs. Panthers: O/U 50.5' — da osservare (shadow, zero ordini)
-- `10-02T19:31` wallet informato-simile HomeRunHazard (score 71/100, win 60%) ENTRA su 'Lions vs. Panthers: O/U 51.5' — da osservare (shadow, zero ordini)
-- `10-02T19:31` wallet informato-simile 0xBc43c8bfBC4d77c2FC9011adaD38Ba43b88996d3-1765231687816 (score 73/100, win 67%) ENTRA su 'Jingshan: Emerson Jones vs Alexandra Shubladze' — da osservare (shadow, zero ordini)
+- `10-02T23:15` wallet informato-simile mooseborzoii (score 70/100, win 71%) ENTRA su 'São Paulo FC vs. Santos FC: O/U 2.5' — da osservare (shadow, zero ordini)
+- `10-02T23:15` wallet informato-simile mooseborzoii (score 70/100, win 71%) ENTRA su 'Spread: BYU (-6.5)' — da osservare (shadow, zero ordini)
+- `10-02T23:15` wallet informato-simile mooseborzoii (score 70/100, win 71%) ENTRA su 'Spread: Liberty (-7.5)' — da osservare (shadow, zero ordini)
+- `10-02T23:15` wallet informato-simile mooseborzoii (score 70/100, win 71%) ENTRA su 'Liberty vs. Delaware: O/U 51.5' — da osservare (shadow, zero ordini)
+- `10-02T23:15` wallet informato-simile mooseborzoii (score 70/100, win 71%) ENTRA su 'Spread: Virginia Tech (-1.5)' — da osservare (shadow, zero ordini)
+- `10-02T23:15` wallet informato-simile mooseborzoii (score 70/100, win 71%) ENTRA su 'Cowboys vs. Texans' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
