@@ -1,8 +1,8 @@
-# Report predmarket-lab — 03/10/2026 04:20:43
+# Report predmarket-lab — 03/10/2026 10:15:20
 
-🟢 **Salute dati:** dati freschi: ultimo scan 9 min fa
+🟢 **Salute dati:** dati freschi: ultimo scan 10 min fa
 
-Ultimo scan: `2026-10-03T02:11:23+00:00` UTC · ciclo n.104 · 6506 mercati tracciati · 30516 snapshot · 15430 alert
+Ultimo scan: `2026-10-03T08:05:41+00:00` UTC · ciclo n.105 · 6567 mercati tracciati · 30816 snapshot · 15556 alert
 
 ## Conto paper
 
@@ -12,46 +12,46 @@ Ultimo scan: `2026-10-03T02:11:23+00:00` UTC · ciclo n.104 · 6506 mercati trac
 
 ## Ultimi alert
 
-- `02:11` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 965k: candidate yield maker
-- `02:11` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 952k: candidate yield maker
-- `02:11` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 773k: candidate yield maker
-- `02:11` **MOVER_1H** — mossa +27 punti in 1h (prezzo 0.5) su 740k vol
-- `02:11` **MOVER_1H** — mossa -40 punti in 1h (prezzo 0.07) su 547k vol
-- `02:11` **MOVER_1H** — mossa -28 punti in 1h (prezzo 0.11) su 545k vol
-- `02:11` **CHIUDE_OGGI** — chiude oggi, vol 24h 545k — finestra informativa finale
-- `02:11` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 499k: candidate yield maker
-- `02:11` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 485k: candidate yield maker
-- `02:11` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 454k: candidate yield maker
-- `02:11` **MOVER_1H** — mossa +37 punti in 1h (prezzo 0.77) su 391k vol
-- `02:11` **CHIUDE_OGGI** — chiude oggi, vol 24h 370k — finestra informativa finale
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 1890k: candidate yield maker
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 950k: candidate yield maker
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 854k: candidate yield maker
+- `08:05` **CHIUDE_OGGI** — chiude oggi, vol 24h 709k — finestra informativa finale
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 698k: candidate yield maker
+- `08:05` **CHIUDE_OGGI** — chiude oggi, vol 24h 696k — finestra informativa finale
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 569k: candidate yield maker
+- `08:05` **MOVER_1H** — mossa +49 punti in 1h (prezzo 0.999) su 552k vol
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 500k: candidate yield maker
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 465k: candidate yield maker
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 459k: candidate yield maker
+- `08:05` **REWARDS_MARKET** — liquidity rewards attivi — vol 24h 405k: candidate yield maker
 
 ## Indice di inefficienza (v0)
 
-- **5/100** — 0% dei top-50 mercati ha spread >=4 punti, 12% ha mosso >=8 punti in 1h
+- **1/100** — 0% dei top-50 mercati ha spread >=4 punti, 2% ha mosso >=8 punti in 1h
 
 ## Shadow signals (l'AI studia, zero capitale)
 
-- **ENDGAME_FAVORITE** — 203 valutati · 83.3% hit · risultato medio -1.00%
-- **LONGSHOT_FADE** — 2769 valutati · 82.7% hit · risultato medio +1.80%
-- **MAKER_SPREAD** — 23 valutati · 87.0% hit · risultato medio +11.18%
-- **MEAN_REVERT** — 618 valutati · 18.9% hit · risultato medio -21.62%
+- **ENDGAME_FAVORITE** — 204 valutati · 82.8% hit · risultato medio -1.49%
+- **LONGSHOT_FADE** — 2792 valutati · 82.6% hit · risultato medio +1.79%
+- **MAKER_SPREAD** — 24 valutati · 87.5% hit · risultato medio +11.05%
+- **MEAN_REVERT** — 625 valutati · 18.9% hit · risultato medio -22.17%
 
 segnali aperti ora:
 
-- `MEAN_REVERT` Dallas Wings vs. Golden State Valkyries — mossa +27p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Spread: Virginia Tech (-2.5) — mossa -40p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Pittsburgh vs. Virginia Tech — mossa +37p in 1h — ipotesi rientro eccesso
-- `MEAN_REVERT` Spread: Virginia Tech (-1.5) — mossa -44p in 1h — ipotesi rientro eccesso
-- `ENDGAME_FAVORITE` Will the price of Bitcoin be above $84,000 on October 3? — favorito 0.90 a fine giornata, spread 0p, vol 119k
-- `MEAN_REVERT` Asian Games Men: Bangladesh vs Sri Lanka — mossa -53p in 1h — ipotesi rientro eccesso
+- `MEAN_REVERT` China Open: Andrey Rublev vs Roman Safiullin — mossa +49p in 1h — ipotesi rientro eccesso
+- `LONGSHOT_FADE` Asian Games Men: Pakistan vs India — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Tarcisio de Freitas win the 2026 Brazilian presidential election? — longshot a 0.001 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Bitcoin reach $92,000 September 28-October 4? — longshot a 0.004 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will the Fed decrease interest rates by 25 bps after the October 2026  — longshot a 0.004 — ipotesi sopravvalutazione
+- `LONGSHOT_FADE` Will Fabian Ruiz win the 2026 Ballon d'Or? — longshot a 0.003 — ipotesi sopravvalutazione
 
 ## Whale watch 🐋
 
-- texaskid: Spread: Virginia Tech (-2.5) @ 0.62 ($285,903, P&L +50,753$)
-- DelidelaDele: São Paulo FC vs. Santos FC: O/U 2.5 @ 1.00 ($165,925, P&L +91,791$)
-- Talvez10: Spread: Virginia Tech (-1.5) @ 0.59 ($119,000, P&L +17,005$)
-- mooseborzoi: Will Chicago Fire FC win the 2026 MLS Cup? @ 0.95 ($94,590, P&L +583$)
-- mooseborzoi: Will San Jose Earthquakes win the 2026 MLS Cup? @ 0.97 ($74,646, P&L +1,151$)
+- aenews2: Will Indiana enact a data center moratorium by December 31,  @ 0.85 ($1,316,153, P&L +177,053$)
+- texaskid: Colts vs. Commanders @ 0.66 ($70,718, P&L +1,842$)
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: China Open: Xinran Sun vs Cristina Bucsa @ 0.68 ($60,241, P&L +1,588$)
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: Counter-Strike: Legacy vs PARIVISION (BO3) - ESL Pro League  @ 0.55 ($54,500, P&L -1,500$)
+- 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465: China Open: Katerina Siniakova vs Elina Svitolina @ 0.91 ($47,838, P&L +10,076$)
 
 ## Shadow Detector v1 🕵️ (scoring wallet — shadow, zero ordini)
 
@@ -59,21 +59,21 @@ Punteggio "insider-simiglianza" dallo storico on-chain (win-rate, profitto, conv
 
 - **JnStrtPrdctnMrkts** — score 91/100 · win 79% · 150 osservazioni su 15 mercati
 - **0x361b16e3ddfe1d415d41008daac2631d94ab74fe** — score 88/100 · win 100% · 19 osservazioni su 19 mercati
+- **texaskid** — score 87/100 · win 100% · 7 osservazioni su 4 mercati
 - **Kch-Temp** — score 86/100 · win 94% · 33 osservazioni su 28 mercati
 - **Tiger200** — score 85/100 · win 86% · 7 osservazioni su 5 mercati
-- **texaskid** — score 84/100 · win 100% · 4 osservazioni su 4 mercati
-- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 76% · 273 osservazioni su 74 mercati
+- **0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465** — score 83/100 · win 76% · 288 osservazioni su 82 mercati
 - **BreakTheBank** — score 81/100 · win 66% · 285 osservazioni su 37 mercati
 - **Diabolical-Prize** — score 79/100 · win 78% · 9 osservazioni su 7 mercati
 
 ingressi sospetti recenti (SHADOW_ENTRY):
 
-- `10-03T02:11` wallet informato-simile Talvez10 (score 69/100, win 69%) ENTRA su 'Spread: Virginia Tech (-1.5)' — da osservare (shadow, zero ordini)
-- `10-03T02:11` wallet informato-simile texaskid (score 84/100, win 100%) ENTRA su 'Spread: Virginia Tech (-2.5)' — da osservare (shadow, zero ordini)
-- `10-03T02:11` wallet informato-simile texaskid (score 84/100, win 100%) ENTRA su 'Broncos vs. 49ers' — da osservare (shadow, zero ordini)
-- `10-03T02:11` wallet informato-simile texaskid (score 84/100, win 100%) ENTRA su 'Colts vs. Commanders' — da osservare (shadow, zero ordini)
-- `10-03T02:11` wallet informato-simile texaskid (score 84/100, win 100%) ENTRA su 'Spread: Colts (-3.5)' — da osservare (shadow, zero ordini)
-- `10-03T02:11` wallet informato-simile Talvez10 (score 69/100, win 69%) ENTRA su 'O/U 1.5 Rounds' — da osservare (shadow, zero ordini)
+- `10-03T08:05` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 76%) ENTRA su 'China Open: Andrey Rublev vs Roman Safiullin' — da osservare (shadow, zero ordini)
+- `10-03T08:05` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 76%) ENTRA su 'Counter-Strike: Legacy vs PARIVISION (BO3) - ESL P' — da osservare (shadow, zero ordini)
+- `10-03T08:05` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 76%) ENTRA su 'LoL: HANJIN BRION vs JD Gaming (BO1) - Demacia Cup' — da osservare (shadow, zero ordini)
+- `10-03T08:05` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 76%) ENTRA su 'LoL: Team Vitality vs BNK FEARX (BO1) - Demacia Cu' — da osservare (shadow, zero ordini)
+- `10-03T08:05` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 76%) ENTRA su 'San Diego Padres vs. Milwaukee Brewers' — da osservare (shadow, zero ordini)
+- `10-03T08:05` wallet informato-simile 0x2c335066FE58fe9237c3d3Dc7b275C2a034a0563-1759935795465 (score 83/100, win 76%) ENTRA su 'Will Flávio Bolsonaro win the 2026 Brazilian presi' — da osservare (shadow, zero ordini)
 
 ## Watchlist normativa
 
