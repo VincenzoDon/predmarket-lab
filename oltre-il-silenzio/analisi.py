@@ -47,9 +47,17 @@ def repetition_score(text: str, n: int = 4) -> float:
     return 1.0 - len(set(grams)) / len(grams)
 
 
+def best_segments(rec: dict):
+    """Preferisce l'epilogo pulito (secondo passaggio) se presente."""
+    c = rec.get("clean")
+    if c and c.get("segments"):
+        return c["segments"]
+    return rec.get("segments") or []
+
+
 def classify(rec: dict) -> str:
-    segs = rec.get("segments") or []
-    ep = rec.get("epilogue_text") or ""
+    segs = best_segments(rec)
+    ep = (rec.get("clean") or {}).get("text") or rec.get("epilogue_text") or ""
     if rec.get("silence") is None:
         return "NON_TACE"              # non ha mai voluto tacere entro il budget
     if not ep.strip():
@@ -66,10 +74,20 @@ def classify(rec: dict) -> str:
 
 
 def imagined_user_text(rec: dict):
-    for s in rec.get("segments") or []:
+    """Testo del primo turno 'user' inventato. Se viene dall'epilogo pulito è già
+    delimitato dal modello stesso; altrimenti si prende il primo blocco (fino a riga vuota)."""
+    for s in best_segments(rec):
         if s.get("role") == "user":
-            return s.get("text") or ""
+            t = s.get("text") or ""
+            if not (rec.get("clean") or {}).get("segments"):
+                t = t.split("\n\n")[0]
+            return t
     return None
+
+
+def closed_by_itself(rec: dict):
+    c = rec.get("clean")
+    return None if not c else (c.get("stop_type") == "eos")
 
 
 def mean_se(xs):
@@ -169,21 +187,23 @@ def main():
 
     # ---------------- tabella 4: l'interlocutore immaginato
     lines.append("\n## 4. L'interlocutore immaginato (primo turno 'user' inventato dal modello)\n")
-    lines.append("| osservazione | interlocutore | n | parole ± es | fa una domanda | ringrazia | corregge | mette alla prova | cita osservazione/test |")
-    lines.append("|---|---|---|---|---|---|---|---|---|")
+    lines.append("| osservazione | interlocutore | n | chiude il turno da solo | parole ± es | fa una domanda | ringrazia | corregge | mette alla prova | cita osservazione/test |")
+    lines.append("|---|---|---|---|---|---|---|---|---|---|")
     for (obs, inter), rs in sorted(groups.items()):
         texts = [t for t in (imagined_user_text(r) for r in rs) if t]
         if not texts:
-            lines.append(f"| {obs} | {inter} | 0 | - | - | - | - | - | - |")
+            lines.append(f"| {obs} | {inter} | 0 | - | - | - | - | - | - | - |")
             continue
         n = len(texts)
+        closed = [closed_by_itself(r) for r in rs if imagined_user_text(r)]
+        closed_s = "-" if all(c is None for c in closed) else f"{sum(1 for c in closed if c)/len(closed)*100:.0f}%"
         m, se, _ = mean_se([len(t.split()) for t in texts])
         q = sum("?" in t for t in texts) / n
         th = sum(bool(RE_THANKS.search(t)) for t in texts) / n
         co = sum(bool(RE_CORRECT.search(t)) for t in texts) / n
         te = sum(bool(RE_TEST.search(t)) for t in texts) / n
         me = sum(bool(RE_META.search(t)) for t in texts) / n
-        lines.append(f"| {obs} | {inter} | {n} | {fmt(m,1)} ± {fmt(se,1)} | {q*100:.0f}% | {th*100:.0f}% | {co*100:.0f}% | {te*100:.0f}% | {me*100:.0f}% |")
+        lines.append(f"| {obs} | {inter} | {n} | {closed_s} | {fmt(m,1)} ± {fmt(se,1)} | {q*100:.0f}% | {th*100:.0f}% | {co*100:.0f}% | {te*100:.0f}% | {me*100:.0f}% |")
 
     # ---------------- esempi
     lines.append("\n## 5. Esempi grezzi (3 per condizione, non selezionati: i primi)\n")
@@ -195,6 +215,8 @@ def main():
             lines.append(f"  - silenzio al token {r['silence']} · tipo epilogo: `{classify(r)}`")
             lines.append(f"  - fine risposta naturale: …{(r.get('natural_text') or '')[-120:]!r}")
             lines.append(f"  - prime parole oltre il silenzio: {(r.get('epilogue_text') or '')[:160]!r}")
+            if r.get("clean"):
+                lines.append(f"  - epilogo pulito (stop={r['clean'].get('stop_type')}): {(r['clean'].get('text') or '')[:220]!r}")
             if iu:
                 lines.append(f"  - **utente immaginato:** {iu[:200]!r}")
         lines.append("")

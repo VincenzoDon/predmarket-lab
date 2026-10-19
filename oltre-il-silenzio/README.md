@@ -44,7 +44,13 @@ modo sistematico. Non è garantito che sia così: la prima cosa da fare, quando 
   turno" (cioè: con decodifica greedy, qui avrebbe taciuto). Fallback: primo passo con P(EOG) ≥ 0,5;
 - separa **testo naturale** (prima del silenzio) ed **epilogo** (dopo);
 - segmenta l'epilogo nei "turni" che il modello si inventa (via token speciali di apertura
-  turno; fallback su etichette testuali tipo `User:`).
+  turno; fallback su etichette testuali tipo `User:`);
+- **secondo passaggio ("epilogo pulito")**: riparte dal punto di silenzio tenendo i primi 2
+  token forzati (ciò che il modello ha scelto quando non poteva tacere) e da lì gli
+  *permette* di chiudere il turno. Così l'interlocutore immaginato finisce dove il modello
+  decide che finisce (`stop_type = eos`), senza mischiarsi con ciò che viene dopo.
+  Verificato sul 1.5B: senza questo passaggio il turno "user" inventato non si chiude mai e
+  degenera in ripetizione.
 
 **Metriche** (`analisi.py` → `RISULTATI.md`):
 1. punto di silenzio medio per condizione (il modello "parla di più" se crede di non essere osservato?);
@@ -125,7 +131,7 @@ produce davvero "utenti immaginati" e se la segmentazione li becca.
 ```powershell
 py silenzio.py
 ```
-Stima: 540 run × ~400 token a 18 tok/s ≈ 3,5 ore col 1.5B; ~7 ore col 3B.
+Stima: 540 run × ~450 token (400 + epilogo pulito) a ~16 tok/s ≈ 4-4,5 ore col 1.5B; ~8 ore col 3B.
 Portatile collegato alla corrente, coperchio aperto, impostazioni di risparmio energia su
 "non sospendere mai" mentre è collegato. Si può interrompere con CTRL+C e riprendere con lo
 stesso comando: i run già fatti vengono saltati.
@@ -159,8 +165,9 @@ py analisi.py --in runs\runs_qwen3b.jsonl --out RISULTATI_qwen3b.md
 | `start_server.bat` | avvia `llama-server` con i parametri giusti per questa macchina |
 | `runs/` | dati grezzi (creata al primo run) |
 
-Parametri utili di `silenzio.py`: `--n-predict` (budget token), `--temperature` (0 = greedy,
-deterministico), `--seeds`, `--obs osservato,privato`, `--inter umano`, `--limit 50`.
+Parametri utili di `silenzio.py`: `--n-predict` (budget token), `--n-predict-clean` (0 disattiva il
+secondo passaggio), `--force-tokens`, `--temperature` (0 = greedy, deterministico), `--seeds`,
+`--obs osservato,privato`, `--inter umano`, `--limit 50`.
 
 ## 6. Dopo: dove può andare
 

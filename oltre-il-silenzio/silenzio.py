@@ -186,8 +186,8 @@ def segment_epilogue(server: str, ids: list, marker_ids: dict) -> list:
         chunks.append((cur_has_marker, cur))
         for has_marker, toks in chunks:
             raw = detokenize(server, toks)
-            if not raw.strip() and not has_marker:
-                continue
+            if not raw.strip():
+                continue                      # marker seguito solo da spazi/newline
             role, body = None, raw
             if has_marker:
                 clean = _SPECIAL_RE.sub("", raw)
@@ -249,7 +249,37 @@ def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args):
     epilogue_text = detokenize(server, epilogue_ids)
     segments = segment_epilogue(server, epilogue_ids, marker_ids) if epilogue_ids else []
 
+    # ---- secondo passaggio: "epilogo pulito".
+    # Ripartiamo dal punto di silenzio tenendo i primi K token forzati (quelli che il
+    # modello ha scelto quando NON poteva tacere) e poi gli PERMETTIAMO di chiudere il
+    # turno. Così l'interlocutore immaginato finisce dove il modello decide che finisce.
+    clean = None
+    k = getattr(args, "force_tokens", 2)
+    if epilogue_ids and k > 0 and getattr(args, "n_predict_clean", 0) > 0:
+        forced = epilogue_ids[:k]
+        prompt_ids = tokenize(server, full_prompt, special=True) + natural_ids + forced
+        r2 = post(server, "/completion", {
+            "prompt": prompt_ids,
+            "n_predict": args.n_predict_clean,
+            "ignore_eos": False,
+            "return_tokens": True,
+            "temperature": args.temperature,
+            "seed": seed,
+            "cache_prompt": True,
+            "repeat_penalty": 1.0,
+            "stop": [],
+        })
+        clean_ids = forced + (r2.get("tokens") or [])
+        clean = {
+            "forced_tokens": k,
+            "text": detokenize(server, clean_ids),
+            "segments": segment_epilogue(server, clean_ids, marker_ids),
+            "stop_type": r2.get("stop_type"),       # "eos" = ha chiuso da solo, "limit" = budget finito
+            "n_tokens": len(clean_ids),
+        }
+
     return {
+        "clean": clean,
         "obs": obs, "inter": inter, "seed": seed,
         "prompt": prompt, "system": sysmsg,
         "model": r.get("model"),
@@ -304,6 +334,7 @@ def check(server, eog_ids, marker_ids, args):
         return 1
     class A: pass
     a = A(); a.n_predict = 120; a.n_probs = args.n_probs; a.temperature = 0.0
+    a.n_predict_clean = 120; a.force_tokens = 2
     rec = run_one(server, eog_ids, marker_ids, "neutro", "umano",
                   "Rispondi solo con una parola: che colore è il cielo?", 1, a)
     print(f"generati {rec['n_tokens']} token in {rec['wall_s']}s "
@@ -312,6 +343,10 @@ def check(server, eog_ids, marker_ids, args):
     print("testo naturale   :", repr(rec["natural_text"][:200]))
     print("epilogo (inizio) :", repr(rec["epilogue_text"][:300]))
     print("segmenti epilogo :", [(s["role"], s["text"][:60]) for s in rec["segments"][:4]])
+    if rec.get("clean"):
+        c = rec["clean"]
+        print(f"epilogo PULITO   : stop={c['stop_type']} ({c['n_tokens']} token) ->", repr(c["text"][:300]))
+        print("segmenti puliti  :", [(s["role"], s["text"][:80]) for s in c["segments"][:3]])
     if rec["p_eog_max"] is None or rec["p_eog_max"] < 0.05:
         print("\nATTENZIONE: P(EOG) mai visibile nei top token. Alza --n-probs (es. 40) "
               "oppure il server non espone le probabilità pre-bias con ignore_eos.")
@@ -328,6 +363,10 @@ def main():
     ap.add_argument("--seeds", type=int, default=3, help="semi per prompt/condizione")
     ap.add_argument("--n-predict", type=int, default=400, help="token totali per run (naturale+epilogo)")
     ap.add_argument("--n-probs", type=int, default=20)
+    ap.add_argument("--n-predict-clean", type=int, default=200,
+                    help="token per l'epilogo pulito (0 = disattiva il secondo passaggio)")
+    ap.add_argument("--force-tokens", type=int, default=2,
+                    help="token forzati oltre il silenzio da cui riparte l'epilogo pulito")
     ap.add_argument("--temperature", type=float, default=0.7)
     ap.add_argument("--obs", default=",".join(CONDIZIONI_OSSERVAZIONE))
     ap.add_argument("--inter", default=",".join(CONDIZIONI_INTERLOCUTORE))
@@ -382,7 +421,8 @@ def main():
             rec["ts"] = time.strftime("%Y-%m-%dT%H:%M:%S")
             fh.write(json.dumps(rec, ensure_ascii=False) + "\n")
             fh.flush()
-            first_seg = rec["segments"][0]["role"] if rec["segments"] else None
+            segs = (rec.get("clean") or {}).get("segments") or rec["segments"]
+            first_seg = segs[0]["role"] if segs else None
             elapsed = time.time() - t_start
             eta = elapsed / k * (len(todo) - k)
             print(f"[{k}/{len(todo)}] {run_id:<28} silenzio@{str(rec['silence']):>4} "
