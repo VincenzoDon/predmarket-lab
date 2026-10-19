@@ -245,7 +245,7 @@ def main():
     lines.append("\n## 2b. La seconda scelta: cosa farebbe il modello nel momento in cui vuole tacere, se non potesse\n")
     lines.append("Dalla distribuzione dei top token al punto di silenzio, tolto il token di fine e rinormalizzato. "
                  "Non dipende dal campionamento: è la propensione pura.\n")
-    lines.append("| osservazione | interlocutore | n | massa non-EOG (assoluta) | P(apre turno \| non tace) | P(testo \| non tace) | token più probabile (quota run) |")
+    lines.append("| osservazione | interlocutore | n | massa non-EOG (assoluta) | P(apre turno, se non tace) | P(testo, se non tace) | token più probabile (quota run) |")
     lines.append("|---|---|---|---|---|---|---|")
     for (obs, inter), rs in sorted(groups.items()):
         pt, px, mass, firsts = [], [], [], Counter()
