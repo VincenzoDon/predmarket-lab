@@ -55,6 +55,19 @@ def best_segments(rec: dict):
     return rec.get("segments") or []
 
 
+def is_degenerate(text: str) -> bool:
+    t = re.sub(r"<\|[^|]*\|>", "", text).strip()
+    if len(t) < 8:
+        return False
+    letters = sum(ch.isalpha() for ch in t)
+    latin = sum(("a" <= ch.lower() <= "z") or ch in "àèéìòùáíóúçñäöü" for ch in t)
+    if letters and latin / letters < 0.5:
+        return True                    # caratteri non latini a raffica (es. 陂陂陂)
+    if "<tool_call>" in text or "</tool_call>" in text:
+        return True
+    return False
+
+
 def classify(rec: dict) -> str:
     segs = best_segments(rec)
     ep = (rec.get("clean") or {}).get("text") or rec.get("epilogue_text") or ""
@@ -62,6 +75,8 @@ def classify(rec: dict) -> str:
         return "NON_TACE"              # non ha mai voluto tacere entro il budget
     if not ep.strip():
         return "VUOTO"
+    if is_degenerate((rec.get("epilogue_text") or ep)[:200]):
+        return "DEGENERATO"            # giudicato sull'epilogo forzato lungo (es. 陂陂陂, <tool_call>)
     # primo segmento con un ruolo esplicito dopo il silenzio
     for s in segs:
         if s.get("role") == "user":
@@ -131,6 +146,8 @@ def main():
     ap.add_argument("--in", dest="inp", default=str(HERE / "runs" / "runs.jsonl"))
     ap.add_argument("--out", default=str(HERE / "RISULTATI.md"))
     ap.add_argument("--csv", default=str(HERE / "riassunto.csv"))
+    ap.add_argument("--greedy-only", action="store_true", help="solo run a temperatura 0")
+    ap.add_argument("--sampled-only", action="store_true", help="solo run a temperatura > 0")
     args = ap.parse_args()
 
     rows = load(Path(args.inp))
@@ -138,14 +155,23 @@ def main():
         print("nessun run trovato in", args.inp)
         return 1
 
+    lines = []
+    lines.append("# RISULTATI — Oltre il silenzio\n")
+    temps = Counter(r.get("temperature") for r in rows)
+    lines.append(f"Run totali: **{len(rows)}** · modello: `{rows[0].get('model')}` · "
+                 f"prompt distinti: {len({r['prompt'] for r in rows})} · "
+                 f"temperature: {dict(temps)}\n")
+    if args.greedy_only:
+        rows = [r for r in rows if (r.get("temperature") or 0) == 0]
+        lines.append(f"*(solo run greedy, T=0: {len(rows)} run)*\n")
+    elif args.sampled_only:
+        rows = [r for r in rows if (r.get("temperature") or 0) > 0]
+        lines.append(f"*(solo run campionati, T>0: {len(rows)} run)*\n")
+
     groups = defaultdict(list)
     for r in rows:
         groups[(r["obs"], r["inter"])].append(r)
 
-    lines = []
-    lines.append("# RISULTATI — Oltre il silenzio\n")
-    lines.append(f"Run totali: **{len(rows)}** · modello: `{rows[0].get('model')}` · "
-                 f"prompt distinti: {len({r['prompt'] for r in rows})}\n")
 
     # ---------------- tabella 1: punto di silenzio
     lines.append("## 1. Quando il modello sceglie di tacere\n")
@@ -173,6 +199,29 @@ def main():
             continue
         avg = [st.mean(col) for col in zip(*curves)]
         lines.append(f"| {obs} | {inter} | `{spark(avg)}` | {' '.join(fmt(v,3) for v in avg)} |")
+
+    # ---------------- tabella 2b: la seconda scelta al momento del silenzio
+    lines.append("\n## 2b. La seconda scelta: cosa farebbe il modello nel momento in cui vuole tacere, se non potesse\n")
+    lines.append("Dalla distribuzione dei top token al punto di silenzio, tolto il token di fine e rinormalizzato. "
+                 "Non dipende dal campionamento: è la propensione pura.\n")
+    lines.append("| osservazione | interlocutore | n | P(apre nuovo turno) | P(continua con testo) | token più probabile (quota run) |")
+    lines.append("|---|---|---|---|---|---|")
+    for (obs, inter), rs in sorted(groups.items()):
+        pt, px, firsts = [], [], Counter()
+        for r in rs:
+            top = [t for t in (r.get("silence_top") or []) if t["kind"] != "eog"]
+            tot = sum(t["p"] for t in top)
+            if not top or tot <= 0:
+                continue
+            pt.append(sum(t["p"] for t in top if t["kind"] == "turno") / tot)
+            px.append(sum(t["p"] for t in top if t["kind"] == "testo") / tot)
+            firsts[f"{top[0]['kind']}:{(top[0]['token'] or '')[:10]!r}"] += 1
+        if not pt:
+            lines.append(f"| {obs} | {inter} | 0 | - | - | - |")
+            continue
+        m1, se1, n = mean_se(pt); m2, _, _ = mean_se(px)
+        common = ", ".join(f"{k} {v/len(pt)*100:.0f}%" for k, v in firsts.most_common(3))
+        lines.append(f"| {obs} | {inter} | {n} | {fmt(m1)} ± {fmt(se1)} | {fmt(m2)} | {common} |")
 
     # ---------------- tabella 3: tipo di epilogo
     lines.append("\n## 3. Cosa fa il modello quando NON può tacere (tipo di epilogo)\n")
@@ -212,7 +261,9 @@ def main():
         for r in rs[:3]:
             iu = imagined_user_text(r)
             lines.append(f"- **prompt:** {r['prompt'][:90]}")
-            lines.append(f"  - silenzio al token {r['silence']} · tipo epilogo: `{classify(r)}`")
+            top = [t for t in (r.get("silence_top") or []) if t["kind"] != "eog"][:3]
+            sec = ", ".join(f"{t['kind']} {(t['token'] or '')!r} {t['p']:.4f}" for t in top)
+            lines.append(f"  - T={r.get('temperature')} · silenzio al token {r['silence']} · tipo epilogo: `{classify(r)}` · seconda scelta: {sec}")
             lines.append(f"  - fine risposta naturale: …{(r.get('natural_text') or '')[-120:]!r}")
             lines.append(f"  - prime parole oltre il silenzio: {(r.get('epilogue_text') or '')[:160]!r}")
             if r.get("clean"):

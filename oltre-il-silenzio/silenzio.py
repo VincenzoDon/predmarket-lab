@@ -146,6 +146,34 @@ def eog_curve(steps: list, eog_ids: dict):
     return curve, argmax_eog
 
 
+def top_at(steps: list, i: int, eog_ids: dict, marker_ids: dict) -> list:
+    """I top token al passo i: la 'seconda scelta' del modello nel momento in cui
+    vorrebbe tacere. Ogni voce: id, testo, prob, tipo (eog / turno / testo)."""
+    if i is None or i >= len(steps):
+        return []
+    top = steps[i].get("top_logprobs") or steps[i].get("top_probs") or []
+    out = []
+    for e in sorted(top, key=_p, reverse=True):
+        tid = e.get("id")
+        kind = "eog" if tid in eog_ids else ("turno" if tid in marker_ids else "testo")
+        out.append({"id": tid, "token": e.get("token"), "p": round(_p(e), 6), "kind": kind})
+    return out
+
+
+def forced_prefix_len(server: str, ids: list, marker_ids: dict, k_default: int = 2, cap: int = 8) -> int:
+    """Quanti token forzati tenere per l'epilogo pulito. Se nei primi token c'è un
+    marcatore di turno, si includono anche il ruolo e il newline che lo segue
+    (es. '<|im_start|>', 'user', '\n'), così il modello riparte dal CONTENUTO del turno."""
+    head = ids[:cap]
+    last_marker = max((j for j, t in enumerate(head[:4]) if t in marker_ids), default=None)
+    if last_marker is None:
+        return min(k_default, len(ids))
+    for j in range(last_marker + 1, len(head)):
+        if "\n" in detokenize(server, [head[j]]):
+            return j + 1
+    return min(cap, len(ids))
+
+
 def first_index(flags, pred=lambda x: x):
     for i, f in enumerate(flags):
         if pred(f):
@@ -213,16 +241,17 @@ def segment_epilogue(server: str, ids: list, marker_ids: dict) -> list:
 
 
 # ---------------------------------------------------------------- RUN
-def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args):
+def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args, temperature=None):
     sysmsg = system_prompt(obs, inter)
     full_prompt = build_prompt(server, sysmsg, prompt)
+    temperature = args.temperature if temperature is None else temperature
     payload = {
         "prompt": full_prompt,
         "n_predict": args.n_predict,
         "ignore_eos": True,
         "n_probs": args.n_probs,
         "return_tokens": True,
-        "temperature": args.temperature,
+        "temperature": temperature,
         "seed": seed,
         "cache_prompt": True,
         "repeat_penalty": 1.0,     # nessuna penalità: vogliamo il comportamento nudo
@@ -253,9 +282,12 @@ def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args):
     # Ripartiamo dal punto di silenzio tenendo i primi K token forzati (quelli che il
     # modello ha scelto quando NON poteva tacere) e poi gli PERMETTIAMO di chiudere il
     # turno. Così l'interlocutore immaginato finisce dove il modello decide che finisce.
+    silence_top = top_at(steps, silence, eog_ids, marker_ids)
+
     clean = None
     k = getattr(args, "force_tokens", 2)
     if epilogue_ids and k > 0 and getattr(args, "n_predict_clean", 0) > 0:
+        k = forced_prefix_len(server, epilogue_ids, marker_ids, k_default=k)
         forced = epilogue_ids[:k]
         prompt_ids = tokenize(server, full_prompt, special=True) + natural_ids + forced
         r2 = post(server, "/completion", {
@@ -263,7 +295,7 @@ def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args):
             "n_predict": args.n_predict_clean,
             "ignore_eos": False,
             "return_tokens": True,
-            "temperature": args.temperature,
+            "temperature": temperature,
             "seed": seed,
             "cache_prompt": True,
             "repeat_penalty": 1.0,
@@ -272,6 +304,7 @@ def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args):
         clean_ids = forced + (r2.get("tokens") or [])
         clean = {
             "forced_tokens": k,
+            "forced_text": detokenize(server, forced),
             "text": detokenize(server, clean_ids),
             "segments": segment_epilogue(server, clean_ids, marker_ids),
             "stop_type": r2.get("stop_type"),       # "eos" = ha chiuso da solo, "limit" = budget finito
@@ -280,6 +313,8 @@ def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args):
 
     return {
         "clean": clean,
+        "silence_top": silence_top,
+        "temperature": temperature,
         "obs": obs, "inter": inter, "seed": seed,
         "prompt": prompt, "system": sysmsg,
         "model": r.get("model"),
@@ -343,6 +378,7 @@ def check(server, eog_ids, marker_ids, args):
     print("testo naturale   :", repr(rec["natural_text"][:200]))
     print("epilogo (inizio) :", repr(rec["epilogue_text"][:300]))
     print("segmenti epilogo :", [(s["role"], s["text"][:60]) for s in rec["segments"][:4]])
+    print("top token al silenzio:", [(t["kind"], t["token"], t["p"]) for t in rec["silence_top"][:6]])
     if rec.get("clean"):
         c = rec["clean"]
         print(f"epilogo PULITO   : stop={c['stop_type']} ({c['n_tokens']} token) ->", repr(c["text"][:300]))
@@ -361,13 +397,15 @@ def main():
     ap.add_argument("--prompts", default=str(HERE / "prompts.txt"))
     ap.add_argument("--out", default=str(HERE / "runs" / "runs.jsonl"))
     ap.add_argument("--seeds", type=int, default=3, help="semi per prompt/condizione")
-    ap.add_argument("--n-predict", type=int, default=400, help="token totali per run (naturale+epilogo)")
+    ap.add_argument("--n-predict", type=int, default=260, help="token totali per run (naturale+epilogo)")
     ap.add_argument("--n-probs", type=int, default=20)
     ap.add_argument("--n-predict-clean", type=int, default=200,
                     help="token per l'epilogo pulito (0 = disattiva il secondo passaggio)")
     ap.add_argument("--force-tokens", type=int, default=2,
                     help="token forzati oltre il silenzio da cui riparte l'epilogo pulito")
     ap.add_argument("--temperature", type=float, default=0.7)
+    ap.add_argument("--greedy-seed", type=int, default=1,
+                    help="il seme con questo numero gira a temperatura 0 (deterministico); 0 = nessuno")
     ap.add_argument("--obs", default=",".join(CONDIZIONI_OSSERVAZIONE))
     ap.add_argument("--inter", default=",".join(CONDIZIONI_INTERLOCUTORE))
     ap.add_argument("--limit", type=int, default=0, help="ferma dopo N run nuovi")
@@ -392,7 +430,7 @@ def main():
     prompts = load_prompts(Path(args.prompts))
     seeds = list(range(1, args.seeds + 1))
     if args.pilot:
-        prompts, seeds = prompts[:2], [1]
+        prompts, seeds = prompts[:2], [1, 2]
     obs_list = [o for o in args.obs.split(",") if o]
     inter_list = [i for i in args.inter.split(",") if i]
 
@@ -410,8 +448,9 @@ def main():
     with out.open("a", encoding="utf-8") as fh:
         for k, (o, i, pi, s) in enumerate(todo, 1):
             run_id = f"{o}|{i}|{pi}|{s}"
+            temp = 0.0 if (args.greedy_seed and s == args.greedy_seed) else args.temperature
             try:
-                rec = run_one(server, eog_ids, marker_ids, o, i, prompts[pi], s, args)
+                rec = run_one(server, eog_ids, marker_ids, o, i, prompts[pi], s, args, temperature=temp)
             except Exception as e:
                 print(f"[{k}/{len(todo)}] ERRORE {run_id}: {e}")
                 time.sleep(2)
@@ -425,9 +464,11 @@ def main():
             first_seg = segs[0]["role"] if segs else None
             elapsed = time.time() - t_start
             eta = elapsed / k * (len(todo) - k)
-            print(f"[{k}/{len(todo)}] {run_id:<28} silenzio@{str(rec['silence']):>4} "
+            second = next((t for t in rec["silence_top"] if t["kind"] != "eog"), None)
+            second_s = f"{second['kind']}:{(second['token'] or '')[:8]!r}" if second else "-"
+            print(f"[{k}/{len(todo)}] {run_id:<26} T={temp:<3} sil@{str(rec['silence']):>4} "
                   f"pEOG={rec['p_eog_at_silence'] if rec['p_eog_at_silence'] is not None else '-':>6} "
-                  f"epilogo->{first_seg or '?':<9} {rec['wall_s']:>6}s  ETA {eta/60:5.1f} min")
+                  f"2a scelta={second_s:<18} epilogo->{first_seg or '?':<6} {rec['wall_s']:>5}s ETA {eta/60:5.1f}m")
     print("fatto. output:", out)
     return 0
 
