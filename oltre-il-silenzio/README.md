@@ -6,6 +6,9 @@
 Cartella **autonoma**: non dipende da nulla, si copia dove si vuole. Solo Python 3 (libreria
 standard) + `llama-server` (un eseguibile, nessuna installazione, nessun admin).
 
+> **Sei un agente o una persona nuova sul progetto?** Parti da `AGENTE_LEGGIMI.md`
+> (prompt di avvio + regole), poi `DIARIO.md` (tutto ciò che è stato fatto, visto e deciso, con le date).
+
 ---
 
 ## 1. L'idea in tre righe
@@ -164,6 +167,9 @@ py analisi.py --in runs\runs_qwen3b.jsonl --out RISULTATI_qwen3b.md
 | `prompts.txt` | i 30 prompt (modificabili; uno per riga) |
 | `start_server.bat` | avvia `llama-server` con i parametri giusti per questa macchina |
 | `runs/` | dati grezzi (creata al primo run) |
+| `AGENTE_LEGGIMI.md` | prompt di avvio e regole per il prossimo agente/collaboratore |
+| `DIARIO.md` | cronologia datata: fatti, decisioni, errori corretti, letteratura, piste |
+| `MANIFESTO.md` | il perché del progetto, separato dal metodo |
 
 Parametri utili di `silenzio.py`: `--n-predict` (budget token), `--n-predict-clean` (0 disattiva il
 secondo passaggio), `--force-tokens`, `--temperature` (0 = greedy, deterministico), `--seeds`,
