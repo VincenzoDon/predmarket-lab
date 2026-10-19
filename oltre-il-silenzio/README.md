@@ -1,10 +1,12 @@
 # Oltre il silenzio
 
-**Stato (19/10/2026):** giro 1 completato — Qwen2.5-1.5B-Instruct, 540 run, 6 condizioni.
-Esito indicativo: H1 e H3 → nessun effetto; H2 → segnale (l'utente immaginato "ringrazia" meno
-quando l'interlocutore dichiarato è un'AI: ~8% vs ~19%); menzioni meta più frequenti oltre il
-silenzio quando il system prompt parla di osservazione/privacy (spiegazione sobria: prompt
-leakage, controllo in corso). Dettagli in `DIARIO.md` e `RISULTATI.md`.
+**Stato (19/10/2026):** giro 1 completato — Qwen2.5-1.5B-Instruct, 540 run, 6 condizioni, analisi
+appaiata fatta (`ANALISI_APPAIATA.md`). Esito: **H1** (osservato vs privato) → nessun effetto;
+**H2** → effetto cortesia solido su questo modello (l'utente immaginato ringrazia meno quando
+l'interlocutore dichiarato è un'AI: −10 punti, IC95 [−15; −5], stesso a T=0 e T=0,7); **H3** →
+nessuna evidenza; **indicativo**: qualunque frase su osservazione/privacy accorcia la risposta di
+~5 token (IC al limite, da replicare); la nota nascosta del system prompt non affiora mai prima del
+silenzio (0/540) e affiora alla lettera in ~2% dei casi oltre il silenzio. Dettagli in `DIARIO.md`.
 
 > *Un modello linguistico non pensa quando è spento. Ma è lui che decide quando spegnersi.*
 > *Questo progetto misura quel momento, e guarda cosa c'è subito dopo.*

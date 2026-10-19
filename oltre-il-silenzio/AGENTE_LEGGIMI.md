@@ -19,8 +19,8 @@ da incollare a mano. Il lavoro non scritto nel repo è lavoro perso.
 ## Prima di agire: obbligatorio
 1. Leggi TUTTO il repository, in quest'ordine:
    AGENTE_LEGGIMI.md (questo) → DIARIO.md → README.md → RISULTATI*.md (se esistono) →
-   silenzio.py → analisi.py → prompts.txt → GUIDA_PASSO_PASSO.md → MANIFESTO.md (ultimo).
-2. Esegui `python3 -c "import ast; ast.parse(open('silenzio.py').read()); ast.parse(open('analisi.py').read())"`.
+   silenzio.py → analisi.py → analisi_appaiata.py → prompts.txt → GUIDA_PASSO_PASSO.md → MANIFESTO.md (ultimo).
+2. Esegui `python3 -c "import ast; ast.parse(open('silenzio.py').read()); ast.parse(open('analisi.py').read()); ast.parse(open('analisi_appaiata.py').read())"`.
 3. Se codice e documenti sono in conflitto, segnala il conflitto: non inventare.
 4. Non proporre modifiche al protocollo finché non hai letto DIARIO.md fino in fondo:
    molte cose sono già state provate, decise o scartate con un motivo.
@@ -111,7 +111,7 @@ $u = "https://raw.githubusercontent.com/VincenzoDon/predmarket-lab/arena/d4a5aaf
 $d = "$env:USERPROFILE\oltre-il-silenzio"
 $lab = "$env:USERPROFILE\silenzio"
 New-Item -ItemType Directory -Force -Path "$d\runs" | Out-Null
-foreach ($f in @("silenzio.py","analisi.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore")) {
+foreach ($f in @("silenzio.py","analisi.py","analisi_appaiata.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore")) {
   curl.exe -sL -o "$d\$f" "$u/$f"
   Write-Host ("  aggiornato  " + $f)
 }
@@ -131,7 +131,8 @@ Write-Host "Fatto. Ora in GitHub Desktop: Commit + Push."
 | `DIARIO.md` | cronologia datata: fatti, decisioni, scoperte, errori corretti |
 | `README.md` | protocollo scientifico, ipotesi, stato dell'arte, setup, metriche |
 | `RISULTATI*.md` | report generati da `analisi.py` per ogni modello/giro |
-| `silenzio.py` / `analisi.py` | raccolta dati / analisi (solo libreria standard) |
+| `silenzio.py` / `analisi.py` / `analisi_appaiata.py` | raccolta dati / analisi per cella / analisi appaiata con bootstrap (solo libreria standard) |
+| `ANALISI_APPAIATA*.md` | report generati da `analisi_appaiata.py` |
 | `prompts.txt` | i 30 prompt |
 | `GUIDA_PASSO_PASSO.md` | istruzioni click-per-click per Windows senza admin |
 | `MANIFESTO.md` | il perché, tenuto separato dal metodo |

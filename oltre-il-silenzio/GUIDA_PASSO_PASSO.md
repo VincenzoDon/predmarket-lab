@@ -19,6 +19,7 @@ mkdir models
 $u = "https://raw.githubusercontent.com/VincenzoDon/predmarket-lab/arena/d4a5aaf3-predmarket-lab/oltre-il-silenzio"
 curl.exe -L -o silenzio.py "$u/silenzio.py"
 curl.exe -L -o analisi.py "$u/analisi.py"
+curl.exe -L -o analisi_appaiata.py "$u/analisi_appaiata.py"
 curl.exe -L -o prompts.txt "$u/prompts.txt"
 curl.exe -L -o start_server.bat "$u/start_server.bat"
 curl.exe -L -o README.md "$u/README.md"
@@ -61,6 +62,7 @@ Deve finire con `CHECK OK`. Altrimenti: copia tutto l'output e incollalo in chat
 ```powershell
 py silenzio.py --pilot
 py analisi.py
+py analisi_appaiata.py
 notepad RISULTATI.md
 ```
 Leggi la sezione 5 (esempi grezzi). Incolla il report in chat prima di procedere.
@@ -94,7 +96,7 @@ $u = "https://raw.githubusercontent.com/VincenzoDon/predmarket-lab/arena/d4a5aaf
 $d = "$env:USERPROFILE\oltre-il-silenzio"
 $lab = "$env:USERPROFILE\silenzio"
 New-Item -ItemType Directory -Force -Path "$d\runs" | Out-Null
-foreach ($f in @("silenzio.py","analisi.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore")) {
+foreach ($f in @("silenzio.py","analisi.py","analisi_appaiata.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore")) {
   curl.exe -sL -o "$d\$f" "$u/$f"
   Write-Host ("  aggiornato  " + $f)
 }
