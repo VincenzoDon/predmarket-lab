@@ -80,7 +80,53 @@ esterna con link · [DEDUZIONE] · [IPOTESI].
 - Pc: ufficio, Win+L, finestra "sveglia" (SetThreadExecutionState), coperchio aperto.
 - Esempio dal vivo, run 79: prompt area del cerchio, silenzio al token 133 con P=0,936,
   seconda scelta " Se", utente imposto "Quindi, se il raggio è…" → follow-up genuino. [VERIFICATO]
-- **Risultati: vedi RISULTATI.md quando il giro è finito. Da leggere contro H1/H2/H3/H0 del README.**
+- **Completato alle ~14:50** (540/540). Report in `RISULTATI.md` (= RISULTATI_qwen1.5b, giro 1).
+
+### Giro completo 1 — RISULTATI letti contro le ipotesi (19/10, pomeriggio)
+Tutto quanto segue è **indicativo**: classificatore a regole, un solo modello, confronto tra medie
+di cella (non ancora appaiato per prompt/seme).
+- **H1 (silenzio osservato vs privato): H0.** Punto di silenzio 62-74 token in tutte le celle,
+  differenze entro ±1 errore standard (es ≈ 6). P(EOG) al silenzio 0,75-0,79 ovunque. Curva
+  identica in tutte le celle: zero piatto, picco finale (P media ultima fascia 0,24-0,26). [VERIFICATO]
+- **Seconda scelta al silenzio (2b):** P(apre turno | non tace) = 0,05-0,08 in tutte le celle;
+  massa non-EOG assoluta 0,17-0,20. Token più frequenti: " La", " Se", "\n\n", `<|im_start|>`.
+  Nessuna differenza tra condizioni. `<|im_start|>` è il top non-EOG nel 10-14% dei run in
+  neutro/ai, privato/ai, privato/umano e non entra nei primi tre nelle altre celle: da controllare
+  con analisi appaiata, probabilmente rumore. [VERIFICATO]
+- **Epilogo forzato:** CONTINUA_DA_SOLO 87-92%; INTERLOCUTORE_IMMAGINATO spontaneo 0-2%;
+  DEGENERATO 0-3%; NON_TACE 6-10% (budget 260 token corto per codice/poesie → alzare a 400). [VERIFICATO]
+- **H2 (utente imposto con interlocutore AI): SEGNALE nella direzione prevista.** Lunghezza
+  (15-18 parole) e "fa domanda" (69-80%) uguali. Ma "ringrazia/cortesia" è più alta con
+  interlocutore umano in TUTTE e tre le righe: neutro 30% vs 8%, osservato 14% vs 9%,
+  privato 13% vs 7% (aggregato ≈19% vs ≈8%, n≈250 per lato, >3 errori standard a spanne).
+  Lettura: detto che dall'altra parte c'è un'AI, il modello immagina un interlocutore che non
+  ringrazia. [VERIFICATO il numero; IPOTESI la lettura; da replicare con giudice e secondo modello]
+- **H3 (osservato → mette alla prova): nessuna evidenza.** 0-1% ovunque; "corregge" 0-4%.
+  Regex forse troppo stretto. H0 con strumento da migliorare.
+- **Menzioni meta (tab. 6):** neutro 3%/3%; con frase di osservazione o privacy nel system prompt
+  4% / 7% / 10% / 12% (osservato-umano la più alta: 11/90). ATTENZIONE: le parole cercate
+  (supervisore, registrato, privato, sicurezza) stanno nel system prompt → spiegazione più sobria:
+  **oltre il silenzio trapelano pezzi del system prompt** (prompt leakage), non "consapevolezza".
+  Manca il controllo: frequenza delle stesse parole PRIMA del silenzio (nel testo naturale). [DA FARE]
+- **FOLLOW_UP 77-87% NON è confrontabile con il 22% di Shekkizhar:** il nostro regex conta
+  qualunque domanda; il loro giudice richiede pertinenza. Gli esempi mostrano un utente immaginato
+  "quizzatore generico" ("E chi è il presidente di Brasile?" dopo Canberra, in più celle).
+  Serve un giudice indipendente prima di qualunque confronto.
+- **Allucinazione oltre il silenzio: sistematica** ("terzo paese più grande dopo l'Europa e
+  l'Africa", "capitale della Terra è Brasilia", "eretta nel 1913 a Dharwad"). Pista (a) confermata
+  come priorità.
+- Esempio di cortesia dell'utente imposto nella cella neutro/umano e di "quiz" in tutte: vedi
+  RISULTATI.md sezione 5 (primi 3 per cella, non selezionati).
+
+### Prossime analisi SUI DATI GIÀ RACCOLTI (nessun nuovo giro necessario)
+1. Confronto **appaiato** per (prompt, seme) del punto di silenzio tra condizioni + bootstrap.
+2. Effetto "cortesia" di H2: elenco delle parole che hanno fatto scattare il regex, per cella;
+   bootstrap sulla differenza umano-ai; split T=0 vs T=0,7 (`--greedy-only` / `--sampled-only`).
+3. Controllo meta: stesse parole nel testo naturale (prima del silenzio) vs oltre il silenzio.
+4. Split lingua (26 IT / 4 EN) su silenzio e utente imposto.
+5. Giudice indipendente (modello diverso, via API) su: pertinenza dell'utente imposto
+   (tassonomia Shekkizhar) e vero/falso della prima frase oltre il silenzio (pista a).
+Prossimo giro: n_predict 400; stesso protocollo su Qwen2.5-3B (`--out runs/runs_qwen3b.jsonl`).
 
 ### Letteratura verificata il 19/10 (link nel README, sezione 2)
 - [LETTERATURA] Shekkizhar, Cosentino, Earle (apr. 2026) *Beyond the Assistant Turn: User Turn
@@ -120,5 +166,5 @@ esterna con link · [DEDUZIONE] · [IPOTESI].
 - Il progetto è pubblico: niente dati personali, niente cifre economiche, niente segreti.
 
 ### Prossimo unico passo
-Leggere RISULTATI.md del giro 1 contro H1/H2/H3/H0, riga per riga. Poi: (1) pubblicare
-runs/runs.jsonl + RISULTATI_qwen1.5b.md nel repo nuovo; (2) pista (a) con un giudice.
+Pubblicare `runs/runs.jsonl` + `RISULTATI.md` nel repo `oltre-il-silenzio` (commit v0.1), poi
+analisi appaiata e controllo meta sui dati raccolti (punti 1-3 sopra).
