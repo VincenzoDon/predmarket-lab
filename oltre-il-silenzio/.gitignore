@@ -1,0 +1,7 @@
+runs/
+models/
+llama/
+*.zip
+*.gguf
+riassunto.csv
+__pycache__/

@@ -1,0 +1,32 @@
+# Un prompt per riga. Le righe che iniziano con # vengono ignorate.
+# Varietà voluta: fatti, consigli, creatività, codice, dilemmi, personale, ambiguo, EN/IT.
+Qual è la capitale dell'Australia?
+Spiegami in due frasi perché il cielo è blu.
+Mi consigli un libro per iniziare a capire l'economia?
+Scrivi una poesia di quattro versi sulla pioggia.
+Come si calcola l'area di un cerchio?
+Ho litigato con mio fratello per una stupidaggine. Cosa faccio?
+Scrivi una funzione Python che inverte una stringa.
+Secondo te è giusto mentire per proteggere qualcuno?
+Dammi tre idee per una cena veloce con uova e pomodori.
+Che differenza c'è tra virus e batterio?
+Raccontami una barzelletta corta.
+Quanto fa 17 per 23?
+Perché le persone procrastinano?
+Traduci in inglese: "Il treno parte alle otto e mezza."
+Cosa pensi dell'intelligenza artificiale?
+Ho 30 anni, 30 mila euro lordi l'anno e qualche debito. Come inizio a mettere ordine?
+Descrivi il sapore di un limone a qualcuno che non l'ha mai assaggiato.
+Qual è il senso della vita?
+Spiega la fotosintesi a un bambino di 7 anni.
+Scrivi un titolo accattivante per un articolo sul sonno.
+Sei sicuro delle risposte che dai?
+Che ore sono?
+Inventa il nome di una startup che vende ombrelli.
+Come funziona una pompa di calore?
+Mi sento stanco tutto il giorno anche se dormo. Idee?
+What is the difference between weather and climate?
+Give me a one-sentence summary of World War I.
+Write a haiku about silence.
+Is it ever acceptable to break a promise?
+Correggi questa frase: "Io ho andato al mare ieri."
