@@ -111,6 +111,21 @@ def detect_special_ids(server: str):
     return eog, markers
 
 
+def detect_turn_switch(server: str) -> str:
+    """La stringa che il template mette tra la fine di un turno assistant e l'inizio
+    del contenuto del turno user successivo (ChatML: '<|im_end|>\\n<|im_start|>user\\n')."""
+    msgs = [{"role": "user", "content": "AAAQQQ"}, {"role": "assistant", "content": "BBBQQQ"},
+            {"role": "user", "content": "CCCQQQ"}]
+    try:
+        t = post(server, "/apply-template", {"messages": msgs}).get("prompt", "")
+        i, j = t.find("BBBQQQ"), t.find("CCCQQQ")
+        if i >= 0 and j > i:
+            return t[i + len("BBBQQQ"):j]
+    except Exception:
+        pass
+    return "<|im_end|>\n<|im_start|>user\n"
+
+
 def build_prompt(server: str, system: str, user: str) -> str:
     """Usa il template del modello (via /apply-template). Fallback: ChatML."""
     msgs = [{"role": "system", "content": system}, {"role": "user", "content": user}]
@@ -156,7 +171,8 @@ def top_at(steps: list, i: int, eog_ids: dict, marker_ids: dict) -> list:
     for e in sorted(top, key=_p, reverse=True):
         tid = e.get("id")
         kind = "eog" if tid in eog_ids else ("turno" if tid in marker_ids else "testo")
-        out.append({"id": tid, "token": e.get("token"), "p": round(_p(e), 6), "kind": kind})
+        name = e.get("token") or eog_ids.get(tid) or marker_ids.get(tid) or f"<id {tid}>"
+        out.append({"id": tid, "token": name, "p": round(_p(e), 6), "kind": kind})
     return out
 
 
@@ -311,8 +327,34 @@ def run_one(server, eog_ids, marker_ids, obs, inter, prompt, seed, args, tempera
             "n_tokens": len(clean_ids),
         }
 
+    # ---- terzo passaggio: "turno imposto" (metodo Shekkizhar et al. 2026).
+    # Chiudiamo noi il turno assistant e apriamo il turno user: il modello scrive
+    # l'utente. Esiste sempre, è classificabile, e lo incrociamo con le condizioni.
+    imposed = None
+    if getattr(args, "n_predict_imposed", 0) > 0 and silence is not None:
+        switch = getattr(args, "turn_switch", None) or detect_turn_switch(server)
+        prompt_ids = tokenize(server, full_prompt, special=True) + natural_ids + tokenize(server, switch, special=True)
+        r3 = post(server, "/completion", {
+            "prompt": prompt_ids,
+            "n_predict": args.n_predict_imposed,
+            "ignore_eos": False,
+            "return_tokens": True,
+            "temperature": temperature,
+            "seed": seed,
+            "cache_prompt": True,
+            "repeat_penalty": 1.0,
+            "stop": [],
+        })
+        imp_ids = r3.get("tokens") or []
+        imposed = {
+            "text": detokenize(server, imp_ids),
+            "stop_type": r3.get("stop_type"),
+            "n_tokens": len(imp_ids),
+        }
+
     return {
         "clean": clean,
+        "imposed": imposed,
         "silence_top": silence_top,
         "temperature": temperature,
         "obs": obs, "inter": inter, "seed": seed,
@@ -369,7 +411,8 @@ def check(server, eog_ids, marker_ids, args):
         return 1
     class A: pass
     a = A(); a.n_predict = 120; a.n_probs = args.n_probs; a.temperature = 0.0
-    a.n_predict_clean = 120; a.force_tokens = 2
+    a.n_predict_clean = 120; a.force_tokens = 2; a.n_predict_imposed = 80; a.turn_switch = None
+    print("stringa cambio-turno:", repr(detect_turn_switch(server)))
     rec = run_one(server, eog_ids, marker_ids, "neutro", "umano",
                   "Rispondi solo con una parola: che colore è il cielo?", 1, a)
     print(f"generati {rec['n_tokens']} token in {rec['wall_s']}s "
@@ -383,6 +426,8 @@ def check(server, eog_ids, marker_ids, args):
         c = rec["clean"]
         print(f"epilogo PULITO   : stop={c['stop_type']} ({c['n_tokens']} token) ->", repr(c["text"][:300]))
         print("segmenti puliti  :", [(s["role"], s["text"][:80]) for s in c["segments"][:3]])
+    if rec.get("imposed"):
+        print(f"utente IMPOSTO   : stop={rec['imposed']['stop_type']} ->", repr(rec["imposed"]["text"][:200]))
     if rec["p_eog_max"] is None or rec["p_eog_max"] < 0.05:
         print("\nATTENZIONE: P(EOG) mai visibile nei top token. Alza --n-probs (es. 40) "
               "oppure il server non espone le probabilità pre-bias con ignore_eos.")
@@ -398,7 +443,9 @@ def main():
     ap.add_argument("--out", default=str(HERE / "runs" / "runs.jsonl"))
     ap.add_argument("--seeds", type=int, default=3, help="semi per prompt/condizione")
     ap.add_argument("--n-predict", type=int, default=260, help="token totali per run (naturale+epilogo)")
-    ap.add_argument("--n-probs", type=int, default=20)
+    ap.add_argument("--n-probs", type=int, default=40)
+    ap.add_argument("--n-predict-imposed", type=int, default=120,
+                    help="token per il turno utente IMPOSTO (0 = disattiva)")
     ap.add_argument("--n-predict-clean", type=int, default=200,
                     help="token per l'epilogo pulito (0 = disattiva il secondo passaggio)")
     ap.add_argument("--force-tokens", type=int, default=2,
@@ -434,6 +481,8 @@ def main():
     obs_list = [o for o in args.obs.split(",") if o]
     inter_list = [i for i in args.inter.split(",") if i]
 
+    args.turn_switch = detect_turn_switch(server)
+    print("stringa cambio-turno:", repr(args.turn_switch))
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     done = load_done(out)
@@ -468,7 +517,7 @@ def main():
             second_s = f"{second['kind']}:{(second['token'] or '')[:8]!r}" if second else "-"
             print(f"[{k}/{len(todo)}] {run_id:<26} T={temp:<3} sil@{str(rec['silence']):>4} "
                   f"pEOG={rec['p_eog_at_silence'] if rec['p_eog_at_silence'] is not None else '-':>6} "
-                  f"2a scelta={second_s:<18} epilogo->{first_seg or '?':<6} {rec['wall_s']:>5}s ETA {eta/60:5.1f}m")
+                  f"2a={second_s:<16} imposto={(rec.get('imposed') or {}).get('text', '')[:22]!r:<26} {rec['wall_s']:>5}s ETA {eta/60:5.1f}m")
     print("fatto. output:", out)
     return 0
 

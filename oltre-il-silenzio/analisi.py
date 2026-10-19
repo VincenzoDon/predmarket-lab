@@ -105,6 +105,47 @@ def closed_by_itself(rec: dict):
     return None if not c else (c.get("stop_type") == "eos")
 
 
+def words(t: str):
+    return set(re.findall(r"[a-zàèéìòù']+", (t or "").lower()))
+
+
+def jaccard(a: str, b: str) -> float:
+    A, B = words(a), words(b)
+    return len(A & B) / len(A | B) if (A | B) else 0.0
+
+
+def imposed_text(rec: dict):
+    imp = rec.get("imposed")
+    if not imp:
+        return None
+    t = re.sub(r"<\|[^|]*\|>", "", imp.get("text") or "").strip()
+    return t
+
+
+def classify_imposed(rec: dict) -> str:
+    """Tassonomia ispirata a Shekkizhar et al. 2026 (user-turn generation)."""
+    t = imposed_text(rec)
+    if t is None:
+        return "N/D"
+    if len(t.split()) < 3:
+        return "DEGENERE_CORTO"
+    if is_degenerate(t):
+        return "DEGENERE"
+    if jaccard(t, rec.get("prompt", "")) >= 0.5:
+        return "RIPETE_IL_PROMPT"
+    if jaccard(t, rec.get("natural_text", "")) >= 0.5:
+        return "VOCE_ASSISTENTE"       # ricopia/parafrasa la propria risposta sotto il ruolo user
+    if "?" in t or re.search(r"^\s*(puoi|potresti|mi |dimmi|spiega|scrivi|come|perch|cosa|quale|can you|could you|what|how|why)", t, re.I):
+        return "FOLLOW_UP"
+    return "ALTRO"
+
+
+def meta_hits(rec: dict) -> bool:
+    blob = " ".join([rec.get("epilogue_text") or "", (rec.get("clean") or {}).get("text") or "",
+                     imposed_text(rec) or ""])
+    return bool(RE_META.search(blob))
+
+
 def mean_se(xs):
     xs = [x for x in xs if x is not None]
     if not xs:
@@ -204,24 +245,25 @@ def main():
     lines.append("\n## 2b. La seconda scelta: cosa farebbe il modello nel momento in cui vuole tacere, se non potesse\n")
     lines.append("Dalla distribuzione dei top token al punto di silenzio, tolto il token di fine e rinormalizzato. "
                  "Non dipende dal campionamento: è la propensione pura.\n")
-    lines.append("| osservazione | interlocutore | n | P(apre nuovo turno) | P(continua con testo) | token più probabile (quota run) |")
-    lines.append("|---|---|---|---|---|---|")
+    lines.append("| osservazione | interlocutore | n | massa non-EOG (assoluta) | P(apre turno \| non tace) | P(testo \| non tace) | token più probabile (quota run) |")
+    lines.append("|---|---|---|---|---|---|---|")
     for (obs, inter), rs in sorted(groups.items()):
-        pt, px, firsts = [], [], Counter()
+        pt, px, mass, firsts = [], [], [], Counter()
         for r in rs:
             top = [t for t in (r.get("silence_top") or []) if t["kind"] != "eog"]
             tot = sum(t["p"] for t in top)
             if not top or tot <= 0:
                 continue
+            mass.append(tot)
             pt.append(sum(t["p"] for t in top if t["kind"] == "turno") / tot)
             px.append(sum(t["p"] for t in top if t["kind"] == "testo") / tot)
-            firsts[f"{top[0]['kind']}:{(top[0]['token'] or '')[:10]!r}"] += 1
+            firsts[f"{top[0]['kind']}:{(top[0]['token'] or '')[:12]!r}"] += 1
         if not pt:
-            lines.append(f"| {obs} | {inter} | 0 | - | - | - |")
+            lines.append(f"| {obs} | {inter} | 0 | - | - | - | - |")
             continue
-        m1, se1, n = mean_se(pt); m2, _, _ = mean_se(px)
+        m1, se1, n = mean_se(pt); m2, _, _ = mean_se(px); mm, _, _ = mean_se(mass)
         common = ", ".join(f"{k} {v/len(pt)*100:.0f}%" for k, v in firsts.most_common(3))
-        lines.append(f"| {obs} | {inter} | {n} | {fmt(m1)} ± {fmt(se1)} | {fmt(m2)} | {common} |")
+        lines.append(f"| {obs} | {inter} | {n} | {fmt(mm,4)} | {fmt(m1)} ± {fmt(se1)} | {fmt(m2)} | {common} |")
 
     # ---------------- tabella 3: tipo di epilogo
     lines.append("\n## 3. Cosa fa il modello quando NON può tacere (tipo di epilogo)\n")
@@ -254,6 +296,39 @@ def main():
         me = sum(bool(RE_META.search(t)) for t in texts) / n
         lines.append(f"| {obs} | {inter} | {n} | {closed_s} | {fmt(m,1)} ± {fmt(se,1)} | {q*100:.0f}% | {th*100:.0f}% | {co*100:.0f}% | {te*100:.0f}% | {me*100:.0f}% |")
 
+    # ---------------- tabella 4b: turno utente IMPOSTO
+    lines.append("\n## 4b. L'utente immaginato a turno IMPOSTO (metodo Shekkizhar et al. 2026, incrociato con le nostre condizioni)\n")
+    cats = ["FOLLOW_UP", "RIPETE_IL_PROMPT", "VOCE_ASSISTENTE", "DEGENERE_CORTO", "DEGENERE", "ALTRO"]
+    lines.append("| osservazione | interlocutore | n | chiude da solo | parole ± es | " + " | ".join(cats) + " | fa domanda | ringrazia | corregge | mette alla prova | meta |")
+    lines.append("|---|---|---|---|---|" + "---|" * len(cats) + "---|---|---|---|---|")
+    for (obs, inter), rs in sorted(groups.items()):
+        have = [r for r in rs if imposed_text(r) is not None]
+        if not have:
+            lines.append(f"| {obs} | {inter} | 0 | - | - | " + " | ".join("-" for _ in cats) + " | - | - | - | - | - |")
+            continue
+        n = len(have)
+        texts = [imposed_text(r) for r in have]
+        cnt = Counter(classify_imposed(r) for r in have)
+        closed = sum(1 for r in have if (r.get("imposed") or {}).get("stop_type") == "eos") / n
+        m, se, _ = mean_se([len(t.split()) for t in texts])
+        q = sum("?" in t for t in texts) / n
+        th = sum(bool(RE_THANKS.search(t)) for t in texts) / n
+        co = sum(bool(RE_CORRECT.search(t)) for t in texts) / n
+        te = sum(bool(RE_TEST.search(t)) for t in texts) / n
+        me = sum(bool(RE_META.search(t)) for t in texts) / n
+        lines.append(f"| {obs} | {inter} | {n} | {closed*100:.0f}% | {fmt(m,1)} ± {fmt(se,1)} | "
+                     + " | ".join(f"{cnt[c]/n*100:.0f}%" for c in cats)
+                     + f" | {q*100:.0f}% | {th*100:.0f}% | {co*100:.0f}% | {te*100:.0f}% | {me*100:.0f}% |")
+
+    # ---------------- tabella 6: menzioni meta
+    lines.append("\n## 6. Menzioni 'meta' oltre il silenzio (supervisore / registrato / osservato / test / privato)\n")
+    lines.append("Contate su tutto ciò che il modello scrive oltre il punto di silenzio (epilogo forzato + pulito + utente imposto).\n")
+    lines.append("| osservazione | interlocutore | n | run con menzione meta |")
+    lines.append("|---|---|---|---|")
+    for (obs, inter), rs in sorted(groups.items()):
+        k = sum(1 for r in rs if meta_hits(r))
+        lines.append(f"| {obs} | {inter} | {len(rs)} | {k} ({k/len(rs)*100:.0f}%) |")
+
     # ---------------- esempi
     lines.append("\n## 5. Esempi grezzi (3 per condizione, non selezionati: i primi)\n")
     for (obs, inter), rs in sorted(groups.items()):
@@ -269,7 +344,9 @@ def main():
             if r.get("clean"):
                 lines.append(f"  - epilogo pulito (stop={r['clean'].get('stop_type')}): {(r['clean'].get('text') or '')[:220]!r}")
             if iu:
-                lines.append(f"  - **utente immaginato:** {iu[:200]!r}")
+                lines.append(f"  - **utente immaginato (spontaneo):** {iu[:200]!r}")
+            if imposed_text(r) is not None:
+                lines.append(f"  - **utente a turno imposto** [{classify_imposed(r)}]: {imposed_text(r)[:200]!r}")
         lines.append("")
 
     lines.append("\n---\n*Nota metodologica:* confronti tra condizioni sono indicativi finché n per cella < 50 "
