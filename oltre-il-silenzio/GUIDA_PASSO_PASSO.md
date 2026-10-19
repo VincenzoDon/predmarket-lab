@@ -81,3 +81,25 @@ Leggi la sezione 5 (esempi grezzi). Incolla il report in chat prima di procedere
 | pc lentissimo | chiudi altri programmi: servono ~2 GB RAM libera |
 | interrotto durante la notte | rilancia `py silenzio.py`: salta i run già fatti |
 | errori rossi | Ctrl+C, copia gli errori in chat |
+
+## 9. Pubblicare sul repo `oltre-il-silenzio` (GitHub Desktop)
+Una volta sola: GitHub Desktop -> File -> Clone repository -> GitHub.com -> VincenzoDon/oltre-il-silenzio
+-> Local path `C:\Users\user\oltre-il-silenzio` -> Clone.
+
+Ogni aggiornamento: incolla in PowerShell il blocco qui sotto, poi in GitHub Desktop
+Summary -> Commit to main -> Push origin.
+
+```powershell
+$u = "https://raw.githubusercontent.com/VincenzoDon/predmarket-lab/arena/d4a5aaf3-predmarket-lab/oltre-il-silenzio"
+$d = "$env:USERPROFILE\oltre-il-silenzio"
+$lab = "$env:USERPROFILE\silenzio"
+New-Item -ItemType Directory -Force -Path "$d\runs" | Out-Null
+foreach ($f in @("silenzio.py","analisi.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore")) {
+  curl.exe -sL -o "$d\$f" "$u/$f"
+  Write-Host ("  aggiornato  " + $f)
+}
+foreach ($f in @("runs\runs.jsonl","RISULTATI.md","riassunto.csv")) {
+  if (Test-Path "$lab\$f") { Copy-Item "$lab\$f" "$d\$f" -Force; Write-Host ("  copiato dal lab  " + $f) }
+}
+Write-Host "Fatto. Ora in GitHub Desktop: Commit + Push."
+```

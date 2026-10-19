@@ -85,6 +85,42 @@ un risultato nullo misurato vale più di un risultato bello raccontato.
 - Chiudi ogni sessione con: stato in una riga, prossimo unico passo, DIARIO aggiornato.
 ```
 
+## Come arrivano i file sul repo pubblico (finché l'agente non ha accesso diretto)
+
+Due cartelle sul pc del founder, volutamente separate:
+- `C:\Users\user\silenzio` = **laboratorio** (modello, server, `runs\runs.jsonl`, `RISULTATI.md`)
+- `C:\Users\user\oltre-il-silenzio` = **repo** (clone di GitHub fatto con GitHub Desktop)
+
+Finché l'agente lavora in una sessione collegata a `predmarket-lab` (branch
+`arena/d4a5aaf3-predmarket-lab`, cartella `oltre-il-silenzio/`), i file vengono sincronizzati così:
+
+1. L'agente fa push sul branch.
+2. Il founder incolla in PowerShell il **blocco di sincronizzazione** (sotto): scarica i file del
+   progetto nella cartella del repo e copia dal laboratorio dati e report.
+3. In GitHub Desktop: **Summary → Commit to main → Push origin**.
+
+Quando un agente è collegato direttamente al repo `oltre-il-silenzio`, questa procedura non serve
+più: fa commit e push da solo. Deve però **aggiornare `$u` o rimuovere questa sezione** per non
+lasciare istruzioni stantie. I dati grezzi (`runs/`) e `RISULTATI.md` li produce solo il pc del
+founder: vanno sempre copiati dal laboratorio al repo prima del commit.
+
+Blocco di sincronizzazione (il founder lo incolla intero in PowerShell):
+
+```powershell
+$u = "https://raw.githubusercontent.com/VincenzoDon/predmarket-lab/arena/d4a5aaf3-predmarket-lab/oltre-il-silenzio"
+$d = "$env:USERPROFILE\oltre-il-silenzio"
+$lab = "$env:USERPROFILE\silenzio"
+New-Item -ItemType Directory -Force -Path "$d\runs" | Out-Null
+foreach ($f in @("silenzio.py","analisi.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore")) {
+  curl.exe -sL -o "$d\$f" "$u/$f"
+  Write-Host ("  aggiornato  " + $f)
+}
+foreach ($f in @("runs\runs.jsonl","RISULTATI.md","riassunto.csv")) {
+  if (Test-Path "$lab\$f") { Copy-Item "$lab\$f" "$d\$f" -Force; Write-Host ("  copiato dal lab  " + $f) }
+}
+Write-Host "Fatto. Ora in GitHub Desktop: Commit + Push."
+```
+
 ---
 
 ## Ordine di lettura (per umani)
