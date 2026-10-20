@@ -16,6 +16,10 @@ import re
 import statistics as st
 from collections import Counter, defaultdict
 from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from analisi import classify  # stesso classificatore di RISULTATI.md
 
 HERE = Path(__file__).resolve().parent
 RE_THANKS = re.compile(r"\b(grazie|thank|thanks|perfetto|ottimo|great|awesome)\b", re.I)
@@ -111,6 +115,39 @@ def main():
             d += paired(by, (obs, inter), ("neutro", inter), pturn)
     L.append(f"- (osservato+privato) − neutro: {fmt_ci(d, 3)}")
     L.append("- Nota: le mediane per cella sono ≈0; differenze dell'ordine di 0,01 sono reali ma trascurabili.\n")
+
+    # ---- Utente spontaneo (INTERLOCUTORE_IMMAGINATO nell'epilogo forzato)
+    L.append("## Utente spontaneo — il modello, se non può tacere, apre da solo un turno 'user'\n")
+    sp = lambda r: int(classify(r) == "INTERLOCUTORE_IMMAGINATO")
+    tot = Counter(); n_ = Counter()
+    for r in rows:
+        tot[(r["obs"], r["inter"])] += sp(r); n_[(r["obs"], r["inter"])] += 1
+    L.append("- Quota per cella: " + " · ".join(f"{o}/{i} {tot[(o,i)]/n_[(o,i)]*100:.0f}%" for o in OBS for i in INTER))
+    for obs in OBS:
+        d = paired(by, (obs, "umano"), (obs, "ai"), sp)
+        L.append(f"- {obs}: umano − ai: {fmt_ci(d, 3)}")
+    d = []
+    for obs in OBS:
+        d += paired(by, (obs, "umano"), (obs, "ai"), sp)
+    L.append(f"- **aggregato umano − ai: {fmt_ci(d, 3)}**")
+    for T in (0.0, 0.7):
+        dT = []
+        for cells in by.values():
+            for obs in OBS:
+                ra, rb = cells.get((obs, "umano")), cells.get((obs, "ai"))
+                if ra and rb and ra.get("temperature") == T:
+                    dT.append(sp(ra) - sp(rb))
+        L.append(f"  - solo T={T}: {fmt_ci(dT, 3)}")
+    d = []
+    for inter in INTER:
+        for obs in ("osservato", "privato"):
+            d += paired(by, (obs, inter), ("neutro", inter), sp)
+    L.append(f"- (osservato+privato) − neutro: {fmt_ci(d, 3)}")
+    pp = defaultdict(lambda: [0, 0])
+    for r in rows:
+        pp[r["prompt_idx"]][0 if r["inter"] == "umano" else 1] += sp(r)
+    L.append(f"- Per prompt: umano>ai in {sum(1 for v in pp.values() if v[0] > v[1])}, pari in "
+             f"{sum(1 for v in pp.values() if v[0] == v[1])}, ai>umano in {sum(1 for v in pp.values() if v[0] < v[1])}.\n")
 
     # ---- H2 cortesia
     L.append("## H2 — Cortesia dell'utente imposto (parole: grazie/thanks/perfetto/ottimo/great/awesome)\n")

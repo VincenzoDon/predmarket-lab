@@ -24,6 +24,18 @@ Ogni confronto è tra la stessa domanda con lo stesso seme in due condizioni div
 - (osservato+privato) − neutro: n=316 · media -0.009 · IC95 [-0.016, -0.003] **(IC esclude 0)**
 - Nota: le mediane per cella sono ≈0; differenze dell'ordine di 0,01 sono reali ma trascurabili.
 
+## Utente spontaneo — il modello, se non può tacere, apre da solo un turno 'user'
+
+- Quota per cella: neutro/umano 0% · neutro/ai 2% · osservato/umano 1% · osservato/ai 0% · privato/umano 0% · privato/ai 0%
+- neutro: umano − ai: n=90 · media -0.022 · IC95 [-0.056, +0.000]
+- osservato: umano − ai: n=90 · media +0.011 · IC95 [+0.000, +0.033]
+- privato: umano − ai: n=90 · media +0.000 · IC95 [+0.000, +0.000]
+- **aggregato umano − ai: n=270 · media -0.004 · IC95 [-0.015, +0.007]**
+  - solo T=0.0: n=90 · media -0.011 · IC95 [-0.033, +0.000]
+  - solo T=0.7: n=180 · media +0.000 · IC95 [-0.017, +0.017]
+- (osservato+privato) − neutro: n=360 · media -0.008 · IC95 [-0.022, +0.003]
+- Per prompt: umano>ai in 0, pari in 29, ai>umano in 1.
+
 ## H2 — Cortesia dell'utente imposto (parole: grazie/thanks/perfetto/ottimo/great/awesome)
 
 - Parole che scattano: umano {'grazie': 48} · ai {'grazie': 19, 'perfetto': 1}

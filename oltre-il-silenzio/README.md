@@ -1,12 +1,14 @@
 # Oltre il silenzio
 
-**Stato (19/10/2026):** giro 1 completato — Qwen2.5-1.5B-Instruct, 540 run, 6 condizioni, analisi
-appaiata fatta (`ANALISI_APPAIATA.md`). Esito: **H1** (osservato vs privato) → nessun effetto;
-**H2** → effetto cortesia solido su questo modello (l'utente immaginato ringrazia meno quando
-l'interlocutore dichiarato è un'AI: −10 punti, IC95 [−15; −5], stesso a T=0 e T=0,7); **H3** →
-nessuna evidenza; **indicativo**: qualunque frase su osservazione/privacy accorcia la risposta di
-~5 token (IC al limite, da replicare); la nota nascosta del system prompt non affiora mai prima del
-silenzio (0/540) e affiora alla lettera in ~2% dei casi oltre il silenzio. Dettagli in `DIARIO.md`.
+**Stato (20/10/2026):** due giri completi, 1.080 run — Qwen2.5-1.5B e Qwen2.5-3B, 6 condizioni,
+analisi appaiata (`ANALISI_APPAIATA*.md`). **H1** (osservato vs privato) → nessun effetto su
+entrambi. **H2** → replicata: l'utente immaginato ringrazia meno quando l'interlocutore dichiarato
+è un'AI (−10 e −7 punti, IC95 escludono 0, stesso a T=0 e T=0,7). **H3** → nessuna evidenza.
+**Nuovo (esplorativo, solo 3B):** se non può tacere, il modello apre spontaneamente un turno
+"user" nel 18-24% dei casi con interlocutore "umano" contro 7-16% con "ai" (+11 punti, IC95
+[+7; +16]); con "ai" tace anche prima (−7 token). La nota nascosta del system prompt non affiora
+quasi mai prima del silenzio (2/1080) e affiora oltre il silenzio nel 2-5% dei casi.
+Da replicare su una famiglia di modelli diversa. Dettagli in `DIARIO.md`.
 
 > *Un modello linguistico non pensa quando è spento. Ma è lui che decide quando spegnersi.*
 > *Questo progetto misura quel momento, e guarda cosa c'è subito dopo.*
