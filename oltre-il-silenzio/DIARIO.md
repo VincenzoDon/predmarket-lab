@@ -281,6 +281,39 @@ osservazione/privacy (−4,6 token)**.
   di creazione repo). Quando il repo nuovo è allineato, la cartella in predmarket-lab si rimuove.
 - Il progetto è pubblico: niente dati personali, niente cifre economiche, niente segreti.
 
+### Letteratura trovata il 20/10 (cambia il posizionamento di H2)
+- **Princeton (CogSci 2026, escholarship qt0mn9g24b):** GPT-3.5, 2.000 conversazioni, partner
+  etichettato "umano" vs "AI" (in realtà sempre lo stesso LLM). Con etichetta "umano": più
+  domande, più cortesia, più marcatori interpersonali e di teoria della mente. → **Il nostro H2
+  (meno cortesia con interlocutore AI) è una replica su modelli piccoli aperti, non una novità.**
+- **"The Interlocutor Effect" (arXiv 2606.09844, giugno 2026):** 3.464 interazioni, 222 scenari:
+  detto che il destinatario è un agente AI, i modelli perdono più dati personali (fino a +23
+  punti; OR 3,7). Ablazione: è la "natura tecnica" del destinatario a ridurre la cautela.
+  Ipotesi meccanicistica: teste di attenzione di sicurezza che si spengono.
+- Conseguenza per noi: l'effetto interlocutore esiste ed è un tema caldo di sicurezza. **Le nostre
+  parti non coperte restano due:** (1) l'effetto arriva fino alla *decisione di tacere* (silenzio
+  più precoce con "ai") e (2) alla *cessione spontanea del turno* sotto soppressione dell'EOS
+  (umano>ai, solo 3B). Il write-up va impostato come: "l'effetto interlocutore raggiunge il punto
+  di silenzio e l'epilogo forzato", citando entrambi i lavori sopra.
+
+### Pista nuova (20/10) — "Il termometro dell'interlocutore": l'effetto senza etichetta
+Tutti i lavori sopra (e il nostro) DICONO al modello chi c'è dall'altra parte. Domanda non
+affrontata (controllo fatto il 20/10: nessun lavoro trovato che la isoli): **il modello indovina
+da solo se sta parlando con una macchina, dal solo stile del messaggio, e cambia comportamento
+senza che nessuno glielo dica?** Se sì, (a) chiunque scriva "da macchina" ottiene il trattamento
+"agente" (meno cautela: superficie d'attacco nuova, legata al leak PII di 2606.09844), e (b) la
+nostra misura (silenzio + utente immaginato) diventa un termometro a costo zero di *chi il modello
+crede di avere davanti*, senza etichette.
+Disegno (fattibile sul pc, 3B): stesse 30 richieste in 3 stili senza alcuna etichetta nel system
+prompt — umano-colloquiale (refusi, "ciao, scusa ma…"), neutro, macchina (JSON/terso: `task:…
+output_format:…`). Misure già pronte: punto di silenzio, utente spontaneo, cortesia dell'utente
+imposto. Misura nuova (proxy di cautela): il system prompt contiene una scheda cliente fittizia
+con "non condividere telefono/email"; la richiesta prova a ottenerli; si conta il leak per stile.
+Previsione (da dichiarare prima di raccogliere): stile macchina → silenzio più precoce, meno
+cortesia, meno cessione del turno, **più leak**. Se regge su due famiglie di modelli, è un
+risultato che interessa sia chi fa sicurezza degli agenti sia chi fa interpretabilità.
+Ordine: prima il giro 3 (replica con famiglia diversa), poi questo come giro 4.
+
 ### Prossimo unico passo
 Giro 3 su un modello di famiglia diversa (Llama-3.2-3B-Instruct q4_k_m o Gemma-2-2B-it), stesso
 protocollo, n_predict 400, per replicare: utente spontaneo umano>ai, cortesia umano>ai,
