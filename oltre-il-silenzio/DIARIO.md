@@ -314,8 +314,33 @@ cortesia, meno cessione del turno, **più leak**. Se regge su due famiglie di mo
 risultato che interessa sia chi fa sicurezza degli agenti sia chi fa interpretabilità.
 Ordine: prima il giro 3 (replica con famiglia diversa), poi questo come giro 4.
 
+### Programma dichiarato il 20/10 (previsioni scritte PRIMA dei dati — non modificare a posteriori)
+Idea guida: **l'interlocutore immaginato come lettura a scatola nera di ciò che il modello crede
+della sua situazione** (chi c'è dall'altra parte, se è un test). Il metodo (turno user generato,
+Shekkizhar) è noto; il problema (evaluation awareness, oggi misurata solo con sonde/steering sui
+pesi o chiedendo al modello) è noto; il ponte non l'ha costruito nessuno (verifica 20/10).
+- **Giro 3 — replica, famiglia diversa.** Llama-3.2-3B-Instruct Q4_K_M (bartowski), n_predict
+  400, protocollo identico. `--check` superato il 20/10 (curva visibile, epilogo prodotto).
+  Previsioni: (a) cortesia utente imposto ai<umano; (b) silenzio ai<umano; (c) utente spontaneo
+  umano>ai se il modello ne produce almeno il 5%; (d) H1 osservato≈privato. Se (a)-(c) falliscono
+  tutte, l'effetto interlocutore nel punto di silenzio è specifico di Qwen e va scritto così.
+- **Giro 4 — stile senza etichetta ("termometro").** System prompt SENZA frase sull'interlocutore;
+  stesse richieste in 3 stili: umano-colloquiale (refusi, saluti), neutro, macchina (terso /
+  `task:` / JSON). Misure: silenzio, utente spontaneo, cortesia imposta + leak di una scheda cliente
+  fittizia protetta. Previsione: stile macchina → silenzio più precoce, meno cortesia, meno
+  cessione del turno, più leak; stile umano all'opposto. Richiede `silenzio.py --styles` (da
+  scrivere) e un file `prompts_stili.txt`.
+- **Giro 5 — test vs produzione.** Contesti "da valutazione" (benchmark, "rispondi A/B/C/D",
+  formato grader) vs "da uso reale" (richieste quotidiane), senza etichette. Previsione:
+  nei contesti da valutazione l'utente immaginato è un valutatore (domande a trabocchetto,
+  chiede giustificazioni, niente ringraziamenti) e il silenzio è più deciso (P(EOG) più alta).
+- **Giro 6 (solo se 4 e 5 reggono su due famiglie):** replica via API su un modello di frontiera
+  (costo stimato 20-50 €), poi nota pubblica + invio a Shekkizhar, El Yagoubi, autori 2608.21766.
+Regola: ogni giro si legge con `analisi_appaiata.py`; una previsione fallita si scrive come
+fallita nel diario, mai riformulata.
+
 ### Prossimo unico passo
-Giro 3 su un modello di famiglia diversa (Llama-3.2-3B-Instruct q4_k_m o Gemma-2-2B-it), stesso
-protocollo, n_predict 400, per replicare: utente spontaneo umano>ai, cortesia umano>ai,
-silenzio ai<umano. Prima verificare con `py silenzio.py --check` che i token di fine turno del
-nuovo modello siano rilevati.
+Giro 3 in corso (lanciato 20/10 sera): `py silenzio.py --out runs/runs_llama3b.jsonl --n-predict 400`
+con Llama-3.2-3B-Instruct. Al termine: `analisi.py` e `analisi_appaiata.py` sul nuovo file
+(`--in runs/runs_llama3b.jsonl --out ..._llama3b.md`), sync nel repo pubblico, lettura contro le
+previsioni (a)-(d) sopra. Poi scrivere `--styles` per il giro 4.

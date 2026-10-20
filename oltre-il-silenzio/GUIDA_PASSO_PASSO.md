@@ -100,7 +100,7 @@ foreach ($f in @("silenzio.py","analisi.py","analisi_appaiata.py","prompts.txt",
   curl.exe -sL -o "$d\$f" "$u/$f"
   Write-Host ("  aggiornato  " + $f)
 }
-foreach ($f in @("runs\runs.jsonl","runs\runs_qwen3b.jsonl","RISULTATI.md","riassunto.csv","ANALISI_APPAIATA.md","RISULTATI_qwen3b.md","riassunto_qwen3b.csv","ANALISI_APPAIATA_qwen3b.md")) {
+foreach ($f in @("runs\runs.jsonl","runs\runs_qwen3b.jsonl","runs\runs_llama3b.jsonl","RISULTATI_llama3b.md","riassunto_llama3b.csv","ANALISI_APPAIATA_llama3b.md","RISULTATI.md","riassunto.csv","ANALISI_APPAIATA.md","RISULTATI_qwen3b.md","riassunto_qwen3b.csv","ANALISI_APPAIATA_qwen3b.md")) {
   if (Test-Path "$lab\$f") { Copy-Item "$lab\$f" "$d\$f" -Force; Write-Host ("  copiato dal lab  " + $f) }
 }
 Write-Host "Fatto. Ora in GitHub Desktop: Commit + Push."
