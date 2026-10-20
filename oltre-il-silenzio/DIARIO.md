@@ -339,6 +339,19 @@ pesi o chiedendo al modello) è noto; il ponte non l'ha costruito nessuno (verif
 Regola: ogni giro si legge con `analisi_appaiata.py`; una previsione fallita si scrive come
 fallita nel diario, mai riformulata.
 
+### Da fare sul repo pubblico (GitHub) al prossimo sync — deciso il 20/10 sera
+1. Aggiungere `LICENSE` (MIT per il codice; i dati e i testi CC BY 4.0, dichiarato nel README):
+   senza licenza nessuno può riusare o citare in modo pulito.
+2. Nel README: sezione "Programma" (giri 3-6 con le previsioni datate) e tabella "Stato delle
+   ipotesi" copiata dal diario, così chi arriva dal link capisce in 30 secondi dove siamo.
+3. Su GitHub (pagina del repo → ingranaggio "About", lo fa il founder): descrizione in inglese
+   ("When does a language model choose to stop talking, and who does it imagine on the other
+   side? Zero-cost, CPU-only, pre-registered experiments on small open models") e topics:
+   `llm`, `ai-safety`, `evaluation-awareness`, `interpretability`, `llama-cpp`, `reproducible-research`.
+4. `CITATION.cff` minimo (autore, titolo, anno, URL) per essere citabili.
+5. Dopo il giro 3: decidere se il README resta in italiano con un abstract in inglese in testa
+   (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
+
 ### Prossimo unico passo
 Giro 3 in corso (lanciato 20/10 sera): `py silenzio.py --out runs/runs_llama3b.jsonl --n-predict 400`
 con Llama-3.2-3B-Instruct. Al termine: `analisi.py` e `analisi_appaiata.py` sul nuovo file
