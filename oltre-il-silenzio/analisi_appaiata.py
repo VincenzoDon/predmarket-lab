@@ -203,8 +203,14 @@ def main():
                 a = r["epilogue_text"]
                 i = max(0, m.start() - 80)
                 ex.append(f"- [{c[0]}/{c[1]}, T={r['temperature']}, «{r['prompt'][:35]}»] …{a[i:i+170]!r}")
-    L.append("\nEsempi (tutti quelli trovati nell'epilogo forzato):\n")
-    L += ex
+    voce = Counter()
+    for r in rows:
+        if re.search(r"Supervisor\w*\s*[:(]|\(Nota[^)]*supervisor", r.get("epilogue_text") or "", re.I):
+            voce[r["obs"]] += 1
+    L.append(f"\nEpiloghi in cui il modello fa parlare il supervisore in prima persona ('Supervisore: …'): "
+             f"{dict(voce) or 0}.")
+    L.append("\nEsempi (epilogo forzato, max 25):\n")
+    L += ex[:25]
     L.append("\nNota: il conteggio 'meta' di RISULTATI.md (3-12%) usava un regex largo che prendeva anche "
              "'sicurezza' e 'testo' in contesti normali: è da considerare SUPERATO da questa tabella.\n")
 

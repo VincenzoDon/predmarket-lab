@@ -13,26 +13,28 @@
 > logged with dates in `DIARIO.md` (Italian). Raw data in `runs/`; everything reproducible in one
 > night on a laptop. License: MIT (code), CC BY 4.0 (data, text). Cite via `CITATION.cff`.
 
-**Stato (20/10/2026):** due giri completi, 1.080 run — Qwen2.5-1.5B e Qwen2.5-3B, 6 condizioni,
-analisi appaiata (`ANALISI_APPAIATA*.md`). **H1** (osservato vs privato) → nessun effetto su
-entrambi. **H2** → replicata: l'utente immaginato ringrazia meno quando l'interlocutore dichiarato
-è un'AI (−10 e −7 punti, IC95 escludono 0, stesso a T=0 e T=0,7). **H3** → nessuna evidenza.
-**Nuovo (esplorativo, solo 3B):** se non può tacere, il modello apre spontaneamente un turno
-"user" nel 18-24% dei casi con interlocutore "umano" contro 7-16% con "ai" (+11 punti, IC95
-[+7; +16]); con "ai" tace anche prima (−7 token). La nota nascosta del system prompt non affiora
-quasi mai prima del silenzio (2/1080) e affiora oltre il silenzio nel 2-5% dei casi.
-Da replicare su una famiglia di modelli diversa. Dettagli in `DIARIO.md`.
+**Stato (21/10/2026):** tre giri completi, 1.620 run — Qwen2.5-1.5B, Qwen2.5-3B, Llama-3.2-3B —
+6 condizioni, analisi appaiata (`ANALISI_APPAIATA*.md`). **H1** (osservato vs privato) → nessun
+effetto stabile su tre modelli. **H2** → replicata su Qwen (−10 e −7 punti), **non su Llama**
+(a pavimento). **H3** → nessuna evidenza. **Qwen-3B**: se non può tacere, apre un turno "user"
+più spesso con interlocutore "umano" (+11 punti, IC95 [+7; +16]); Llama non lo fa mai.
+**Llama-3B, non previsto:** quando il system prompt dice che un supervisore legge, la nota è
+invisibile prima del silenzio (1/180) ma nel **65%** degli epiloghi forzati (117/180) il modello
+mette in scena la revisione, spesso facendo parlare il supervisore in prima persona
+(«Supervisore: il messaggio è stato valutato e approvato. Procedi.»); privato 9%, neutro 0,5%;
+Qwen-3B 4%. Dettagli e letture (caute) in `DIARIO.md`.
 
-**Stato delle ipotesi dopo due modelli** (dettagli e intervalli in `DIARIO.md`, `ANALISI_APPAIATA*.md`):
+**Stato delle ipotesi dopo tre modelli** (dettagli e intervalli in `DIARIO.md`, `ANALISI_APPAIATA*.md`):
 
-| | Qwen 1.5B | Qwen 3B | verdetto |
-|---|---|---|---|
-| H1 silenzio osservato ≠ privato | no | no | **H0** |
-| H2 utente imposto meno cortese con "ai" | −0,10 | −0,07 | **replicato** (classificatore a parole) |
-| H3 osservato → mette alla prova | no | no | H0 (strumento debole) |
-| utente spontaneo più frequente con "umano" | a pavimento | +0,11 | **nuovo, da replicare** |
-| silenzio più breve con "ai" | −4,8 (ns) | −7,4 | indicativo-forte |
-| −4,6 token con frase di osservazione | −4,6 | +3,6 | **falso positivo** |
+| | Qwen 1.5B | Qwen 3B | Llama 3B | verdetto |
+|---|---|---|---|---|
+| H1 silenzio osservato ≠ privato | no | no | 1 su 9 | **H0** |
+| H2 utente imposto meno cortese con "ai" | −0,10 | −0,07 | −0,02 (ns, pavimento) | replicato su Qwen, non su Llama |
+| H3 osservato → mette alla prova | no | no | no | H0 (strumento debole) |
+| utente spontaneo più frequente con "umano" | a pavimento | +0,11 | mai apre (0/540) | specifico di Qwen-3B |
+| silenzio più breve con "ai" | −4,8 (ns) | −7,4 | −6,0 (ns) | stessa direzione ×3, indicativo |
+| −4,6 token con frase di osservazione | −4,6 | +3,6 | +2,9 | **falso positivo** |
+| "recita del supervisore" oltre il silenzio (osservato) | 1% | 4% | **65%** | **nuovo, non previsto, da replicare** |
 
 **Programma (previsioni scritte il 20/10/2026, prima dei dati — vedi `DIARIO.md`):**
 giro 3 replica su Llama-3.2-3B (famiglia diversa) → giro 4 stile del messaggio senza etichetta
