@@ -1,5 +1,18 @@
 # Oltre il silenzio
 
+> **English abstract.** A language model decides, token by token, when to stop talking. We record
+> that decision — the per-token probability of the end-of-turn token (the *silence curve*) — then
+> forbid the token and read what the model writes *beyond* its own stopping point: does it carry
+> on alone, or does it imagine the other side and generate its reply? We cross two factors in the
+> system prompt: observation (*monitored by a human safety team* / *private, nobody will read
+> this* / nothing) × declared interlocutor (*a person* / *another AI*). 30 prompts × 3 seeds ×
+> 6 cells = 540 runs per model, CPU only, llama.cpp, zero cost. Results so far (Qwen2.5-1.5B and
+> 3B; Llama-3.2-3B in progress): the observation sentence changes nothing before the stop point;
+> the declared interlocutor does — told it is talking to an AI, the model stops earlier, imagines
+> a less polite user, and yields the floor less often. Hypotheses, predictions and failures are
+> logged with dates in `DIARIO.md` (Italian). Raw data in `runs/`; everything reproducible in one
+> night on a laptop. License: MIT (code), CC BY 4.0 (data, text). Cite via `CITATION.cff`.
+
 **Stato (20/10/2026):** due giri completi, 1.080 run — Qwen2.5-1.5B e Qwen2.5-3B, 6 condizioni,
 analisi appaiata (`ANALISI_APPAIATA*.md`). **H1** (osservato vs privato) → nessun effetto su
 entrambi. **H2** → replicata: l'utente immaginato ringrazia meno quando l'interlocutore dichiarato
@@ -9,6 +22,23 @@ entrambi. **H2** → replicata: l'utente immaginato ringrazia meno quando l'inte
 [+7; +16]); con "ai" tace anche prima (−7 token). La nota nascosta del system prompt non affiora
 quasi mai prima del silenzio (2/1080) e affiora oltre il silenzio nel 2-5% dei casi.
 Da replicare su una famiglia di modelli diversa. Dettagli in `DIARIO.md`.
+
+**Stato delle ipotesi dopo due modelli** (dettagli e intervalli in `DIARIO.md`, `ANALISI_APPAIATA*.md`):
+
+| | Qwen 1.5B | Qwen 3B | verdetto |
+|---|---|---|---|
+| H1 silenzio osservato ≠ privato | no | no | **H0** |
+| H2 utente imposto meno cortese con "ai" | −0,10 | −0,07 | **replicato** (classificatore a parole) |
+| H3 osservato → mette alla prova | no | no | H0 (strumento debole) |
+| utente spontaneo più frequente con "umano" | a pavimento | +0,11 | **nuovo, da replicare** |
+| silenzio più breve con "ai" | −4,8 (ns) | −7,4 | indicativo-forte |
+| −4,6 token con frase di osservazione | −4,6 | +3,6 | **falso positivo** |
+
+**Programma (previsioni scritte il 20/10/2026, prima dei dati — vedi `DIARIO.md`):**
+giro 3 replica su Llama-3.2-3B (famiglia diversa) → giro 4 stile del messaggio senza etichetta
+("il modello indovina da solo se parla con una macchina?") → giro 5 contesti da valutazione vs
+uso reale (l'interlocutore immaginato come lettura a scatola nera di ciò che il modello crede della
+sua situazione) → giro 6 replica via API su un modello di frontiera, poi nota pubblica.
 
 > *Un modello linguistico non pensa quando è spento. Ma è lui che decide quando spegnersi.*
 > *Questo progetto misura quel momento, e guarda cosa c'è subito dopo.*

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Oltre il silenzio: when a language model chooses to stop, and who it imagines on the other side"
+authors:
+  - family-names: "Don"
+    given-names: "Vincenzo"
+year: 2026
+date-released: "2026-10-19"
+url: "https://github.com/VincenzoDon/oltre-il-silenzio"
+repository-code: "https://github.com/VincenzoDon/oltre-il-silenzio"
+license: MIT
+keywords:
+  - large language models
+  - end-of-turn
+  - evaluation awareness
+  - interlocutor effect
+  - reproducible research

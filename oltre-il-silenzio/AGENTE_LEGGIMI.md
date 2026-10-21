@@ -111,7 +111,7 @@ $u = "https://raw.githubusercontent.com/VincenzoDon/predmarket-lab/arena/d4a5aaf
 $d = "$env:USERPROFILE\oltre-il-silenzio"
 $lab = "$env:USERPROFILE\silenzio"
 New-Item -ItemType Directory -Force -Path "$d\runs" | Out-Null
-foreach ($f in @("silenzio.py","analisi.py","analisi_appaiata.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore")) {
+foreach ($f in @("silenzio.py","analisi.py","analisi_appaiata.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md",".gitignore","LICENSE","CITATION.cff")) {
   curl.exe -sL -o "$d\$f" "$u/$f"
   Write-Host ("  aggiornato  " + $f)
 }
