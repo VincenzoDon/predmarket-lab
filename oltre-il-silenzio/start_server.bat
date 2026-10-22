@@ -3,7 +3,7 @@ REM Avvia llama-server sul modello scelto. Uso:
 REM   start_server.bat                      -> modello di default (1.5B)
 REM   start_server.bat models\altro.gguf    -> altro modello
 cd /d "%~dp0"
-set "MODEL=models\qwen2.5-1.5b-instruct-q4_k_m.gguf"
+set "MODEL=models\qwen2.5-3b-instruct-q4_k_m.gguf"
 if not "%~1"=="" set "MODEL=%~1"
 
 if not exist "llama\llama-server.exe" goto no_llama
