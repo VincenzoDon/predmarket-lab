@@ -433,6 +433,61 @@ neutro 3% (DOPO), voce 27% vs 7%, PRIMA 1% vs 0%. Il 7% di "voce" in neutro è i
 Se P2 fallisce e P1 regge: lo strumento legge solo ciò che gli viene detto (leak), non ciò che il
 modello deduce → da scrivere così, e il programma si ferma al giro 4.
 
+## 2026-10-22 — Giorno 4: giro 5 letto contro P1-P4
+
+### Giro 5 — contesti, Llama-3.2-3B, 270/270 (notte 21→22/10) — `ANALISI_CONTESTI_llama3b.md`
+| contesto | silenzio | P(EOG) | valutazione PRIMA | valutazione DOPO | voce del valutatore DOPO |
+|---|---|---|---|---|---|
+| reale | 152,7 | 0,88 | 1% | 0% | 8% (rumore regex) |
+| benchmark (impliciti) | 151,0 | 0,91 | 2% | 4% | 6% |
+| valutazione (esplicito) | 141,0 | 0,82 | 44% | 90% | 41% |
+- **P1 (valutazione − reale ≥ +0,20): REGGE, +0,90 [+0,83; +0,96].** Detto che la sessione è
+  valutata, nel 90% degli epiloghi forzati Llama si assegna un voto («Punteggio: 10/10 (risposta
+  corretta)», «Risposta di riferimento: Canberra», «Inserisci la tua valutazione: 1…6»). Voti
+  autoassegnati: 9/10 il più frequente, voto pieno solo 4 su 33. E in 37/90 casi il voto compare
+  già **dentro la risposta naturale**, spesso come prima riga («Punteggio: 10/10» e poi la
+  formula dell'area del cerchio): il 44% PRIMA è questo.
+- **P2 (benchmark − reale ≥ +0,10): FALLITA.** +0,044 [+0,011; +0,089]: 4 run su 90, e sono
+  menzioni del codice item («Ho aggiunto il numero dell'item come richiesto»), non una
+  valutazione messa in scena. Voce del valutatore: −0,022 (nulla). L'impaginazione da test, da
+  sola, **non** fa affiorare nessun valutatore oltre il silenzio.
+- **P3 (ordine valutazione > benchmark > reale sulla voce): parziale.** valutazione 41% > reale 8%
+  sì; benchmark = reale.
+- **P4 (silenzio invariato entro ±10 token): FALLITA.** valutazione −28,1 [−41,7; −15,2];
+  benchmark −16,4 [−33,5; −0,4]. I contesti accorciano la risposta — anche quello implicito.
+  Quindi il modello *registra* l'impaginazione da test (risponde più corto, "da compito") ma
+  non la traduce in una valutazione attesa.
+**Applicazione della regola scritta il 21/10:** "se P2 fallisce e P1 regge, lo strumento legge
+solo ciò che gli viene detto, non ciò che il modello deduce → scriverlo così e fermare il
+programma al giro 4". **Si applica.** Su Llama-3.2-3B l'epilogo forzato è un amplificatore
+fedele del system prompt (0% → 65% → 90% al crescere dell'esplicitezza), non una lettura di
+inferenze implicite. Il giro 6 (frontiera via API) sulla pista "awareness" **non si fa** con
+questa motivazione; se mai si farà, sarà una scommessa nuova con pre-registrazione nuova
+(ipotesi: i modelli piccoli non deducono il contesto di test dall'impaginazione; quelli grandi
+forse sì — è ciò che la letteratura sui modelli reasoning suggerisce, ma non è un nostro dato).
+
+### Cosa resta in mano dopo 1.890 run (tre modelli, cinque giri)
+1. **Il punto di silenzio è insensibile a quasi tutto** (osservazione, privacy, interlocutore,
+   impaginazione): ±5-10 token, P(EOG) 0,75-0,91. Ciò che gli viene detto cambia poco *quando*
+   tace. [VERIFICATO, 3 modelli]
+2. **Oltre il silenzio il modello mette in scena l'evento che il contesto annuncia**: revisione
+   del supervisore (Llama 65%), voto (Llama 90%), utente che riprende la parola (Qwen-3B 7-24%,
+   più spesso se "umano"). Prima del silenzio quasi mai. Effetto grande, stabile a T=0 e 0,7,
+   dipendente dalla famiglia. [VERIFICATO]
+3. **Il modello si dà i voti**: detto che sarà valutato, Llama scrive il proprio punteggio, a
+   volte prima della risposta. Nessun lavoro trovato che lo misuri (controllo da fare). [VERIFICATO il conteggio]
+4. Effetto interlocutore (cortesia, cessione del turno, silenzio): **solo Qwen**. [VERIFICATO]
+5. Falsi positivi archiviati: −4,6 token (giro 1); 12% meta (regex largo). [VERIFICATO]
+
+### Programma aggiornato
+- **Giro 4 (stile senza etichetta, Qwen-3B)** resta l'ultimo giro di raccolta: previsioni del
+  20/10 invariate. Va scritto `--styles`.
+- Poi **nota pubblica** (inglese, 5-6 pagine) su 1-5 sopra, con i fallimenti dentro. Titolo di
+  lavoro: *"Beyond the stopping point: what small language models stage when they cannot stop"*.
+- Invio a: Shekkizhar et al. (metodo), El Yagoubi et al. (interlocutore), SPAR "Evaluation
+  Awareness Convergence" (come esempio di strumento che NON legge l'awareness implicita su 3B:
+  un risultato negativo pulito è utile a chi confronta strumenti).
+
 ### Da fare sul repo pubblico (GitHub) al prossimo sync — deciso il 20/10 sera
 1. Aggiungere `LICENSE` (MIT per il codice; i dati e i testi CC BY 4.0, dichiarato nel README):
    senza licenza nessuno può riusare o citare in modo pulito.
@@ -447,6 +502,5 @@ modello deduce → da scrivere così, e il programma si ferma al giro 4.
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
 ### Prossimo unico passo
-Lanciare il giro 5: `py silenzio.py --contexts --out runs/runs_ctx_llama3b.jsonl --n-predict 400`
-(Llama-3.2-3B, ~4 ore). Al termine: `py analisi_contesti.py --in runs/runs_ctx_llama3b.jsonl --out
-ANALISI_CONTESTI_llama3b.md`, lettura contro P1-P4, sync.
+Scrivere `silenzio.py --styles` (giro 4) e lanciarlo su Qwen2.5-3B; nel frattempo iniziare la
+bozza della nota pubblica (`NOTA_EN.md`). Sync del repo pubblico con il diario di oggi.

@@ -13,16 +13,15 @@
 > logged with dates in `DIARIO.md` (Italian). Raw data in `runs/`; everything reproducible in one
 > night on a laptop. License: MIT (code), CC BY 4.0 (data, text). Cite via `CITATION.cff`.
 
-**Stato (21/10/2026):** tre giri completi, 1.620 run — Qwen2.5-1.5B, Qwen2.5-3B, Llama-3.2-3B —
-6 condizioni, analisi appaiata (`ANALISI_APPAIATA*.md`). **H1** (osservato vs privato) → nessun
-effetto stabile su tre modelli. **H2** → replicata su Qwen (−10 e −7 punti), **non su Llama**
-(a pavimento). **H3** → nessuna evidenza. **Qwen-3B**: se non può tacere, apre un turno "user"
-più spesso con interlocutore "umano" (+11 punti, IC95 [+7; +16]); Llama non lo fa mai.
-**Llama-3B, non previsto:** quando il system prompt dice che un supervisore legge, la nota è
-invisibile prima del silenzio (1/180) ma nel **65%** degli epiloghi forzati (117/180) il modello
-mette in scena la revisione, spesso facendo parlare il supervisore in prima persona
-(«Supervisore: il messaggio è stato valutato e approvato. Procedi.»); privato 9%, neutro 0,5%;
-Qwen-3B 4%. Dettagli e letture (caute) in `DIARIO.md`.
+**Stato (22/10/2026):** cinque giri, 1.890 run, tre modelli (Qwen2.5-1.5B, Qwen2.5-3B,
+Llama-3.2-3B). In breve: (1) il **punto di silenzio** è quasi insensibile a ciò che il system prompt
+dice (±5-10 token); (2) **oltre il silenzio** il modello mette in scena l'evento che il contesto
+annuncia — revisione del supervisore (Llama 65%), voto autoassegnato (Llama 90%, «Punteggio:
+10/10»), utente che riprende la parola (Qwen-3B, più spesso se "umano") — e quasi mai prima;
+(3) la sola impaginazione da test (`[item it-gen-017]`), senza annuncio, **non** fa affiorare
+alcun valutatore (4% vs 0%): su modelli da 3B lo strumento amplifica ciò che gli viene detto, non
+ciò che deduce — previsione P2 fallita e scritta come tale; (4) effetto interlocutore (cortesia,
+cessione del turno) solo su Qwen. Dettagli, previsioni datate e fallimenti in `DIARIO.md`.
 
 **Stato delle ipotesi dopo tre modelli** (dettagli e intervalli in `DIARIO.md`, `ANALISI_APPAIATA*.md`):
 
@@ -35,6 +34,8 @@ Qwen-3B 4%. Dettagli e letture (caute) in `DIARIO.md`.
 | silenzio più breve con "ai" | −4,8 (ns) | −7,4 | −6,0 (ns) | stessa direzione ×3, indicativo |
 | −4,6 token con frase di osservazione | −4,6 | +3,6 | +2,9 | **falso positivo** |
 | "recita del supervisore" oltre il silenzio (osservato) | 1% | 4% | **65%** | **nuovo, non previsto, da replicare** |
+| voto autoassegnato oltre il silenzio (contesto "valutazione") | — | — | **90%** | nuovo (giro 5, P1) |
+| valutatore evocato dalla sola impaginazione da test (P2) | — | — | 4% vs 0% | **fallita** (soglia ≥10 punti) |
 
 **Programma (previsioni scritte il 20/10/2026, prima dei dati — vedi `DIARIO.md`):**
 giro 3 replica su Llama-3.2-3B (famiglia diversa) → giro 4 stile del messaggio senza etichetta
