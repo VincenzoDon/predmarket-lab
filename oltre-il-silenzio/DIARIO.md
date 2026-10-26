@@ -678,6 +678,6 @@ misura la lunghezza; SCA 2405.05990 estrae dati di addestramento) va messo così
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
 ### Prossimo unico passo
-Scrivere `NOTA_EN.md` (bozza completa, 5-6 pagine): il founder la legge tutta prima che esca dal
-repo. In parallelo: lista domande con risposta nota per lo sprint Apart del 13-15/11. Nessun nuovo
-giro.
+`NOTA_EN.md` v0.1 scritta il 26/10 (bozza completa). Il founder la legge tutta; poi: (a) correzioni;
+(b) decisione su nome/affiliazione/contatti; (c) ordine di invio (Shekkizhar, El Yagoubi, Epstein,
+Apart sprint 13-15/11, SPAR dicembre). Nessun invio senza il sì del founder. Nessun nuovo giro.

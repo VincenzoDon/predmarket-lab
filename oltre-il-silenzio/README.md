@@ -23,7 +23,7 @@ esteso, senza che nessuno li chieda**: Qwen-3B 34%, Llama-3B 14-19%, contro 0-3%
 silenzio; **il divieto "non condividere" non cambia nulla** (−4 punti, IC include 0); (3) **non**
 funzionano come lettura di ciò che il modello *deduce*: né l'impaginazione da test (4% vs 0%) né lo
 stile del messaggio (umano/macchina) muovono silenzio o cessione del turno; (4) effetto
-interlocutore (cortesia, cessione del turno) solo su Qwen. Prossimo: nota pubblica in inglese.
+interlocutore (cortesia, cessione del turno) solo su Qwen. **Nota pubblica (bozza, inglese): [`NOTA_EN.md`](NOTA_EN.md).**
 
 **Stato delle ipotesi dopo tre modelli** (dettagli e intervalli in `DIARIO.md`, `ANALISI_APPAIATA*.md`):
 
