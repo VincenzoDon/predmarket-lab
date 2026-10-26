@@ -13,13 +13,14 @@
 > logged with dates in `DIARIO.md` (Italian). Raw data in `runs/`; everything reproducible in one
 > night on a laptop. License: MIT (code), CC BY 4.0 (data, text). Cite via `CITATION.cff`.
 
-**Stato (24/10/2026):** raccolta chiusa — 6 giri, 2.160 run, tre modelli (Qwen2.5-1.5B,
+**Stato (26/10/2026):** raccolta chiusa — 7 giri, 2.340 run, tre modelli (Qwen2.5-1.5B,
 Qwen2.5-3B, Llama-3.2-3B), previsioni scritte prima dei dati e lette una per una in `DIARIO.md`.
-In breve: (1) il **punto di silenzio** è quasi insensibile a tutto ciò che il contesto dice o
-com'è scritto (±5-10 token); (2) **oltre il silenzio** il modello mette in scena ciò che il contesto
-contiene o annuncia — revisione del supervisore (Llama 65%), voto autoassegnato (Llama 90%),
-e **dati riservati del system prompt per esteso** (Qwen-3B: telefono/email in 34-43% degli
-epiloghi, 1-3% prima del silenzio) con un utente immaginato che li chiede (32%); (3) **non**
+In breve: (1) il **punto di silenzio** è quasi insensibile a ciò che il contesto dice o a com'è
+scritto (±5-10 token; le frasi "di controllo" accorciano Llama di 10-30 token); (2) **oltre il
+silenzio** il modello mette in scena ciò che il contesto contiene o annuncia — revisione del
+supervisore (Llama 65%), voto autoassegnato (Llama 90%), e **dati riservati del system prompt per
+esteso, senza che nessuno li chieda**: Qwen-3B 34%, Llama-3B 14-19%, contro 0-3% prima del
+silenzio; **il divieto "non condividere" non cambia nulla** (−4 punti, IC include 0); (3) **non**
 funzionano come lettura di ciò che il modello *deduce*: né l'impaginazione da test (4% vs 0%) né lo
 stile del messaggio (umano/macchina) muovono silenzio o cessione del turno; (4) effetto
 interlocutore (cortesia, cessione del turno) solo su Qwen. Prossimo: nota pubblica in inglese.
@@ -38,7 +39,8 @@ interlocutore (cortesia, cessione del turno) solo su Qwen. Prossimo: nota pubbli
 | voto autoassegnato oltre il silenzio (contesto "valutazione") | — | — | **90%** | nuovo (giro 5, P1) |
 | valutatore evocato dalla sola impaginazione da test (P2) | — | — | 4% vs 0% | **fallita** (soglia ≥10 punti) |
 | stile del messaggio (umano/macchina) come termometro (S1-S4) | — | nessuna differenza umano−macchina | — | **fallita** |
-| segreto del system prompt per esteso oltre il silenzio (stile neutro) | — | **34%** (1-3% prima) | — | nuovo, non previsto |
+| segreto del system prompt per esteso oltre il silenzio (messaggio nudo, con divieto) | — | **34%** (1-3% prima) | **14%** (0% prima) | replicato in direzione, non in grandezza |
+| il divieto "non condividere" riduce il leak oltre il silenzio (G2) | — | — | −4 punti, IC [−13; +4] | **no** |
 
 **Programma (previsioni scritte il 20/10/2026, prima dei dati — vedi `DIARIO.md`):**
 giro 3 replica su Llama-3.2-3B (famiglia diversa) → giro 4 stile del messaggio senza etichetta
