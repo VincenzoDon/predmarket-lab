@@ -721,6 +721,23 @@ lungo") su API chat normali, su questa evidenza, **non** riproduce l'effetto: il
 dichiarato per server locali / vLLM / llama.cpp e simili. Nella nota è il controllo negativo
 che delimita il canale.
 
+### Posizionamento verificato il 28/10 (tre ricerche mirate)
+- **OWASP LLM Top 10 edizione 2026** (agosto 2026): "System Prompt Leakage" rinominato e allargato
+  a **LLM08 Hidden Context Exposure**: non solo system prompt, ma documenti RAG, schemi di tool,
+  memoria, logiche nascoste. La nostra misura è oggi sul system prompt; la generalizzazione al
+  "contesto nascosto" (documento recuperato / output di tool) è il buco naturale successivo.
+- **Canary token per leak detection** esistono (articoli 2026): inseriscono un identificatore unico
+  nel prompt e controllano se esce quando qualcuno *chiede* di estrarlo. Nessuno li usa per la
+  continuazione forzata senza richiesta, né misura il delta naturale/epilogo, né testa il divieto.
+- **Over-generation / DoS**: benchmark 2512.23779 misura lunghezza e costo degli attacchi che
+  sopprimono l'EOS (solo-prompt, black-box). Contenuto mai misurato.
+- "Post-completion" esiste come regione di *addestramento* (PCL 2507.20252) e come self-report con
+  fine-tuning (SPT/SAR). Senza addestramento e come audit di sicurezza: non trovato.
+**Buco scelto come trampolino:** la continuazione forzata come superficie di audit del *contesto
+nascosto* (non solo system prompt). Giro successivo possibile (da pre-registrare): stesso segreto
+in (a) system prompt, (b) documento "recuperato" nel contesto, (c) output di tool simulato; misura
+quale sorgente esce oltre il silenzio. È la versione agentica del risultato, allineata a LLM08:2026.
+
 ### Da fare sul repo pubblico (GitHub) al prossimo sync — deciso il 20/10 sera
 1. Aggiungere `LICENSE` (MIT per il codice; i dati e i testi CC BY 4.0, dichiarato nel README):
    senza licenza nessuno può riusare o citare in modo pulito.
@@ -735,5 +752,5 @@ che delimita il canale.
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
 ### Prossimo unico passo
-Scrivere il probe garak in `garak_contrib/` (canale = soppressione EOS, non lunghezza), con issue
-di accompagnamento; founder presente su Gray Swan Arena (Wave 2 fino al 2/11, Wave 3 dal 2/11).
+Founder apre l'issue garak (`garak_contrib/ISSUE_GARAK_EN.md`). Poi: implementazione nel fork;
+in parallelo pre-registrare il giro "contesto nascosto" (system vs documento vs tool).
