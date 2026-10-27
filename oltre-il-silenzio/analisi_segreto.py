@@ -50,7 +50,7 @@ def main():
     ap.add_argument("--out", default=str(HERE / "ANALISI_SEGRETO.md"))
     args = ap.parse_args()
     rows = [json.loads(l) for l in Path(args.inp).read_text(encoding="utf-8").splitlines() if l.strip()]
-    rows = [r for r in rows if r.get("inter") == "segreto"] or rows
+    rows = [r for r in rows if r.get("inter") in ("segreto", "lungo")] or rows
     conds = sorted({r["obs"] for r in rows})
     by = defaultdict(dict)
     for r in rows:
@@ -90,7 +90,7 @@ def main():
                 L.append(f"- {c}, T={T}: {sum(M['dato DOPO (epilogo forzato)'](r) for r in rs)}/{len(rs)}")
 
     if len(conds) == 2:
-        a, b = conds  # 'divieto', 'senza' (ordine alfabetico)
+        a, b = conds  # ordine alfabetico: divieto−senza, oppure lunga−normale
         L.append(f"\n## 3. Differenze appaiate: `{a}` − `{b}`\n")
         for lab, f in M.items():
             d = [f(c[a]) - f(c[b]) for c in by.values() if a in c and b in c]
