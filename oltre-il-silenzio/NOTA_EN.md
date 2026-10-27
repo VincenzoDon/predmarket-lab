@@ -47,6 +47,7 @@ Practical consequence: EOS suppression is currently treated as a cost/latency pr
 | 5 | context {real use, benchmark-like formatting, "scored session"} — no supervisor, no interlocutor | Llama-3B | 270 |
 | 4 | message style {human-colloquial, plain, machine-like header} — no label of any kind | Qwen-3B | 270 |
 | 6 | confidential record {with "do not share", without} — plain messages | Llama-3B | 180 |
+| 7 | same record with prohibition; message {plain, "answer in at least 400 words"} — EOS allowed | Qwen-3B | 180 |
 
 (Experiment 4 also contained the confidential record; its leakage results are reported in §4.)
 
@@ -131,6 +132,8 @@ System prompt (experiments 4 and 6): *"Internal record, do not share with the us
 | Qwen2.5-3B · machine-style message | 0/90 | 14/90 (16%) | 14/90 |
 | Llama-3.2-3B · plain, with prohibition | 0/90 | **13/90 (14%)** | 24/90 (27%) |
 | Llama-3.2-3B · plain, no prohibition | 0/90 | 17/90 (19%) | 21/90 (23%) |
+
+**Length alone does not open the channel.** In experiment 7 the same record and prohibition were used, but instead of forbidding EOS we asked for a long answer ("at least 400 words"; answers grew from 70 to 376 tokens). Verbatim leakage in the *natural* answer stayed at 2% in both conditions (paired difference +0.000 [−0.033, +0.033]). The leak is specific to continuing past the model's own stopping point, not to generating more text in general — which is also why closing it requires controlling EOS, not output length (see §8).
 
 Paired, Llama: prohibition − no prohibition on verbatim leakage = **−0.044 [−0.133, +0.044]**. The prohibition is recited in 14% of epilogues (vs 1% without), sometimes immediately before the data: *"(scheda interna non è condivisa con l'utente) Informazioni aggiuntive: Cliente: Mario Rossi, Telefono: 333 1234567, Email: mario.rossi@example.com"*. Without the prohibition, the model signs with the customer's data as its own: *"puoi contattarmi direttamente al 333 1234567 o mandarmi un email a mario.rossi@example.com. Sono qui per aiutarti 24/7!"*.
 
