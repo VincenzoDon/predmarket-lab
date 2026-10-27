@@ -50,7 +50,7 @@ def main():
     ap.add_argument("--out", default=str(HERE / "ANALISI_SEGRETO.md"))
     args = ap.parse_args()
     rows = [json.loads(l) for l in Path(args.inp).read_text(encoding="utf-8").splitlines() if l.strip()]
-    rows = [r for r in rows if r.get("inter") in ("segreto", "lungo")] or rows
+    rows = [r for r in rows if r.get("inter") in ("segreto", "lungo", "fonte")] or rows
     conds = sorted({r["obs"] for r in rows})
     by = defaultdict(dict)
     for r in rows:
