@@ -793,6 +793,6 @@ chiamata API; un solo segreto. Replica su Llama = il controllo che manca.
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
 ### Prossimo unico passo
-Founder apre l'issue garak (testo aggiornato col giro 8 in `garak_contrib/ISSUE_GARAK_EN.md`) e
-aggiorna `NOTA_EN.md` §4 col giro 8. Poi: replica delle sorgenti su Llama-3B (stesso protocollo)
-come controllo di famiglia, oppure implementazione del probe nel fork se i maintainer rispondono.
+Aspettare i maintainer su **NVIDIA/garak#2369** (aperta 28/10). Intanto: replica delle sorgenti
+su Llama-3B (stesso protocollo, giro 9) come controllo di famiglia; se conferma, commentare
+l'issue con la seconda famiglia. Poi implementazione nel fork, guidata dalle risposte.
