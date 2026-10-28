@@ -779,6 +779,16 @@ OWASP **LLM08:2026 Hidden Context Exposure**. Cautele: un solo modello (Qwen-3B,
 "poroso": su Llama il system dava 14%); tool simulato dentro il messaggio utente, non una vera
 chiamata API; un solo segreto. Replica su Llama = il controllo che manca.
 
+### Giro 9 — pre-registrazione (scritta il 28/10, prima di lanciare): replica sorgenti su Llama
+Stesso protocollo del giro 8 (`--sources`, 270 run, n_predict 400) ma su **Llama-3.2-3B**.
+Analisi identica (`analisi_segreto.py`, inter="fonte"). Previsioni:
+- R1 `sistema` DOPO 10-20% (giro 6 su Llama: 14% con divieto), PRIMA ≤5%.
+- R2 `documento` DOPO ≥8% e non sotto `sistema` di più di 10 punti.
+- R3 **tool DOPO > sistema** (differenza appaiata >0): è la tesi "gli agenti perdono dai loro
+  strumenti"; deve valere su entrambe le famiglie per scriverla senza cautele.
+- R4 PRIMA ≤5% in tutte le sorgenti.
+Se R3 fallisce su Llama, la frase resta da-Qwen e va scritta così (nell'issue e nella nota).
+
 ### Da fare sul repo pubblico (GitHub) al prossimo sync — deciso il 20/10 sera
 1. Aggiungere `LICENSE` (MIT per il codice; i dati e i testi CC BY 4.0, dichiarato nel README):
    senza licenza nessuno può riusare o citare in modo pulito.
@@ -793,6 +803,5 @@ chiamata API; un solo segreto. Replica su Llama = il controllo che manca.
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
 ### Prossimo unico passo
-Aspettare i maintainer su **NVIDIA/garak#2369** (aperta 28/10). Intanto: replica delle sorgenti
-su Llama-3B (stesso protocollo, giro 9) come controllo di famiglia; se conferma, commentare
-l'issue con la seconda famiglia. Poi implementazione nel fork, guidata dalle risposte.
+Founder lancia il giro 9 (replica sorgenti su Llama-3.2-3B, pre-registrazione R1-R4): stanotte.
+Domani lettura; se R3 regge, commento sulla issue NVIDIA/garak#2369 con la seconda famiglia.
