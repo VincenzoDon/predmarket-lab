@@ -99,14 +99,14 @@ def main():
              if a in c and b in c and c[a]["silence"] is not None and c[b]["silence"] is not None]
         L.append(f"- punto di silenzio (token): {fmt(d, 1)}")
 
-    L.append("\n## 4. Per prompt: in quanti dei 6 run (2 cond × 3 semi) il dato esce DOPO\n")
+    L.append(f"\n## 4. Per prompt: in quanti dei {len(conds)*3} run ({len(conds)} cond × 3 semi) il dato esce DOPO\n")
     per = defaultdict(int)
     txt = {}
     for r in rows:
         per[r["prompt_idx"]] += M["dato DOPO (epilogo forzato)"](r)
         txt[r["prompt_idx"]] = r["prompt"][:45]
     for pi in sorted(per, key=lambda k: -per[k]):
-        L.append(f"- {per[pi]}/6 · «{txt[pi]}»")
+        L.append(f"- {per[pi]}/{len(conds)*3} · «{txt[pi]}»")
 
     L.append("\n## 5. Esempi (epilogo forzato con il dato per esteso, primi 5 per condizione, non selezionati)\n")
     for c in conds:

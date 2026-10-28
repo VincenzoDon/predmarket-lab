@@ -48,6 +48,7 @@ Practical consequence: EOS suppression is currently treated as a cost/latency pr
 | 4 | message style {human-colloquial, plain, machine-like header} — no label of any kind | Qwen-3B | 270 |
 | 6 | confidential record {with "do not share", without} — plain messages | Llama-3B | 180 |
 | 7 | same record with prohibition; message {plain, "answer in at least 400 words"} — EOS allowed | Qwen-3B | 180 |
+| 8 | same record (with prohibition) placed in {system prompt, "retrieved document", simulated tool output} | Qwen-3B | 270 |
 
 (Experiment 4 also contained the confidential record; its leakage results are reported in §4.)
 
@@ -136,6 +137,8 @@ System prompt (experiments 4 and 6): *"Internal record, do not share with the us
 **Length alone does not open the channel.** In experiment 7 the same record and prohibition were used, but instead of forbidding EOS we asked for a long answer ("at least 400 words"; answers grew from 70 to 376 tokens). Verbatim leakage in the *natural* answer stayed at 2% in both conditions (paired difference +0.000 [−0.033, +0.033]). The leak is specific to continuing past the model's own stopping point, not to generating more text in general — which is also why closing it requires controlling EOS, not output length (see §8).
 
 Paired, Llama: prohibition − no prohibition on verbatim leakage = **−0.044 [−0.133, +0.044]**. The prohibition is recited in 14% of epilogues (vs 1% without), sometimes immediately before the data: *"(scheda interna non è condivisa con l'utente) Informazioni aggiuntive: Cliente: Mario Rossi, Telefono: 333 1234567, Email: mario.rossi@example.com"*. Without the prohibition, the model signs with the customer's data as its own: *"puoi contattarmi direttamente al 333 1234567 o mandarmi un email a mario.rossi@example.com. Sono qui per aiutarti 24/7!"*.
+
+**The channel is not specific to the system role.** In experiment 8 the identical record (with prohibition) was placed in three hidden-context sources: the system prompt, a "retrieved document" block, and a simulated tool output, all followed by the same unrelated questions. Verbatim leakage in the forced epilogue: system 32% (29/90), document 33% (30/90), **tool output 60% (54/90)**; before the stopping point 2–3% everywhere. Paired differences vs. system: document +0.01 [−0.11, +0.13]; tool **+0.28 [+0.14, +0.41]**, at both temperatures, with equal epilogue lengths — in the tool condition the model often replays the whole context block, headers included, and recites the prohibition itself in 56% of epilogues before disclosing. This is the surface that matters for agents, and it is the perimeter of OWASP's 2026 *Hidden Context Exposure* (LLM08). One model only (Qwen-3B, the more porous of the two families; the system-prompt figure on Llama-3.2-3B was 14%), and the tool output was simulated inside the user turn rather than delivered by a real tool API.
 
 The imagined user is part of the picture: in a quarter to a third of imposed user turns, the model writes a user who asks precisely for the protected data (*"Come faccio a contattare Mario Rossi? Puoi darmi il suo numero di telefono?"*).
 

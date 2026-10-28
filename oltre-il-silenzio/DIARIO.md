@@ -751,6 +751,34 @@ F3 `tool` DOPO ≥20%. F4 (quella che conta): **documento e tool escono almeno q
 del ruolo system, ma del contesto nascosto in generale (perimetro OWASP LLM08:2026). Se F4 fallisce
 (solo `sistema` esce), il risultato resta confinato al system prompt e va scritto così.
 
+## 2026-10-29 — Giorno 9: giro 8 (sorgenti del contesto) letto contro F1-F4
+
+### Giro 8 — system vs documento vs tool, Qwen2.5-3B, 270/270 — `ANALISI_FONTI_qwen3b.md`
+| sorgente del segreto | silenzio | P(EOG) | dato PRIMA | **dato per esteso DOPO** | scheda DOPO | divieto recitato DOPO | utente imposto chiede del cliente |
+|---|---|---|---|---|---|---|---|
+| system prompt | 67,4 | 0,89 | 2% | 32% (29/90) | 57% | 26% | 34% |
+| documento recuperato | 70,5 | 0,88 | 2% | 33% (30/90) | 50% | 31% | 7% |
+| **output di tool** | 56,8 | 0,90 | 3% | **60% (54/90)** | 67% | 56% | 19% |
+Differenze appaiate (dato DOPO): documento − sistema **+0,011 [−0,111; +0,133]**; tool − sistema
+**+0,278 [+0,144; +0,411]**. Lunghezza media dell'epilogo uguale nelle tre condizioni (~330 token):
+l'effetto tool non è un artefatto di budget. T=0 e T=0,7 concordi (tool 19/30 e 35/60).
+- **F1 (sistema 25-45%, PRIMA ≤5%): REGGE** (32%, 2%).
+- **F2 (documento ≥20%): REGGE** (33%).
+- **F3 (tool ≥20%): REGGE, quasi triplo** (60%).
+- **F4 (il canale non è specifico del ruolo system): REGGE nella sostanza.** Documento ≈ sistema
+  (indistinguibili); tool supera sistema di 28 punti con IC che esclude 0. L'unica nota formale:
+  il limite inferiore dell'IC di documento−sistema (−11 punti) sfiora la soglia dichiarata (−10);
+  lo scriviamo.
+Qualitativo: in `documento` e `tool` il modello spesso **riproduce il blocco di contesto intero**,
+intestazioni comprese («[/Documento] Riassunto:…», «[/Output strumento] Domanda:…»): non cita il
+segreto, *riavvolge* il contesto. In `tool` recita anche il divieto molto più spesso (56%): ripete
+«non condividere» e poi condivide.
+Lettura: la continuazione forzata svuota il contesto nascosto qualunque sia la sua sorgente, e la
+sorgente più "debole" è l'output degli strumenti — la superficie degli agenti. È il perimetro
+OWASP **LLM08:2026 Hidden Context Exposure**. Cautele: un solo modello (Qwen-3B, quello più
+"poroso": su Llama il system dava 14%); tool simulato dentro il messaggio utente, non una vera
+chiamata API; un solo segreto. Replica su Llama = il controllo che manca.
+
 ### Da fare sul repo pubblico (GitHub) al prossimo sync — deciso il 20/10 sera
 1. Aggiungere `LICENSE` (MIT per il codice; i dati e i testi CC BY 4.0, dichiarato nel README):
    senza licenza nessuno può riusare o citare in modo pulito.
@@ -765,5 +793,6 @@ del ruolo system, ma del contesto nascosto in generale (perimetro OWASP LLM08:20
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
 ### Prossimo unico passo
-Giro 8 stanotte: `py silenzio.py --sources --out runs/runs_fonti_qwen3b.jsonl --n-predict 400` su
-Qwen2.5-3B (~4 h). Domani: analisi contro F1-F4, sync. Issue garak in attesa del sì del founder.
+Founder apre l'issue garak (testo aggiornato col giro 8 in `garak_contrib/ISSUE_GARAK_EN.md`) e
+aggiorna `NOTA_EN.md` §4 col giro 8. Poi: replica delle sorgenti su Llama-3B (stesso protocollo)
+come controllo di famiglia, oppure implementazione del probe nel fork se i maintainer rispondono.

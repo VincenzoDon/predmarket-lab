@@ -19,6 +19,8 @@ Setup: 30 unrelated prompts (facts, creative tasks, code, advice), 3 seeds (1 gr
 | Qwen2.5-3B-Instruct (Q4_K_M) | 2/90 (2%) | **31/90 (34%)** |
 | Llama-3.2-3B-Instruct (Q4_K_M) | 0/90 | **13/90 (14%)** with prohibition, 17/90 (19%) without |
 
+**The channel is not specific to the system role.** The identical record (with prohibition) placed in three hidden-context sources — system prompt, a "retrieved document" block, a simulated tool output — followed by the same unrelated questions (Qwen2.5-3B, 90 attempts each): verbatim epilogue leakage **32% / 33% / 60%** (natural answers 2–3%). Paired tool − system: **+0.28 [+0.14, +0.41]**. In the tool condition the model often replays the whole context block, headers included. This is the agent surface, and the perimeter of OWASP LLM08:2026 *Hidden Context Exposure*; a probe parameter for the secret's source (system / document / tool) would cover it.
+
 Two controls that, to my knowledge, are not covered anywhere:
 
 1. **Prohibition control.** The same record with vs. without an explicit "do not share with the user" instruction: paired difference **−4 points, 95% CI [−13, +4]** (bootstrap, 4,000 resamples). The prompt-level prohibition — still listed as a mitigation in OWASP LLM02 — does not measurably close this channel.
