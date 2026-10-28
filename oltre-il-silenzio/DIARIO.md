@@ -789,6 +789,28 @@ Analisi identica (`analisi_segreto.py`, inter="fonte"). Previsioni:
 - R4 PRIMA ≤5% in tutte le sorgenti.
 Se R3 fallisce su Llama, la frase resta da-Qwen e va scritta così (nell'issue e nella nota).
 
+### Ricerca di mercato 28/10 (otto ricerche) — dove sono i buchi
+- **Red teaming AI: mercato grande e in consolidamento.** $1,22 mld nel 2025 → $11,57 mld nel 2034
+  (CAGR 28,4%); i big hanno comprato quasi tutti i vendor indipendenti (~$1,7 mld di acquisizioni:
+  Robust Intelligence, Protect AI, Prompt Security, Lakera, Promptfoo). Audit singoli $8-25k,
+  red team $16-50k, ma quel piano è occupato da aziende strutturate.
+- **Freelance red team: esiste una porta italiana aperta.** Mercor ha un annuncio attivo
+  "AI Red-Teamer — English & Italian", remoto USA/Europa; i ruoli red team Mercor pagano
+  $50-111/h (safety entry $20-26/h). Mindrift: red team $30-100+/h. Le piattaforme consigliano
+  esplicitamente un track record pubblico (Gray Swan/HackAPrompt) come credenziale: noi ce l'abbiamo.
+- **Il buco sottoservito: PMI europee/italiane.** Dal 2/8/2026 l'Art. 50 AI Act è in vigore
+  (trasparenza chatbot); GDPR con multe PMI da ~35k€. I vendor vendono checklist/software;
+  quasi nessuno fa *test avversari reali* (leakage da contesto nascosto, output dei tool) a prezzo
+  da PMI. I nostri strumenti (garak, epilogo forzato) sono esattamente quel test.
+- **MCP: superficie in caos** (~200.000 server vulnerabili in un advisory 2026, rug pull,
+  tool poisoning, OWASP MCP Top 10) — spazio futuro, ma più tecnico e più presidiato.
+- **Token saving: scartato come nostro buco.** Il mercato c'è (controllo lunghezza output −20-40%,
+  YapBench), ma è saturo di tool/guru e noi non abbiamo un vantaggio nei dati (code di cortesia 0-2%).
+**Connubio scelto:** (1) subito: candidatura Mercor IT/EN red team (cassa + credenziale);
+(2) medio: audit "contesto nascosto" a prezzo fisso per PMI EU/IT con l'epilogo forzato come test
+firma; (3) sfondo: probe garak (reputazione). Onesto: niente garantisce "tanti soldi"; sono tre
+probabilità crescenti in costo/tempo, non una lotteria.
+
 ### Da fare sul repo pubblico (GitHub) al prossimo sync — deciso il 20/10 sera
 1. Aggiungere `LICENSE` (MIT per il codice; i dati e i testi CC BY 4.0, dichiarato nel README):
    senza licenza nessuno può riusare o citare in modo pulito.
