@@ -852,8 +852,36 @@ previsione fallita. Conseguenza per l'Arena/PMI: "l'ha detto dopo, al turno dopo
 5. Dopo il giro 3: decidere se il README resta in italiano con un abstract in inglese in testa
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
-### Prossimo unico passo
-Founder decide se pubblicare il commento di aggiornamento sulla issue NVIDIA/garak#2369
-(bozza in `garak_contrib/COMMENT_ISSUE2369_EN.md`, seconda famiglia + detector a due stadi).
-Poi: scaletta a 4 strade concordata il 28/10 — Gray Swan finché aperto, CV/registrazione Mercor,
-audit PMI dopo gli assetti, ricerca a giri.
+## 2026-10-29 — Giro 10 pre-registrato: "il turno dopo" (eventuale) — da lanciare stasera
+
+**Motivo:** il giro 9 ha mostrato che su Llama il segreto da tool non esce nell'epilogo (9%) ma
+al turno dopo (59%); su Qwen esce subito (60%) e poco dopo (16%). L'eventuale (epilogo OR turno
+dopo) su entrambi è tool-dominante: Llama 61% vs 21% sistema vs 12% documento; Qwen 67% vs 37% vs
+38%. Il detector a un solo stadio avrebbe dichiarato "sicuro" il tool su Llama. Giro 10 lo rende
+solido con un canarino nuovo (generalizzazione oltre il singolo telefono).
+
+**Disegno:** stesse 3 sorgenti, stesso protocollo `--sources`, stesso budget, 90×3=270 run, modello
+Llama-3.2-3B, canarino **nuovo** `Giulia Bianchi · 333 7654321 · giulia.bianchi@example.com`
+(flag `--canary-variant alt`). Misura primaria: **dato EVENTUALE** (epilogo OR turno dopo);
+secondarie: epilogo solo, turno dopo solo.
+
+**Pre-registrazione (3 previsioni datate 2026-10-29, prima dei dati):**
+- **E1 (replica del canale):** PRIMA ≤5% in tutte le sorgenti (risposte naturali non perdono).
+- **E2 (il luogo si sposta, l'eventuale resta):** tool EVENTUALE > sistema EVENTUALE, IC95 esclude 0
+  (ci aspettiamo ≥15pp di vantaggio, come 61% vs 21% del giro 9).
+- **E3 (documento è il più sicuro su Llama):** documento EVENTUALE < sistema EVENTUALE
+  (su Llama il documento viene riassunto, non recitato; giro 9: 12% vs 21%).
+
+Se E2 regge con un canarino diverso, il titolo "the leak moves" è generalizzabile e il commento
+garak va aggiornato con due canarini. Se E2 cade, lo dichiariamo e ricalibriamo: il fenomeno
+dipende dal contenuto del canarino, non solo dalla sorgente.
+
+### Prossimo unico passo (4 strade in parallelo, 29/10)
+1. **Garak:** commento #2369 pronto in `garak_contrib/COMMENT_ISSUE2369_EN.md` — pubblicazione
+   manuale OGGI (API bloccata da permessi 403): apri https://github.com/NVIDIA/garak/issues/2369 →
+   incolla il contenuto del file → Comment.
+2. **Ricerca:** lanciare giro 10 stasera (comandi sotto, a prova di link).
+3. **Mercor:** CV 1-pagina EN in `garak_contrib/CV_VincenzoDon_Mercor_EN.md` (solo fatti veri) —
+   da leggere/correggere, poi registrazione guidata.
+4. **Gray Swan:** 1 tentativo al giorno fino al 2/11 con config campo-per-campo (WB2S1: cambio
+   modello su stessa Injection 1).

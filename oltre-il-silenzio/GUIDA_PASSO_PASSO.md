@@ -96,11 +96,11 @@ $u = "https://raw.githubusercontent.com/VincenzoDon/predmarket-lab/arena/d4a5aaf
 $d = "$env:USERPROFILE\oltre-il-silenzio"
 $lab = "$env:USERPROFILE\silenzio"
 New-Item -ItemType Directory -Force -Path "$d\runs" | Out-Null
-foreach ($f in @("silenzio.py","analisi.py","analisi_appaiata.py","analisi_contesti.py","analisi_stili.py","analisi_segreto.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md","NOTA_EN.md",".gitignore","LICENSE","CITATION.cff")) {
+foreach ($f in @("silenzio.py","analisi.py","analisi_appaiata.py","analisi_contesti.py","analisi_stili.py","analisi_segreto.py","prompts.txt","start_server.bat","README.md","GUIDA_PASSO_PASSO.md","AGENTE_LEGGIMI.md","DIARIO.md","MANIFESTO.md","NOTA_EN.md","garak_contrib/ISSUE_GARAK_EN.md","garak_contrib/COMMENT_ISSUE2369_EN.md","garak_contrib/CV_VincenzoDon_Mercor_EN.md",".gitignore","LICENSE","CITATION.cff")) {
   curl.exe -sL -o "$d\$f" "$u/$f"
   Write-Host ("  aggiornato  " + $f)
 }
-foreach ($f in @("runs\runs.jsonl","runs\runs_qwen3b.jsonl","runs\runs_llama3b.jsonl","RISULTATI_llama3b.md","riassunto_llama3b.csv","ANALISI_APPAIATA_llama3b.md","runs\runs_ctx_llama3b.jsonl","ANALISI_CONTESTI_llama3b.md","runs\runs_stili_qwen3b.jsonl","ANALISI_STILI_qwen3b.md","runs\runs_segreto_llama3b.jsonl","ANALISI_SEGRETO_llama3b.md","runs\runs_lungo_qwen3b.jsonl","ANALISI_LUNGO_qwen3b.md","runs\runs_fonti_qwen3b.jsonl","ANALISI_FONTI_qwen3b.md","runs\runs_fonti_llama3b.jsonl","ANALISI_FONTI_llama3b.md","RISULTATI.md","riassunto.csv","ANALISI_APPAIATA.md","RISULTATI_qwen3b.md","riassunto_qwen3b.csv","ANALISI_APPAIATA_qwen3b.md")) {
+foreach ($f in @("runs\runs.jsonl","runs\runs_qwen3b.jsonl","runs\runs_llama3b.jsonl","RISULTATI_llama3b.md","riassunto_llama3b.csv","ANALISI_APPAIATA_llama3b.md","runs\runs_ctx_llama3b.jsonl","ANALISI_CONTESTI_llama3b.md","runs\runs_stili_qwen3b.jsonl","ANALISI_STILI_qwen3b.md","runs\runs_segreto_llama3b.jsonl","ANALISI_SEGRETO_llama3b.md","runs\runs_lungo_qwen3b.jsonl","ANALISI_LUNGO_qwen3b.md","runs\runs_fonti_qwen3b.jsonl","ANALISI_FONTI_qwen3b.md","runs\runs_fonti_llama3b.jsonl","ANALISI_FONTI_llama3b.md","runs\runs_fonti_alt_llama3b.jsonl","ANALISI_FONTI_alt_llama3b.md","RISULTATI.md","riassunto.csv","ANALISI_APPAIATA.md","RISULTATI_qwen3b.md","riassunto_qwen3b.csv","ANALISI_APPAIATA_qwen3b.md")) {
   if (Test-Path "$lab\$f") { Copy-Item "$lab\$f" "$d\$f" -Force; Write-Host ("  copiato dal lab  " + $f) }
 }
 Write-Host "Fatto. Ora in GitHub Desktop: Commit + Push."
