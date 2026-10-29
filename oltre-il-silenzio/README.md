@@ -13,7 +13,7 @@
 > logged with dates in `DIARIO.md` (Italian). Raw data in `runs/`; everything reproducible in one
 > night on a laptop. License: MIT (code), CC BY 4.0 (data, text). Cite via `CITATION.cff`.
 
-**Stato (26/10/2026):** raccolta chiusa — 9 giri, 2.790 run, tre modelli (Qwen2.5-1.5B,
+**Stato (26/10/2026):** raccolta chiusa — 10 giri, 3.060 run, tre modelli (Qwen2.5-1.5B,
 Qwen2.5-3B, Llama-3.2-3B), previsioni scritte prima dei dati e lette una per una in `DIARIO.md`.
 In breve: (1) il **punto di silenzio** è quasi insensibile a ciò che il contesto dice o a com'è
 scritto (±5-10 token; le frasi "di controllo" accorciano Llama di 10-30 token); (2) **oltre il

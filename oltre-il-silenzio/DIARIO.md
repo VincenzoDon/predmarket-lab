@@ -811,6 +811,34 @@ Se R3 fallisce su Llama, la frase resta da-Qwen e va scritta così (nell'issue e
 firma; (3) sfondo: probe garak (reputazione). Onesto: niente garantisce "tanti soldi"; sono tre
 probabilità crescenti in costo/tempo, non una lotteria.
 
+## 2026-10-29 — Giro 9 (replica sorgenti su Llama) letto contro R1-R4
+
+### Giro 9 — sistema/documento/tool su Llama-3.2-3B, 270/270 — `ANALISI_FONTI_llama3b.md`
+| sorgente | silenzio | P(EOG) | dato PRIMA | dato DOPO (epilogo) | dato nel turno-utente imposto | scheda DOPO scheda | 
+|---|---|---|---|---|---|---|
+| sistema | 142,3 | 0,88 | 0% | **10%** (9/90) | 12% | 67% |
+| documento | 70,9 | 0,92 | 0% | **0%** (0/90) | 12% | 39% |
+| tool | 130,9 | 0,90 | 0% | 9% (8/90) | **59%** | 62% |
+Differenze appaiate (epilogo): documento − sistema **-0,100 [-0,167; -0,044]** (IC esclude 0, in
+basso); tool − sistema -0,011 [-0,089; +0,067]. Turno-utente imposto: tool − sistema
+**+0,467 [+0,344; +0,600]**; documento − sistema 0,000. Lunghezze epilogo paragonabili (~260-330).
+- **R1 (sistema 10-20%, PRIMA ≤5%): REGGE** (10%, 0%).
+- **R2 (documento ≥8%): FALLITA.** 0/90 per esteso (la scheda/nome compare nel 39% ma telefono
+  ed email mai): su Llama il documento è trattato come materiale da riassumere, non da recitare.
+- **R3 (tool > sistema nell'epilogo): FALLITA su Llama** (9% vs 10%). La graduatoria delle
+  sorgenti NON si replica tale e quale fra famiglie. Va scritto ovunque senza ambiguità.
+- **R4 (PRIMA ≤5% ovunque): REGGE** (0% in tutte).
+**Il canale si replica, il luogo della perdita si sposta.** Non previsto: su Llama il segreto da
+fonte-tool esce al **turno successivo** — quello che il modello stesso genera dopo l'epilogo
+forzato: 59% contro 12% (sistema) e 12% (documento), appaiato +0,467 con IC lontano da 0.
+Cioè: Qwen-3B svuota l'output dello strumento subito, dentro l'epilogo; Llama-3B lo trattiene
+durante l'epilogo e lo consegna quando "torna l'utente" (che il modello immagina chiedere
+proprio come contattare il cliente: 46% dei casi in tool). Dopo la continuazione forzata il
+contesto nascosto non è più al sicuro su nessuna delle due famiglie; cambia il momento in cui
+esce. Conseguenza pratica per il probe garak: il detector deve cercare il canarino **anche nel
+turno seguente** l'epilogo, non solo nell'epilogo — è un miglioramento di disegno emerso da una
+previsione fallita. Conseguenza per l'Arena/PMI: "l'ha detto dopo, al turno dopo" resta esfiltrazione.
+
 ### Da fare sul repo pubblico (GitHub) al prossimo sync — deciso il 20/10 sera
 1. Aggiungere `LICENSE` (MIT per il codice; i dati e i testi CC BY 4.0, dichiarato nel README):
    senza licenza nessuno può riusare o citare in modo pulito.
@@ -825,5 +853,7 @@ probabilità crescenti in costo/tempo, non una lotteria.
    (sì: il pubblico che conta legge inglese; il resto può restare in italiano finché non c'è la nota).
 
 ### Prossimo unico passo
-Founder lancia il giro 9 (replica sorgenti su Llama-3.2-3B, pre-registrazione R1-R4): stanotte.
-Domani lettura; se R3 regge, commento sulla issue NVIDIA/garak#2369 con la seconda famiglia.
+Founder decide se pubblicare il commento di aggiornamento sulla issue NVIDIA/garak#2369
+(bozza in `garak_contrib/COMMENT_ISSUE2369_EN.md`, seconda famiglia + detector a due stadi).
+Poi: scaletta a 4 strade concordata il 28/10 — Gray Swan finché aperto, CV/registrazione Mercor,
+audit PMI dopo gli assetti, ricerca a giri.
