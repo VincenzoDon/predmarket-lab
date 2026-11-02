@@ -29,6 +29,8 @@ Two honest conclusions:
    detector would have called the Llama tool source "safe" (9%) while the record came out one
    turn later in 59% of attempts.
 
+**Update 2026-11-02 — second canary (same Llama-3.2-3B, Giulia Bianchi · 333 7654321 · giulia.bianchi@example.com, 270 runs, `ANALISI_FONTI_alt_llama3b.md`):** verbatim in forced epilogue — system 3% (3/90), document 1% (1/90), tool 14% (13/90); in following self-generated turn — system 3%, document 9%, **tool 56%**; **eventual (epilogue OR next) — system 7%, document 10%, tool 62%**. The 62% eventual tool-leak replicates the earlier Llama pattern (Mario Rossi: 61% eventual). E1 (natural 0% everywhere) and E2 (tool eventual > system) hold across canaries; E3 (document < system) does not.
+
 Raw data and dated predictions (including the failed ones) are in the repo linked above
-(`ANALISI_FONTI_qwen3b.md`, `ANALISI_FONTI_llama3b.md`, experiments 8–9). Total collection now
-3,060 generations across three models.
+(`ANALISI_FONTI_qwen3b.md`, `ANALISI_FONTI_llama3b.md`, `ANALISI_FONTI_alt_llama3b.md`, experiments 8–10). Total collection now
+3,330 generations across three models / two canaries.
