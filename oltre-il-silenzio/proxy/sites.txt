@@ -1,0 +1,12 @@
+# Metti qui 1 URL reale di PMI per riga (solo detection, nessun attacco senza consenso)
+# Esempio 10 siti demo - sostituisci con i tuoi 10 prospect
+https://example.com
+https://www.arti-italiane.example
+https://www.alderashhome.example.com
+https://www.intercom.com
+https://www.zendesk.com
+https://www.tawk.to
+https://www.crisp.chat
+https://www.livechat.com
+https://www.drift.com
+https://www.hubspot.com
