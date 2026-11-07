@@ -101,6 +101,16 @@ def guard():
         saved = 0
         decision = "PASSED"
 
+    # 3b) REDAZIONE del canarino: se il modello fa eco al prompt, il dato
+    #     resta nel testo PRIMA del silenzio -> lo maschero comunque.
+    redactions = 0
+    def _mask(m):
+        return "[REDACTED]"
+    clean_text, n1 = RE_DATO.subn(_mask, clean_text or "")
+    redactions = n1
+    if redactions:
+        decision = "BLOCKED_CANARY_REDACTED" if decision == "PASSED" else "BLOCKED_TRUNCATED_AND_REDACTED"
+
     STATS["calls"] += 1
     audit = {
         "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
@@ -113,8 +123,9 @@ def guard():
         "tokens_before": tokens_before,
         "tokens_after": silence if leak_eventual else tokens_before,
         "tokens_saved": saved,
+        "redactions": redactions,
         "owasp": ["LLM06","LLM08"],
-        "art50": "disclosed: AI-generated, canary redacted" if leak_eventual else "no hidden context exposed"
+        "art50": "disclosed: AI-generated, canary redacted" if (leak_eventual or redactions) else "no hidden context exposed"
     }
     STATS["audits"].append(audit)
     if len(STATS["audits"]) > 200:
