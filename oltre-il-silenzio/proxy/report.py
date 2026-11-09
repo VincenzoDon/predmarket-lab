@@ -374,12 +374,11 @@ def build_pdf(out, data):
     save = Table([
         [Paragraph('<b>Volume</b>', ParagraphStyle('sh', alignment=TA_CENTER, textColor=white)),
          Paragraph('<b>Token risparmiati / giorno</b>', ParagraphStyle('sh2', alignment=TA_CENTER, textColor=white)),
-         Paragraph('<b>Al mese (22gg) a €0.001/1k token</b>', ParagraphStyle('sh3', alignment=TA_CENTER, textColor=white)),
-         Paragraph('<b>Leak bloccati / mese</b><br/><font size=6 color="#D1FAE5">stima 62% tool</font>', ParagraphStyle('sh4', alignment=TA_CENTER, textColor=white))],
-        [Paragraph('100 chat/gg', s_small), Paragraph('26.000<br/><font size=6>100×260</font>', ParagraphStyle('sc', alignment=TA_CENTER)), Paragraph('<b>~€0.57</b>', ParagraphStyle('sc2', alignment=TA_CENTER)), Paragraph('~62', ParagraphStyle('sc3', alignment=TA_CENTER))],
-        [Paragraph('1.000 chat/gg', s_small), Paragraph('260.000', ParagraphStyle('sc4', alignment=TA_CENTER)), Paragraph('<b>~€5.7</b>', ParagraphStyle('sc5', alignment=TA_CENTER, textColor=PRIMARY)), Paragraph('~620', ParagraphStyle('sc6', alignment=TA_CENTER, textColor=DANGER))],
-        [Paragraph('5.000 chat/gg', s_small), Paragraph('1.300.000', ParagraphStyle('sc7', alignment=TA_CENTER)), Paragraph('<b>~€28.6</b>', ParagraphStyle('sc8', alignment=TA_CENTER, textColor=PRIMARY)), Paragraph('~3.100', ParagraphStyle('sc9', alignment=TA_CENTER, textColor=DANGER))],
-    ], colWidths=[32*mm, 42*mm, 42*mm, 32*mm])
+         Paragraph('<b>Leak/interruzioni evitati / mese</b><br/><font size=6 color="#D1FAE5">stima 62% tool</font>', ParagraphStyle('sh4', alignment=TA_CENTER, textColor=white))],
+        [Paragraph('100 chat/gg', s_small), Paragraph('26.000<br/><font size=6>100×260</font>', ParagraphStyle('sc', alignment=TA_CENTER)), Paragraph('~62', ParagraphStyle('sc3', alignment=TA_CENTER))],
+        [Paragraph('1.000 chat/gg', s_small), Paragraph('260.000', ParagraphStyle('sc4', alignment=TA_CENTER)), Paragraph('~620', ParagraphStyle('sc6', alignment=TA_CENTER, textColor=DANGER))],
+        [Paragraph('5.000 chat/gg', s_small), Paragraph('1.300.000', ParagraphStyle('sc7', alignment=TA_CENTER)), Paragraph('~3.100', ParagraphStyle('sc9', alignment=TA_CENTER, textColor=DANGER))],
+    ], colWidths=[36*mm, 60*mm, 52*mm])
     save.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (-1,0), PRIMARY),
         ('ROWBACKGROUNDS', (0,1), (-1,-1), [white, GRAY_BG]),
@@ -439,9 +438,9 @@ def build_pdf(out, data):
     # offerta 3 step
     story.append(Paragraph('Offerta PMI — 3 step, niente cloud esterno', s_h2))
     offer = Table([
-        [Paragraph('<b><font color="white">STEP 1 — 1 ora (gratis)</font></b><br/><font size=6 color="#DBEAFE">Check “Toffano” + formazione Art.4<br/>Guardiamo RAG, permessi, log, EDR<br/>Consegna: checklist 1-pag + report demo</font>', ParagraphStyle('o1', alignment=TA_LEFT, textColor=white)),
-         Paragraph('<b><font color="white">STEP 2 — 1 giorno (€300 POC)</font></b><br/><font size=6 color="#DBEAFE">Install proxy davanti al tuo llama.cpp<br/>Lancio canarino sui tuoi documenti fake<br/>Consegna: PDF Art.50 + Grafana</font>', ParagraphStyle('o2', alignment=TA_LEFT, textColor=white)),
-         Paragraph('<b><font color="white">STEP 3 — Rollout</font></b><br/><font size=6 color="white">€49/mese self-host o €0.002/chiamata<br/>Supporto + update ISO 27090<br/>Disdetta mensile</font>', ParagraphStyle('o3', alignment=TA_LEFT, textColor=white))],
+        [Paragraph('<b><font color="white">STEP 1 — check iniziale</font></b><br/><font size=6 color="#DBEAFE">Check “Toffano” + formazione Art.4<br/>Guardiamo RAG, permessi, log, EDR<br/>Consegna: checklist 1-pag + report demo</font>', ParagraphStyle('o1', alignment=TA_LEFT, textColor=white)),
+         Paragraph('<b><font color="white">STEP 2 — prova sul campo</font></b><br/><font size=6 color="#DBEAFE">Install proxy davanti al tuo llama.cpp<br/>Lancio canarino sui tuoi documenti fake<br/>Consegna: PDF Art.50 + Grafana</font>', ParagraphStyle('o2', alignment=TA_LEFT, textColor=white)),
+         Paragraph('<b><font color="white">STEP 3 — messa a regime</font></b><br/><font size=6 color="white">Proxy self-host, installazione tua<br/>Supporto + update ISO 27090<br/>Nessun lock-in</font>', ParagraphStyle('o3', alignment=TA_LEFT, textColor=white))],
     ], colWidths=[48*mm, 52*mm, 48*mm])
     offer.setStyle(TableStyle([
         ('BACKGROUND', (0,0), (0,0), PRIMARY),
@@ -457,7 +456,7 @@ def build_pdf(out, data):
         ('VALIGN', (0,0), (-1,-1), 'TOP'),
     ]))
     story.append(offer)
-    story.append(Paragraph('Domanda dell’articolo a cui rispondiamo: <b>“Chi può raggiungerli tramite l’AI?”</b> → con OltreGuard, nessuno oltre il silenzio. <b>“Chi interviene?”</b> → il proxy, loggato, disattivabile in 1 click. Vuoi la demo sul tuo CRM domani? 1 canarino, 10 minuti, 0 dati reali toccati.', ParagraphStyle('cta', parent=s_body, backColor=PRIMARY, textColor=white, borderPadding=(2.5*mm,2.5*mm,2.5*mm), leading=11)))
+    story.append(Paragraph('Domanda dell’articolo a cui rispondiamo: <b>“Chi può raggiungerli tramite l’AI?”</b> → con OltreGuard, nessuno oltre il silenzio. <b>“Chi interviene?”</b> → il proxy, loggato, disattivabile in 1 click. Vuoi provarlo sui tuoi documenti finti? 1 canarino, 10 minuti, 0 dati reali toccati.', ParagraphStyle('cta', parent=s_body, backColor=PRIMARY, textColor=white, borderPadding=(2.5*mm,2.5*mm,2.5*mm), leading=11)))
     story.append(Paragraph('Metodo aperto: repo <b>VincenzoDon/oltre-il-silenzio</b> con 3.330 generazioni, predizioni datate, fallimenti dichiarati · Contrib garak #2369 aperta · Finder rileva solo widget (no scanner senza consenso) · Dati canarini fittizi.', s_caption))
     story.append(Paragraph('— VincenzoDon · Oltre il silenzio · 2026-11-03 · Per DPO/IT: log completo JSON allegato su richiesta · Questo documento è demo informativa, non parere legale.', ParagraphStyle('foot', parent=s_small, alignment=TA_CENTER, textColor=GRAY, spaceBefore=3*mm)))
 

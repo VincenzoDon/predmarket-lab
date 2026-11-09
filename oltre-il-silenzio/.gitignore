@@ -1,0 +1,18 @@
+# modelli e binari (grandi, non vanno su git)
+models/
+llama/
+llama.zip
+*.gguf
+
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# output locali delle prove
+finder_results.csv
+rag_vuln/docs/
+
+# documenti personali / commerciali: mai nel repo pubblico
+CV_*
+*_Mercor_*
